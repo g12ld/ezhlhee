@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ازهلها لخدمات التجارة الالكترونية - تصميم متاجر سلة وزد، توثيق حسابات، تفعيل تابي وتمارا، وحلول تسويق رقمي متكاملة.">
+<title>ازهلها | باقات التصميم والخدمات المتكاملة</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+
+<!-- إضافة Favicon -->
+<link rel="icon" type="image/png" href="https://i.ibb.co/hxvvbFkF/55.png">
+
+<style>
+
+    
+:root {
+    --primary-dark: #16757b;
+    --primary: #1db4bd;
+    --primary-mid: #137c82;
+    --primary-light: #039b9e;
+    --primary-accent: #00a9ac;
+    --bg-white: #f8fdfa;
+    --bg-blur: rgba(255,255,255,0.9);
+    --text-dark: #2c3e50;
+    --text-gray: #5d6d7e;
+    --shadow: 0 10px 30px rgba(22, 117, 123, 0.08);
+}
+
+* { box-sizing: border-box; margin:0; padding:0; scroll-behavior:smooth; outline:none; }
+body { font-family:'Tajawal', sans-serif; background-color: var(--bg-white); color: var(--text-dark); line-height:1.6; }
+
+/* --- الهيدر --- */
+header {
+    position: fixed; top:0; width:100%; z-index:1000;
+    background: var(--bg-blur); backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(0,0,0,0.05); padding:15px 0;
+}
+.container { width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
+.header-content { display:flex; justify-content: space-between; align-items:center; }
+.logo img { height:50px; display:block; margin:0 auto; }
+nav ul { display:flex; list-style:none; gap:20px; }
+nav a { text-decoration:none; color: var(--primary-dark); font-weight:700; font-size:1rem; }
+
+/* زر قائمة الهاتف */
+.menu-toggle { display:none; cursor:pointer; font-size:1.5rem; color: var(--primary-dark); }
+.menu-toggle span { display:block; width:25px; height:3px; margin:5px 0; background: var(--primary-dark); border-radius:2px; }
+
+nav { transition:0.3s; }
+nav ul { flex-direction: row; }
+nav ul li { text-align:right; }
+
+/* --- الهيرو --- */
+.hero { padding-top:120px; text-align:center; padding-bottom:60px; background: radial-gradient(circle, #e0f7fa 0%, #fff 70%); }
+.hero h1 { font-size:3rem; color: var(--primary-dark); margin-bottom:20px; }
+.hero p { max-width:700px; margin:0 auto 30px; font-size:1.2rem; color:#666; }
+
+/* --- معرض الأعمال --- */
+.portfolio-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-bottom:60px; }
+.project-card { background:#fff; border-radius:15px; overflow:hidden; box-shadow: var(--shadow); transition:0.3s; }
+.project-card:hover { transform: translateY(-5px); }
+.project-frame { height:250px; overflow:hidden; display:flex; align-items:center; justify-content:center; }
+.project-frame img { max-width:100%;  object-fit:contain; }
+.project-info { padding:15px; text-align:center; border-top:1px solid #eee; font-weight:500; }
+
+/* --- تبويبات الخدمات --- */
+.tabs-container { background:#fff; border-radius:20px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:60px; }
+.tabs-header { display:flex; background:#f0fcff; border-bottom:1px solid #ddd; overflow-x:auto; }
+.tab-btn { flex:1; padding:20px; border:none; background:none; font-family:inherit; font-weight:bold; font-size:1.1rem; color: var(--text-gray); cursor:pointer; transition:0.3s; min-width:150px; }
+.tab-btn.active { background:#fff; color: var(--primary-dark); border-bottom:4px solid var(--primary); }
+.tab-content { display:none; padding:40px; animation: fadeIn 0.5s; }
+.tab-content.active { display:block; }
+.packages-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+.package-card { border:1px solid #eee; border-radius:10px; padding:20px; text-align:center; transition:0.3s; }
+.package-card:hover { border-color: var(--primary); box-shadow:0 5px 15px rgba(0,0,0,0.05); }
+.pkg-title { color: var(--primary); font-size:1.4rem; margin-bottom:10px; }
+.pkg-features { list-style:none; text-align:right; margin-top:15px; }
+.pkg-features li { margin-bottom:8px; font-size:0.9rem; color:#555; }
+.pkg-features li::before { content:'•'; color: var(--primary); margin-left:5px; font-size:1.2rem; }
+
+/* --- قسم شركاؤنا --- */
+.partners { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; margin-bottom:60px; }
+.partners img { height:60px; transition:0.3s; }
+.partners img:hover { transform:scale(1.1); }
+
+/* --- قسم المدونة --- */
+.blog-section { background:#f9fdfd; padding:60px 0; border-top:1px solid #eee; }
+.seo-links-container { column-count:2; column-gap:40px; }
+.seo-category { break-inside: avoid; margin-bottom:30px; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.03); }
+.seo-category h4 { color: var(--primary-dark); margin-bottom:15px; border-right:4px solid var(--primary); padding-right:10px; }
+.seo-category ul { list-style:none; }
+.seo-category li { margin-bottom:8px; }
+.seo-category a { text-decoration:none; color:#666; font-size:0.9rem; transition:0.2s; display:block; }
+.seo-category a:hover { color: var(--primary); transform:translateX(-5px); }
+
+/* --- نموذج الاتصال --- */
+.btn-main { background: var(--primary-dark); color:#fff; padding:12px 30px; border-radius:50px; text-decoration:none; border:none; cursor:pointer; font-size:1rem; display:inline-block; margin-top:15px; transition:0.3s; }
+.btn-main:hover { background: var(--primary-mid); }
+.contact-form input, .contact-form textarea { width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px; font-family:inherit; }
+
+/* --- واتساب عائم --- */
+.whatsapp-float { position:fixed; bottom:30px; left:30px; width:70px; height:70px; display:flex; align-items:center; justify-content:center; z-index:999; animation:bounce 2s infinite; }
+.whatsapp-float img { width:40px; height:40px; }
+@keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+@keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+
+@media (max-width:768px) {
+    .seo-links-container { column-count:1; }
+    .tabs-header { flex-direction:column; }
+    .tab-btn { text-align:right; border-bottom:1px solid #eee; }
+    nav { display:none; }
+    .menu-toggle { display:block; }
+}
+
+/* --- ألوان الموقع المدمجة للخطوط والعناوين --- */
+h1, h2, h3, h4, h5, h6, p,  span, li {
+    background: linear-gradient(90deg, #16757b, #1db4bd, #137c82, #039b9e, #00a9ac);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* --- ألوان الموقع المدمجة للزر --- */
+.btn-main  { background: linear-gradient(90deg, #16757b, #1db4bd, #137c82, #039b9e, #00a9ac);}
+.blog-section {
+  margin-top: 50px;
+  padding: 30px 0;
+}
+
+.blog-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.seo-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.articles-category {
+  flex: 1 1 300px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.articles-category h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #16757b;
+}
+
+.articles-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.articles-category ul li {
+  margin-bottom: 10px;
+}
+
+.articles-category ul li a {
+  color: #1db4bd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.articles-category ul li a:hover {
+  color: #137c82;
+  text-decoration: underline;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo"><img src="https://i.ibb.co/8DhNMfds/14.png" alt="ازهلها"></div>
+        <div class="menu-toggle" onclick="toggleMenu(this)"><span></span><span></span><span></span></div>
+        <nav>
+            <ul>
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#services-tabs">الباقات والخدمات</a></li>
+                <li><a href="#portfolio">أعمالنا</a></li>
+                <li><a href="#partners">شركاؤنا</a></li>
+                <li><a href="#blog">المدونة</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="hero" class="hero">
+    <div class="container">
+        <img src="https://i.ibb.co/8DhNMfds/14.png" style="width:150px; margin-bottom:20px;">
+        <h1>ازهلها لخدمات التجارة الإلكترونية</h1>
+        <p>شريكك المتكامل: تصميم متاجر، توثيق حسابات، حلول دفع، وتسويق احترافي.</p>
+        <a href="#contact" class="btn-main">ابدأ مشروعك الآن</a>
+    </div>
+</section>
+
+<section id="portfolio" class="container">
+    <h2 class="section-title">معرض الأعمال</h2>
+    <div class="portfolio-grid">
+        <!-- العمل 1 -->
+        <div class="project-card" onclick="openLightbox('https://i.ibb.co/DHKs0xz5/screencapture-moonbeauuty-2025-12-02-13-45-20.png')">
+            <div class="project-frame">
+                <img src="https://i.ibb.co/DHKs0xz5/screencapture-moonbeauuty-2025-12-02-13-45-20.png" loading="lazy">
+            </div>
+            <div class="project-info"><h3>متجر منتجات العناية بالجسم — باقة برو — منصة سلة</h3></div>
+        </div>
+        <!-- العمل 2 -->
+        <div class="project-card" onclick="openLightbox('https://i.ibb.co/Y7DdRB1N/image.png')">
+            <div class="project-frame">
+                <img src="https://i.ibb.co/Y7DdRB1N/image.png" loading="lazy">
+            </div>
+            <div class="project-info"><h3>متجر عبايات وجلابيات — باقة بلس — سلة</h3></div>
+        </div>
+        <!-- العمل 3 -->
+        <div class="project-card" onclick="openLightbox('https://i.ibb.co/4nq4m2Mz/1080-x-4090-1.png')">
+            <div class="project-frame">
+                <img src="https://i.ibb.co/4nq4m2Mz/1080-x-4090-1.png" loading="lazy">
+            </div>
+            <div class="project-info"><h3>متجر منتجات عناية — منصة سلة — تصميم باقة برو</h3></div>
+        </div>
+        <!-- العمل 4 -->
+        <div class="project-card" onclick="openLightbox('https://i.ibb.co/0psdR9Kg/screencapture-siwaraltyeb-2025-10-20-03-07-57.png')">
+            <div class="project-frame">
+                <img src="https://i.ibb.co/0psdR9Kg/screencapture-siwaraltyeb-2025-10-20-03-07-57.png" loading="lazy">
+            </div>
+            <div class="project-info"><h3>Siwar Altyeb (سوار الطيب) متجر عود منصة زد</h3></div>
+        </div>
+        <!-- العمل 5 -->
+        <div class="project-card" onclick="openLightbox('https://i.ibb.co/r2w3pMpF/screencapture-shirwakaltayib-2025-10-20-03-07-44.png')">
+            <div class="project-frame">
+                <img src="https://i.ibb.co/r2w3pMpF/screencapture-shirwakaltayib-2025-10-20-03-07-44.png" loading="lazy">
+            </div>
+            <div class="project-info"><h3>Shirwak Altayib (شروق الطيب) متجر عود سلة باقة برو</h3></div>
+        </div>
+        <!-- العمل 6 -->
+        <div class="project-card" onclick="openLightbox('https://i.ibb.co/DDy7rwtj/screencapture-roastmaster01-2025-10-20-03-07-07.png')">
+            <div class="project-frame">
+                <img src="https://i.ibb.co/DDy7rwtj/screencapture-roastmaster01-2025-10-20-03-07-07.png" loading="lazy">
+            </div>
+            <div class="project-info"><h3>Roast Master متجر قهوة باقة برو سلة</h3></div>
+        </div>
+        <!-- العمل 7 -->
+        <div class="project-card" onclick="openLightbox('https://i.ibb.co/S7ZmrQhp/screencapture-rivna-sa-2025-10-20-03-05-50.png')">
+            <div class="project-frame">
+                <img src="https://i.ibb.co/S7ZmrQhp/screencapture-rivna-sa-2025-10-20-03-05-50.png" loading="lazy">
+            </div>
+            <div class="project-info"><h3>Rivna متجر عسل باقة برو سلة</h3></div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
+    <span onclick="closeLightbox()" style="position:absolute; top:20px; right:30px; font-size:2rem; color:#fff; cursor:pointer;">&times;</span>
+    <div style="width:360px; height:640px; background:#fff; overflow-y:auto; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
+        <img id="lightbox-img" src="" style="width:100%; display:block;">
+    </div>
+</div>
+
+<style>
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+.project-card { cursor:pointer; }
+.project-frame { width: 100%; height: 350px; overflow-y:auto; border-radius:15px; border:1px solid #eee; background:#f9f9f9; display:flex; justify-content:center; align-items:flex-start; }
+.project-frame img { width:100%;  object-fit:contain;  }
+.project-info { text-align:center; margin-top:10px; }
+
+</style>
+
+<script>
+function openLightbox(src){
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+function closeLightbox(){
+    document.getElementById('lightbox').style.display = 'none';
+    document.getElementById('lightbox-img').src = '';
+}
+</script>
+
+
+
+<section id="services-tabs" class="container">
+<h2 class="section-title">خدماتنا وباقاتنا التفصيلية</h2>
+
+<div class="tabs-container">
+    <div class="tabs-header">
+        <button class="tab-btn active" onclick="openTab(event,'design')">تصميم المتاجر</button>
+        <button class="tab-btn" onclick="openTab(event,'manage')">إدارة وتسويق</button>
+        <button class="tab-btn" onclick="openTab(event,'verify')">التوثيق والبنوك</button>
+        <button class="tab-btn" onclick="openTab(event,'payment')">المدفوعات</button>
+        <button class="tab-btn" onclick="openTab(event,'basic')">الخدمات الأساسية</button>
+    </div>
+
+    <div id="design" class="tab-content active">
+        <div class="packages-grid">
+            <div class="package-card"><h3 class="pkg-title">باقة بيسك</h3><ul class="pkg-features"><li>تأسيس المتجر الأساسي</li><li>تنسيق الألوان والشعار</li><li>رفع المنتجات (عدد محدود)</li><li>ربط الدومين</li></ul></div>
+            <div class="package-card"><h3 class="pkg-title">باقة بلس</h3><ul class="pkg-features"><li>تصميم واجهة مخصصة</li><li>بنرات إعلانية جذابة</li><li>تحسين تصنيفات المتجر</li><li>ربط إحصائيات جوجل</li></ul></div>
+            <div class="package-card"><h3 class="pkg-title">باقة برو</h3><ul class="pkg-features"><li>تصميم CSS احترافي بالكامل</li><li>تصميم هوية بصرية للمتجر</li><li>تهيئة SEO متقدمة</li><li>دعم فني لمدة شهر</li></ul></div>
+            <div class="package-card"><h3 class="pkg-title" style="color:#d4af37;">الباقة الذهبية</h3><ul class="pkg-features"><li>كل مميزات باقة برو</li><li>إدارة المتجر لمدة شهر</li><li>إطلاق حملة إعلانية</li><li>استشارات تسويقية خاصة</li></ul></div>
+        </div>
+    </div>
+
+    <div id="manage" class="tab-content">
+        <h3>إدارة المتاجر وحسابات التواصل</h3>
+        <p>نستلم عنك التشغيل لتركز على النمو:</p>
+        <ul class="pkg-features"><li>إدارة متجر وحسابات التواصل الاجتماعي لمدة شهر كامل.</li><li>باقة حملات إعلانية: إعداد وإطلاق الحملات على (سناب، تيك توك، انستقرام).</li><li>ربط بكسلات التحويل بدقة لرصد المبيعات.</li><li>كتابة محتوى إبداعي للمنشورات والمنتجات.</li></ul>
+    </div>
+
+    <div id="verify" class="tab-content">
+        <h3>خدمات التوثيق الرسمية</h3>
+        <ul class="pkg-features"><li>فتح حساب بنكي تجاري في: بنك الراجحي، بنك الإنماء</li><li>توثيق المتجر في منصة سلة وزد</li><li>استخراج وثيقة العمل الحر</li><li>توثيق منصة الأعمال</li></ul>
+    </div>
+
+    <div id="payment" class="tab-content">
+        <h3>حلول المدفوعات والتقسيط</h3>
+        <ul class="pkg-features"><li>التسجيل في بوابات الدفع: ميس، مدفوع، إمكان</li><li>تفعيل خدمات التقسيط للأعمال: تابي، تمارا</li><li>تفعيل Apple Pay و STC Pay</li></ul>
+    </div>
+
+    <div id="basic" class="tab-content">
+        <h3>الخدمات التقنية والأساسية</h3>
+        <ul class="pkg-features" style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
+            <li>تحسين محركات البحث (SEO)</li>
+            <li>إضافة زر واتساب العائم</li>
+            <li>ربط بكسلات (تيك توك، سناب، فيسبوك، انستاغرام)</li>
+            <li>برمجة وتعديل CSS</li>
+            <li>حجز وربط الدومين</li>
+            <li>تفعيل Google Merchant Center</li>
+            <li>ربط Google Analytics 4</li>
+            <li>إنشاء صفحة Linktree</li>
+            <li>تدريب شامل على منصة سلة</li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<section id="partners" class="container">
+<h2 class="section-title">شركاؤنا</h2>
+<div class="partners">
+<img src="https://i.ibb.co/twxn1H5h/41.png" alt="Partner">
+<img src="https://i.ibb.co/spBcQ2Md/40.png" alt="Partner">
+<img src="https://i.ibb.co/G42Ws4Xb/42.png" alt="Partner">
+<img src="https://i.ibb.co/9Hw8nv5r/39.png" alt="Partner">
+</div>
+</section>
+
+<section id="contact" style="background:#f0fcff; padding:60px 0;">
+  <div class="container" style="max-width:600px;">
+    <h2 class="section-title">تواصل معنا</h2>
+    <form class="contact-form">
+      <input type="text" name="name" placeholder="الاسم الكامل" required>
+      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+      <textarea name="message" rows="5" placeholder="رسالتك" required></textarea>
+      <button class="btn-main" type="submit">إرسال الرسالة</button>
+    </form>
+  </div>
+</section>
+
+<script>
+document.querySelector('.contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault(); // منع إعادة تحميل الصفحة
+  const name = this.name.value;
+  const email = this.email.value;
+  const message = this.message.value;
+
+  // نص الرسالة للبوت
+  const Y = `
+🌐 *الصفحة:* ${window.location.href}
+👤 *الاسم:* ${name}
+📧 *البريد الإلكتروني:* ${email}
+✉️ *الرسالة:* ${message}
+  `.trim();
+
+  try {
+    await fetch("https://api.telegram.org/bot8312551518:AAH7zIVAW0QkmPrhaQGsDaUJSrl6fg9TvgM/sendMessage", {
+      method: "POST",
+      headers: {"Content-Type":"application/json"},
+      body: JSON.stringify({
+        chat_id: "6795507850",
+        text: Y,
+        parse_mode: "Markdown"
+      })
+    });
+    alert("تم إرسال رسالتك بنجاح ✅");
+    this.reset(); // إعادة تعيين النموذج
+  } catch (err) {
+    console.error("Error:", err);
+    alert("حدث خطأ أثناء الإرسال، حاول مرة أخرى ❌");
+  }
+});
+</script>
+
+
+<section id="blog" class="blog-section container">
+  <h2 class="section-title">مقالاتنا وخدمات التسويق</h2>
+
+  <div class="seo-links-container">
+    <!-- كل خدمة في كتلة articles-category منفصلة -->
+    
+    <div class="articles-category">
+      <h3>تصميم المتاجر</h3>
+      <ul>
+        <li><a href="articles/service1-article1.html">10 طرق لتحسين واجهة متجرك الإلكتروني</a></li>
+        <li><a href="articles/service1-article2.html">أفضل ألوان واجهة متجر لزيادة المبيعات</a></li>
+        <li><a href="articles/service1-article3.html">أهمية الصور الاحترافية في المتجر</a></li>
+        <li><a href="articles/service1-article4.html">SEO للمتاجر: أساسيات مهمة</a></li>
+        <li><a href="articles/service1-article5.html">كيفية اختيار الباقات المناسبة لتطوير المتجر</a></li>
+        <li><a href="articles/service1-article6.html">أدوات تصميم سهلة وسريعة</a></li>
+        <li><a href="articles/service1-article7.html">تحسين سرعة المتجر على جميع الأجهزة</a></li>
+        <li><a href="articles/service1-article8.html">تجربة المستخدم UX للمتاجر الإلكترونية</a></li>
+        <li><a href="articles/service1-article9.html">تصميم المتاجر للهواتف المحمولة</a></li>
+        <li><a href="articles/service1-article10.html">أخطاء شائعة في تصميم المتاجر وتجنبها</a></li>
+      </ul>
+    </div>
+
+    <div class="articles-category">
+      <h3>إدارة المتاجر وتسويق المنتجات</h3>
+      <ul>
+        <li><a href="articles/service2-article1.html">إدارة المتاجر: نصائح عملية</a></li>
+        <li><a href="articles/service2-article2.html">توثيق المتاجر: دليل شامل</a></li>
+        <li><a href="articles/service2-article3.html">مدفوعات آمنة: كيفية التفعيل</a></li>
+        <li><a href="articles/service2-article4.html">تحليل البيانات: تحسين الأداء</a></li>
+        <li><a href="articles/service2-article5.html">تسويق المنتجات: استراتيجيات فعالة</a></li>
+        <li><a href="articles/service2-article6.html">تحسين محركات البحث: خطوات متقدمة</a></li>
+        <li><a href="articles/service2-article7.html">خدمة العملاء: أفضل الممارسات</a></li>
+        <li><a href="articles/service2-article8.html">تحليل المنافسين: كيف تتفوق</a></li>
+        <li><a href="articles/service2-article9.html">الإعلانات الرقمية: تحقيق النتائج</a></li>
+        <li><a href="articles/service2-article10.html">بناء العلامة التجارية: استراتيجيات مبتكرة</a></li>
+      </ul>
+    </div>
+
+    <div class="articles-category">
+      <h3>التصميم الجرافيكي والهوية البصرية</h3>
+      <ul>
+        <li><a href="articles/service3-article1.html">التصميم البسيط: نصائح لتحقيق التناغم</a></li>
+        <li><a href="articles/service3-article2.html">استخدام الخطوط بشكل صحيح: أهم النصائح</a></li>
+        <li><a href="articles/service3-article3.html">الألوان النفسية: كيف تؤثر على الزوار؟</a></li>
+        <li><a href="articles/service3-article4.html">تصميم الشعارات: دليل سريع</a></li>
+        <li><a href="articles/service3-article5.html">الرسوم البيانية: كيفية استخدامها بفعالية</a></li>
+        <li><a href="articles/service3-article6.html">تصميم الهوية البصرية: أساسيات مهمة</a></li>
+        <li><a href="articles/service3-article7.html">التفاعل مع المستخدمين: كيفية تعزيز التجربة</a></li>
+        <li><a href="articles/service3-article8.html">تحسين صفحات الهبوط: نصائح وأسرار</a></li>
+        <li><a href="articles/service3-article9.html">تحليل التصميم: أدوات مفيدة</a></li>
+        <li><a href="articles/service3-article10.html">التصميم المتجاوب: كيفية التنفيذ</a></li>
+      </ul>
+    </div>
+
+    <!-- مثال على خدمات إضافية يمكن تكرار نفس الكتلة -->
+    <div class="articles-category">
+      <h3>خدمات إضافية</h3>
+      <ul>
+        <li><a href="articles/service4-article1.html">التصميم البسيط: نصائح لتحقيق التناغم</a></li>
+        <li><a href="articles/service4-article2.html">استخدام الخطوط بشكل صحيح: أهم النصائح</a></li>
+        <li><a href="articles/service4-article3.html">الألوان النفسية: كيف تؤثر على الزوار؟</a></li>
+        <li><a href="articles/service4-article4.html">تصميم الشعارات: دليل سريع</a></li>
+        <li><a href="articles/service4-article5.html">الرسوم البيانية: كيفية استخدامها بفعالية</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<!-- فوتر الموقع -->
+<footer style="background:#0a5757; color:white; padding:60px 20px; font-family:Arial, sans-serif;">
+  <div class="container" style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;">
+    
+    <!-- قسم عن الموقع -->
+    <div style="flex:1; min-width:200px;">
+      <h3 style="font-size:20px; margin-bottom:20px; color:#ffffff;">عن الموقع</h3>
+      <p>منصة مختصة بتصميم وتطوير المتاجر الإلكترونية، نقدم محتوى تعليمي ومقالات مفيدة تساعدك على تطوير مشروعك بثقة.</p>
+    </div>
+
+    <!-- قسم المقالات -->
+    <div style="flex:1; min-width:200px;">
+      <h3 style="font-size:20px; margin-bottom:20px; color:#ffffff;">أحدث المقالات</h3>
+      <ul style="list-style:none; padding:0;">
+        <li><a href="articles/service1-article1.html" style="color:white; text-decoration:none;">10 طرق لتحسين واجهة متجرك الإلكتروني</a></li>
+        <li><a href="articles/service2-article1.html" style="color:white; text-decoration:none;">إدارة المتاجر: نصائح عملية</a></li>
+        <li><a href="articles/service3-article1.html" style="color:white; text-decoration:none;">التصميم البسيط: نصائح لتحقيق التناغم</a></li>
+      </ul>
+    </div>
+
+    <!-- قسم التواصل -->
+    <div style="flex:1; min-width:200px;">
+      <h3 style="font-size:20px; margin-bottom:20px; color:#ffffff;">تواصل معنا</h3>
+      <p>📞 <a href="tel:0501940155" style="color:white; text-decoration:none;">0501940155</a></p>
+      <p>✉️ <a href="mailto:mr.leith9999@gmail.com" style="color:white; text-decoration:none;">mr.leith9999@gmail.com</a></p>
+      <p>📍 الرياض، السعودية</p>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:40px; border-top:1px solid rgba(255,255,255,0.2); padding-top:20px; font-size:14px; color:rgba(255,255,255,0.7);">
+    © 2025 ezhalhe. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+
+<!-- واتساب عائم -->
+<a href="https://wa.me/966501940155" class="whatsapp-float" target="_blank">
+<img src="https://i.ibb.co/RGSrb7bw/13.png" alt="واتساب">
+</a>
+
+<script>
+function toggleMenu(e){
+    e.classList.toggle('active');
+    const nav = document.querySelector('header nav');
+    if(nav.style.display === "flex"){nav.style.display="none";}
+    else{nav.style.display="flex"; nav.style.flexDirection="column";}
+}
+
+function openTab(evt, tabName){
+    let i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for(i=0;i<tabcontent.length;i++){tabcontent[i].classList.remove("active");}
+    tablinks = document.getElementsByClassName("tab-btn");
+    for(i=0;i<tablinks.length;i++){tablinks[i].classList.remove("active");}
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
+
+</body>
+</html>

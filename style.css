@@ -1,0 +1,156 @@
+:root {
+    --primary-dark: #16757b;
+    --primary: #1db4bd;
+    --primary-mid: #137c82;
+    --primary-light: #039b9e;
+    --primary-accent: #00a9ac;
+    --bg-white: #f8fdfa;
+    --bg-blur: rgba(255,255,255,0.9);
+    --text-dark: #2c3e50;
+    --text-gray: #5d6d7e;
+    --shadow: 0 10px 30px rgba(22, 117, 123, 0.08);
+}
+
+* { box-sizing: border-box; margin:0; padding:0; scroll-behavior:smooth; outline:none; }
+body { font-family:'Tajawal', sans-serif; background-color: var(--bg-white); color: var(--text-dark); line-height:1.6; }
+
+/* --- الهيدر --- */
+header {
+    position: sticky; top:0; width:100%; z-index:1000;
+    background: var(--bg-blur); backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(0,0,0,0.05); padding:15px 0;
+}
+.container { width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
+.header-content { display:flex; justify-content: space-between; align-items:center; }
+.header {
+    /* إضافة مسافة من اليسار */
+    padding-left: 20px;
+}
+
+.logo {
+    /* إضافة مسافة من اليمين للشعار */
+    margin-right: 20px;
+}
+
+.logo img { height:50px; display:block; margin:0 auto; }
+nav ul { display:flex; list-style:none; gap:20px; }
+nav a { text-decoration:none; color: var(--primary-dark); font-weight:700; font-size:1rem; }
+
+/* زر قائمة الهاتف */
+.menu-toggle { display:none; cursor:pointer; font-size:1.5rem; color: var(--primary-dark); }
+.menu-toggle span { display:block; width:25px; height:3px; margin:5px 0; background: var(--primary-dark); border-radius:2px; }
+
+nav { transition:0.3s; }
+nav ul { flex-direction: row; }
+nav ul li { text-align:right; }
+
+/* --- محتوى المقال --- */
+.article-content {
+    padding: 120px 0 60px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.article-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--primary-dark);
+}
+.article-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--primary-mid);
+}
+.article-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: var(--shadow);
+}
+
+/* --- الأزرار --- */
+.whatsapp-button, .back-home {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 10px 10px 10px 0;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-size: 200% auto;
+}
+
+.whatsapp-button {
+    background-image: linear-gradient(to right, #25D366, #128C7E, #25D366);
+}
+
+.back-home {
+    background-image: linear-gradient(to right, var(--primary), var(--primary-dark), var(--primary));
+}
+
+.whatsapp-button:hover, .back-home:hover {
+    background-position: right center;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+/* --- الفوتر --- */
+footer {
+    background: #f0fcff;
+    padding: 60px 0;
+    border-top: 1px solid #eee;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.section-title {
+    text-align:center;
+    font-size: 2.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+}
+.contact-form input, .contact-form textarea { width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px; font-family:inherit; }
+.btn-main  {
+    background: linear-gradient(90deg, #16757b, #1db4bd, #137c82, #039b9e, #00a9ac);
+    color:#fff;
+    padding:12px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+    font-size:1rem;
+    display:inline-block;
+    margin-top:15px;
+    transition:0.3s;
+}
+.btn-main:hover {
+    filter: brightness(110%);
+}
+
+/* --- واتساب عائم --- */
+.whatsapp-float { position:fixed; bottom:30px; left:30px; width:70px; height:70px; display:flex; align-items:center; justify-content:center; z-index:999; animation:bounce 2s infinite; }
+.whatsapp-float img { width:40px; height:40px; }
+
+@keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
+@keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+
+
+@media (max-width:768px) {
+    .menu-toggle { display:block; }
+    nav { display:none; position: absolute; top: 70px; right: 0; background: #fff; width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    nav.active { display: block; }
+    nav ul { flex-direction: column; padding: 20px; }
+    nav ul li { text-align: right; margin-bottom: 10px; }
+
+    .article-content { padding-top: 100px; }
+}
