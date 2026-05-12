@@ -3,906 +3,1311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="ازهلها لخدمات التجارة الالكترونية - تصميم متاجر سلة وزد، توثيق حسابات، تفعيل تابي وتمارا، وحلول تسويق رقمي متكاملة.">
-<title>ازهلها | باقات التصميم والخدمات المتكاملة</title>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
-
-<!-- إضافة Favicon -->
-<link rel="icon" type="image/png" href="images/logo.webp">
-
+<title>ازهلها — تصميم متاجر إلكترونية تبيع</title>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
+:root{
+  --ink:#05080A;
+  --ink2:#0D1416;
+  --gold:#C8993A;
+  --gold2:#E8C06A;
+  --gold-pale:#F5E9CC;
+  --teal:#1B9EA5;
+  --teal2:#5AC8CE;
+  --cream:#F6F1E9;
+  --white:#FDFAF5;
+  --muted:#8A9EA0;
+  --border:rgba(200,153,58,0.18);
+  --border2:rgba(255,255,255,0.07);
+  --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;background:var(--ink);color:var(--white);overflow-x:hidden;cursor:default}
+::selection{background:var(--gold);color:var(--ink)}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--gold)}
 
-    
-:root {
-    --primary-dark: #16757b;
-    --primary: #1db4bd;
-    --primary-mid: #137c82;
-    --primary-light: #039b9e;
-    --primary-accent: #00a9ac;
-    --bg-white: #f8fdfa;
-    --bg-blur: rgba(255,255,255,0.9);
-    --text-dark: #2c3e50;
-    --text-gray: #5d6d7e;
-    --shadow: 0 10px 30px rgba(22, 117, 123, 0.08);
+/* ── CURSOR ── */
+.cursor{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transition:transform .15s,width .3s,height .3s;mix-blend-mode:exclusion}
+.cursor-ring{width:32px;height:32px;border:1px solid rgba(200,153,58,.5);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transition:transform .4s cubic-bezier(.23,1,.32,1),width .3s,height .3s;mix-blend-mode:exclusion}
+
+/* ── NOISE TEXTURE ── */
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:1;opacity:.4;
 }
 
-* { box-sizing: border-box; margin:0; padding:0; scroll-behavior:smooth; outline:none; }
-body { font-family:'Tajawal', sans-serif; background-color: var(--bg-white); color: var(--text-dark); line-height:1.6; }
+/* ── HEADER ── */
+header{
+  position:fixed;top:0;width:100%;z-index:100;
+  padding:22px 5%;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:all .4s;
+}
+header.scrolled{
+  background:rgba(5,8,10,.88);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--border2);
+  padding:16px 5%;
+}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo-mark{
+  width:38px;height:38px;
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:900;color:var(--ink);
+  letter-spacing:-1px;
+}
+.logo-name{font-size:1.15rem;font-weight:900;color:var(--white)}
+.logo-dot{color:var(--gold)}
+nav{display:flex;align-items:center;gap:6px}
+nav a{
+  color:rgba(255,255,255,.55);text-decoration:none;
+  font-size:.85rem;font-weight:600;
+  padding:8px 14px;border-radius:8px;
+  transition:all .25s;
+}
+nav a:hover{color:var(--white)}
+.nav-btn{
+  background:var(--gold);color:var(--ink) !important;
+  padding:9px 20px !important;border-radius:10px;
+  font-weight:800 !important;
+  transition:all .25s !important;
+}
+.nav-btn:hover{background:var(--gold2);transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--white);border-radius:2px;transition:.3s}
 
-/* --- الهيدر --- */
-header {
-    position: fixed; top:0; width:100%; z-index:1000;
-    background: var(--bg-blur); backdrop-filter: blur(10px);
-    border-bottom:1px solid rgba(0,0,0,0.05); 
-    padding: 15px 0; /* التباعد العمودي فقط (أعلى وأسفل) */
+/* ── HERO ── */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  padding:140px 5% 80px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg-ring{
+  position:absolute;
+  width:900px;height:900px;
+  border:1px solid rgba(200,153,58,.06);
+  border-radius:50%;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.hero-bg-ring::before{
+  content:'';
+  position:absolute;inset:-140px;
+  border:1px solid rgba(200,153,58,.04);
+  border-radius:50%;
+}
+.hero-bg-ring::after{
+  content:'';
+  position:absolute;inset:140px;
+  border:1px solid rgba(200,153,58,.08);
+  border-radius:50%;
+}
+.hero-label{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--border);
+  padding:7px 18px;border-radius:50px;
+  font-size:.75rem;font-weight:700;color:var(--gold);
+  letter-spacing:.8px;text-transform:uppercase;
+  margin-bottom:32px;
+  animation:fadeUp .8s ease both;
+}
+.hero-label-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;animation:pulse 2s ease infinite}
+h1.hero-h{
+  font-size:clamp(3rem,7.5vw,7rem);
+  font-weight:900;
+  line-height:1.05;
+  letter-spacing:-2px;
+  margin-bottom:28px;
+  animation:fadeUp .9s .1s ease both;
+}
+h1.hero-h em{
+  font-style:normal;
+  background:linear-gradient(90deg,var(--gold2) 0%,var(--gold) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-sub{
+  font-size:1.1rem;color:rgba(255,255,255,.5);
+  max-width:520px;line-height:1.8;
+  margin:0 auto 48px;
+  animation:fadeUp .9s .2s ease both;
+}
+.hero-ctas{
+  display:flex;gap:14px;justify-content:center;flex-wrap:wrap;
+  animation:fadeUp .9s .3s ease both;
+  margin-bottom:80px;
+}
+.btn-gold{
+  background:var(--gold);color:var(--ink);
+  text-decoration:none;
+  padding:16px 36px;border-radius:12px;
+  font-weight:800;font-size:1rem;
+  display:flex;align-items:center;gap:8px;
+  transition:all .3s;
+}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-ghost{
+  border:1px solid rgba(255,255,255,.15);
+  color:rgba(255,255,255,.7);text-decoration:none;
+  padding:16px 30px;border-radius:12px;
+  font-weight:700;font-size:.95rem;
+  transition:all .3s;
+}
+.btn-ghost:hover{border-color:rgba(255,255,255,.35);color:var(--white);transform:translateY(-2px)}
+
+/* hero stats */
+.hero-stats{
+  display:flex;gap:60px;justify-content:center;
+  animation:fadeUp 1s .45s ease both;
+}
+.stat{text-align:center}
+.stat-n{font-size:2.8rem;font-weight:900;color:var(--white);letter-spacing:-2px;line-height:1}
+.stat-l{font-size:.72rem;color:var(--muted);margin-top:6px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.stat-sep{width:1px;background:rgba(255,255,255,.08);align-self:stretch}
+
+/* ── MARQUEE TICKER ── */
+.ticker-wrap{
+  width:100%;overflow:hidden;
+  border-top:1px solid var(--border2);
+  border-bottom:1px solid var(--border2);
+  background:rgba(200,153,58,.04);
+  padding:14px 0;
+  white-space:nowrap;
+  position:relative;
+}
+.ticker{
+  display:inline-flex;gap:60px;
+  animation:ticker 22s linear infinite;
+}
+.ticker-item{
+  font-size:.82rem;font-weight:700;color:var(--muted);
+  display:flex;align-items:center;gap:10px;
+  text-transform:uppercase;letter-spacing:.5px;
+}
+.ticker-dot{color:var(--gold);font-size:1.1rem}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── SECTION COMMON ── */
+.sec{padding:110px 5%;position:relative}
+.sec-inner{max-width:1280px;margin:0 auto}
+.tag{
+  display:inline-flex;align-items:center;gap:7px;
+  border:1px solid var(--border);
+  padding:5px 14px;border-radius:50px;
+  font-size:.72rem;font-weight:700;color:var(--gold);
+  letter-spacing:.8px;text-transform:uppercase;
+  margin-bottom:20px;
+}
+.tag-dot{width:5px;height:5px;background:var(--gold);border-radius:50%}
+h2.sh{font-size:clamp(2rem,4vw,3.6rem);font-weight:900;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px}
+h2.sh span{color:var(--gold)}
+.sub{font-size:1rem;color:rgba(255,255,255,.45);line-height:1.8;max-width:520px}
+
+/* ── WORK / PORTFOLIO (first section) ── */
+.work-section{background:var(--ink);padding-top:100px}
+.work-header{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  margin-bottom:60px;
+  flex-wrap:wrap;gap:20px;
+}
+.work-header-left{}
+.work-see-all{
+  color:var(--gold);text-decoration:none;
+  font-size:.85rem;font-weight:700;
+  display:flex;align-items:center;gap:6px;
+  border-bottom:1px solid rgba(200,153,58,.3);
+  padding-bottom:2px;
+  transition:gap .25s;
+}
+.work-see-all:hover{gap:12px}
+
+/* PRO showcase strip */
+.pro-badge-strip{
+  display:flex;align-items:center;gap:12px;
+  background:linear-gradient(90deg,rgba(200,153,58,.12),rgba(200,153,58,.04));
+  border:1px solid rgba(200,153,58,.2);
+  border-radius:12px;
+  padding:14px 22px;
+  margin-bottom:36px;
+}
+.pro-badge-strip-icon{font-size:1.4rem}
+.pro-badge-strip-text{font-size:.9rem;color:var(--gold2);font-weight:700}
+.pro-badge-strip-sub{font-size:.8rem;color:rgba(255,255,255,.4);margin-top:2px}
+
+/* Filter */
+.work-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:40px}
+.wf-btn{
+  padding:8px 18px;border-radius:8px;
+  border:1px solid rgba(255,255,255,.1);
+  background:none;color:rgba(255,255,255,.45);
+  font-family:inherit;font-weight:700;font-size:.8rem;
+  cursor:pointer;transition:all .25s;
+  letter-spacing:.3px;
+}
+.wf-btn.on{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.wf-btn:hover:not(.on){border-color:rgba(200,153,58,.4);color:rgba(255,255,255,.8)}
+
+/* GRID */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.work-card{
+  position:relative;overflow:hidden;
+  aspect-ratio:3/4;
+  cursor:pointer;
+}
+/* Make first card large */
+.work-card.hero-card{grid-column:span 2;aspect-ratio:16/9}
+.work-card img{
+  width:100%;height:100%;object-fit:cover;object-position:top;
+  transition:transform .6s cubic-bezier(.23,1,.32,1);display:block;
+}
+.work-card:hover img{transform:scale(1.05)}
+.work-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(5,8,10,.9) 0%,transparent 55%);
+  transition:opacity .4s;
+}
+.work-card:hover .work-overlay{opacity:.7}
+.work-meta{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:20px 22px;
+}
+.wm-badges{display:flex;gap:6px;margin-bottom:10px}
+.badge-pro{
+  background:var(--gold);color:var(--ink);
+  padding:3px 10px;border-radius:5px;
+  font-size:.68rem;font-weight:800;letter-spacing:.4px;
+}
+.badge-plus{
+  background:var(--teal);color:var(--white);
+  padding:3px 10px;border-radius:5px;
+  font-size:.68rem;font-weight:800;
+}
+.badge-plat{
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(6px);
+  color:rgba(255,255,255,.8);
+  border:1px solid rgba(255,255,255,.15);
+  padding:3px 10px;border-radius:5px;
+  font-size:.65rem;font-weight:700;
+}
+.wm-title{font-size:.95rem;font-weight:800;color:var(--white);margin-bottom:3px}
+.wm-cat{font-size:.72rem;color:rgba(255,255,255,.45);font-weight:600}
+.work-hover-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);
+  background:var(--gold);color:var(--ink);
+  padding:10px 22px;border-radius:8px;
+  font-weight:800;font-size:.82rem;
+  opacity:0;transition:all .35s;
+  pointer-events:none;
+  white-space:nowrap;
+}
+.work-card:hover .work-hover-btn{opacity:1;transform:translate(-50%,-50%)}
+
+/* ── LIGHTBOX ── */
+#lb{
+  display:none;position:fixed;inset:0;
+  background:rgba(5,8,10,.95);z-index:5000;
+  align-items:center;justify-content:center;
+  backdrop-filter:blur(20px);
+}
+#lb.on{display:flex}
+.lb-box{
+  max-width:420px;width:90%;
+  max-height:88vh;overflow-y:auto;
+  border-radius:20px;
+  position:relative;
+}
+.lb-box img{width:100%;display:block;border-radius:20px}
+.lb-close{
+  position:fixed;top:24px;right:28px;
+  width:42px;height:42px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.06);
+  color:var(--white);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;transition:.2s;
+  backdrop-filter:blur(10px);
+}
+.lb-close:hover{background:rgba(255,255,255,.15)}
+
+/* ── PRO PACKAGE SECTION ── */
+.pro-section{
+  background:linear-gradient(160deg,#060B0C 0%,#0B1C1E 60%,#071011 100%);
+  position:relative;overflow:hidden;
+}
+.pro-section::before{
+  content:'PRO';
+  position:absolute;
+  font-size:28vw;font-weight:900;
+  color:rgba(200,153,58,.025);
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+  letter-spacing:-20px;
+  white-space:nowrap;
+}
+.pro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+.pro-left{}
+.pro-left .sub{color:rgba(255,255,255,.5)}
+.pro-price-tag{
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(200,153,58,.1);
+  border:1px solid rgba(200,153,58,.25);
+  border-radius:12px;
+  padding:10px 20px;
+  margin:30px 0 40px;
+}
+.pro-price-tag span:first-child{font-size:.75rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.6px}
+.pro-price-tag span:last-child{font-size:.85rem;color:rgba(255,255,255,.5);font-weight:600}
+.pro-features{display:flex;flex-direction:column;gap:12px}
+.pf-item{
+  display:flex;align-items:flex-start;gap:12px;
+  padding:14px 18px;border-radius:10px;
+  border:1px solid rgba(255,255,255,.04);
+  background:rgba(255,255,255,.02);
+  transition:all .3s;
+}
+.pf-item:hover{border-color:rgba(200,153,58,.15);background:rgba(200,153,58,.04)}
+.pf-check{
+  width:20px;height:20px;border-radius:6px;flex-shrink:0;
+  background:rgba(200,153,58,.15);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--gold);font-size:.7rem;margin-top:1px;
+}
+.pf-text{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.5}
+.pf-text strong{color:var(--gold2);font-weight:700}
+.pro-cta-wrap{margin-top:40px;display:flex;gap:14px;flex-wrap:wrap}
+
+/* RIGHT — platform tabs */
+.pro-right{}
+.platform-tabs{
+  display:flex;gap:0;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;padding:4px;
+  margin-bottom:28px;
+  width:fit-content;
+}
+.pt-tab{
+  padding:10px 22px;border:none;background:none;
+  color:rgba(255,255,255,.4);
+  font-family:inherit;font-weight:700;font-size:.9rem;
+  cursor:pointer;border-radius:9px;transition:all .3s;
+}
+.pt-tab.on{background:var(--gold);color:var(--ink)}
+
+/* Preview card */
+.preview-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:18px;overflow:hidden;
+}
+.preview-header{
+  padding:18px 20px;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:center;gap:10px;
+}
+.preview-dots{display:flex;gap:6px}
+.pd{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.1)}
+.pd:first-child{background:#FF5F57}
+.pd:nth-child(2){background:#FEBC2E}
+.pd:last-child{background:#28C840}
+.preview-url{
+  flex:1;background:rgba(255,255,255,.04);border-radius:6px;
+  padding:5px 12px;font-size:.7rem;color:rgba(255,255,255,.25);
+  font-weight:600;text-align:center;
+}
+.preview-screenshots{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+}
+.preview-screenshots img{
+  width:100%;height:200px;object-fit:cover;object-position:top;
+  display:block;transition:transform .4s;cursor:pointer;
+}
+.preview-screenshots img:hover{transform:scale(1.03)}
+.preview-platform-label{
+  padding:14px 20px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.ppl-name{font-size:.78rem;font-weight:800;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:.6px}
+.ppl-link{
+  color:var(--gold);font-size:.78rem;font-weight:700;
+  text-decoration:none;display:flex;align-items:center;gap:5px;
 }
 
-/* --- الحاوية الداخلية (المسؤول عن التباعد الجانبي) --- */
-.container { 
-    width:90%; 
-    max-width:1200px; 
-    margin:0 auto; 
-    /* 15px على اليمين واليسار للجوال والشاشات الصغيرة */
-    padding:0 15px; 
+/* ── PLUS PACKAGE ── */
+.plus-section{background:var(--ink2)}
+.plus-wrap{
+  background:var(--cream);
+  border-radius:28px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;
 }
-
-/* --- محتوى الهيدر --- */
-.header-content { 
-    display:flex; 
-    justify-content: space-between; 
-    align-items:center; 
-    /* 💡 إضافة تباعد احتياطي إذا لم يتم استخدام .container */
-    padding-left: 15px;
-    padding-right: 15px;
+.plus-left{
+  padding:60px;
+  background:linear-gradient(135deg,#F6F1E9,#EDE4D2);
 }
-
-.logo img { height:50px; }
-nav ul { display:flex; list-style:none; gap:20px; }
-nav a { text-decoration:none; color: var(--primary-dark); font-weight:700; font-size:1rem; }
-/* زر قائمة الهاتف */
-.menu-toggle { display:none; cursor:pointer; font-size:1.5rem; color: var(--primary-dark); }
-.menu-toggle span { display:block; width:25px; height:3px; margin:5px 0; background: var(--primary-dark); border-radius:2px; }
-
-nav { transition:0.3s; }
-nav ul { flex-direction: row; }
-nav ul li { text-align:right; }
-
-/* --- الهيرو --- */
-.hero { padding-top:120px; text-align:center; padding-bottom:60px; background: radial-gradient(circle, #e0f7fa 0%, #fff 70%); }
-.hero h1 { font-size:3rem; color: var(--primary-dark); margin-bottom:20px; }
-.hero p { max-width:700px; margin:0 auto 30px; font-size:1.2rem; color:#666; }
-
-/* --- معرض الأعمال --- */
-.portfolio-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; margin-bottom:60px; }
-.project-card { background:#fff; border-radius:15px; overflow:hidden; box-shadow: var(--shadow); transition:0.3s; }
-.project-card:hover { transform: translateY(-5px); }
-.project-frame { height:250px; overflow:hidden; display:flex; align-items:center; justify-content:center; }
-.project-frame img { max-width:100%;  object-fit:contain; }
-.project-info { padding:15px; text-align:center; border-top:1px solid #eee; font-weight:500; }
-
-/* --- تبويبات الخدمات --- */
-.tabs-container { background:#fff; border-radius:20px; box-shadow:var(--shadow); overflow:hidden; margin-bottom:60px; }
-.tabs-header { display:flex; background:#f0fcff; border-bottom:1px solid #ddd; overflow-x:auto; }
-.tab-btn { flex:1; padding:20px; border:none; background:none; font-family:inherit; font-weight:bold; font-size:1.1rem; color: var(--text-gray); cursor:pointer; transition:0.3s; min-width:150px; }
-.tab-btn.active { background:#fff; color: var(--primary-dark); border-bottom:4px solid var(--primary); }
-.tab-content { display:none; padding:40px; animation: fadeIn 0.5s; }
-.tab-content.active { display:block; }
-.packages-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
-.package-card { border:1px solid #eee; border-radius:10px; padding:20px; text-align:center; transition:0.3s; }
-.package-card:hover { border-color: var(--primary); box-shadow:0 5px 15px rgba(0,0,0,0.05); }
-.pkg-title { color: var(--primary); font-size:1.4rem; margin-bottom:10px; }
-.pkg-features { list-style:none; text-align:right; margin-top:15px; }
-.pkg-features li { margin-bottom:8px; font-size:0.9rem; color:#555; }
-.pkg-features li::before { content:'•'; color: var(--primary); margin-left:5px; font-size:1.2rem; }
-
-/* --- قسم شركاؤنا --- */
-.partners { display:flex; justify-content:center; flex-wrap:wrap; gap:30px; margin-bottom:60px; }
-.partners img { height:60px; transition:0.3s; }
-.partners img:hover { transform:scale(1.1); }
-
-/* --- قسم المدونة --- */
-.blog-section { background:#f9fdfd; padding:60px 0; border-top:1px solid #eee; }
-.seo-links-container { column-count:2; column-gap:40px; }
-.seo-category { break-inside: avoid; margin-bottom:30px; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.03); }
-.seo-category h4 { color: var(--primary-dark); margin-bottom:15px; border-right:4px solid var(--primary); padding-right:10px; }
-.seo-category ul { list-style:none; }
-.seo-category li { margin-bottom:8px; }
-.seo-category a { text-decoration:none; color:#666; font-size:0.9rem; transition:0.2s; display:block; }
-.seo-category a:hover { color: var(--primary); transform:translateX(-5px); }
-
-/* --- نموذج الاتصال --- */
-.btn-main { background: var(--primary-dark); color:#fff; padding:12px 30px; border-radius:50px; text-decoration:none; border:none; cursor:pointer; font-size:1rem; display:inline-block; margin-top:15px; transition:0.3s; }
-.btn-main:hover { background: var(--primary-mid); }
-.contact-form input, .contact-form textarea { width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px; font-family:inherit; }
-
-/* --- واتساب عائم --- */
-.whatsapp-float { position:fixed; bottom:30px; left:30px; width:70px; height:70px; display:flex; align-items:center; justify-content:center; z-index:999; animation:bounce 2s infinite; }
-.whatsapp-float img { width:40px; height:40px; }
-@keyframes fadeIn { from {opacity:0; transform:translateY(10px);} to {opacity:1; transform:translateY(0);} }
-@keyframes bounce { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
-
-@media (max-width:768px) {
-    .seo-links-container { column-count:1; }
-    .tabs-header { flex-direction:column; }
-    .tab-btn { text-align:right; border-bottom:1px solid #eee; }
-    nav { display:none; }
-    .menu-toggle { display:block; }
+.plus-left .tag{border-color:rgba(22,117,123,.3);color:var(--teal)}
+.plus-left .tag-dot{background:var(--teal)}
+.plus-left h2{color:var(--ink);font-size:clamp(1.8rem,3vw,2.8rem);letter-spacing:-1px;margin-bottom:12px}
+.plus-left .sub{color:rgba(5,8,10,.5)}
+.plus-features-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  margin:30px 0 36px;
 }
-
-/* --- ألوان الموقع المدمجة للخطوط والعناوين --- */
-h1, h2, h3, h4, h5, h6, p,  span, li {
-    background: linear-gradient(90deg, #16757b, #1db4bd, #137c82, #039b9e, #00a9ac);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.plf{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.6);
+  border:1px solid rgba(22,117,123,.1);
+  border-radius:10px;padding:10px 14px;
+  font-size:.82rem;font-weight:700;color:var(--ink);
 }
-/* --- ألوان الموقع المدمجة للزر --- */
-.btn-main  { background: linear-gradient(90deg, #16757b, #1db4bd, #137c82, #039b9e, #00a9ac);}
-.blog-section {
-  margin-top: 50px;
-  padding: 30px 0;
+.plf-icon{color:var(--teal);font-size:1rem}
+.btn-teal{
+  background:var(--teal);color:var(--white);
+  text-decoration:none;
+  padding:15px 30px;border-radius:12px;
+  font-weight:800;font-size:.95rem;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all .3s;
 }
-
-.blog-section .section-title {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
+.btn-teal:hover{background:#15878E;transform:translateY(-2px)}
+.plus-right{
+  display:grid;grid-template-rows:1fr 1fr;gap:2px;
+  overflow:hidden;
 }
+.plus-right img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .5s}
+.plus-right img:hover{transform:scale(1.03)}
 
-.seo-links-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: space-between;
+/* ── COMPARE ── */
+.compare-section{background:var(--ink)}
+.compare-table{
+  background:rgba(255,255,255,.02);
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:20px;overflow:hidden;
+  margin-top:50px;
 }
-
-.articles-category {
-  flex: 1 1 300px;
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+.ct-header{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;
+  background:rgba(255,255,255,.03);
+  border-bottom:1px solid rgba(255,255,255,.06);
 }
-
-.articles-category h3 {
-  margin-bottom: 15px;
-  font-size: 1.5rem;
-  color: #16757b;
+.ct-col{padding:22px 24px;text-align:center}
+.ct-col:first-child{text-align:right;padding-right:30px}
+.ct-col-name{font-size:1rem;font-weight:800;color:var(--white)}
+.ct-col-sub{font-size:.72rem;color:var(--muted);margin-top:3px}
+.ct-pro-badge{
+  display:inline-block;
+  background:rgba(200,153,58,.15);border:1px solid rgba(200,153,58,.3);
+  color:var(--gold);padding:3px 12px;border-radius:50px;
+  font-size:.68rem;font-weight:700;margin-bottom:8px;
 }
-
-.articles-category ul {
-  list-style: none;
-  padding: 0;
+.ct-row{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;
+  border-top:1px solid rgba(255,255,255,.04);
+  transition:background .2s;
 }
+.ct-row:hover{background:rgba(200,153,58,.03)}
+.ct-cell{padding:15px 24px;font-size:.85rem}
+.ct-cell:first-child{padding-right:30px;color:rgba(255,255,255,.65);font-weight:600}
+.ct-cell:not(:first-child){text-align:center}
+.ct-yes{color:var(--gold);font-size:1rem}
+.ct-no{color:rgba(255,255,255,.15);font-size:1rem}
+.ct-val{color:var(--gold2);font-weight:700;font-size:.82rem}
 
-.articles-category ul li {
-  margin-bottom: 10px;
+/* ── SERVICES ── */
+.srv-section{background:var(--ink2)}
+.srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:50px}
+.srv-card{
+  padding:28px 24px;
+  border:1px solid rgba(255,255,255,.06);
+  border-radius:16px;background:rgba(255,255,255,.02);
+  transition:all .35s;cursor:pointer;
 }
-
-.articles-category ul li a {
-  color: #1db4bd;
-  text-decoration: none;
-  transition: color 0.3s;
+.srv-card:hover{
+  background:rgba(200,153,58,.05);
+  border-color:rgba(200,153,58,.2);
+  transform:translateY(-4px);
 }
-
-.articles-category ul li a:hover {
-  color: #137c82;
-  text-decoration: underline;
+.srv-ic{
+  width:48px;height:48px;border-radius:12px;
+  background:rgba(200,153,58,.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.3rem;margin-bottom:16px;
 }
-
-/* زر واتساب مطابق لهوية الموقع */
-.whatsapp-btn {
-    background: linear-gradient(135deg, #28b5a2, #1e9c89);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 12px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 15px;
-    text-align: center;
-    transition: 0.25s ease;
-    box-shadow: 0 3px 10px rgba(40,181,162,0.25);
+.srv-title{font-size:.95rem;font-weight:800;color:var(--white);margin-bottom:8px}
+.srv-desc{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.7}
+.srv-cta{
+  display:inline-flex;align-items:center;gap:5px;
+  color:var(--gold);font-size:.78rem;font-weight:700;
+  text-decoration:none;margin-top:14px;transition:gap .2s;
 }
+.srv-cta:hover{gap:10px}
 
-.whatsapp-btn:hover {
-    background: linear-gradient(135deg, #1e9c89, #28b5a2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(40, 181, 162, 0.35);
+/* ── PARTNERS ── */
+.partners-section{background:var(--ink);padding:70px 5%}
+.partners-inner{max-width:1000px;margin:0 auto;text-align:center}
+.partners-label{font-size:.72rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:36px}
+.partners-row{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+.partner-chip{
+  padding:16px 32px;border-radius:12px;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(255,255,255,.02);
+  transition:all .3s;
 }
-
-.whatsapp-btn:active {
-    transform: scale(0.97);
+.partner-chip:hover{
+  border-color:rgba(200,153,58,.2);
+  background:rgba(200,153,58,.04);
+  transform:translateY(-3px);
 }
+.partner-chip img{height:36px;filter:brightness(0) invert(1);opacity:.4;transition:.3s;display:block}
+.partner-chip:hover img{opacity:.8}
 
-/* نص الزر */
-.whatsapp-btn span {
-    color: white !important;
+/* ── CONTACT ── */
+.contact-section{
+  background:linear-gradient(135deg,#06100F 0%,#0B1C1E 100%);
+  padding:110px 5%;
 }
-
-
-.package-btn {
-    background: linear-gradient(135deg, #28b5a2, #1e9c89);
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 12px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 15px;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none; /* مهم للروابط */
-    box-shadow: 0 3px 10px rgba(40,181,162,0.25);
-    transition: 0.25s ease;
+.contact-inner{max-width:700px;margin:0 auto;text-align:center}
+.contact-inner .sub{margin:0 auto 50px;color:rgba(255,255,255,.45)}
+.cf{text-align:right}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.cf-field input,.cf-field textarea{
+  width:100%;padding:14px 18px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:11px;color:var(--white);
+  font-family:inherit;font-size:.9rem;
+  transition:all .3s;outline:none;
 }
-
-.package-btn:hover {
-    background: linear-gradient(135deg, #1e9c89, #28b5a2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(40, 181, 162, 0.35);
+.cf-field input::placeholder,.cf-field textarea::placeholder{color:rgba(255,255,255,.25)}
+.cf-field input:focus,.cf-field textarea:focus{
+  border-color:rgba(200,153,58,.4);
+  background:rgba(200,153,58,.05);
+  box-shadow:0 0 0 3px rgba(200,153,58,.08);
 }
-
-.package-btn:active {
-    transform: scale(0.97);
+.cf-field{margin-bottom:14px}
+.cf-field textarea{min-height:120px;resize:vertical}
+.btn-submit{
+  width:100%;padding:16px;
+  background:var(--gold);border:none;border-radius:12px;
+  color:var(--ink);font-family:inherit;font-size:1rem;font-weight:900;
+  cursor:pointer;transition:all .3s;margin-top:4px;
+  letter-spacing:.3px;
 }
+.btn-submit:hover{background:var(--gold2);transform:translateY(-2px)}
+.wa-cta{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  margin-top:20px;padding:14px 24px;
+  border:1px solid rgba(37,211,102,.25);
+  border-radius:12px;text-decoration:none;
+  color:#4ade80;font-weight:700;font-size:.9rem;
+  transition:all .3s;
+}
+.wa-cta:hover{background:rgba(37,211,102,.08);transform:translateY(-2px)}
 
+/* ── FOOTER ── */
+footer{
+  background:#030709;
+  border-top:1px solid rgba(255,255,255,.05);
+  padding:60px 5% 28px;
+}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-top{
+  display:grid;grid-template-columns:1.6fr 1fr 1fr;
+  gap:50px;margin-bottom:50px;
+}
+.footer-brand-desc{font-size:.83rem;color:rgba(255,255,255,.3);line-height:1.8;margin-top:16px}
+.footer-col h4{font-size:.8rem;font-weight:800;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.8px;margin-bottom:18px}
+.footer-col a{
+  display:block;text-decoration:none;
+  color:rgba(255,255,255,.3);font-size:.83rem;
+  margin-bottom:9px;transition:color .2s;
+}
+.footer-col a:hover{color:var(--gold)}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.05);
+  padding-top:22px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+}
+.footer-copy{font-size:.75rem;color:rgba(255,255,255,.2)}
+.social-row{display:flex;gap:8px}
+.social-btn{
+  width:34px;height:34px;border-radius:8px;
+  border:1px solid rgba(255,255,255,.07);
+  background:rgba(255,255,255,.03);
+  color:rgba(255,255,255,.3);
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;font-size:.8rem;
+  transition:all .25s;
+}
+.social-btn:hover{border-color:rgba(200,153,58,.3);color:var(--gold)}
+
+/* ── WA FLOAT ── */
+.wa-float{
+  position:fixed;bottom:28px;left:28px;z-index:200;
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,#25D366,#128C5E);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;text-decoration:none;
+  box-shadow:0 6px 24px rgba(37,211,102,.35);
+  animation:waPulse 2.5s ease infinite;
+  transition:transform .2s;
+}
+.wa-float:hover{transform:scale(1.1)}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:100px;right:28px;z-index:9000;
+  background:linear-gradient(135deg,#0B1C1E,#1B9EA5);
+  color:var(--white);padding:13px 22px;border-radius:10px;
+  font-weight:700;font-size:.85rem;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+  opacity:0;transform:translateY(10px);
+  transition:all .4s;pointer-events:none;
+}
+.toast.on{opacity:1;transform:translateY(0)}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(28px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes pulse{
+  0%,100%{opacity:1;transform:scale(1)}
+  50%{opacity:.5;transform:scale(.7)}
+}
+@keyframes waPulse{
+  0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.25)}
+  50%{box-shadow:0 6px 24px rgba(37,211,102,.35),0 0 0 12px rgba(37,211,102,0)}
+}
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+/* ── MOBILE NAV ── */
+@media(max-width:900px){
+  .pro-grid{grid-template-columns:1fr}
+  .work-grid{grid-template-columns:1fr 1fr}
+  .work-card.hero-card{grid-column:span 2;aspect-ratio:4/3}
+  .srv-grid{grid-template-columns:1fr 1fr}
+  .plus-wrap{grid-template-columns:1fr}
+  .plus-right{display:none}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+  nav:not(.mob-open){display:none}
+  nav.mob-open{
+    display:flex;flex-direction:column;
+    position:absolute;top:72px;right:0;left:0;
+    background:rgba(5,8,10,.97);
+    padding:16px 5%;border-top:1px solid var(--border2);
+    gap:4px;
+  }
+  .hamburger{display:flex}
+  h1.hero-h{letter-spacing:-1px}
+  .hero-stats{gap:28px}
+  .stat-sep{display:none}
+  .work-grid{grid-template-columns:1fr}
+  .work-card.hero-card{grid-column:span 1;aspect-ratio:4/3}
+  .compare-section{display:none}
+  .srv-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr;gap:28px}
+  .plus-features-grid{grid-template-columns:1fr}
+  .cf-row{grid-template-columns:1fr}
+  .hero-stats{flex-direction:column;gap:16px}
+}
 </style>
 </head>
 <body>
 
-<header>
-    <div class="header-content">
-        <div class="logo"><img src="images/logo.webp" alt="ازهلها"></div>
-        <div class="menu-toggle" onclick="toggleMenu(this)"><span></span><span></span><span></span></div>
-        <nav>
-            <ul>
-                <li><a href="#hero">الرئيسية</a></li>
-                <li><a href="#services-tabs">الباقات والخدمات</a></li>
-                <li><a href="#portfolio">أعمالنا</a></li>
-                <li><a href="#partners">شركاؤنا</a></li>
-                <li><a href="#blog">المدونة</a></li>
-                <li><a href="articles.html">مقالات</a></li>
-            </ul>
-        </nav>
+<div class="cursor" id="cr"></div>
+<div class="cursor-ring" id="crr"></div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <a href="#" class="logo">
+    <div class="logo-mark">ا</div>
+    <div>
+      <div class="logo-name">ازهلها<span class="logo-dot">.</span></div>
     </div>
+  </a>
+  <div class="hamburger" onclick="toggleNav()" id="ham"><span></span><span></span><span></span></div>
+  <nav id="nav">
+    <a href="#work">أعمالنا</a>
+    <a href="#pro">باقة برو</a>
+    <a href="#services">الخدمات</a>
+    <a href="#contact" class="nav-btn">ابدأ الآن →</a>
+  </nav>
 </header>
 
-<section id="hero" class="hero">
-    <div class="container">
-        <img src="images/logo.webp" style="width:150px; margin-bottom:20px;">
-        <h1>ازهلها لخدمات التجارة الإلكترونية</h1>
-        <p>شريكك المتكامل: تصميم متاجر، توثيق حسابات، حلول دفع، وتسويق احترافي.</p>
-        <a href="#contact" class="btn-main">ابدأ مشروعك الآن</a>
-    </div>
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg-ring"></div>
+  <div class="hero-label"><span class="hero-label-dot"></span>الشريك الأول للتجارة الإلكترونية</div>
+  <h1 class="hero-h">متجرك يستحق<br><em>تصميماً يبيع</em></h1>
+  <p class="hero-sub">نبني متاجر على سلة وزد تحوّل الزوار إلى عملاء — تصميم احترافي، هوية بصرية، وتقنيات تسويق متكاملة.</p>
+  <div class="hero-ctas">
+    <a href="#work" class="btn-gold">شاهد أعمالنا ↓</a>
+    <a href="#pro" class="btn-ghost">اكتشف باقة برو</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-n">+50</div><div class="stat-l">متجر مُسلَّم</div></div>
+    <div class="stat-sep"></div>
+    <div class="stat"><div class="stat-n">100%</div><div class="stat-l">رضا العملاء</div></div>
+    <div class="stat-sep"></div>
+    <div class="stat"><div class="stat-n">3 أيام</div><div class="stat-l">متوسط التسليم</div></div>
+  </div>
 </section>
 
-<section id="portfolio" class="container">
-    <h2 class="section-title">معرض الأعمال</h2>
-    <div class="portfolio-grid">
-        
-
-
-<!-- متجر عسل نورة -->
-
-<div class="project-card" onclick="openLightbox('images/asl_noura_plus.webp')">
-            <div class="project-frame">
-                <img src="images/asl_noura_plus.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر عسل نورة — باقة بلس — منصة سلة</h3></div>
-        </div>
-
-<!-- متجر سمبوسة البلد -->
-
-<div class="project-card" onclick="openLightbox('images/sanbosaalbalad_pro.webp')">
-            <div class="project-frame">
-                <img src="images/sanbosaalbalad_pro.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر سمبوسة البلد — باقة برو — منصة سلة</h3></div>
-        </div>
-
-<!-- العمل 8 -->
-
-<div class="project-card" onclick="openLightbox('images/mtger_abk1.webp')">
-            <div class="project-frame">
-                <img src="images/mtger_abk1.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر عبايات — باقة برو — منصة سلة</h3></div>
-        </div>
-
-<!--  1   --> 
-
-<div class="project-card" onclick="openLightbox('images/darlisa_pro.webp')">
-            <div class="project-frame">
-                <img src="images/darlisa_pro.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر دار — باقة برو — منصة سلة</h3></div>
-        </div>
-
-<!--  11   --> 
-
-        <div class="project-card" onclick="openLightbox('images/LEDER.webp')">
-            <div class="project-frame">
-                <img src="images/LEDER.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر نمو اللحيه ليدر بالجسم — باقة برو — منصة سلة</h3></div>
-        </div>
-
-        <!-- العمل 12 -->
-        <div class="project-card" onclick="openLightbox('images/mtger_anaia3.webp')">
-            <div class="project-frame">
-                <img src="images/mtger_anaia3.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر منتجات العناية بالجسم — باقة برو — منصة سلة</h3></div>
-        </div>
-
-        <!-- العمل 2 -->
-
-        <div class="project-card" onclick="openLightbox('images/matger_abaia4.webp')">
-            <div class="project-frame">
-                <img src="images/matger_abaia4.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر عبايات وجلابيات — باقة بلس — سلة</h3></div>
-        </div>
-
-        <!-- العمل 3 -->
-
-        <div class="project-card" onclick="openLightbox('images/matgeranaia_2bni.webp')">
-            <div class="project-frame">
-                <img src="images/matgeranaia_2bni.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر منتجات عناية — منصة سلة — تصميم باقة برو</h3></div>
-        </div>
-
-        <!-- العمل 4 -->
-
-        <div class="project-card" onclick="openLightbox('images/swartyp_zid.webp')">
-            <div class="project-frame">
-                <img src="images/swartyp_zid.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>Siwar Altyeb (سوار الطيب) متجر عود منصة زد</h3></div>
-        </div>
-
-        <!-- العمل 5 -->
-
-        <div class="project-card" onclick="openLightbox('images/sarok_salla.webp')">
-            <div class="project-frame">
-                <img src="images/sarok_salla.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>Shirwak Altayib (شروق الطيب) متجر عود سلة باقة برو</h3></div>
-        </div>
-
-        <!-- العمل 6 -->
-
-        <div class="project-card" onclick="openLightbox('images/coffepro.webp')">
-            <div class="project-frame">
-                <img src="images/coffepro.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>Roast Master متجر قهوة باقة برو سلة</h3></div>
-        </div>
-
-        <!-- العمل 7 -->
-        
-        <div class="project-card" onclick="openLightbox('images/rivna.webp')">
-            <div class="project-frame">
-                <img src="images/rivna.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>Rivna متجر عسل باقة برو سلة</h3></div>
-        </div>
-
-<!-- العمل 8 -->
-
-        <div class="project-card" onclick="openLightbox('images/fstinplus.webp')">
-            <div class="project-frame">
-                <img src="images/fstinplus.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر عنق فساتين باقة بلس سله   </h3></div>
-        </div>
-
-        <!-- العمل 9 -->
-
-        <div class="project-card" onclick="openLightbox('images/dressefaya_pro.webp')">
-            <div class="project-frame">
-                <img src="images/dressefaya_pro.webp" loading="lazy">
-            </div>
-            <div class="project-info"><h3>متجر فساتين Dresse Faya — باقة برو — منصة سلة</h3></div>
-        </div>
-    </div>
-</section>
-
-
-<!-- Lightbox -->
-<div id="lightbox" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:9999;">
-    <span onclick="closeLightbox()" style="position:absolute; top:20px; right:30px; font-size:2rem; color:#fff; cursor:pointer;">&times;</span>
-    <div style="width:360px; height:640px; background:#fff; overflow-y:auto; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.5);">
-        <img id="lightbox-img" src="" style="width:100%; display:block;">
-    </div>
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" id="tickerInner">
+    <span class="ticker-item"><span class="ticker-dot">✦</span> تصميم سلة احترافي</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> باقة برو الشاملة</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> SEO متقدم + Analytics</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> تفعيل تابي & تمارا</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> هوية بصرية كاملة</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> تصميم زد احترافي</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> بكسلات سناب & تيك توك</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> توثيق منصة الأعمال</span>
+    <!-- duplicated for infinite effect -->
+    <span class="ticker-item"><span class="ticker-dot">✦</span> تصميم سلة احترافي</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> باقة برو الشاملة</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> SEO متقدم + Analytics</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> تفعيل تابي & تمارا</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> هوية بصرية كاملة</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> تصميم زد احترافي</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> بكسلات سناب & تيك توك</span>
+    <span class="ticker-item"><span class="ticker-dot">✦</span> توثيق منصة الأعمال</span>
+  </div>
 </div>
 
-<style>
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة ثابتة */
-  gap: 25px;
-}
-
-
-.project-card {
-  cursor: pointer;
-}
-
-.project-frame {
-  width: 100%;           /* عرض كامل للكرت */
-  height: 350px;         /* ارتفاع ثابت للكرت */
-  overflow-y: auto;      /* يسمح بالتمرير إذا الصورة طويلة */
-  border-radius: 15px;
-  border: 1px solid #eee;
-  background: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* الصورة تبدأ من الأعلى */
-  padding: 5px;          /* مسافة بسيطة داخل الكرت */
-}
-
-.project-frame img {
-  width: 100%;           /* عرض كامل للكرت */
-  height: auto;          /* يحافظ على النسبة */
-  display: block;
-}
-
-.project-frame img:hover {
-  transform: scale(1.05);
-}
-
-.project-info {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.portfolio-grid { /* تأكد أن هذا الاسم يطابق HTML */
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 أعمدة ثابتة */
-  gap: 25px;
-}
-
-@media (max-width: 992px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 عمود على التابلت */
-  }
-}
-
-@media (max-width: 576px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr; /* عمود واحد على الموبايل */
-  }
-}
-
-
-</style>
-
-<script>
-function openLightbox(src){
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox').style.display = 'flex';
-}
-function closeLightbox(){
-    document.getElementById('lightbox').style.display = 'none';
-    document.getElementById('lightbox-img').src = '';
-}
-</script>
-
-
-
-<section id="services-tabs" class="container">
-<h2 class="section-title">خدماتنا وباقاتنا التفصيلية</h2>
-
-<div class="tabs-container">
-    <div class="tabs-header">
-        <button class="tab-btn active" onclick="openTab(event,'design')">تصميم المتاجر</button>
-        <button class="tab-btn" onclick="openTab(event,'manage')">إدارة وتسويق</button>
-        <button class="tab-btn" onclick="openTab(event,'verify')">التوثيق والبنوك</button>
-        <button class="tab-btn" onclick="openTab(event,'payment')">المدفوعات</button>
-        <button class="tab-btn" onclick="openTab(event,'basic')">الخدمات الأساسية</button>
+<!-- WORK / PORTFOLIO — FIRST -->
+<section class="work-section sec" id="work">
+  <div class="sec-inner">
+    <div class="work-header">
+      <div class="work-header-left">
+        <div class="tag"><span class="tag-dot"></span>معرض الأعمال</div>
+        <h2 class="sh">متاجر صمّمناها<br><span>بفخر واحتراف</span></h2>
+      </div>
+      <a href="#contact" class="work-see-all">ابدأ مشروعك ←</a>
     </div>
 
-  <div id="design" class="tab-content active">
-    <div class="packages-grid">
-
-        <!-- 🔵 باقة بلس -->
-        <div class="package-card">
-            <h3 class="pkg-title">باقة بلس</h3>
-            <ul class="pkg-features">
-                <li>باقة تصميم المتجر – متجر احترافي جاهز للانطلاق</li>
-                <li>باقة متكاملة تشمل كل ما تحتاجه لتأسيس متجرك الإلكتروني بشكل احترافي وجذاب...</li>
-                <li>إنشاء المتجر وضبط الإعدادات الأساسية</li>
-                <li>تصميم واجهة المتجر والصفحات الداخلية</li>
-                <li>تصميم حتى 3 بنرات رئيسية احترافية</li>
-                <li>تفعيل وسائل الدفع (مدى – أبل باي – تحويل بنكي وغيرها)</li>
-                <li>إعداد الشحن (سمسا أو الخيار الأنسب لمتجرك)</li>
-                <li>إنشاء الصفحات القانونية (سياسة الخصوصية – الاستبدال والاسترجاع)</li>
-            </ul>
-
-            <!-- زر باقة بلس -->
-<a href="https://ezhalhe.com/XeWEPGb" target="_blank" class="package-btn">
-    اريد تصميم باقة بلس
-</a>
-        </div> <!-- إغلاق باقة بلس -->
-
-        <!-- 🔵 باقة برو -->
-        <div class="package-card">
-            <h3 class="pkg-title">باقة برو</h3>
-            <ul class="pkg-features">
-                <li>🚀 خدمة تصميم وإنشاء متجر إلكتروني احترافي جاهز للانطلاق</li>
-                <li>توثيق المتجر في منصة الأعمال السعودية</li>
-                <li>تصميم 6 بنرات احترافية</li>
-                <li>تصميم شعار احترافي</li>
-                <li>تحسين تجربة المستخدم</li>
-                <li>إضافة أقسام رئيسية في الهيدر</li>
-                <li>قسم المنتجات الجديدة</li>
-                <li>ترتيب المنتجات بشكل احترافي</li>
-                <li>ربط Google Analytics</li>
-                <li>تفعيل واتساب</li>
-                <li>إضافة 35 منتجًا باحترافية</li>
-                <li>برمجة CSS احترافية</li>
-                <li>تحسين SEO متقدم</li>
-                <li>ربط Search Console</li>
-                <li>تفعيل بكسل سناب وتيك توك</li>
-                <li>🌐 حجز دومين .com</li>
-            </ul>
-
-            <a href="https://ezhalhe.com/qQZeYvQ" target="_blank" class="package-btn">
-    اريد تصميم باقة برو
-</a>
-        </div> <!-- إغلاق باقة برو -->
-
-    </div> <!-- إغلاق packages-grid -->
-</div> <!-- إغلاق design -->
-
-
-    <div id="manage" class="tab-content">
-        <h3>إدارة المتاجر وحسابات التواصل</h3>
-        <p>نستلم عنك التشغيل لتركز على النمو:</p>
-        <ul class="pkg-features"><li>إدارة متجر وحسابات التواصل الاجتماعي لمدة شهر كامل.</li><li>باقة حملات إعلانية: إعداد وإطلاق الحملات على (سناب، تيك توك، انستقرام).</li><li>ربط بكسلات التحويل بدقة لرصد المبيعات.</li><li>كتابة محتوى إبداعي للمنشورات والمنتجات.</li></ul>
+    <!-- PRO BADGE STRIP -->
+    <div class="pro-badge-strip reveal">
+      <div class="pro-badge-strip-icon">👑</div>
+      <div>
+        <div class="pro-badge-strip-text">التصاميم التالية هي أعمال باقة PRO الاحترافية الكاملة</div>
+        <div class="pro-badge-strip-sub">تصميم هوية + واجهة + تسويق + SEO + بكسلات + 35 منتج</div>
+      </div>
     </div>
 
-    <div id="verify" class="tab-content">
-        <h3>خدمات التوثيق الرسمية</h3>
-        <ul class="pkg-features"><li>فتح حساب بنكي تجاري في: بنك الراجحي، بنك الإنماء</li><li>توثيق المتجر في منصة سلة وزد</li><li>استخراج وثيقة العمل الحر</li><li>توثيق منصة الأعمال</li></ul>
+    <!-- FILTER -->
+    <div class="work-filter">
+      <button class="wf-btn on" onclick="filterWork('all',this)">الكل</button>
+      <button class="wf-btn" onclick="filterWork('pro',this)">👑 باقة برو</button>
+      <button class="wf-btn" onclick="filterWork('plus',this)">✦ باقة بلس</button>
+      <button class="wf-btn" onclick="filterWork('salla',this)">منصة سلة</button>
+      <button class="wf-btn" onclick="filterWork('zid',this)">منصة زد</button>
     </div>
 
-    <div id="payment" class="tab-content">
-        <h3>حلول المدفوعات والتقسيط</h3>
-        <ul class="pkg-features"><li>التسجيل في بوابات الدفع: ميس، مدفوع، إمكان</li><li>تفعيل خدمات التقسيط للأعمال: تابي، تمارا</li><li>تفعيل Apple Pay و STC Pay</li></ul>
-    </div>
+    <!-- GRID -->
+    <div class="work-grid" id="workGrid">
 
-    <div id="basic" class="tab-content">
-        <h3>الخدمات التقنية والأساسية</h3>
-        <ul class="pkg-features" style="display:grid; grid-template-columns:1fr 1fr; gap:10px;">
-            <li>تحسين محركات البحث (SEO)</li>
-            <li>إضافة زر واتساب العائم</li>
-            <li>ربط بكسلات (تيك توك، سناب، فيسبوك، انستاغرام)</li>
-            <li>برمجة وتعديل CSS</li>
-            <li>حجز وربط الدومين</li>
-            <li>تفعيل Google Merchant Center</li>
-            <li>ربط Google Analytics 4</li>
-            <li>إنشاء صفحة Linktree</li>
-            <li>تدريب شامل على منصة سلة</li>
-        </ul>
+      <!-- HERO CARD: عسل نورة -->
+      <div class="work-card hero-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/asl_noura_plus.webp')">
+        <img src="images/asl_noura_plus.webp" alt="متجر عسل نورة" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">متجر عسل نورة</div>
+          <div class="wm-cat">منتجات طبيعية</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- سمبوسة البلد -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/sanbosaalbalad_pro.webp')">
+        <img src="images/sanbosaalbalad_pro.webp" alt="سمبوسة البلد" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">سمبوسة البلد</div>
+          <div class="wm-cat">أغذية ومطبخ</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- عبايات -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/mtger_abk1.webp')">
+        <img src="images/mtger_abk1.webp" alt="متجر عبايات" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">متجر عبايات</div>
+          <div class="wm-cat">أزياء نسائية</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- دار -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/darlisa_pro.webp')">
+        <img src="images/darlisa_pro.webp" alt="متجر دار" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">متجر دار</div>
+          <div class="wm-cat">أثاث ومفروشات</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- ليدر -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/LEDER.webp')">
+        <img src="images/LEDER.webp" alt="ليدر" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">متجر ليدر</div>
+          <div class="wm-cat">عناية بالجسم</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- منتجات عناية -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/mtger_anaia3.webp')">
+        <img src="images/mtger_anaia3.webp" alt="منتجات العناية" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">منتجات العناية</div>
+          <div class="wm-cat">تجميل وعناية</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- سوار الطيب ZID -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="zid" onclick="openLb('images/swartyp_zid.webp')">
+        <img src="images/swartyp_zid.webp" alt="سوار الطيب" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">زد</span></div>
+          <div class="wm-title">Siwar Altyeb</div>
+          <div class="wm-cat">عطور وعود</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- شروق الطيب -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/sarok_salla.webp')">
+        <img src="images/sarok_salla.webp" alt="شروق الطيب" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">Shirwak Altayib</div>
+          <div class="wm-cat">عطور وعود</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- Roast Master -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/coffepro.webp')">
+        <img src="images/coffepro.webp" alt="Roast Master" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">Roast Master</div>
+          <div class="wm-cat">قهوة مختصة</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- Rivna -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/rivna.webp')">
+        <img src="images/rivna.webp" alt="Rivna" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">Rivna</div>
+          <div class="wm-cat">عسل طبيعي</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- Dresse Faya -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/dressefaya_pro.webp')">
+        <img src="images/dressefaya_pro.webp" alt="Dresse Faya" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">Dresse Faya</div>
+          <div class="wm-cat">أزياء راقية</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- عبايات وجلابيات PLUS -->
+      <div class="work-card reveal" data-pkg="plus" data-plat="salla" onclick="openLb('images/matger_abaia4.webp')">
+        <img src="images/matger_abaia4.webp" alt="عبايات وجلابيات" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-plus">✦ PLUS</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">عبايات وجلابيات</div>
+          <div class="wm-cat">أزياء نسائية</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- فساتين PLUS -->
+      <div class="work-card reveal" data-pkg="plus" data-plat="salla" onclick="openLb('images/fstinplus.webp')">
+        <img src="images/fstinplus.webp" alt="متجر فساتين" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-plus">✦ PLUS</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">متجر عنق فساتين</div>
+          <div class="wm-cat">أزياء نسائية</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
+      <!-- عناية 2bni -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/matgeranaia_2bni.webp')">
+        <img src="images/matgeranaia_2bni.webp" alt="عناية" loading="lazy">
+        <div class="work-overlay"></div>
+        <div class="work-meta">
+          <div class="wm-badges"><span class="badge-pro">👑 PRO</span><span class="badge-plat">سلة</span></div>
+          <div class="wm-title">متجر منتجات عناية</div>
+          <div class="wm-cat">عناية وتجميل</div>
+        </div>
+        <div class="work-hover-btn">عرض التصميم ↗</div>
+      </div>
+
     </div>
-</div>
+  </div>
 </section>
 
-<section id="partners" class="container">
-<h2 class="section-title">شركاؤنا</h2>
-<div class="partners">
-<img src="images/salla.webp" alt="Partner">
-<img src="images/shopify.webp" alt="Partner">
-<img src="images/wordpress.webp" alt="Partner">
-<img src="images/zid.webp" alt="Partner">
+<!-- LIGHTBOX -->
+<div id="lb" onclick="closeLb()">
+  <button class="lb-close" onclick="closeLb()">✕</button>
+  <div class="lb-box" onclick="event.stopPropagation()">
+    <img id="lbImg" src="" alt="">
+  </div>
 </div>
+
+<!-- PRO PACKAGE -->
+<section class="pro-section sec" id="pro">
+  <div class="sec-inner">
+    <div class="pro-grid">
+      <div class="pro-left reveal">
+        <div class="tag"><span class="tag-dot"></span>الباقة الاحترافية الكاملة</div>
+        <h2 class="sh">باقة <span>PRO</span><br>كل شيء في مكان واحد</h2>
+        <p class="sub">الحل الأمثل لمن يريد متجراً ينافس الكبار — من التوثيق حتى التسويق، نتولى كل شيء.</p>
+        <div class="pro-price-tag">
+          <span>🛡️ ضمان رضا كامل</span>
+          <span>|</span>
+          <span>تسليم خلال 3-5 أيام</span>
+        </div>
+        <div class="pro-features">
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">توثيق المتجر في <strong>منصة الأعمال السعودية</strong></span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">تصميم شعار احترافي <strong>(Logo)</strong> بالهوية البصرية كاملة</span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">تصميم <strong>6 بنرات احترافية</strong> عالية الجودة</span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">تخصيص واجهة المتجر + <strong>برمجة CSS مخصصة</strong></span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">إضافة <strong>35 منتجاً</strong> بصورة وتوضيح احترافي</span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">تحسين <strong>SEO متقدم</strong> + ربط Google Search Console</span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">ربط <strong>Google Analytics 4</strong> كامل</span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">تفعيل <strong>بكسل سناب شات + تيك توك</strong></span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">تفعيل وسائل الدفع + إعداد الشحن الكامل</span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">حجز وربط <strong>دومين .com</strong></span></div>
+          <div class="pf-item"><span class="pf-check">✓</span><span class="pf-text">زر واتساب عائم + صفحات قانونية كاملة</span></div>
+        </div>
+        <div class="pro-cta-wrap">
+          <a href="https://ezhalhe.com/qQZeYvQ" target="_blank" class="btn-gold">اطلب باقة سلة PRO ←</a>
+          <a href="https://wa.me/966501940155?text=أريد باقة برو على منصة زد" target="_blank" class="btn-ghost">باقة زد PRO</a>
+        </div>
+      </div>
+
+      <div class="pro-right reveal">
+        <div class="platform-tabs">
+          <button class="pt-tab on" onclick="switchPlatform('salla',this)">🛒 سلة</button>
+          <button class="pt-tab" onclick="switchPlatform('zid',this)">⚡ زد</button>
+        </div>
+
+        <div id="pt-salla" class="preview-card">
+          <div class="preview-header">
+            <div class="preview-dots"><div class="pd"></div><div class="pd"></div><div class="pd"></div></div>
+            <div class="preview-url">salla.sa / متجرك</div>
+          </div>
+          <div class="preview-screenshots">
+            <img src="images/coffepro.webp" alt="تصميم سلة 1" onclick="openLb('images/coffepro.webp')">
+            <img src="images/darlisa_pro.webp" alt="تصميم سلة 2" onclick="openLb('images/darlisa_pro.webp')">
+            <img src="images/LEDER.webp" alt="تصميم سلة 3" onclick="openLb('images/LEDER.webp')">
+            <img src="images/rivna.webp" alt="تصميم سلة 4" onclick="openLb('images/rivna.webp')">
+          </div>
+          <div class="preview-platform-label">
+            <span class="ppl-name">أعمال سلة PRO</span>
+            <a href="#work" class="ppl-link">شاهد الكل ↓</a>
+          </div>
+        </div>
+
+        <div id="pt-zid" class="preview-card" style="display:none">
+          <div class="preview-header">
+            <div class="preview-dots"><div class="pd"></div><div class="pd"></div><div class="pd"></div></div>
+            <div class="preview-url">zid.sa / متجرك</div>
+          </div>
+          <div class="preview-screenshots">
+            <img src="images/swartyp_zid.webp" alt="تصميم زد" onclick="openLb('images/swartyp_zid.webp')">
+            <img src="images/sarok_salla.webp" alt="تصميم زد 2" onclick="openLb('images/sarok_salla.webp')">
+            <img src="images/dressefaya_pro.webp" alt="تصميم زد 3" onclick="openLb('images/dressefaya_pro.webp')">
+            <img src="images/mtger_anaia3.webp" alt="تصميم زد 4" onclick="openLb('images/mtger_anaia3.webp')">
+          </div>
+          <div class="preview-platform-label">
+            <span class="ppl-name">أعمال زد PRO</span>
+            <a href="#work" class="ppl-link">شاهد الكل ↓</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact" style="background:#f0fcff; padding:60px 0;">
-  <div class="container" style="max-width:600px;">
-    <h2 class="section-title">تواصل معنا</h2>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="الاسم الكامل" required>
-      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-      <textarea name="message" rows="5" placeholder="رسالتك" required></textarea>
-      <button class="btn-main" type="submit">إرسال الرسالة</button>
+<!-- PLUS PACKAGE -->
+<section class="plus-section sec" id="plus">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:40px;" class="reveal">
+      <div class="tag" style="border-color:rgba(27,158,165,.25);color:var(--teal);"><span class="tag-dot" style="background:var(--teal)"></span>للانطلاق السريع</div>
+      <h2 class="sh">باقة <span style="color:var(--teal)">PLUS</span></h2>
+      <p class="sub" style="margin:0 auto">ابدأ قوياً بمتجر أنيق جاهز للبيع في أيام.</p>
+    </div>
+    <div class="plus-wrap reveal">
+      <div class="plus-left">
+        <div class="tag" style="border-color:rgba(27,158,165,.25);color:var(--teal);margin-bottom:16px"><span class="tag-dot" style="background:var(--teal)"></span>ما تحصل عليه</div>
+        <h2 style="font-size:1.9rem;font-weight:900;color:var(--ink);letter-spacing:-1px;margin-bottom:12px">كل ما تحتاجه<br>للانطلاق فوراً</h2>
+        <p style="font-size:.88rem;color:rgba(5,8,10,.55);line-height:1.8;margin-bottom:24px">مثالية لمن يريد متجراً احترافياً بتسليم سريع — تصميم أنيق، دفع نشط، وإعداد كامل.</p>
+        <div class="plus-features-grid">
+          <div class="plf"><span class="plf-icon">✓</span> إنشاء المتجر</div>
+          <div class="plf"><span class="plf-icon">✓</span> 3 بنرات احترافية</div>
+          <div class="plf"><span class="plf-icon">✓</span> تصميم الواجهة</div>
+          <div class="plf"><span class="plf-icon">✓</span> وسائل الدفع</div>
+          <div class="plf"><span class="plf-icon">✓</span> إعداد الشحن</div>
+          <div class="plf"><span class="plf-icon">✓</span> الصفحات القانونية</div>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a href="https://ezhalhe.com/XeWEPGb" target="_blank" class="btn-teal">اطلب باقة بلس ←</a>
+          <a href="#pro" style="padding:14px 22px;border-radius:12px;border:1.5px solid rgba(5,8,10,.15);color:rgba(5,8,10,.6);text-decoration:none;font-weight:700;font-size:.88rem;display:inline-flex;align-items:center;transition:all .3s" onmouseover="this.style.borderColor='var(--teal)';this.style.color='var(--teal)'" onmouseout="this.style.borderColor='rgba(5,8,10,.15)';this.style.color='rgba(5,8,10,.6)'">قارن مع برو</a>
+        </div>
+      </div>
+      <div class="plus-right">
+        <img src="images/matger_abaia4.webp" alt="تصميم بلس 1">
+        <img src="images/fstinplus.webp" alt="تصميم بلس 2">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARE TABLE -->
+<section class="compare-section sec" id="compare">
+  <div class="sec-inner">
+    <div style="text-align:center;margin-bottom:0" class="reveal">
+      <div class="tag"><span class="tag-dot"></span>مقارنة الباقتين</div>
+      <h2 class="sh">بلس أم <span>برو</span>؟</h2>
+    </div>
+    <div class="compare-table reveal">
+      <div class="ct-header">
+        <div class="ct-col"><span style="font-size:.78rem;color:var(--muted);font-weight:700">الميزة</span></div>
+        <div class="ct-col"><div class="ct-col-name">PLUS</div><div class="ct-col-sub">للانطلاق السريع</div></div>
+        <div class="ct-col"><div class="ct-pro-badge">⭐ الأفضل</div><div class="ct-col-name">PRO</div><div class="ct-col-sub">الحل الاحترافي الكامل</div></div>
+      </div>
+      <div class="ct-row"><div class="ct-cell">توثيق منصة الأعمال</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-yes">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">عدد البنرات الاحترافية</div><div class="ct-cell"><span class="ct-val">3 بنرات</span></div><div class="ct-cell"><span class="ct-val">6 بنرات</span></div></div>
+      <div class="ct-row"><div class="ct-cell">تصميم شعار (Logo)</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-yes">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">برمجة CSS مخصصة</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-yes">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">إضافة المنتجات</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-val">35 منتجاً</span></div></div>
+      <div class="ct-row"><div class="ct-cell">تحسين SEO متقدم</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-yes">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">Google Analytics 4</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-yes">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">بكسل سناب + تيك توك</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-yes">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">حجز دومين .com</div><div class="ct-cell"><span class="ct-no">✗</span></div><div class="ct-cell"><span class="ct-yes">✓</span></div></div>
+      <div class="ct-row" style="border-bottom:none">
+        <div class="ct-cell"></div>
+        <div class="ct-cell" style="padding:18px 12px"><a href="https://ezhalhe.com/XeWEPGb" target="_blank" style="display:inline-block;background:var(--teal);color:white;padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none">اطلب بلس</a></div>
+        <div class="ct-cell" style="padding:18px 12px"><a href="https://ezhalhe.com/qQZeYvQ" target="_blank" style="display:inline-block;background:var(--gold);color:var(--ink);padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none">اطلب برو ←</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="srv-section sec" id="services">
+  <div class="sec-inner">
+    <div class="tag reveal"><span class="tag-dot"></span>خدمات إضافية</div>
+    <h2 class="sh reveal">كل ما يكمل <span>متجرك</span></h2>
+    <p class="sub reveal" style="margin-bottom:0">من التوثيق إلى التسويق — نرافقك في كل خطوة.</p>
+    <div class="srv-grid">
+      <div class="srv-card reveal"><div class="srv-ic">🏦</div><div class="srv-title">فتح حساب بنكي تجاري</div><div class="srv-desc">نساعدك في فتح حسابك التجاري في الراجحي أو الإنماء بسلاسة تامة.</div><a href="https://wa.me/966501940155?text=أريد المساعدة في فتح حساب بنكي" class="srv-cta" target="_blank">استفسر الآن →</a></div>
+      <div class="srv-card reveal"><div class="srv-ic">📋</div><div class="srv-title">التوثيق الرسمي</div><div class="srv-desc">توثيق في سلة وزد، منصة الأعمال، ووثيقة العمل الحر.</div><a href="https://wa.me/966501940155?text=أريد المساعدة في التوثيق" class="srv-cta" target="_blank">استفسر الآن →</a></div>
+      <div class="srv-card reveal"><div class="srv-ic">💳</div><div class="srv-title">تفعيل تابي & تمارا</div><div class="srv-desc">نفعّل الدفع الآجل لزيادة متوسط قيمة الطلب وتحسين التحويل.</div><a href="https://wa.me/966501940155?text=أريد تفعيل تابي وتمارا" class="srv-cta" target="_blank">استفسر الآن →</a></div>
+      <div class="srv-card reveal"><div class="srv-ic">🎯</div><div class="srv-title">إدارة الحملات الإعلانية</div><div class="srv-desc">حملات سناب، تيك توك وإنستقرام مع ربط بكسلات التحويل.</div><a href="https://wa.me/966501940155?text=أريد إدارة حملات إعلانية" class="srv-cta" target="_blank">استفسر الآن →</a></div>
+      <div class="srv-card reveal"><div class="srv-ic">📱</div><div class="srv-title">إدارة المتجر والسوشيال</div><div class="srv-desc">محتوى، طلبات، وتواصل مع العملاء — ندير كل شيء عنك.</div><a href="https://wa.me/966501940155?text=أريد إدارة متجري" class="srv-cta" target="_blank">استفسر الآن →</a></div>
+      <div class="srv-card reveal"><div class="srv-ic">⚙️</div><div class="srv-title">الخدمات التقنية</div><div class="srv-desc">SEO، Analytics، بكسلات، دومين، Google Merchant وتدريب المنصات.</div><a href="https://wa.me/966501940155?text=أريد خدمات تقنية" class="srv-cta" target="_blank">استفسر الآن →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners-section">
+  <div class="partners-inner">
+    <div class="partners-label">منصاتنا الشريكة</div>
+    <div class="partners-row">
+      <div class="partner-chip"><img src="images/salla.webp" alt="سلة"></div>
+      <div class="partner-chip"><img src="images/zid.webp" alt="زد"></div>
+      <div class="partner-chip"><img src="images/shopify.webp" alt="Shopify"></div>
+      <div class="partner-chip"><img src="images/wordpress.webp" alt="WordPress"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="tag" style="margin:0 auto 16px"><span class="tag-dot"></span>ابدأ اليوم</div>
+    <h2 class="sh" style="margin-bottom:14px">جاهز لمتجرك<br><span>الاحترافي؟</span></h2>
+    <p class="sub" style="color:rgba(255,255,255,.45);margin:0 auto 44px">أرسل لنا رسالتك وسنتواصل معك خلال ساعات.</p>
+    <form class="cf" id="cf">
+      <div class="cf-row">
+        <div class="cf-field"><input type="text" name="name" placeholder="الاسم الكامل" required></div>
+        <div class="cf-field"><input type="email" name="email" placeholder="البريد الإلكتروني" required></div>
+      </div>
+      <div class="cf-field"><textarea name="message" placeholder="أخبرنا عن متجرك وما تحتاجه..." required></textarea></div>
+      <button class="btn-submit" type="submit">إرسال الرسالة ✈</button>
     </form>
+    <a href="https://wa.me/966501940155" target="_blank" class="wa-cta">
+      💬 تحدث معنا مباشرة على واتساب
+    </a>
   </div>
 </section>
 
-<script>
-document.querySelector('.contact-form').addEventListener('submit', async function(e) {
-  e.preventDefault(); // منع إعادة تحميل الصفحة
-  const name = this.name.value;
-  const email = this.email.value;
-  const message = this.message.value;
-
-  // نص الرسالة للبوت
-  const Y = `
-🌐 *الصفحة:* ${window.location.href}
-👤 *الاسم:* ${name}
-📧 *البريد الإلكتروني:* ${email}
-✉️ *الرسالة:* ${message}
-  `.trim();
-
-  try {
-    await fetch("https://api.telegram.org/bot8312551518:AAH7zIVAW0QkmPrhaQGsDaUJSrl6fg9TvgM/sendMessage", {
-      method: "POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({
-        chat_id: "6795507850",
-        text: Y,
-        parse_mode: "Markdown"
-      })
-    });
-    alert("تم إرسال رسالتك بنجاح ✅");
-    this.reset(); // إعادة تعيين النموذج
-  } catch (err) {
-    console.error("Error:", err);
-    alert("حدث خطأ أثناء الإرسال، حاول مرة أخرى ❌");
-  }
-});
-</script>
-
-<!-- فوتر الموقع -->
-<footer style=" background: linear-gradient(
-    135deg,
-    #f0fcff,
-    #f8fefe,
-    #ebeceb,
-    #f8fdfa,
-    #fdfcfe,
-    #ecf9f8
-  ); color:white; padding:60px 20px; font-family:Arial, sans-serif;">
-  <div class="container" style="max-width:1200px; margin:auto; display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;">
-    
-    <!-- قسم عن الموقع -->
-    <div style="flex:1; min-width:200px;">
-      <h3 style="font-size:20px; margin-bottom:20px; color:#ffffff;">عن الموقع</h3>
-      <p>منصة مختصة بتصميم وتطوير المتاجر الإلكترونية، نقدم محتوى تعليمي ومقالات مفيدة تساعدك على تطوير مشروعك بثقة.</p>
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:16px;display:inline-flex"><div class="logo-mark">ا</div><div><div class="logo-name">ازهلها<span class="logo-dot">.</span></div></div></a>
+        <p class="footer-brand-desc">شريكك المتكامل في بناء وتطوير متجرك الإلكتروني على سلة وزد — من التصميم حتى النجاح.</p>
+      </div>
+      <div class="footer-col">
+        <h4>روابط</h4>
+        <a href="#work">معرض الأعمال</a>
+        <a href="#pro">باقة برو</a>
+        <a href="#plus">باقة بلس</a>
+        <a href="#services">الخدمات</a>
+      </div>
+      <div class="footer-col">
+        <h4>تواصل</h4>
+        <a href="https://wa.me/966501940155" target="_blank">📱 +966501940155</a>
+        <a href="mailto:mr.leith9999@gmail.com">✉ mr.leith9999@gmail.com</a>
+        <a href="#">📍 الرياض، السعودية</a>
+      </div>
     </div>
-
-   
-
-    <!-- قسم التواصل -->
-    <div style="flex:1; min-width:200px;">
-      <h3 style="font-size:20px; margin-bottom:20px; color:#ffffff;">تواصل معنا</h3>
-      <p>
-  <a href="https://wa.me/966501940155" target="_blank" style="color:white; text-decoration:none; font-weight:bold;">
-    اتصل بنا الآن 📞
-  </a>
-</p>
-
-      <p>✉️ <a href="mailto:mr.leith9999@gmail.com" style="color:white; text-decoration:none;">mr.leith9999@gmail.com</a></p>
-      <p>📍 الرياض، السعودية</p>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 ازهلها · جميع الحقوق محفوظة</div>
+      <div class="social-row">
+        <a class="social-btn" href="https://wa.me/966501940155" target="_blank">💬</a>
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">🎵</a>
+      </div>
     </div>
-
-  </div>
-
-  <div style="text-align:center; margin-top:40px; border-top:1px solid rgba(255,255,255,0.2); padding-top:20px; font-size:14px; color:rgba(6, 105, 112, 0.7);">
-    © 2025 ezhalhe. جميع الحقوق محفوظة.
   </div>
 </footer>
 
+<!-- WA FLOAT -->
+<a href="https://wa.me/966501940155" class="wa-float" target="_blank">💬</a>
 
-<!-- واتساب عائم -->
-<a href="https://wa.me/966501940155" class="whatsapp-float" target="_blank">
-<img src="images/whatsapp.webp" alt="واتساب">
-</a>
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
 
 <script>
-document.querySelectorAll(".whatsapp-btn").forEach(btn => {
-    btn.addEventListener("click", function() {
-        let message = this.getAttribute("data-package");
-        let phone = "966501940155"; // ضع رقمك هنا
-        let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-        window.open(url, "_blank");
-    });
+// Custom cursor
+const cr=document.getElementById('cr'),crr=document.getElementById('crr');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cr.style.transform=`translate(${mx-4}px,${my-4}px)`;});
+(function loop(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;crr.style.transform=`translate(${rx-16}px,${ry-16}px)`;requestAnimationFrame(loop)})();
+document.querySelectorAll('a,button,.work-card').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cr.style.width='12px';cr.style.height='12px';crr.style.width='48px';crr.style.height='48px'});
+  el.addEventListener('mouseleave',()=>{cr.style.width='8px';cr.style.height='8px';crr.style.width='32px';crr.style.height='32px'});
 });
-function toggleMenu(e){
-    e.classList.toggle('active');
-    const nav = document.querySelector('header nav');
-    if(nav.style.display === "flex"){nav.style.display="none";}
-    else{nav.style.display="flex"; nav.style.flexDirection="column";}
+
+// Header scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('hdr').classList.toggle('scrolled',window.scrollY>40);
+});
+
+// Nav toggle
+function toggleNav(){document.getElementById('nav').classList.toggle('mob-open')}
+
+// Platform tabs (PRO section)
+function switchPlatform(id,btn){
+  document.querySelectorAll('.pt-tab').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.getElementById('pt-salla').style.display=id==='salla'?'block':'none';
+  document.getElementById('pt-zid').style.display=id==='zid'?'block':'none';
 }
 
-function openTab(evt, tabName){
-    let i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for(i=0;i<tabcontent.length;i++){tabcontent[i].classList.remove("active");}
-    tablinks = document.getElementsByClassName("tab-btn");
-    for(i=0;i<tablinks.length;i++){tablinks[i].classList.remove("active");}
-    document.getElementById(tabName).classList.add("active");
-    evt.currentTarget.classList.add("active");
+// Lightbox
+function openLb(src){
+  document.getElementById('lbImg').src=src;
+  document.getElementById('lb').classList.add('on');
+  document.body.style.overflow='hidden';
 }
+function closeLb(){
+  document.getElementById('lb').classList.remove('on');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
+
+// Portfolio filter
+function filterWork(type,btn){
+  document.querySelectorAll('.wf-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.work-card').forEach(c=>{
+    const p=c.dataset.pkg,pl=c.dataset.plat;
+    c.style.display=(type==='all'||p===type||pl===type)?'block':'none';
+  });
+}
+
+// Scroll reveal
+const obs=new IntersectionObserver((entries)=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('in'),i*70);
+      obs.unobserve(e.target);
+    }
+  });
+},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Contact form
+document.getElementById('cf').addEventListener('submit',async function(e){
+  e.preventDefault();
+  const n=this.name.value,em=this.email.value,msg=this.message.value;
+  const text=`🌐 *رسالة جديدة — ازهلها*\n👤 *الاسم:* ${n}\n📧 *البريد:* ${em}\n✉️ *الرسالة:* ${msg}`;
+  try{
+    await fetch("https://api.telegram.org/bot8312551518:AAH7zIVAW0QkmPrhaQGsDaUJSrl6fg9TvgM/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:"6795507850",text,parse_mode:"Markdown"})});
+    showToast('✅ تم إرسال رسالتك بنجاح!');this.reset();
+  }catch{showToast('❌ حدث خطأ، حاول مرة أخرى')}
+});
+
+function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),3500)}
 </script>
-
-<section id="blog" class="blog-section container">
-  <h2 class="section-title">مقالاتنا وخدمات التسويق</h2>
-
-  <div class="seo-links-container">
-    <!-- كل خدمة في كتلة articles-category منفصلة -->
-    
-    <div class="articles-category">
-            <h3>تصميم المتجر احترافي (سلة، زد)</h3>
-            <ul>
-                <li><a href="articles/service1-article1.html">أهمية التصميم الاحترافي لمتجرك على سلة: زيادة المبيعات والثقة.</a></li>
-                <li><a href="articles/service1-article2.html">مقارنة شاملة بين باقات تصميم متجر سلة: بيسك، بلس، برو، ذهبية.</a></li>
-                <li><a href="articles/service1-article3.html">كيف تختار قالب متجر زد المناسب لمنتجاتك؟ دليل عملي.</a></li>
-                <li><a href="articles/service1-article4.html">عناصر التصميم التي تزيد من معدل التحويل في المتاجر الإلكترونية.</a></li>
-                <li><a href="articles/service1-article5.html">تصميم تجربة المستخدم (UX) في متجرك الإلكتروني: خطوات التنفيذ.</a></li>
-                <li><a href="articles/service1-article6.html">أسرار تصميم صفحات المنتجات الجذابة على منصة سلة.</a></li>
-                <li><a href="articles/service1-article7.html">دور الهوية البصرية في نجاح متجرك الإلكتروني الاحترافي.</a></li>
-                <li><a href="articles/service1-article8.html">تصميم متجر إلكتروني متوافق مع الجوال (Mobile-First Design) على زد.</a></li>
-                <li><a href="articles/service1-article9.html">أخطاء شائعة في تصميم المتاجر الإلكترونية وكيفية تجنبها.</a></li>
-                <li><a href="articles/service1-article10.html">تصميم متجر احترافي: استراتيجيات لتمييز متجرك عن المنافسين.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>إدارة متجر وحسابات التواصل الاجتماعي لمدة شهر</h3>
-            <ul>
-                <li><a href="articles/service2-article1.html">كيف تضمن إدارة متجرك الإلكتروني بكفاءة عالية لمدة شهر؟</a></li>
-                <li><a href="articles/service2-article2.html">استراتيجيات إدارة حسابات التواصل الاجتماعي لمتجرك: زيادة التفاعل والمبيعات.</a></li>
-                <li><a href="articles/service2-article3.html">أهمية التخطيط للمحتوى في إدارة المتجر وحسابات السوشيال ميديا.</a></li>
-                <li><a href="articles/service2-article4.html">أدوات وتقنيات تسهل عليك إدارة متجرك الإلكتروني اليومية.</a></li>
-                <li><a href="articles/service2-article5.html">إدارة خدمة العملاء عبر التواصل الاجتماعي: نصائح لرضا العميل.</a></li>
-                <li><a href="articles/service2-article6.html">تحليل أداء المتجر وحسابات التواصل الاجتماعي: مؤشرات الأداء الرئيسية (KPIs).</a></li>
-                <li><a href="articles/service2-article7.html">إدارة المخزون والطلبات في متجرك الإلكتروني: دليل المبتدئين.</a></li>
-                <li><a href="articles/service2-article8.html">بناء مجتمع حول متجرك الإلكتروني عبر استراتيجيات التواصل الاجتماعي.</a></li>
-                <li><a href="articles/service2-article9.html">التحديات الشائعة في إدارة المتاجر الإلكترونية وحلولها.</a></li>
-                <li><a href="articles/service2-article10.html">خدمات الإدارة المتكاملة للمتجر والتسويق الرقمي: ما الذي تقدمه؟</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>فتح حساب بنكي (الراجحي، الإنماء)</h3>
-            <ul>
-                <li><a href="articles/service3-article1.html">أهمية فتح حساب بنكي تجاري لمتجرك الإلكتروني.</a></li>
-                <li><a href="articles/service3-article2.html">مقارنة بين إجراءات فتح حساب بنكي تجاري في الراجحي والإنماء.</a></li>
-                <li><a href="articles/service3-article3.html">الوثائق المطلوبة لفتح حساب بنكي للأعمال في المملكة العربية السعودية.</a></li>
-                <li><a href="articles/service3-article4.html">خطوات فتح حساب بنكي إلكتروني للأفراد والمؤسسات.</a></li>
-                <li><a href="articles/service3-article5.html">كيف يسهل الحساب البنكي التجاري عملية توثيق متجرك الإلكتروني؟</a></li>
-                <li><a href="articles/service3-article6.html">نصائح لتسريع عملية الموافقة على فتح حساب بنكي للأعمال.</a></li>
-                <li><a href="articles/service3-article7.html">إدارة التدفقات النقدية لمتجرك عبر الحساب البنكي التجاري.</a></li>
-                <li><a href="articles/service3-article8.html">الخدمات المصرفية الرقمية المتاحة لأصحاب المتاجر في الراجحي والإنماء.</a></li>
-                <li><a href="articles/service3-article9.html">الفرق بين الحساب البنكي الشخصي والحساب البنكي التجاري للمتجر.</a></li>
-                <li><a href="articles/service3-article10.html">فتح حساب بنكي للمشاريع الناشئة: دليل خطوة بخطوة.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>توثيق المتجر في سلة</h3>
-            <ul>
-                <li><a href="articles/service4-article1.html">أهمية توثيق متجرك في سلة: بناء الثقة والمصداقية.</a></li>
-                <li><a href="articles/service4-article2.html">الخطوات التفصيلية لتوثيق المتجر في منصة سلة بنجاح.</a></li>
-                <li><a href="articles/service4-article3.html">الوثائق والمتطلبات الأساسية لعملية توثيق متجر سلة.</a></li>
-                <li><a href="articles/service4-article4.html">كيف يؤثر توثيق المتجر على تحسين محركات البحث (SEO) لمتجرك؟</a></li>
-                <li><a href="articles/service4-article5.html">توثيق المتجر في سلة: دليل لتجنب الأخطاء الشائعة.</a></li>
-                <li><a href="articles/service4-article6.html">الفوائد القانونية والتجارية لتوثيق متجرك الإلكتروني.</a></li>
-                <li><a href="articles/service4-article7.html">توثيق المتجر الاحترافي: متطلبات إضافية لزيادة الموثوقية.</a></li>
-                <li><a href="articles/service4-article8.html">المدة الزمنية المتوقعة لإنهاء إجراءات توثيق متجر سلة.</a></li>
-                <li><a href="articles/service4-article9.html">العلاقة بين وثيقة العمل الحر وتوثيق المتجر في سلة.</a></li>
-                <li><a href="articles/service4-article10.html">خدمات المساعدة في توثيق متجرك على سلة: ضمان القبول السريع.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>استخراج وثيقة العمل الحر</h3>
-            <ul>
-                <li><a href="articles/service5-article1.html">ما هي وثيقة العمل الحر؟ وأهميتها لأصحاب المتاجر الإلكترونية.</a></li>
-                <li><a href="articles/service5-article2.html">الشروط والمتطلبات الأساسية لاستخراج وثيقة العمل الحر.</a></li>
-                <li><a href="articles/service5-article3.html">الخطوات التفصيلية لاستخراج وثيقة العمل الحر عبر الإنترنت.</a></li>
-                <li><a href="articles/service5-article4.html">كيف تساعد وثيقة العمل الحر في توثيق متجرك على منصتي سلة وزد؟</a></li>
-                <li><a href="articles/service5-article5.html">المزايا والحوافز التي تقدمها وثيقة العمل الحر لحامليها.</a></li>
-                <li><a href="articles/service5-article6.html">وثيقة العمل الحر: دليل لتحديد النشاط المناسب لمتجرك.</a></li>
-                <li><a href="articles/service5-article7.html">الفرق بين وثيقة العمل الحر والسجل التجاري للمتجر الإلكتروني.</a></li>
-                <li><a href="articles/service5-article8.html">كيفية تجديد وثيقة العمل الحر وتعديل بياناتها.</a></li>
-                <li><a href="articles/service5-article9.html">وثيقة العمل الحر والالتزامات الضريبية: ما يجب أن تعرفه.</a></li>
-                <li><a href="articles/service5-article10.html">خدمات المساعدة في استخراج وثيقة العمل الحر: توفير الوقت والجهد.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>توثيق منصة الأعمال</h3>
-            <ul>
-                <li><a href="articles/service6-article1.html">أهمية توثيق متجرك عبر منصة الأعمال لضمان الامتثال القانوني.</a></li>
-                <li><a href="articles/service6-article2.html">الخطوات الأساسية لربط متجرك الإلكتروني بمنصة الأعمال.</a></li>
-                <li><a href="articles/service6-article3.html">الوثائق المطلوبة لتوثيق متجر إلكتروني في منصة الأعمال.</a></li>
-                <li><a href="articles/service6-article4.html">كيف يؤثر توثيق منصة الأعمال على التعاملات المالية والحساب البنكي؟</a></li>
-                <li><a href="articles/service6-article5.html">توثيق منصة الأعمال: دليل لتجنب الرفض وتسريع الإجراءات.</a></li>
-                <li><a href="articles/service6-article6.html">الفوائد الأمنية لتوثيق متجرك عبر منصة الأعمال.</a></li>
-                <li><a href="articles/service6-article7.html">العلاقة بين توثيق منصة الأعمال وتفعيل بوابات الدفع الإلكتروني.</a></li>
-                <li><a href="articles/service6-article8.html">متطلبات التوثيق للمتاجر التي تعمل على منصات سلة وزد.</a></li>
-                <li><a href="articles/service6-article9.html">توثيق منصة الأعمال: ضمان حقوق التاجر والمستهلك.</a></li>
-                <li><a href="articles/service6-article10.html">خدمات الدعم الفني لتوثيق متجرك في منصة الأعمال.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>تسجيل في ميس، مدفوع، إمكان</h3>
-            <ul>
-                <li><a href="articles/service7-article1.html">مقارنة بين بوابات الدفع الإلكتروني: ميس، مدفوع، وإمكان.</a></li>
-                <li><a href="articles/service7-article2.html">أهمية تفعيل بوابات دفع متعددة لمتجرك الإلكتروني.</a></li>
-                <li><a href="articles/service7-article3.html">خطوات التسجيل وتفعيل بوابة الدفع ميس (MeeS) على متجرك.</a></li>
-                <li><a href="articles/service7-article4.html">دليل تفعيل بوابة الدفع مدفوع (Madfou) للمتاجر الناشئة.</a></li>
-                <li><a href="articles/service7-article5.html">كيفية ربط بوابة الدفع إمكان (Imkan) بمتجرك على سلة أو زد.</a></li>
-                <li><a href="articles/service7-article6.html">الشروط والمتطلبات الفنية لتفعيل بوابات الدفع الإلكتروني.</a></li>
-                <li><a href="articles/service7-article7.html">بوابات الدفع وتأثيرها على تجربة المستخدم ومعدل التحويل.</a></li>
-                <li><a href="articles/service7-article8.html">الرسوم والعمولات: مقارنة تكاليف استخدام ميس، مدفوع، وإمكان.</a></li>
-                <li><a href="articles/service7-article9.html">حلول الدفع الآمنة: كيف تحمي متجرك وعملائك؟</a></li>
-                <li><a href="articles/service7-article10.html">خدمات المساعدة في تفعيل بوابات الدفع: ضمان التكامل السريع.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>تفعيل تابي وتمارا للأعمال</h3>
-            <ul>
-                <li><a href="articles/service8-article1.html">أهمية تفعيل خدمات الدفع الآجل (تابي وتمارا) لزيادة مبيعات متجرك.</a></li>
-                <li><a href="articles/service8-article2.html">الشروط والمتطلبات الأساسية لتفعيل تابي للأعمال.</a></li>
-                <li><a href="articles/service8-article3.html">الخطوات التفصيلية لربط خدمة تمارا بمتجرك الإلكتروني على سلة أو زد.</a></li>
-                <li><a href="articles/service8-article4.html">كيف يؤثر الدفع الآجل على سلة المشتريات وقيمة الطلب المتوسطة؟</a></li>
-                <li><a href="articles/service8-article5.html">تابي وتمارا: مقارنة بين المزايا والرسوم لأصحاب المتاجر.</a></li>
-                <li><a href="articles/service8-article6.html">دليل تفعيل تابي وتمارا للمتاجر التي تعمل بدون سجل تجاري.</a></li>
-                <li><a href="articles/service8-article7.html">تجربة العميل مع الدفع الآجل: نصائح لتحسينها.</a></li>
-                <li><a href="articles/service8-article8.html">التحديات الشائعة في تفعيل تابي وتمارا وكيفية تجاوزها.</a></li>
-                <li><a href="articles/service8-article9.html">تفعيل تابي وتمارا: دليل للامتثال لشروط الخدمة.</a></li>
-                <li><a href="articles/service8-article10.html">خدمات المساعدة في تفعيل تابي وتمارا: ضمان القبول السريع.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>الخدمات الأساسية (SEO، واتساب، بكسلات، CSS، دومين، Google Merchant، Analytics، Linktree، تدريب سلة)</h3>
-            <ul>
-                <li><a href="articles/service9-article1.html">تحسين SEO للمتاجر الإلكترونية على سلة: دليل شامل للبداية.</a></li>
-                <li><a href="articles/service9-article2.html">ربط متجرك بـ Google Merchant Center: خطوات لزيادة الظهور.</a></li>
-                <li><a href="articles/service9-article3.html">أهمية ربط Google Analytics 4 بمتجرك الإلكتروني لتحليل الأداء.</a></li>
-                <li><a href="articles/service9-article4.html">دور تخصيص CSS في تصميم متجر سلة احترافي ومميز.</a></li>
-                <li><a href="articles/service9-article5.html">اختيار الدومين المناسب لمتجرك الإلكتروني: نصائح واستراتيجيات.</a></li>
-                <li><a href="articles/service9-article6.html">تفعيل بكسلات التحويل (فيسبوك، سناب شات) لتحسين الحملات الإعلانية.</a></li>
-                <li><a href="articles/service9-article7.html">استخدام واتساب للأعمال في خدمة العملاء والتسويق لمتجرك.</a></li>
-                <li><a href="articles/service9-article8.html">تدريب سلة: كيف تتقن إدارة متجرك وتحقق أقصى استفادة من المنصة؟</a></li>
-                <li><a href="articles/service9-article9.html">استخدام Linktree أو بدائله لتحسين الروابط في حسابات التواصل الاجتماعي.</a></li>
-                <li><a href="articles/service9-article10.html">الخدمات الأساسية المتكاملة لنجاح متجرك الإلكتروني: قائمة مرجعية.</a></li>
-
-            </ul>
-        </div>
-
-        <div class="articles-category">
-            <h3>حملات إعلانية (إعداد وربط البكسلات التحويلية)</h3>
-            <ul>
-                <li><a href="articles/service10-article1.html">كيف تخطط لحملة إعلانية ناجحة لمتجرك الإلكتروني؟</a></li>
-                <li><a href="articles/service10-article2.html">الدليل الشامل لإعداد وربط البكسلات التحويلية (فيسبوك، سناب شات، تيك توك).</a></li>
-                <li><a href="articles/service10-article3.html">أهمية تتبع التحويلات في الحملات الإعلانية: قياس العائد على الاستثمار (ROI).</a></li>
-                <li><a href="articles/service10-article4.html">استراتيجيات استهداف الجمهور في الحملات الإعلانية لزيادة المبيعات.</a></li>
-                <li><a href="articles/service10-article5.html">تحسين إعلاناتك باستخدام بيانات البكسلات: دليل متقدم.</a></li>
-                <li><a href="articles/service10-article6.html">مقارنة بين منصات الإعلان الرئيسية: جوجل، فيسبوك، سناب شات.</a></li>
-                <li><a href="articles/service10-article7.html">الأخطاء الشائعة في إعداد الحملات الإعلانية وكيفية تجنبها.</a></li>
-                <li><a href="articles/service10-article8.html">دور تحسين SEO في دعم أداء حملاتك الإعلانية.</a></li>
-                <li><a href="articles/service10-article9.html">إعداد حملات إعادة الاستهداف (Retargeting) باستخدام البكسلات.</a></li>
-                <li><a href="articles/service10-article10.html">خدمات الإدارة الاحترافية للحملات الإعلانية: تحقيق أفضل النتائج.</a></li>
-
-            </ul>
-        </div>
-
-  </div>
-</section>
-
-
 </body>
 </html>
