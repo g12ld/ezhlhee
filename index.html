@@ -732,7 +732,9 @@ footer{
   .work-grid{grid-template-columns:repeat(2,1fr)}
   .wc-hero{grid-column:span 2}
   .pro-grid{grid-template-columns:1fr}
-  .pro-preview-wrap{display:none}
+  .pro-preview-wrap{display:block; margin-top:20px}
+  .preview-mosaic{grid-template-columns:repeat(4,1fr); gap:2px}
+  .pm-item{height:120px}
 }
 @media(max-width:860px){
   nav:not(.mob-open){display:none}
@@ -1174,6 +1176,7 @@ footer{
         <div class="platform-switch">
           <button class="ps-tab on" onclick="switchPlat('salla',this)">🛒 سلة</button>
           <button class="ps-tab" onclick="switchPlat('zid',this)">⚡ زد</button>
+          <button class="ps-tab" onclick="switchPlat('tawsaa',this)">منصة توسع</button>
         </div>
         <!-- سلة screenshots — only salla work -->
         <div id="pp-salla" class="preview-mosaic">
@@ -1188,6 +1191,10 @@ footer{
         <!-- زد screenshots — only zid work -->
         <div id="pp-zid" class="preview-mosaic" style="display:none">
           <div class="pm-item"><img src="images/swartyp_zid.webp" alt="زد 1" class="scroll-img"><div class="pm-overlay"></div></div>
+        </div>
+        <!-- توسع screenshots — only tawsaa work -->
+        <div id="pp-tawsaa" class="preview-mosaic" style="display:none">
+          <div class="pm-item"><img src="images/alyasaminoil_tawsaa_.webp" alt="توسع 1" class="scroll-img"><div class="pm-overlay"></div></div>
         </div>
         <div style="margin-top:14px;text-align:center">
           <span style="font-size:.76rem;color:rgba(255,255,255,.35);font-weight:700">↕ مرّر على الصور لمشاهدة التصميم كاملاً</span>
@@ -1555,6 +1562,7 @@ function switchPlat(id,btn){
   btn.classList.add('on');
   document.getElementById('pp-salla').style.display=id==='salla'?'grid':'none';
   document.getElementById('pp-zid').style.display=id==='zid'?'grid':'none';
+  document.getElementById('pp-tawsaa').style.display=id==='tawsaa'?'grid':'none';
 }
 
 /* ── SCROLL REVEAL ── */
