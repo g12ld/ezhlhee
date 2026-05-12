@@ -550,6 +550,33 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .partner-chip:hover img{opacity:1}
 
 /* ═══════════════════════════════
+   ARTICLES
+═══════════════════════════════ */
+.articles-sec{
+  padding:100px 28px;background:var(--bg);
+}
+.articles-inner{max-width:1200px;margin:0 auto;text-align:center}
+.articles-sec .sh{margin-bottom:12px}
+.articles-sec .sub{margin:0 auto 60px;max-width:600px}
+.articles-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;
+}
+.article-card{
+  background:#fff;border-radius:16px;padding:30px;text-align:right;
+  box-shadow:0 8px 32px rgba(0,0,0,.08);transition:all .3s;
+}
+.article-card:hover{transform:translateY(-5px);box-shadow:0 12px 48px rgba(0,0,0,.12)}
+.article-card h3{font-size:1.2rem;margin-bottom:15px;color:var(--ink)}
+.article-card p{margin-bottom:20px;color:var(--muted);line-height:1.6}
+.article-card a{
+  color:var(--p);text-decoration:none;font-weight:700;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.article-card a:hover{color:var(--pd)}
+.article-card a::after{content:'→';transition:transform .3s}
+.article-card a:hover::after{transform:translateX(-4px)}
+
+/* ═══════════════════════════════
    CONTACT
 ═══════════════════════════════ */
 .contact-sec{
@@ -709,6 +736,7 @@ footer{
       <a href="#pro">باقة برو</a>
       <a href="#plus">باقة بلس</a>
       <a href="#services">الخدمات</a>
+      <a href="articles.html">المقالات</a>
       <a href="#contact" class="nav-cta">ابدأ الآن</a>
     </nav>
   </div>
@@ -1186,6 +1214,48 @@ footer{
       <div class="partner-chip"><img src="images/shopify.webp" alt="Shopify"></div>
       <div class="partner-chip"><img src="images/wordpress.webp" alt="WordPress"></div>
     </div>
+  </div>
+</section>
+
+<!-- ARTICLES -->
+<section class="articles-sec" id="articles">
+  <div class="articles-inner">
+    <div class="tag-chip"><span class="tag-dot"></span>مدونتنا</div>
+    <h2 class="sh">مقالات مفيدة<br><span>لنجاح متجرك</span></h2>
+    <p class="sub">اكتشف نصائح وإرشادات حول تصميم المتاجر، التسويق الرقمي، والإدارة الاحترافية.</p>
+    <div class="articles-grid">
+      <div class="article-card">
+        <h3>أهمية التصميم الاحترافي لمتجرك على سلة</h3>
+        <p>تعلم كيف يساعد التصميم الاحترافي في زيادة المبيعات وبناء الثقة مع عملائك.</p>
+        <a href="articles/أهمية-التصميم-الاحترافي-لمتجرك-على-سلة-زيادة-المبيعات-والثقة.html">اقرأ المزيد</a>
+      </div>
+      <div class="article-card">
+        <h3>كيفية إدارة متجرك الإلكتروني بكفاءة</h3>
+        <p>استراتيجيات عملية لإدارة المتجر وحسابات التواصل الاجتماعي لمدة شهر كامل.</p>
+        <a href="articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html">اقرأ المزيد</a>
+      </div>
+      <div class="article-card">
+        <h3>دليل توثيق المتجر على سلة</h3>
+        <p>خطوات مفصلة لبناء الثقة وزيادة المصداقية لمتجرك الإلكتروني.</p>
+        <a href="articles/أهمية-توثيق-متجرك-في-سلة-بناء-الثقة-والمصداقية.html">اقرأ المزيد</a>
+      </div>
+      <div class="article-card">
+        <h3>مقارنة بوابات الدفع الإلكتروني</h3>
+        <p>تعرف على ميس، مدفوع، وإمكان وكيفية اختيار الأنسب لمتجرك.</p>
+        <a href="articles/مقارنة-بين-بوابات-الدفع-الإلكتروني-ميس-مدفوع-وإمكان.html">اقرأ المزيد</a>
+      </div>
+      <div class="article-card">
+        <h3>تحسين SEO للمتاجر على سلة</h3>
+        <p>دليل شامل لبدء تحسين محركات البحث وزيادة ظهور متجرك.</p>
+        <a href="articles/تحسين-seo-للمتاجر-الإلكترونية-على-سلة-دليل-شامل-للبداية.html">اقرأ المزيد</a>
+      </div>
+      <div class="article-card">
+        <h3>إعداد حملات إعلانية ناجحة</h3>
+        <p>خطوات لتخطيط وإدارة حملات إعلانية فعالة لزيادة المبيعات.</p>
+        <a href="articles/كيف-تخطط-لحملة-إعلانية-ناجحة-لمتجرك-الإلكتروني.html">اقرأ المزيد</a>
+      </div>
+    </div>
+    <a href="articles.html" class="nav-cta" style="margin-top:50px;display:inline-block">عرض جميع المقالات</a>
   </div>
 </section>
 
