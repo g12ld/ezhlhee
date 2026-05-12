@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="استكشف مقالاتنا الشاملة حول خدمات التسويق والتجارة الإلكترونية لتطوير متجرك.">
+    <meta name="keywords" content="مقالات تجارة إلكترونية، خدمات التجارة الإلكترونية، تصميم متجر إلكتروني، تسويق رقمي، واتساب، سلة، زد، SEO، إدارة متجر">
     <title>الصفحة الرئيسية - مقالات وخدمات التسويق</title>
     <style>
         
@@ -180,6 +181,149 @@
         margin-bottom: 15px;
     }
 
+    .page-cta {
+        background: linear-gradient(135deg, rgba(4,181,184,0.18), rgba(29,180,189,0.1));
+        border: 1px solid rgba(4,181,184,0.18);
+        border-radius: 24px;
+        padding: 28px 26px;
+        margin: 40px auto 0;
+        max-width: 1100px;
+    }
+
+    .page-cta .cta-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .page-cta h2 {
+        font-size: 1.75em;
+        color: var(--color-primary-dark);
+        margin-bottom: 10px;
+        line-height: 1.15;
+    }
+
+    .page-cta p {
+        color: #3d5a60;
+        line-height: 1.8;
+        max-width: 680px;
+    }
+
+    .cta-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 26px;
+        border-radius: 14px;
+        font-weight: 800;
+        text-decoration: none;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-light));
+        color: #fff;
+    }
+
+    .btn-secondary {
+        background: #fff;
+        color: var(--color-primary-dark);
+        border: 2px solid var(--color-primary-dark);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover {
+        transform: translateY(-2px);
+        opacity: 0.95;
+    }
+
+    .main-footer {
+        background: rgba(255,255,255,0.95);
+        border-top: 1px solid rgba(4,181,184,0.18);
+        padding: 40px 20px 20px;
+        margin-top: 60px;
+    }
+
+    .footer-container {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    .footer-logo {
+        width: 60px;
+        border-radius: 18px;
+        box-shadow: 0 18px 40px rgba(4,181,184,0.18);
+        margin-bottom: 16px;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+        color: var(--color-primary-dark);
+        margin-bottom: 14px;
+    }
+
+    .footer-links a,
+    .footer-contact a {
+        display: block;
+        color: #2f565d;
+        text-decoration: none;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .footer-links a:hover,
+    .footer-contact a:hover {
+        color: var(--color-primary-dark);
+    }
+
+    .footer-bottom {
+        margin-top: 32px;
+        border-top: 1px solid rgba(4,181,184,0.14);
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+        color: #5a7a7e;
+        font-size: 0.95rem;
+    }
+
+    .whatsapp-float {
+        position: fixed;
+        bottom: 22px;
+        left: 22px;
+        background: #25D366;
+        color: #fff;
+        padding: 14px 18px;
+        border-radius: 999px;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 18px 40px rgba(37,211,102,0.22);
+        z-index: 999;
+    }
+
+    @media (max-width: 768px) {
+        .page-cta { padding: 24px 20px; }
+        .footer-grid { grid-template-columns: 1fr; }
+        .cta-actions { width: 100%; justify-content: stretch; }
+    }
+
     /* Media Queries */
     @media (max-width: 768px) {
         .articles-container {
@@ -214,6 +358,7 @@
       <a href="#plus">باقة PLUS</a>
       <a href="#services">الخدمات</a>
       <a href="articles.html" class="nav-cta">المقالات</a>
+      <a href="https://wa.me/966501940155" class="nav-cta" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
     </nav>
   </div>
 </header>
@@ -222,6 +367,18 @@
     <h1>مدونتنا</h1>
     <p>اكتشف مقالاتنا الشاملة حول التسويق الرقمي، تصميم المتاجر، والإدارة الاحترافية لمساعدتك في نجاح متجرك الإلكتروني.</p>
 </section>
+    <section class="page-cta">
+        <div class="cta-inner">
+            <div>
+                <h2>هل تريد تصميم متجر إلكتروني أو خدمات تجارة إلكترونية؟</h2>
+                <p>اطلب الآن استشارة احترافية عبر الصفحة الرئيسية أو تواصل مباشرة مع مختص عبر واتساب لتحويل متجرك إلى تجربة احترافية.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="index.html" class="btn-primary">طلب تصميم / خدمات</a>
+                <a href="https://wa.me/966501940155" target="_blank" class="btn-secondary">تواصل مع مختص عبر واتساب</a>
+            </div>
+        </div>
+    </section>
     
     <div class="articles-container">
         
@@ -1006,5 +1163,32 @@
             }
         });
     </script>
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.webp" alt="ازهلها" class="footer-logo">
+        <p>شريكك في تصميم وتطوير المتاجر الإلكترونية وخدمات التجارة الإلكترونية على سلة وزد.</p>
+      </div>
+      <div class="footer-links">
+        <h4>روابط سريعة</h4>
+        <a href="index.html">الرئيسية</a>
+        <a href="articles.html">المقالات</a>
+        <a href="index.html#services">الخدمات</a>
+      </div>
+      <div class="footer-contact">
+        <h4>تواصل الآن</h4>
+        <a href="https://wa.me/966501940155" target="_blank">💬 تواصل مع مختص تجارة إلكترونية</a>
+        <a href="mailto:mr.leith9999@gmail.com">✉ mr.leith9999@gmail.com</a>
+        <p>+966 501 940 155</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 ازهلها. جميع الحقوق محفوظة.</p>
+      <p>تصميم متجر إلكتروني احترافي وخدمات التجارة الإلكترونية.</p>
+    </div>
+  </div>
+</footer>
+<a class="whatsapp-float" href="https://wa.me/966501940155" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
 </body>
 </html>
