@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ازهلها — تصميم متاجر إلكترونية تبيع</title>
+<!-- Favicon via emoji -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2304B5B8'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🛒</text></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -21,9 +23,12 @@
   --border:rgba(4,181,184,0.18);
   --border2:rgba(4,181,184,0.1);
   --shadow:0 4px 24px rgba(4,181,184,0.12);
-  --shadow-lg:0 12px 48px rgba(4,181,184,0.15);
+  --shadow-lg:0 12px 48px rgba(4,181,184,0.18);
   --r:14px;
   --r2:20px;
+  --gold:#D4AF37;
+  --gold-l:#F0D060;
+  --gold-d:#A88520;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -31,18 +36,14 @@ body{font-family:'Tajawal',sans-serif;background:var(--bg);color:var(--ink);over
 ::selection{background:var(--p);color:#fff}
 img{max-width:100%;display:block}
 a{transition:all .25s}
-
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:4px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--p);border-radius:2px}
 
-/* ═══════════════════════════════
-   HEADER
-═══════════════════════════════ */
+/* ═══════════════════ HEADER ═══════════════════ */
 header{
   position:fixed;top:0;width:100%;z-index:500;
-  background:rgba(240,250,251,0.88);
+  background:rgba(240,250,251,0.92);
   backdrop-filter:blur(20px);
   border-bottom:1px solid var(--border2);
   transition:all .35s;
@@ -50,15 +51,25 @@ header{
 .hdr-inner{
   max-width:1320px;margin:0 auto;
   display:flex;align-items:center;justify-content:space-between;
-  padding:14px 28px;
+  padding:12px 28px;
 }
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-mark{
-  width:40px;height:40px;border-radius:11px;
-  box-shadow:0 4px 14px rgba(4,181,184,0.35);
+
+/* ── LOGO — bigger & more professional ── */
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark-wrap{
+  width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(135deg,var(--p),var(--pd));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 20px rgba(4,181,184,0.4),0 2px 6px rgba(4,181,184,0.2);
+  flex-shrink:0;overflow:hidden;
 }
-.logo-text{font-size:1.2rem;font-weight:900;color:var(--ink)}
-.logo-text span{color:var(--p)}
+.logo-mark-wrap img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.logo-mark-wrap .logo-emoji{font-size:1.6rem;line-height:1}
+.logo-text-wrap{}
+.logo-brand{font-size:1.35rem;font-weight:900;color:var(--ink);letter-spacing:-0.5px;line-height:1.1}
+.logo-brand span{color:var(--p)}
+.logo-tagline{font-size:.68rem;color:var(--muted);font-weight:600;letter-spacing:.3px;margin-top:1px}
+
 nav{display:flex;align-items:center;gap:4px}
 nav a{
   color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:700;
@@ -74,9 +85,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s}
 
-/* ═══════════════════════════════
-   HERO
-═══════════════════════════════ */
+/* ═══════════════════ HERO ═══════════════════ */
 .hero{
   min-height:100vh;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -84,7 +93,6 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   position:relative;overflow:hidden;
   background:linear-gradient(175deg,#fff 0%,var(--bg) 50%,var(--bg2) 100%);
 }
-/* decorative circles */
 .hero::before{
   content:'';position:absolute;
   width:700px;height:700px;border-radius:50%;
@@ -109,7 +117,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .hero-pill-dot{width:7px;height:7px;background:var(--p);border-radius:50%;animation:blink 2s ease infinite}
 .hero h1{
-  font-size:clamp(2.6rem,6.5vw,5.5rem);
+  font-size:clamp(2.4rem,6.5vw,5.5rem);
   font-weight:900;color:var(--ink);
   line-height:1.08;letter-spacing:-2px;
   margin-bottom:24px;animation:fadeUp .8s .1s ease both;
@@ -130,7 +138,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .hero-btns{
   display:flex;gap:12px;justify-content:center;flex-wrap:wrap;
-  animation:fadeUp .8s .3s ease both;margin-bottom:72px;
+  animation:fadeUp .8s .3s ease both;margin-bottom:56px;
 }
 .btn-primary{
   background:var(--p);color:#fff;text-decoration:none;
@@ -146,12 +154,34 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .btn-outline:hover{background:var(--ppp);transform:translateY(-2px)}
 
+/* HERO CTA ROW — whatsapp consultation */
+.hero-consult{
+  animation:fadeUp .8s .38s ease both;
+  margin-bottom:44px;
+  display:flex;gap:10px;justify-content:center;flex-wrap:wrap;
+}
+.btn-consult{
+  display:inline-flex;align-items:center;gap:9px;
+  background:linear-gradient(135deg,#25D366,#128C5E);
+  color:#fff;text-decoration:none;
+  padding:13px 26px;border-radius:12px;font-weight:800;font-size:.92rem;
+  box-shadow:0 6px 20px rgba(37,211,102,0.3);transition:all .3s;
+}
+.btn-consult:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(37,211,102,0.4)}
+.btn-call{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#fff;color:var(--ink);text-decoration:none;
+  padding:13px 22px;border-radius:12px;font-weight:800;font-size:.92rem;
+  border:2px solid var(--border);box-shadow:0 4px 14px rgba(0,0,0,0.06);transition:all .3s;
+}
+.btn-call:hover{border-color:var(--p);color:var(--p);transform:translateY(-2px)}
+
 /* stats bar */
 .hero-stats{
   display:flex;gap:0;
   background:#fff;border:1px solid var(--border);border-radius:18px;
   box-shadow:var(--shadow);overflow:hidden;
-  animation:fadeUp .8s .45s ease both;
+  animation:fadeUp .8s .5s ease both;
   width:fit-content;margin:0 auto;
 }
 .hstat{padding:22px 36px;text-align:center}
@@ -159,9 +189,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .hstat-n{font-size:2rem;font-weight:900;color:var(--p);letter-spacing:-1px;line-height:1}
 .hstat-l{font-size:.72rem;color:var(--muted);font-weight:700;margin-top:5px;text-transform:uppercase;letter-spacing:.4px}
 
-/* ═══════════════════════════════
-   TICKER
-═══════════════════════════════ */
+/* ═══════════════════ TICKER ═══════════════════ */
 .ticker-wrap{
   overflow:hidden;border-top:1px solid var(--border2);
   border-bottom:1px solid var(--border2);
@@ -175,9 +203,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .tdot{color:var(--p);font-size:1rem}
 
-/* ═══════════════════════════════
-   SECTIONS
-═══════════════════════════════ */
+/* ═══════════════════ SECTIONS ═══════════════════ */
 .sec{padding:100px 28px}
 .sec-inner{max-width:1320px;margin:0 auto}
 .tag-chip{
@@ -192,9 +218,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .sh span{color:var(--p)}
 .sub{font-size:1rem;color:var(--muted);line-height:1.8;max-width:500px}
 
-/* ═══════════════════════════════
-   PRO STRIP — above portfolio
-═══════════════════════════════ */
+/* ═══════════════════ PRO STRIP ═══════════════════ */
 .pro-strip{
   display:flex;align-items:center;gap:14px;
   background:linear-gradient(90deg,rgba(4,181,184,0.08),rgba(4,181,184,0.03));
@@ -210,9 +234,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .ps-text{font-size:.9rem;font-weight:700;color:var(--ink2)}
 .ps-sub{font-size:.78rem;color:var(--muted);margin-top:1px}
 
-/* ═══════════════════════════════
-   WORK FILTER
-═══════════════════════════════ */
+/* ═══════════════════ WORK FILTER ═══════════════════ */
 .work-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:36px}
 .wf-btn{
   padding:8px 18px;border-radius:9px;border:1.5px solid var(--border);
@@ -222,17 +244,12 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .wf-btn.on,.wf-btn:hover{background:var(--p);color:#fff;border-color:var(--p)}
 
-/* ═══════════════════════════════
-   PORTFOLIO GRID — TALL SCREENSHOTS
-   Technique: fixed container + hover-scroll
-═══════════════════════════════ */
+/* ═══════════════════ PORTFOLIO GRID ═══════════════════ */
 .work-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:20px;
 }
-
-/* Large hero card = 2 cols */
 .wc-hero{grid-column:span 2}
 
 .work-card{
@@ -249,7 +266,6 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   border-color:rgba(4,181,184,0.3);
 }
 
-/* Browser chrome mockup */
 .card-chrome{
   background:var(--bg2);
   border-bottom:1px solid var(--border2);
@@ -269,25 +285,23 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .chrome-lock{font-size:.7rem}
 
-/* Scroll-preview container */
+/* Smart scroll-preview container */
 .card-viewport{
-  height:320px;overflow:hidden;position:relative;
+  height:280px;overflow:hidden;position:relative;
   background:var(--bg);
 }
-.wc-hero .card-viewport{height:360px}
+.wc-hero .card-viewport{height:340px}
 .card-viewport img{
   width:100%;height:auto;
   display:block;
   transform:translateY(0);
-  transition:transform 4.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  transition:transform 5s cubic-bezier(0.25,0.46,0.45,0.94);
   will-change:transform;
 }
-
-/* scroll hint overlay */
 .scroll-hint{
-  position:absolute;bottom:0;left:0;right:0;height:80px;
+  position:absolute;bottom:0;left:0;right:0;height:70px;
   background:linear-gradient(to top,rgba(240,250,251,0.95),transparent);
-  display:flex;align-items:flex-end;justify-content:center;padding-bottom:12px;
+  display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px;
   opacity:1;transition:opacity .3s;pointer-events:none;
 }
 .work-card:hover .scroll-hint{opacity:0}
@@ -298,15 +312,14 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   display:flex;align-items:center;gap:4px;
 }
 
-/* card info footer */
 .card-info{
   padding:14px 16px;
   display:flex;align-items:center;justify-content:space-between;
   border-top:1px solid var(--border2);
 }
 .card-badges{display:flex;gap:5px}
-.cbadge-pro{
-  background:var(--p);color:#fff;
+.cbadge-gold{
+  background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;
   padding:3px 10px;border-radius:5px;font-size:.67rem;font-weight:800;
 }
 .cbadge-plus{
@@ -318,7 +331,6 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   background:var(--bg2);color:var(--muted);
   padding:3px 9px;border-radius:5px;font-size:.65rem;font-weight:700;
 }
-.card-name-wrap{}
 .card-title{font-size:.88rem;font-weight:800;color:var(--ink)}
 .card-cat{font-size:.72rem;color:var(--muted)}
 .card-view{
@@ -330,9 +342,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .work-card:hover .card-view{background:var(--p);color:#fff;border-color:var(--p)}
 
-/* ═══════════════════════════════
-   LIGHTBOX
-═══════════════════════════════ */
+/* ═══════════════════ LIGHTBOX ═══════════════════ */
 #lb{
   display:none;position:fixed;inset:0;z-index:3000;
   background:rgba(7,40,41,0.92);
@@ -362,47 +372,60 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .lb-x:hover{background:rgba(255,255,255,.2)}
 
-/* ═══════════════════════════════
-   PRO PACKAGE
-═══════════════════════════════ */
+/* ═══════════════════ GOLD / PRO SECTION ═══════════════════ */
 .pro-section{
   background:linear-gradient(135deg,var(--ink) 0%,var(--ink2) 100%);
+  position:relative;overflow:hidden;
+}
+.pro-section::before{
+  content:'';position:absolute;top:-200px;left:-200px;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(212,175,55,0.06) 0%,transparent 70%);
+  pointer-events:none;
 }
 .pro-section .sh{color:#fff}
 .pro-section .sub{color:rgba(255,255,255,.5)}
-.pro-section .tag-chip{background:rgba(4,181,184,0.12);border-color:rgba(4,181,184,0.25);color:var(--pl)}
-.pro-section .tag-dot{background:var(--pl)}
+.pro-section .tag-chip{background:rgba(212,175,55,0.15);border-color:rgba(212,175,55,0.35);color:var(--gold-l)}
+.pro-section .tag-dot{background:var(--gold)}
 
 .pro-grid{
   display:grid;grid-template-columns:1fr 1fr;
   gap:70px;align-items:start;
 }
 
-/* Feature items */
-.pro-feats{display:flex;flex-direction:column;gap:10px;margin:32px 0 36px}
+/* Gold feature items */
+.pro-feats{display:flex;flex-direction:column;gap:8px;margin:28px 0 32px}
 .pf{
   display:flex;align-items:flex-start;gap:11px;
-  padding:13px 16px;border-radius:11px;
+  padding:12px 16px;border-radius:11px;
   background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);
   transition:all .3s;
 }
-.pf:hover{background:rgba(4,181,184,.08);border-color:rgba(4,181,184,.2)}
+.pf:hover{background:rgba(212,175,55,.07);border-color:rgba(212,175,55,.2)}
 .pf-ck{
   width:19px;height:19px;border-radius:5px;flex-shrink:0;margin-top:1px;
-  background:rgba(4,181,184,.2);color:var(--pl);
+  background:rgba(212,175,55,.2);color:var(--gold-l);
   display:flex;align-items:center;justify-content:center;font-size:.68rem;
 }
-.pf-t{font-size:.86rem;color:rgba(255,255,255,.72);line-height:1.5}
-.pf-t strong{color:var(--pl);font-weight:700}
+.pf-t{font-size:.84rem;color:rgba(255,255,255,.72);line-height:1.5}
+.pf-t strong{color:var(--gold-l);font-weight:700}
+
+/* Gold section group headers */
+.pf-group{
+  font-size:.7rem;font-weight:800;color:var(--gold);
+  text-transform:uppercase;letter-spacing:.8px;
+  margin-top:6px;padding:4px 0;opacity:.7;
+}
 
 .pro-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-white{
-  background:#fff;color:var(--p);text-decoration:none;
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold),var(--gold-d));
+  color:#fff;text-decoration:none;
   padding:14px 30px;border-radius:12px;font-weight:800;font-size:.95rem;
-  box-shadow:0 4px 20px rgba(0,0,0,.2);transition:all .3s;
+  box-shadow:0 4px 20px rgba(212,175,55,.3);transition:all .3s;
   display:inline-flex;align-items:center;gap:7px;
 }
-.btn-white:hover{background:var(--pp);transform:translateY(-2px);color:var(--pd)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(212,175,55,.4)}
 .btn-ghost-w{
   border:1.5px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);
   text-decoration:none;padding:14px 24px;border-radius:12px;
@@ -410,7 +433,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .btn-ghost-w:hover{border-color:rgba(255,255,255,.4);color:#fff;transform:translateY(-2px)}
 
-/* Right side: platform preview */
+/* Right side: platform preview mosaic */
 .pro-preview-wrap{}
 .platform-switch{
   display:flex;gap:0;background:rgba(255,255,255,.07);
@@ -431,12 +454,12 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   border:1px solid rgba(255,255,255,.08);
 }
 .pm-item{
-  position:relative;overflow:hidden;height:190px;background:var(--bg);cursor:pointer;
+  position:relative;overflow:hidden;height:200px;background:var(--bg);cursor:pointer;
 }
 .pm-item img{
   width:100%;height:auto;
   transform:translateY(0);
-  transition:transform 4s cubic-bezier(0.25,0.46,0.45,0.94);
+  transition:transform 4.5s cubic-bezier(0.25,0.46,0.45,0.94);
 }
 .pm-item:hover img{transform:translateY(var(--scroll-to,-50%))}
 .pm-overlay{
@@ -446,9 +469,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .pm-item:hover .pm-overlay{opacity:1}
 
-/* ═══════════════════════════════
-   PLUS PACKAGE
-═══════════════════════════════ */
+/* ═══════════════════ PLUS SECTION ═══════════════════ */
 .plus-section{background:var(--white)}
 .plus-card{
   background:linear-gradient(135deg,var(--ppp) 0%,#fff 100%);
@@ -456,24 +477,26 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   display:grid;grid-template-columns:1fr 1fr;
   box-shadow:var(--shadow);
 }
-.plus-body{padding:56px 52px}
-.plus-feats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:28px 0 36px}
+.plus-body{padding:52px 48px}
+.plus-feats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:24px 0 32px}
 .plf{
   display:flex;align-items:center;gap:8px;
   background:#fff;border:1px solid var(--border2);border-radius:9px;
   padding:9px 13px;font-size:.82rem;font-weight:700;color:var(--ink2);
 }
 .plf-ic{color:var(--p);font-size:.95rem}
+.plf-no{
+  display:flex;align-items:center;gap:8px;
+  background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.06);border-radius:9px;
+  padding:9px 13px;font-size:.82rem;font-weight:700;color:var(--muted);
+  text-decoration:line-through;opacity:.6;
+}
+.plf-no-ic{color:#ccc;font-size:.95rem}
 
-/* Tall screenshot carousel for Plus */
+/* Plus gallery */
 .plus-gallery{overflow:hidden;position:relative}
-.gallery-track{
-  display:flex;height:100%;
-}
-.gallery-slide{
-  flex-shrink:0;width:50%;
-  overflow:hidden;position:relative;height:100%;
-}
+.gallery-track{display:flex;height:100%}
+.gallery-slide{flex-shrink:0;width:50%;overflow:hidden;position:relative;height:100%}
 .gallery-slide img{
   width:100%;height:auto;
   transform:translateY(0);
@@ -482,9 +505,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .gallery-slide:hover img{transform:translateY(var(--scroll-to,-40%))}
 .gallery-divider{width:2px;background:#fff;flex-shrink:0}
 
-/* ═══════════════════════════════
-   COMPARE TABLE
-═══════════════════════════════ */
+/* ═══════════════════ COMPARE TABLE ═══════════════════ */
 .compare-section{background:var(--bg)}
 .ct{
   background:var(--white);border:1px solid var(--border2);
@@ -500,9 +521,9 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .ct-hcol:first-child{text-align:right;padding-right:28px}
 .ct-hname{font-size:.98rem;font-weight:800;color:#fff}
 .ct-hsub{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:3px}
-.ct-pro-chip{
-  display:inline-block;background:rgba(4,181,184,.2);
-  border:1px solid rgba(4,181,184,.4);color:var(--pl);
+.ct-gold-chip{
+  display:inline-block;background:rgba(212,175,55,.25);
+  border:1px solid rgba(212,175,55,.5);color:var(--gold-l);
   padding:2px 10px;border-radius:50px;font-size:.66rem;font-weight:800;
   margin-bottom:6px;
 }
@@ -512,12 +533,10 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .ct-cell:first-child{padding-right:28px;font-weight:700;color:var(--ink2)}
 .ct-cell:not(:first-child){text-align:center}
 .cy{color:var(--p);font-weight:800}
-.cn{color:var(--border2);filter:grayscale(1)}
+.cn{color:#ccc;filter:grayscale(1)}
 .cv{font-size:.82rem;font-weight:800;color:var(--p)}
 
-/* ═══════════════════════════════
-   SERVICES
-═══════════════════════════════ */
+/* ═══════════════════ SERVICES ═══════════════════ */
 .srv-section{background:var(--white)}
 .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
 .srv-card{
@@ -534,9 +553,7 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .srv-link{display:inline-flex;align-items:center;gap:5px;color:var(--p);font-size:.78rem;font-weight:700;text-decoration:none;margin-top:12px;transition:gap .2s}
 .srv-link:hover{gap:9px}
 
-/* ═══════════════════════════════
-   PARTNERS
-═══════════════════════════════ */
+/* ═══════════════════ PARTNERS ═══════════════════ */
 .partners-sec{background:var(--bg);padding:60px 28px}
 .partners-inner{max-width:900px;margin:0 auto;text-align:center}
 .partners-label{font-size:.7rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:32px}
@@ -549,36 +566,26 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .partner-chip img{height:34px;opacity:.6;transition:.3s}
 .partner-chip:hover img{opacity:1}
 
-/* ═══════════════════════════════
-   ARTICLES
-═══════════════════════════════ */
-.articles-sec{
-  padding:100px 28px;background:var(--bg);
-}
+/* ═══════════════════ ARTICLES ═══════════════════ */
+.articles-sec{padding:100px 28px;background:var(--bg)}
 .articles-inner{max-width:1200px;margin:0 auto;text-align:center}
 .articles-sec .sh{margin-bottom:12px}
 .articles-sec .sub{margin:0 auto 60px;max-width:600px}
-.articles-grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px;
-}
+.articles-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
 .article-card{
   background:#fff;border-radius:16px;padding:30px;text-align:right;
   box-shadow:0 8px 32px rgba(0,0,0,.08);transition:all .3s;
 }
 .article-card:hover{transform:translateY(-5px);box-shadow:0 12px 48px rgba(0,0,0,.12)}
-.article-card h3{font-size:1.2rem;margin-bottom:15px;color:var(--ink)}
-.article-card p{margin-bottom:20px;color:var(--muted);line-height:1.6}
+.article-card h3{font-size:1.1rem;margin-bottom:12px;color:var(--ink)}
+.article-card p{margin-bottom:18px;color:var(--muted);line-height:1.6;font-size:.9rem}
 .article-card a{
   color:var(--p);text-decoration:none;font-weight:700;
-  display:inline-flex;align-items:center;gap:8px;
+  display:inline-flex;align-items:center;gap:8px;font-size:.88rem;
 }
 .article-card a:hover{color:var(--pd)}
-.article-card a::after{content:'→';transition:transform .3s}
-.article-card a:hover::after{transform:translateX(-4px)}
 
-/* ═══════════════════════════════
-   CONTACT
-═══════════════════════════════ */
+/* ═══════════════════ CONTACT ═══════════════════ */
 .contact-sec{
   background:linear-gradient(160deg,var(--ink) 0%,var(--ink2) 100%);
   padding:100px 28px;
@@ -608,17 +615,26 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   margin-top:4px;box-shadow:0 6px 24px rgba(4,181,184,.35);transition:all .3s;letter-spacing:.2px;
 }
 .btn-submit:hover{background:var(--pd);transform:translateY(-2px);box-shadow:0 10px 32px rgba(4,181,184,.4)}
-.wa-row{
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  margin-top:18px;padding:14px 22px;border-radius:12px;
-  border:1px solid rgba(37,211,102,.25);text-decoration:none;
-  color:#4ade80;font-weight:700;font-size:.88rem;transition:all .3s;
-}
-.wa-row:hover{background:rgba(37,211,102,.08);transform:translateY(-2px)}
 
-/* ═══════════════════════════════
-   FOOTER
-═══════════════════════════════ */
+/* Contact quick actions */
+.contact-quick{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.cq-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:13px 22px;border-radius:12px;
+  font-weight:700;font-size:.88rem;transition:all .3s;text-decoration:none;
+}
+.cq-wa{
+  background:rgba(37,211,102,.12);color:#4ade80;
+  border:1px solid rgba(37,211,102,.25);
+}
+.cq-wa:hover{background:rgba(37,211,102,.2);transform:translateY(-2px)}
+.cq-consult{
+  background:rgba(255,255,255,.08);color:rgba(255,255,255,.7);
+  border:1px solid rgba(255,255,255,.15);
+}
+.cq-consult:hover{background:rgba(255,255,255,.15);color:#fff;transform:translateY(-2px)}
+
+/* ═══════════════════ FOOTER ═══════════════════ */
 footer{
   background:#040F10;
   border-top:1px solid rgba(255,255,255,.06);
@@ -636,19 +652,58 @@ footer{
 .soc{width:32px;height:32px;border-radius:8px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;text-decoration:none;color:rgba(255,255,255,.3);font-size:.78rem;transition:all .25s}
 .soc:hover{border-color:rgba(4,181,184,.4);color:var(--p)}
 
-/* ═══════════════════════════════
-   WA FLOAT
-═══════════════════════════════ */
+/* ═══════════════════ WHATSAPP FLOAT BUTTON — FIXED ═══════════════════ */
 .wa-float{
   position:fixed;bottom:26px;left:26px;z-index:200;
-  width:54px;height:54px;border-radius:50%;
+  width:60px;height:60px;border-radius:50%;
   background:linear-gradient(135deg,#25D366,#128C5E);
   display:flex;align-items:center;justify-content:center;
-  text-decoration:none;font-size:1.4rem;
-  box-shadow:0 6px 22px rgba(37,211,102,.35);
+  text-decoration:none;
+  box-shadow:0 6px 22px rgba(37,211,102,.4),0 2px 8px rgba(37,211,102,.2);
   animation:waPulse 2.5s ease infinite;transition:transform .2s;
 }
 .wa-float:hover{transform:scale(1.1)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* WA tooltip */
+.wa-tooltip{
+  position:fixed;bottom:34px;left:96px;z-index:200;
+  background:#fff;border:1px solid var(--border);border-radius:12px;
+  padding:8px 16px;box-shadow:0 4px 20px rgba(0,0,0,.1);
+  font-size:.82rem;font-weight:700;color:var(--ink);
+  white-space:nowrap;pointer-events:none;
+  opacity:0;transform:translateX(-8px);transition:all .3s;
+}
+.wa-float:hover + .wa-tooltip{opacity:1;transform:translateX(0)}
+
+/* CONSULTATION POPUP */
+.consult-popup{
+  position:fixed;bottom:100px;left:26px;z-index:300;
+  background:#fff;border:1px solid var(--border);border-radius:18px;
+  padding:20px 22px;box-shadow:0 12px 48px rgba(0,0,0,.12);
+  max-width:280px;width:calc(100vw - 52px);
+  opacity:0;transform:translateY(12px) scale(0.96);
+  transition:all .35s;pointer-events:none;
+}
+.consult-popup.open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+.cp-close{
+  position:absolute;top:10px;left:10px;
+  width:24px;height:24px;border-radius:50%;background:var(--bg);
+  border:none;cursor:pointer;font-size:.9rem;color:var(--muted);
+  display:flex;align-items:center;justify-content:center;
+}
+.cp-title{font-size:.95rem;font-weight:900;color:var(--ink);margin-bottom:4px}
+.cp-sub{font-size:.78rem;color:var(--muted);margin-bottom:14px}
+.cp-actions{display:flex;flex-direction:column;gap:8px}
+.cp-btn{
+  display:flex;align-items:center;gap:9px;padding:11px 14px;
+  border-radius:10px;text-decoration:none;font-weight:700;font-size:.85rem;
+  transition:all .25s;
+}
+.cp-wa{background:linear-gradient(135deg,#25D366,#128C5E);color:#fff}
+.cp-wa:hover{transform:translateY(-1px)}
+.cp-call{background:var(--ppp);color:var(--pd);border:1px solid var(--border)}
+.cp-call:hover{border-color:var(--p);transform:translateY(-1px)}
 
 /* TOAST */
 .toast{
@@ -661,22 +716,18 @@ footer{
 }
 .toast.on{opacity:1;transform:translateY(0)}
 
-/* ═══════════════════════════════
-   ANIMATIONS
-═══════════════════════════════ */
+/* ═══════════════════ ANIMATIONS ═══════════════════ */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 @keyframes tickerMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes waPulse{
-  0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.35),0 0 0 0 rgba(37,211,102,.25)}
-  50%{box-shadow:0 6px 22px rgba(37,211,102,.35),0 0 0 10px rgba(37,211,102,0)}
+  0%,100%{box-shadow:0 6px 22px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.25)}
+  50%{box-shadow:0 6px 22px rgba(37,211,102,.4),0 0 0 12px rgba(37,211,102,0)}
 }
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 
-/* ═══════════════════════════════
-   RESPONSIVE
-═══════════════════════════════ */
+/* ═══════════════════ RESPONSIVE ═══════════════════ */
 @media(max-width:1100px){
   .work-grid{grid-template-columns:repeat(2,1fr)}
   .wc-hero{grid-column:span 2}
@@ -687,7 +738,7 @@ footer{
   nav:not(.mob-open){display:none}
   nav.mob-open{
     display:flex;flex-direction:column;
-    position:absolute;top:68px;right:0;left:0;
+    position:absolute;top:76px;right:0;left:0;
     background:rgba(240,250,251,.97);
     padding:14px 20px;border-top:1px solid var(--border2);gap:4px;z-index:10;
   }
@@ -700,15 +751,18 @@ footer{
   .hero-stats{flex-direction:column;border-radius:14px;gap:0}
   .hstat{padding:16px 28px}
   .hstat+.hstat{border-right:none;border-top:1px solid var(--border2)}
-  .pro-feats{gap:8px}
   .plus-feats{grid-template-columns:1fr}
+  .wa-tooltip{display:none}
 }
-@media(max-width:580px){
+@media(max-width:640px){
+  .hdr-inner{padding:12px 16px}
+  .logo-mark-wrap{width:44px;height:44px}
+  .logo-brand{font-size:1.15rem}
+  .logo-tagline{display:none}
   .work-grid{grid-template-columns:1fr}
   .wc-hero{grid-column:span 1}
-  .card-viewport,.wc-hero .card-viewport{height:280px}
+  .card-viewport,.wc-hero .card-viewport{height:260px}
   .pm-item{height:140px}
-  .preview-mosaic{grid-template-columns:1fr 1fr}
   .srv-grid{grid-template-columns:1fr}
   .ct-head,.ct-row{grid-template-columns:1.2fr 1fr 1fr}
   .ct-cell{padding:12px 10px;font-size:.78rem}
@@ -716,6 +770,8 @@ footer{
   .ft-top{grid-template-columns:1fr;gap:26px}
   .hero h1{letter-spacing:-1px}
   .cf-row{grid-template-columns:1fr}
+  .hero-stats{width:100%;border-radius:14px}
+  .hstat{padding:14px 20px}
 }
 </style>
 </head>
@@ -725,15 +781,22 @@ footer{
 <header id="hdr">
   <div class="hdr-inner">
     <a href="#" class="logo">
-      <img src="images/logo.webp" alt="ازهلها" class="logo-mark">
-      <div class="logo-text">ازهلها<span>.</span></div>
+      <div class="logo-mark-wrap">
+        <!-- If logo.webp loads, it shows; fallback to emoji -->
+        <img src="images/logo.webp" alt="ازهلها" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <span class="logo-emoji" style="display:none">🛒</span>
+      </div>
+      <div class="logo-text-wrap">
+        <div class="logo-brand">ازهلها<span>.</span></div>
+        <div class="logo-tagline">متاجر إلكترونية احترافية</div>
+      </div>
     </a>
     <div class="burger" onclick="toggleNav()" id="burg">
       <span></span><span></span><span></span>
     </div>
     <nav id="nav">
       <a href="#work">أعمالنا</a>
-      <a href="#pro">باقة برو</a>
+      <a href="#pro">الذهبية</a>
       <a href="#plus">باقة بلس</a>
       <a href="#services">الخدمات</a>
       <a href="articles.html">المقالات</a>
@@ -747,10 +810,19 @@ footer{
   <div class="hero-inner">
     <div class="hero-pill"><span class="hero-pill-dot"></span>الشريك المتكامل لمتجرك الإلكتروني</div>
     <h1>نصمّم متاجر<br><em>تبيع فعلاً</em></h1>
-    <p class="hero-sub">متاجر احترافية على سلة وزد — تصميم يحول الزوار إلى عملاء، وهوية بصرية تجعلك تُذكَر دائماً.</p>
+    <p class="hero-sub">متاجر احترافية على سلة وزد — تصميم يحوّل الزوار إلى عملاء، وهوية بصرية تجعلك تُذكَر دائماً.</p>
     <div class="hero-btns">
       <a href="#work" class="btn-primary">شاهد أعمالنا ↓</a>
-      <a href="#pro" class="btn-outline">تعرف على باقة برو</a>
+      <a href="#pro" class="btn-outline">الباقة الذهبية</a>
+    </div>
+    <div class="hero-consult">
+      <a href="https://wa.me/966501940155?text=أريد التواصل مع مختص تجارة إلكترونية" target="_blank" class="btn-consult">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        تواصل مع مختص
+      </a>
+      <a href="https://wa.me/966501940155?text=أريد طلب استشارة هاتفية سريعة لمتجري الإلكتروني" target="_blank" class="btn-call">
+        📞 استشارة هاتفية مجانية
+      </a>
     </div>
     <div class="hero-stats">
       <div class="hstat"><div class="hstat-n">+50</div><div class="hstat-l">متجر مُسلَّم</div></div>
@@ -764,29 +836,27 @@ footer{
 <div class="ticker-wrap">
   <div class="ticker">
     <span class="ticker-item"><span class="tdot">✦</span>تصميم سلة احترافي</span>
-    <span class="ticker-item"><span class="tdot">✦</span>باقة PRO الكاملة</span>
+    <span class="ticker-item"><span class="tdot">✦</span>الباقة الذهبية الشاملة</span>
     <span class="ticker-item"><span class="tdot">✦</span>SEO متقدم + Analytics</span>
     <span class="ticker-item"><span class="tdot">✦</span>تفعيل تابي & تمارا</span>
     <span class="ticker-item"><span class="tdot">✦</span>هوية بصرية كاملة</span>
     <span class="ticker-item"><span class="tdot">✦</span>تصميم زد احترافي</span>
     <span class="ticker-item"><span class="tdot">✦</span>بكسل سناب وتيك توك</span>
-    <span class="ticker-item"><span class="tdot">✦</span>توثيق منصة الأعمال</span>
-    <!-- duplicate for seamless loop -->
+    <span class="ticker-item"><span class="tdot">✦</span>استشارة هاتفية مجانية</span>
     <span class="ticker-item"><span class="tdot">✦</span>تصميم سلة احترافي</span>
-    <span class="ticker-item"><span class="tdot">✦</span>باقة PRO الكاملة</span>
+    <span class="ticker-item"><span class="tdot">✦</span>الباقة الذهبية الشاملة</span>
     <span class="ticker-item"><span class="tdot">✦</span>SEO متقدم + Analytics</span>
     <span class="ticker-item"><span class="tdot">✦</span>تفعيل تابي & تمارا</span>
     <span class="ticker-item"><span class="tdot">✦</span>هوية بصرية كاملة</span>
     <span class="ticker-item"><span class="tdot">✦</span>تصميم زد احترافي</span>
     <span class="ticker-item"><span class="tdot">✦</span>بكسل سناب وتيك توك</span>
-    <span class="ticker-item"><span class="tdot">✦</span>توثيق منصة الأعمال</span>
+    <span class="ticker-item"><span class="tdot">✦</span>استشارة هاتفية مجانية</span>
   </div>
 </div>
 
 <!-- ═══ PORTFOLIO / WORK ═══ -->
 <section class="sec" id="work" style="background:var(--bg)">
   <div class="sec-inner">
-    <!-- header -->
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:36px" class="reveal">
       <div>
         <div class="tag-chip"><span class="tag-dot"></span>معرض الأعمال</div>
@@ -796,29 +866,28 @@ footer{
       <a href="#contact" style="color:var(--p);text-decoration:none;font-weight:800;font-size:.88rem;border-bottom:2px solid rgba(4,181,184,.3);padding-bottom:2px;white-space:nowrap">ابدأ مشروعك ←</a>
     </div>
 
-    <!-- PRO indicator strip -->
     <div class="pro-strip reveal">
-      <span class="ps-badge">👑 PRO</span>
+      <span class="ps-badge">🏅 الذهبية</span>
       <div>
-        <div class="ps-text">التصاميم التالية هي أعمال باقة PRO الاحترافية الكاملة</div>
-        <div class="ps-sub">تصميم هوية كاملة · واجهة مخصصة · SEO · بكسلات تسويق · 35 منتج</div>
+        <div class="ps-text">التصاميم التالية من الباقة الذهبية الاحترافية الشاملة</div>
+        <div class="ps-sub">هوية كاملة · واجهة مخصصة · SEO · بكسلات تسويق · 20 منتج</div>
       </div>
     </div>
 
     <!-- filter -->
     <div class="work-filter">
       <button class="wf-btn on" onclick="filterWork('all',this)">الكل</button>
-      <button class="wf-btn" onclick="filterWork('pro',this)">👑 PRO</button>
+      <button class="wf-btn" onclick="filterWork('pro',this)">🏅 الذهبية</button>
       <button class="wf-btn" onclick="filterWork('plus',this)">✦ PLUS</button>
       <button class="wf-btn" onclick="filterWork('salla',this)">منصة سلة</button>
       <button class="wf-btn" onclick="filterWork('zid',this)">منصة زد</button>
     </div>
 
-    <!-- GRID — tall screenshot cards -->
+    <!-- GRID -->
     <div class="work-grid" id="wGrid">
 
-      <!-- HERO CARD -->
-      <div class="work-card wc-hero reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/asl_noura_plus.webp','متجر عسل نورة','salla.sa')">
+      <!-- HERO CARD — سلة -->
+      <div class="work-card wc-hero reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/asl_noura_plus.webp','متجر عسل نورة','asl-noura.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>asl-noura.salla.sa</div>
@@ -828,13 +897,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر عسل نورة</div><div class="card-cat">منتجات طبيعية</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر عسل نورة</div><div class="card-cat">منتجات طبيعية</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- سمبوسة البلد -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/sanbosaalbalad_pro.webp','سمبوسة البلد','salla.sa')">
+      <!-- سمبوسة البلد — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/sanbosaalbalad_pro.webp','سمبوسة البلد','sanbosa.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>sanbosa.salla.sa</div>
@@ -844,13 +913,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">سمبوسة البلد</div><div class="card-cat">أغذية ومطبخ</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">سمبوسة البلد</div><div class="card-cat">أغذية ومطبخ</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- عبايات -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/mtger_abk1.webp','متجر عبايات','salla.sa')">
+      <!-- عبايات — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/mtger_abk1.webp','متجر عبايات','abaya.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>abaya.salla.sa</div>
@@ -860,13 +929,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر عبايات</div><div class="card-cat">أزياء نسائية</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر عبايات</div><div class="card-cat">أزياء نسائية</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- دار -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/darlisa_pro.webp','متجر دار','salla.sa')">
+      <!-- دار — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>dar.salla.sa</div>
@@ -876,13 +945,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر دار</div><div class="card-cat">أثاث ومفروشات</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر دار</div><div class="card-cat">أثاث ومفروشات</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- ليدر -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/LEDER.webp','متجر ليدر','salla.sa')">
+      <!-- ليدر — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/LEDER.webp','متجر ليدر','leder.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>leder.salla.sa</div>
@@ -892,13 +961,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر ليدر</div><div class="card-cat">عناية بالجسم</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر ليدر</div><div class="card-cat">عناية بالجسم</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- عناية -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/mtger_anaia3.webp','منتجات العناية','salla.sa')">
+      <!-- عناية — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/mtger_anaia3.webp','منتجات العناية','anaia.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>anaia.salla.sa</div>
@@ -908,13 +977,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">منتجات العناية</div><div class="card-cat">تجميل وعناية</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">منتجات العناية</div><div class="card-cat">تجميل وعناية</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- سوار الطيب ZID -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="zid" onclick="openLb('images/swartyp_zid.webp','Siwar Altyeb','zid.sa')">
+      <!-- سوار الطيب — ZID فقط -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="zid" onclick="openLb('images/swartyp_zid.webp','Siwar Altyeb','siwar.zid.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>siwar.zid.sa</div>
@@ -924,13 +993,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">زد</span></div><div class="card-title" style="margin-top:5px">Siwar Altyeb</div><div class="card-cat">عطور وعود</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">زد</span></div><div class="card-title" style="margin-top:5px">Siwar Altyeb</div><div class="card-cat">عطور وعود</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- شروق الطيب -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/sarok_salla.webp','شروق الطيب','salla.sa')">
+      <!-- شروق الطيب — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/sarok_salla.webp','شروق الطيب','shirwak.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>shirwak.salla.sa</div>
@@ -940,13 +1009,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">Shirwak Altayib</div><div class="card-cat">عطور وعود</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">Shirwak Altayib</div><div class="card-cat">عطور وعود</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- Roast Master -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/coffepro.webp','Roast Master','salla.sa')">
+      <!-- Roast Master — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/coffepro.webp','Roast Master','roastmaster.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>roastmaster.salla.sa</div>
@@ -956,13 +1025,13 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">Roast Master</div><div class="card-cat">قهوة مختصة</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">Roast Master</div><div class="card-cat">قهوة مختصة</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- Rivna -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/rivna.webp','Rivna','salla.sa')">
+      <!-- Rivna — سلة -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>rivna.salla.sa</div>
@@ -972,45 +1041,45 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">Rivna</div><div class="card-cat">عسل طبيعي</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">Rivna</div><div class="card-cat">عسل طبيعي</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- Dresse Faya -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/dressefaya_pro.webp','Dresse Faya','salla.sa')">
+      <!-- Dresse Faya — ZID -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="zid" onclick="openLb('images/dressefaya_pro.webp','Dresse Faya','faya.zid.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
-          <div class="chrome-bar"><span class="chrome-lock">🔒</span>faya.salla.sa</div>
+          <div class="chrome-bar"><span class="chrome-lock">🔒</span>faya.zid.sa</div>
         </div>
         <div class="card-viewport">
           <img src="images/dressefaya_pro.webp" alt="Dresse Faya" loading="lazy" class="scroll-img">
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">Dresse Faya</div><div class="card-cat">أزياء راقية</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">زد</span></div><div class="card-title" style="margin-top:5px">Dresse Faya</div><div class="card-cat">أزياء راقية</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- عناية 2bni -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" onclick="openLb('images/matgeranaia_2bni.webp','منتجات عناية','salla.sa')">
+      <!-- عناية 2bni — ZID -->
+      <div class="work-card reveal" data-pkg="pro" data-plat="zid" onclick="openLb('images/matgeranaia_2bni.webp','منتجات عناية','anaia2.zid.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
-          <div class="chrome-bar"><span class="chrome-lock">🔒</span>anaia2.salla.sa</div>
+          <div class="chrome-bar"><span class="chrome-lock">🔒</span>anaia2.zid.sa</div>
         </div>
         <div class="card-viewport">
           <img src="images/matgeranaia_2bni.webp" alt="عناية 2" loading="lazy" class="scroll-img">
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-pro">👑 PRO</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">منتجات عناية</div><div class="card-cat">عناية وتجميل</div></div>
+          <div><div class="card-badges"><span class="cbadge-gold">🏅 ذهبية</span><span class="cbadge-plat">زد</span></div><div class="card-title" style="margin-top:5px">منتجات عناية</div><div class="card-cat">عناية وتجميل</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
 
-      <!-- عبايات وجلابيات PLUS -->
-      <div class="work-card reveal" data-pkg="plus" data-plat="salla" onclick="openLb('images/matger_abaia4.webp','عبايات وجلابيات','salla.sa')">
+      <!-- عبايات — PLUS -->
+      <div class="work-card reveal" data-pkg="plus" data-plat="salla" onclick="openLb('images/matger_abaia4.webp','عبايات وجلابيات','abaya2.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>abaya2.salla.sa</div>
@@ -1025,8 +1094,8 @@ footer{
         </div>
       </div>
 
-      <!-- فساتين PLUS -->
-      <div class="work-card reveal" data-pkg="plus" data-plat="salla" onclick="openLb('images/fstinplus.webp','متجر فساتين','salla.sa')">
+      <!-- فساتين — PLUS -->
+      <div class="work-card reveal" data-pkg="plus" data-plat="salla" onclick="openLb('images/fstinplus.webp','متجر فساتين','fasatin.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>fasatin.salla.sa</div>
@@ -1036,7 +1105,7 @@ footer{
           <div class="scroll-hint"><div class="scroll-hint-text">↕ مرّر للمعاينة</div></div>
         </div>
         <div class="card-info">
-          <div><div class="card-badges"><span class="cbadge-plus">✦ PLUS</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر عنق فساتين</div><div class="card-cat">أزياء نسائية</div></div>
+          <div><div class="card-badges"><span class="cbadge-plus">✦ PLUS</span><span class="cbadge-plat">سلة</span></div><div class="card-title" style="margin-top:5px">متجر فساتين عنق</div><div class="card-cat">أزياء نسائية</div></div>
           <div class="card-view">↗</div>
         </div>
       </div>
@@ -1057,54 +1126,67 @@ footer{
   </div>
 </div>
 
-<!-- ═══ PRO PACKAGE ═══ -->
+<!-- ═══ GOLDEN / PRO PACKAGE ═══ -->
 <section class="pro-section sec" id="pro">
   <div class="sec-inner">
     <div class="pro-grid">
       <!-- LEFT: features -->
       <div class="reveal">
-        <div class="tag-chip"><span class="tag-dot"></span>الباقة الاحترافية الكاملة</div>
-        <h2 class="sh">باقة <span>PRO</span><br>كل شيء في مكان واحد</h2>
-        <p class="sub">الحل الأمثل لمن يريد متجراً ينافس الكبار — من التوثيق الرسمي حتى التسويق الرقمي، نتولى كل شيء.</p>
+        <div class="tag-chip"><span class="tag-dot"></span>الباقة الذهبية الاحترافية الشاملة</div>
+        <h2 class="sh">الباقة <span style="color:var(--gold)">الذهبية</span><br><span style="font-size:.8em;color:rgba(255,255,255,.6);font-weight:700">متجرك جاهز من الصفر</span></h2>
+        <p class="sub">الحل الأمثل لإطلاق مشروعك باحترافية وهدوء بال. نسلّمك "مفتاح متجرك" جاهزاً لاستقبال الطلبات.</p>
+
         <div class="pro-feats">
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">توثيق المتجر في <strong>منصة الأعمال السعودية</strong></span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">تصميم <strong>شعار احترافي</strong> مع الهوية البصرية كاملة</span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">تصميم <strong>6 بنرات احترافية</strong> عالية الجودة</span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">تخصيص الواجهة الكاملة + <strong>برمجة CSS مخصصة</strong></span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">إضافة <strong>35 منتجاً</strong> بصور وأوصاف احترافية</span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">تحسين <strong>SEO متقدم</strong> + ربط Google Search Console</span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">ربط <strong>Google Analytics 4</strong> الكامل</span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">تفعيل <strong>بكسل سناب شات + تيك توك</strong></span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">تفعيل وسائل الدفع كاملة + إعداد الشحن</span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">حجز وربط <strong>دومين .com</strong> مخصص</span></div>
-          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t">زر واتساب عائم + صفحات قانونية كاملة</span></div>
+          <div class="pf-group">🛠️ التأسيس والاشتراكات</div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>اشتراك المتجر:</strong> دفع رسوم الاشتراك الشهري لمنصة سلة / زد</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>الدومين السنوي:</strong> حجز وتفعيل اسم النطاق (.com) لمدة عام كامل</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>تفعيل المدفوعات:</strong> مدى · فيزا · Apple Pay · تابي · تمارا</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>خيارات الشحن:</strong> تفعيل شركات الشحن وتجهيز بوليصات الإرسال</span></div>
+
+          <div class="pf-group">🎨 الهوية والتصميم الإبداعي</div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>تصميم اللوجو:</strong> شعار احترافي يعكس هوية علامتك التجارية</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>تصميم البنرات:</strong> بنرات متحركة وثابتة بجودة عالية للواجهة الرئيسية</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>تنسيق الألوان:</strong> لوحة ألوان متناغمة تزيد جاذبية المتجر ومعدل التحويل</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>برمجة CSS:</strong> تخصيص الواجهة الكاملة + كود مخصص احترافي</span></div>
+
+          <div class="pf-group">📦 هندسة المنتجات والأقسام</div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>هيكلة الأقسام:</strong> إنشاء وتنسيق تصنيفات المنتجات لتسهيل تجربة العميل</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>إضافة 20 منتجاً:</strong> صور احترافية + أوصاف توضيحية مقنعة</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>الصفحات القانونية:</strong> من نحن + سياسات الاستبدال والاسترجاع</span></div>
+
+          <div class="pf-group">🚀 التسويق الرقمي والتحليلات</div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>SEO متقدم</strong> + ربط Google Search Console</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>Google Analytics 4</strong> الكامل</span></div>
+          <div class="pf"><span class="pf-ck">✓</span><span class="pf-t"><strong>بكسل سناب شات + تيك توك</strong> + توثيق منصة الأعمال</span></div>
         </div>
         <div class="pro-btns">
-          <a href="https://ezhalhe.com/qQZeYvQ" target="_blank" class="btn-white">اطلب PRO سلة ←</a>
-          <a href="https://wa.me/966501940155?text=أريد باقة برو على منصة زد" target="_blank" class="btn-ghost-w">PRO زد</a>
+          <a href="https://ezhalhe.com/qQZeYvQ" target="_blank" class="btn-gold">اطلب الذهبية — سلة ←</a>
+          <a href="https://wa.me/966501940155?text=أريد الباقة الذهبية على منصة زد" target="_blank" class="btn-ghost-w">الذهبية — زد</a>
         </div>
       </div>
 
-      <!-- RIGHT: preview mosaic -->
+      <!-- RIGHT: mosaic — سلة vs زد separated -->
       <div class="pro-preview-wrap reveal">
         <div class="platform-switch">
           <button class="ps-tab on" onclick="switchPlat('salla',this)">🛒 سلة</button>
           <button class="ps-tab" onclick="switchPlat('zid',this)">⚡ زد</button>
         </div>
+        <!-- سلة screenshots — only salla work -->
         <div id="pp-salla" class="preview-mosaic">
-          <div class="pm-item"><img src="images/coffepro.webp" alt="PRO 1" class="scroll-img"><div class="pm-overlay"></div></div>
-          <div class="pm-item"><img src="images/darlisa_pro.webp" alt="PRO 2" class="scroll-img"><div class="pm-overlay"></div></div>
-          <div class="pm-item"><img src="images/LEDER.webp" alt="PRO 3" class="scroll-img"><div class="pm-overlay"></div></div>
-          <div class="pm-item"><img src="images/rivna.webp" alt="PRO 4" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/coffepro.webp" alt="سلة 1" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/darlisa_pro.webp" alt="سلة 2" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/LEDER.webp" alt="سلة 3" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/rivna.webp" alt="سلة 4" class="scroll-img"><div class="pm-overlay"></div></div>
         </div>
+        <!-- زد screenshots — only zid work -->
         <div id="pp-zid" class="preview-mosaic" style="display:none">
-          <div class="pm-item"><img src="images/swartyp_zid.webp" alt="ZID 1" class="scroll-img"><div class="pm-overlay"></div></div>
-          <div class="pm-item"><img src="images/dressefaya_pro.webp" alt="ZID 2" class="scroll-img"><div class="pm-overlay"></div></div>
-          <div class="pm-item"><img src="images/mtger_anaia3.webp" alt="ZID 3" class="scroll-img"><div class="pm-overlay"></div></div>
-          <div class="pm-item"><img src="images/matgeranaia_2bni.webp" alt="ZID 4" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/swartyp_zid.webp" alt="زد 1" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/dressefaya_pro.webp" alt="زد 2" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/matgeranaia_2bni.webp" alt="زد 3" class="scroll-img"><div class="pm-overlay"></div></div>
+          <div class="pm-item"><img src="images/mtger_anaia3.webp" alt="زد 4" class="scroll-img"><div class="pm-overlay"></div></div>
         </div>
-        <div style="margin-top:16px;display:flex;gap:10px;align-items:center;justify-content:center">
-          <span style="font-size:.76rem;color:rgba(255,255,255,.35);font-weight:700">↕ مرّر على أي صورة لمشاهدة التصميم كاملاً</span>
+        <div style="margin-top:14px;text-align:center">
+          <span style="font-size:.76rem;color:rgba(255,255,255,.35);font-weight:700">↕ مرّر على الصور لمشاهدة التصميم كاملاً</span>
         </div>
       </div>
     </div>
@@ -1114,30 +1196,47 @@ footer{
 <!-- ═══ PLUS PACKAGE ═══ -->
 <section class="plus-section sec" id="plus">
   <div class="sec-inner">
+    <!-- Header — PRO first -->
     <div style="text-align:center;margin-bottom:40px" class="reveal">
-      <div class="tag-chip" style="background:rgba(4,181,184,.08);border-color:rgba(4,181,184,.2)"><span class="tag-dot"></span>للانطلاق السريع</div>
+      <div class="tag-chip" style="background:rgba(4,181,184,.08);border-color:rgba(4,181,184,.2)"><span class="tag-dot"></span>باقة الانطلاق</div>
       <h2 class="sh">باقة <span>PLUS</span></h2>
-      <p class="sub" style="margin:0 auto">ابدأ بمتجر أنيق وجاهز للبيع فوراً.</p>
+      <p class="sub" style="margin:0 auto">للانطلاق السريع بتصميم أنيق وجاهز للبيع.</p>
     </div>
+
+    <!-- Comparison highlight — PRO first -->
+    <div style="background:linear-gradient(135deg,var(--ppp),#fff);border:1px solid var(--border);border-radius:20px;padding:28px 32px;margin-bottom:32px;display:flex;gap:20px;align-items:center;flex-wrap:wrap" class="reveal">
+      <div style="flex:1;min-width:220px">
+        <div style="font-size:.75rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">تريد الأفضل؟</div>
+        <div style="font-size:1.1rem;font-weight:900;color:var(--ink);margin-bottom:4px">الباقة الذهبية أقوى بكثير</div>
+        <div style="font-size:.85rem;color:var(--muted)">تشمل لوجو + بكسلات + SEO + تابي وتمارا + 20 منتج</div>
+      </div>
+      <a href="#pro" style="background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;text-decoration:none;padding:13px 26px;border-radius:12px;font-weight:800;font-size:.9rem;white-space:nowrap;box-shadow:0 4px 16px rgba(212,175,55,.3)">شاهد الذهبية ↑</a>
+    </div>
+
     <div class="plus-card reveal">
       <div class="plus-body">
-        <div class="tag-chip" style="background:rgba(4,181,184,.08);border-color:rgba(4,181,184,.2)"><span class="tag-dot"></span>ما تحصل عليه</div>
-        <h2 style="font-size:clamp(1.7rem,2.8vw,2.4rem);font-weight:900;color:var(--ink);letter-spacing:-1px;margin:12px 0 10px">كل ما تحتاجه<br>للانطلاق الفوري</h2>
-        <p style="font-size:.88rem;color:var(--muted);line-height:1.8;margin-bottom:0">مثالية لمن يريد الدخول السريع للسوق بتصميم احترافي وأنيق.</p>
+        <div class="tag-chip" style="background:rgba(4,181,184,.08);border-color:rgba(4,181,184,.2)"><span class="tag-dot"></span>ما تشمله باقة PLUS</div>
+        <h2 style="font-size:clamp(1.6rem,2.8vw,2.2rem);font-weight:900;color:var(--ink);letter-spacing:-1px;margin:12px 0 8px">إطلاق سريع<br>بتكلفة مناسبة</h2>
+        <p style="font-size:.86rem;color:var(--muted);line-height:1.8;margin-bottom:0">مثالية لمن يريد الدخول السريع بميزانية محدودة — التوسع لاحقاً للذهبية.</p>
+
         <div class="plus-feats">
           <div class="plf"><span class="plf-ic">✓</span>إنشاء المتجر</div>
-          <div class="plf"><span class="plf-ic">✓</span>3 بنرات احترافية</div>
+          <div class="plf"><span class="plf-ic">✓</span>بنرين إعلانيين</div>
           <div class="plf"><span class="plf-ic">✓</span>تصميم الواجهة</div>
-          <div class="plf"><span class="plf-ic">✓</span>وسائل الدفع</div>
-          <div class="plf"><span class="plf-ic">✓</span>إعداد الشحن</div>
-          <div class="plf"><span class="plf-ic">✓</span>الصفحات القانونية</div>
+          <div class="plf"><span class="plf-ic">✓</span>قسمين فقط</div>
+          <div class="plf"><span class="plf-ic">✓</span>منتجين للعرض</div>
+          <div class="plf"><span class="plf-ic">✓</span>تفعيل الشحن والدفع</div>
+          <div class="plf-no"><span class="plf-no-ic">✗</span>تصميم لوجو</div>
+          <div class="plf-no"><span class="plf-no-ic">✗</span>تابي / تمارا</div>
+          <div class="plf-no"><span class="plf-no-ic">✗</span>SEO / Analytics</div>
+          <div class="plf-no"><span class="plf-no-ic">✗</span>بكسلات تسويق</div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a href="https://ezhalhe.com/XeWEPGb" target="_blank" class="btn-primary">اطلب PLUS ←</a>
-          <a href="#compare" style="display:inline-flex;align-items:center;padding:14px 22px;border-radius:12px;border:2px solid var(--p);color:var(--p);text-decoration:none;font-weight:800;font-size:.88rem;transition:all .3s" onmouseover="this.style.background='var(--ppp)'" onmouseout="this.style.background='transparent'">قارن مع PRO</a>
+          <a href="#compare" style="display:inline-flex;align-items:center;padding:14px 22px;border-radius:12px;border:2px solid var(--p);color:var(--p);text-decoration:none;font-weight:800;font-size:.88rem;transition:all .3s" onmouseover="this.style.background='var(--ppp)'" onmouseout="this.style.background='transparent'">قارن مع الذهبية</a>
         </div>
       </div>
-      <!-- Gallery of tall screenshots -->
+      <!-- Gallery of PLUS screenshots only -->
       <div class="plus-gallery">
         <div class="gallery-track">
           <div class="gallery-slide" style="height:100%">
@@ -1158,28 +1257,31 @@ footer{
   <div class="sec-inner">
     <div style="text-align:center;margin-bottom:0" class="reveal">
       <div class="tag-chip"><span class="tag-dot"></span>مقارنة الباقتين</div>
-      <h2 class="sh">بلس أم <span>PRO</span>؟</h2>
+      <h2 class="sh">بلس أم <span>الذهبية</span>؟</h2>
     </div>
     <div class="ct reveal">
       <div class="ct-head">
         <div class="ct-hcol"><span style="font-size:.76rem;color:rgba(255,255,255,.4);font-weight:700">الميزة</span></div>
         <div class="ct-hcol"><div class="ct-hname">PLUS</div><div class="ct-hsub">للانطلاق السريع</div></div>
-        <div class="ct-hcol"><div class="ct-pro-chip">⭐ الأفضل</div><div class="ct-hname">PRO</div><div class="ct-hsub">الحل الاحترافي الكامل</div></div>
+        <div class="ct-hcol"><div class="ct-gold-chip">⭐ الأفضل</div><div class="ct-hname" style="color:var(--gold-l)">الذهبية</div><div class="ct-hsub">الحل الاحترافي الكامل</div></div>
       </div>
-      <div class="ct-row"><div class="ct-cell">توثيق منصة الأعمال</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">عدد البنرات</div><div class="ct-cell"><span class="cv">3 بنرات</span></div><div class="ct-cell"><span class="cv">6 بنرات</span></div></div>
-      <div class="ct-row"><div class="ct-cell">تصميم شعار</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">اشتراك المنصة</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">دومين .com</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">تصميم لوجو</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">عدد البنرات</div><div class="ct-cell"><span class="cv">2 بنرات</span></div><div class="ct-cell"><span class="cv">بنرات متعددة</span></div></div>
+      <div class="ct-row"><div class="ct-cell">الأقسام</div><div class="ct-cell"><span class="cv">قسمين</span></div><div class="ct-cell"><span class="cv">غير محدود</span></div></div>
+      <div class="ct-row"><div class="ct-cell">إضافة المنتجات</div><div class="ct-cell"><span class="cv">منتجين</span></div><div class="ct-cell"><span class="cv">20 منتجاً</span></div></div>
+      <div class="ct-row"><div class="ct-cell">تابي & تمارا</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
       <div class="ct-row"><div class="ct-cell">برمجة CSS مخصصة</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">إضافة المنتجات</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cv">35 منتجاً</span></div></div>
       <div class="ct-row"><div class="ct-cell">SEO متقدم</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
       <div class="ct-row"><div class="ct-cell">Google Analytics 4</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
       <div class="ct-row"><div class="ct-cell">بكسل سناب + تيك توك</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">دومين .com</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">توثيق منصة الأعمال</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
       <div class="ct-row"><div class="ct-cell">وسائل الدفع + الشحن</div><div class="ct-cell"><span class="cy">✓</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
       <div class="ct-row" style="border-bottom:none">
         <div class="ct-cell"></div>
         <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/XeWEPGb" target="_blank" style="display:inline-block;background:rgba(4,181,184,.12);color:var(--p);border:1.5px solid var(--p);padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none">اطلب PLUS</a></div>
-        <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/qQZeYvQ" target="_blank" style="display:inline-block;background:var(--p);color:#fff;padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none;box-shadow:0 4px 14px rgba(4,181,184,.3)">اطلب PRO ←</a></div>
+        <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/qQZeYvQ" target="_blank" style="display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none;box-shadow:0 4px 14px rgba(212,175,55,.3)">اطلب الذهبية ←</a></div>
       </div>
     </div>
   </div>
@@ -1209,10 +1311,10 @@ footer{
   <div class="partners-inner">
     <div class="partners-label">منصاتنا الشريكة</div>
     <div class="partners-row">
-      <div class="partner-chip"><img src="images/salla.webp" alt="سلة"></div>
-      <div class="partner-chip"><img src="images/zid.webp" alt="زد"></div>
-      <div class="partner-chip"><img src="images/shopify.webp" alt="Shopify"></div>
-      <div class="partner-chip"><img src="images/wordpress.webp" alt="WordPress"></div>
+      <div class="partner-chip"><img src="images/salla.webp" alt="سلة" onerror="this.parentElement.innerHTML='<span style=font-weight:800;color:var(--muted)>سلة</span>'"></div>
+      <div class="partner-chip"><img src="images/zid.webp" alt="زد" onerror="this.parentElement.innerHTML='<span style=font-weight:800;color:var(--muted)>زد</span>'"></div>
+      <div class="partner-chip"><img src="images/shopify.webp" alt="Shopify" onerror="this.parentElement.innerHTML='<span style=font-weight:800;color:var(--muted)>Shopify</span>'"></div>
+      <div class="partner-chip"><img src="images/wordpress.webp" alt="WordPress" onerror="this.parentElement.innerHTML='<span style=font-weight:800;color:var(--muted)>WordPress</span>'"></div>
     </div>
   </div>
 </section>
@@ -1224,36 +1326,12 @@ footer{
     <h2 class="sh">مقالات مفيدة<br><span>لنجاح متجرك</span></h2>
     <p class="sub">اكتشف نصائح وإرشادات حول تصميم المتاجر، التسويق الرقمي، والإدارة الاحترافية.</p>
     <div class="articles-grid">
-      <div class="article-card">
-        <h3>أهمية التصميم الاحترافي لمتجرك على سلة</h3>
-        <p>تعلم كيف يساعد التصميم الاحترافي في زيادة المبيعات وبناء الثقة مع عملائك.</p>
-        <a href="articles/أهمية-التصميم-الاحترافي-لمتجرك-على-سلة-زيادة-المبيعات-والثقة.html">اقرأ المزيد</a>
-      </div>
-      <div class="article-card">
-        <h3>كيفية إدارة متجرك الإلكتروني بكفاءة</h3>
-        <p>استراتيجيات عملية لإدارة المتجر وحسابات التواصل الاجتماعي لمدة شهر كامل.</p>
-        <a href="articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html">اقرأ المزيد</a>
-      </div>
-      <div class="article-card">
-        <h3>دليل توثيق المتجر على سلة</h3>
-        <p>خطوات مفصلة لبناء الثقة وزيادة المصداقية لمتجرك الإلكتروني.</p>
-        <a href="articles/أهمية-توثيق-متجرك-في-سلة-بناء-الثقة-والمصداقية.html">اقرأ المزيد</a>
-      </div>
-      <div class="article-card">
-        <h3>مقارنة بوابات الدفع الإلكتروني</h3>
-        <p>تعرف على ميس، مدفوع، وإمكان وكيفية اختيار الأنسب لمتجرك.</p>
-        <a href="articles/مقارنة-بين-بوابات-الدفع-الإلكتروني-ميس-مدفوع-وإمكان.html">اقرأ المزيد</a>
-      </div>
-      <div class="article-card">
-        <h3>تحسين SEO للمتاجر على سلة</h3>
-        <p>دليل شامل لبدء تحسين محركات البحث وزيادة ظهور متجرك.</p>
-        <a href="articles/تحسين-seo-للمتاجر-الإلكترونية-على-سلة-دليل-شامل-للبداية.html">اقرأ المزيد</a>
-      </div>
-      <div class="article-card">
-        <h3>إعداد حملات إعلانية ناجحة</h3>
-        <p>خطوات لتخطيط وإدارة حملات إعلانية فعالة لزيادة المبيعات.</p>
-        <a href="articles/كيف-تخطط-لحملة-إعلانية-ناجحة-لمتجرك-الإلكتروني.html">اقرأ المزيد</a>
-      </div>
+      <div class="article-card"><h3>أهمية التصميم الاحترافي لمتجرك على سلة</h3><p>تعلم كيف يساعد التصميم الاحترافي في زيادة المبيعات وبناء الثقة مع عملائك.</p><a href="articles/أهمية-التصميم-الاحترافي-لمتجرك-على-سلة-زيادة-المبيعات-والثقة.html">اقرأ المزيد</a></div>
+      <div class="article-card"><h3>كيفية إدارة متجرك الإلكتروني بكفاءة</h3><p>استراتيجيات عملية لإدارة المتجر وحسابات التواصل الاجتماعي لمدة شهر كامل.</p><a href="articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html">اقرأ المزيد</a></div>
+      <div class="article-card"><h3>دليل توثيق المتجر على سلة</h3><p>خطوات مفصلة لبناء الثقة وزيادة المصداقية لمتجرك الإلكتروني.</p><a href="articles/أهمية-توثيق-متجرك-في-سلة-بناء-الثقة-والمصداقية.html">اقرأ المزيد</a></div>
+      <div class="article-card"><h3>مقارنة بوابات الدفع الإلكتروني</h3><p>تعرف على ميس، مدفوع، وإمكان وكيفية اختيار الأنسب لمتجرك.</p><a href="articles/مقارنة-بين-بوابات-الدفع-الإلكتروني-ميس-مدفوع-وإمكان.html">اقرأ المزيد</a></div>
+      <div class="article-card"><h3>تحسين SEO للمتاجر على سلة</h3><p>دليل شامل لبدء تحسين محركات البحث وزيادة ظهور متجرك.</p><a href="articles/تحسين-seo-للمتاجر-الإلكترونية-على-سلة-دليل-شامل-للبداية.html">اقرأ المزيد</a></div>
+      <div class="article-card"><h3>إعداد حملات إعلانية ناجحة</h3><p>خطوات لتخطيط وإدارة حملات إعلانية فعالة لزيادة المبيعات.</p><a href="articles/كيف-تخطط-لحملة-إعلانية-ناجحة-لمتجرك-الإلكتروني.html">اقرأ المزيد</a></div>
     </div>
     <a href="articles.html" class="nav-cta" style="margin-top:50px;display:inline-block">عرض جميع المقالات</a>
   </div>
@@ -1273,9 +1351,15 @@ footer{
       <div class="cf-mb"><textarea name="message" placeholder="أخبرنا عن متجرك وما تحتاجه..." required></textarea></div>
       <button class="btn-submit" type="submit">إرسال الرسالة ✈</button>
     </form>
-    <a href="https://wa.me/966501940155" target="_blank" class="wa-row">
-      💬 تحدث معنا مباشرة على واتساب
-    </a>
+    <div class="contact-quick">
+      <a href="https://wa.me/966501940155" target="_blank" class="cq-btn cq-wa">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        تحدث معنا على واتساب
+      </a>
+      <a href="https://wa.me/966501940155?text=أريد طلب استشارة هاتفية سريعة" target="_blank" class="cq-btn cq-consult">
+        📞 استشارة هاتفية مجانية
+      </a>
+    </div>
   </div>
 </section>
 
@@ -1284,19 +1368,29 @@ footer{
   <div class="ft-inner">
     <div class="ft-top">
       <div>
-        <a href="#" class="logo"><img src="images/logo.webp" alt="ازهلها" class="logo-mark"><div class="logo-text">ازهلها<span>.</span></div></a>
+        <a href="#" class="logo">
+          <div class="logo-mark-wrap">
+            <img src="images/logo.webp" alt="ازهلها" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <span class="logo-emoji" style="display:none">🛒</span>
+          </div>
+          <div class="logo-text-wrap">
+            <div class="logo-brand">ازهلها<span>.</span></div>
+            <div class="logo-tagline">متاجر إلكترونية احترافية</div>
+          </div>
+        </a>
         <p class="ft-desc">شريكك المتكامل في بناء وتطوير متجرك الإلكتروني على سلة وزد — من التصميم حتى النجاح.</p>
       </div>
       <div class="ft-col">
         <h4>روابط</h4>
         <a href="#work">معرض الأعمال</a>
-        <a href="#pro">باقة PRO</a>
+        <a href="#pro">الباقة الذهبية</a>
         <a href="#plus">باقة PLUS</a>
         <a href="#services">الخدمات</a>
       </div>
       <div class="ft-col">
         <h4>تواصل</h4>
         <a href="https://wa.me/966501940155" target="_blank">📱 تواصل مع مختص تجارة إلكترونية</a>
+        <a href="https://wa.me/966501940155?text=أريد استشارة هاتفية" target="_blank">📞 استشارة هاتفية مجانية</a>
         <a href="mailto:mr.leith9999@gmail.com">✉ mr.leith9999@gmail.com</a>
         <a href="#">📍 الرياض، السعودية</a>
       </div>
@@ -1312,67 +1406,107 @@ footer{
   </div>
 </footer>
 
-<a href="https://wa.me/966501940155" class="wa-float" target="_blank">💬</a>
+<!-- WHATSAPP FLOAT BUTTON — with proper SVG icon -->
+<a href="https://wa.me/966501940155" class="wa-float" id="waFloat" target="_blank" title="تواصل معنا">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+<div class="wa-tooltip">تواصل معنا على واتساب</div>
+
+<!-- CONSULTATION POPUP -->
+<div class="consult-popup" id="consultPopup">
+  <button class="cp-close" onclick="toggleConsult()">✕</button>
+  <div class="cp-title">تحدث مع مختص 👋</div>
+  <div class="cp-sub">اختر طريقة التواصل المناسبة لك</div>
+  <div class="cp-actions">
+    <a href="https://wa.me/966501940155?text=أريد التواصل مع مختص تجارة إلكترونية" target="_blank" class="cp-btn cp-wa">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      محادثة واتساب
+    </a>
+    <a href="https://wa.me/966501940155?text=أريد طلب استشارة هاتفية سريعة لمتجري الإلكتروني" target="_blank" class="cp-btn cp-call">
+      📞 استشارة هاتفية سريعة
+    </a>
+  </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
 /* ── NAV ── */
 function toggleNav(){document.getElementById('nav').classList.toggle('mob-open')}
 
+/* ── CONSULTATION POPUP ── */
+let consultOpen=false;
+function toggleConsult(){
+  consultOpen=!consultOpen;
+  document.getElementById('consultPopup').classList.toggle('open',consultOpen);
+}
+// Show popup on wa button long press or after 8s
+setTimeout(()=>{if(!consultOpen)document.getElementById('consultPopup').classList.add('open')},8000);
+document.getElementById('consultPopup').addEventListener('click',function(e){e.stopPropagation()});
+document.addEventListener('click',function(){
+  if(consultOpen&&!document.getElementById('consultPopup').contains(event.target)){
+    consultOpen=false;document.getElementById('consultPopup').classList.remove('open');
+  }
+});
+
 /* ── HEADER SCROLL ── */
 window.addEventListener('scroll',()=>{
-  document.getElementById('hdr').style.boxShadow=window.scrollY>30?'0 4px 24px rgba(4,181,184,.08)':'none';
+  document.getElementById('hdr').style.boxShadow=window.scrollY>30?'0 4px 24px rgba(4,181,184,.1)':'none';
 });
 
 /* ══════════════════════════════════════
-   SCROLL-PREVIEW: The key feature
-   On hover: calculate how far to scroll the
-   tall screenshot to reveal the full page
+   SMART SCROLL-PREVIEW
+   Calculates exact distance to scroll
+   based on natural image dimensions
 ══════════════════════════════════════ */
-function initScrollPreviews(){
-  document.querySelectorAll('.card-viewport').forEach(vp=>{
-    const img=vp.querySelector('.scroll-img');
-    if(!img)return;
-    const doScroll=()=>{
-      // Wait for natural dimensions
-      if(img.naturalHeight===0){img.addEventListener('load',doScroll,{once:true});return}
-      const containerH=vp.offsetHeight;
-      const renderedH=img.getBoundingClientRect().height||img.offsetHeight;
-      // Use natural ratio to compute actual rendered height
-      const scale=img.offsetWidth/img.naturalWidth;
-      const actualH=img.naturalHeight*scale;
-      const maxScroll=actualH-containerH;
-      if(maxScroll>0){
-        img.style.transform=`translateY(-${maxScroll}px)`;
-      }
-    };
-    vp.closest('.work-card')&&vp.closest('.work-card').addEventListener('mouseenter',doScroll);
-    vp.closest('.work-card')&&vp.closest('.work-card').addEventListener('mouseleave',()=>{
-      img.style.transform='translateY(0)';
-    });
-  });
-  // PRO preview mosaic
-  document.querySelectorAll('.pm-item').forEach(item=>{
-    const img=item.querySelector('.scroll-img');
-    if(!img)return;
-    item.addEventListener('mouseenter',()=>{
-      if(img.naturalHeight===0){img.addEventListener('load',()=>{doMosaicScroll(item,img)},{once:true});return}
-      doMosaicScroll(item,img);
-    });
-    item.addEventListener('mouseleave',()=>{img.style.transform='translateY(0)'});
-  });
-}
-function doMosaicScroll(item,img){
-  const containerH=item.offsetHeight;
-  const scale=img.offsetWidth/img.naturalWidth;
-  const actualH=img.naturalHeight*scale;
-  const maxScroll=actualH-containerH;
-  if(maxScroll>0)img.style.transform=`translateY(-${maxScroll}px)`;
+function calcScrollDistance(img, containerH){
+  const scale = img.offsetWidth / (img.naturalWidth || img.offsetWidth);
+  const actualH = (img.naturalHeight || containerH * 3) * scale;
+  return Math.max(0, actualH - containerH);
 }
 
-// Initialize after images start loading
-document.addEventListener('DOMContentLoaded',initScrollPreviews);
-window.addEventListener('load',initScrollPreviews);
+function initScrollPreviews(){
+  // Card viewports
+  document.querySelectorAll('.card-viewport').forEach(vp=>{
+    const card = vp.closest('.work-card');
+    const img = vp.querySelector('.scroll-img');
+    if(!img || !card) return;
+
+    function doScroll(){
+      if(!img.complete || img.naturalHeight === 0){
+        img.addEventListener('load', doScroll, {once:true});
+        return;
+      }
+      const maxScroll = calcScrollDistance(img, vp.offsetHeight);
+      if(maxScroll > 0) img.style.transform = `translateY(-${maxScroll}px)`;
+    }
+
+    card.addEventListener('mouseenter', doScroll);
+    card.addEventListener('mouseleave', ()=>{ img.style.transform = 'translateY(0)'; });
+  });
+
+  // Mosaic items
+  document.querySelectorAll('.pm-item').forEach(item=>{
+    const img = item.querySelector('.scroll-img');
+    if(!img) return;
+    function doScroll(){
+      if(!img.complete || img.naturalHeight === 0){
+        img.addEventListener('load', doScroll, {once:true});
+        return;
+      }
+      const maxScroll = calcScrollDistance(img, item.offsetHeight);
+      if(maxScroll > 0) img.style.transform = `translateY(-${maxScroll}px)`;
+    }
+    item.addEventListener('mouseenter', doScroll);
+    item.addEventListener('mouseleave', ()=>{ img.style.transform = 'translateY(0)'; });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initScrollPreviews);
+window.addEventListener('load', initScrollPreviews);
+window.addEventListener('resize', initScrollPreviews);
 
 /* ── LIGHTBOX ── */
 function openLb(src,title,url){
@@ -1380,10 +1514,7 @@ function openLb(src,title,url){
   document.getElementById('lbUrl').textContent=url||'';
   document.getElementById('lb').classList.add('on');
   document.body.style.overflow='hidden';
-  // Auto-scroll in lightbox to show full page
-  const img=document.getElementById('lbImg');
-  const frame=document.querySelector('.lb-frame');
-  setTimeout(()=>{frame.scrollTop=0},50);
+  document.querySelector('.lb-frame').scrollTop=0;
 }
 function closeLb(){
   document.getElementById('lb').classList.remove('on');
@@ -1395,27 +1526,26 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb()});
 function filterWork(type,btn){
   document.querySelectorAll('.wf-btn').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
-  document.querySelectorAll('#wGrid .work-card').forEach(c=>{
+  const grid=document.getElementById('wGrid');
+  const cards=[...grid.querySelectorAll('.work-card')];
+  cards.forEach(c=>{
     const show=type==='all'||c.dataset.pkg===type||c.dataset.plat===type;
     c.style.display=show?'':'none';
-    // Handle hero card span
-    if(show&&c.classList.contains('wc-hero')){
-      c.style.gridColumn='span 2';
-    }
   });
-  // Fix: if hero card is hidden, make next card full width
-  const grid=document.getElementById('wGrid');
-  const visible=[...grid.querySelectorAll('.work-card')].filter(c=>c.style.display!=='none');
-  visible.forEach((c,i)=>{
-    if(c.classList.contains('wc-hero')&&visible.length===1){
-      c.style.gridColumn='span 1';
-    } else if(c.classList.contains('wc-hero')){
-      c.style.gridColumn='span 2';
+  // Hero card span logic
+  const visible=cards.filter(c=>c.style.display!=='none');
+  visible.forEach(c=>{
+    if(c.classList.contains('wc-hero')){
+      const w=window.innerWidth;
+      const cols=w>1100?3:w>580?2:1;
+      c.style.gridColumn=cols>=2?'span 2':'span 1';
+    } else {
+      c.style.gridColumn='';
     }
   });
 }
 
-/* ── PLATFORM SWITCH (PRO) ── */
+/* ── PLATFORM SWITCH (Mosaic) ── */
 function switchPlat(id,btn){
   document.querySelectorAll('.ps-tab').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
@@ -1426,7 +1556,10 @@ function switchPlat(id,btn){
 /* ── SCROLL REVEAL ── */
 const obs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{
-    if(e.isIntersecting){setTimeout(()=>e.target.classList.add('in'),i*65);obs.unobserve(e.target)}
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add('in'),i*65);
+      obs.unobserve(e.target);
+    }
   });
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
@@ -1437,11 +1570,22 @@ document.getElementById('cf').addEventListener('submit',async function(e){
   const n=this.name.value,em=this.email.value,msg=this.message.value;
   const text=`🌐 *رسالة جديدة — ازهلها*\n👤 *الاسم:* ${n}\n📧 *البريد:* ${em}\n✉️ *الرسالة:* ${msg}`;
   try{
-    await fetch("https://api.telegram.org/bot8312551518:AAH7zIVAW0QkmPrhaQGsDaUJSrl6fg9TvgM/sendMessage",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({chat_id:"6795507850",text,parse_mode:"Markdown"})});
-    showToast('✅ تم إرسال رسالتك بنجاح!');this.reset();
-  }catch{showToast('❌ حدث خطأ، حاول مرة أخرى')}
+    await fetch("https://api.telegram.org/bot8312551518:AAH7zIVAW0QkmPrhaQGsDaUJSrl6fg9TvgM/sendMessage",{
+      method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({chat_id:"6795507850",text,parse_mode:"Markdown"})
+    });
+    showToast('✅ تم إرسال رسالتك بنجاح!');
+    this.reset();
+  }catch{
+    showToast('❌ حدث خطأ، حاول مرة أخرى');
+  }
 });
-function showToast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),3500)}
+
+function showToast(m){
+  const t=document.getElementById('toast');
+  t.textContent=m;t.classList.add('on');
+  setTimeout(()=>t.classList.remove('on'),3500);
+}
 </script>
 </body>
 </html>
