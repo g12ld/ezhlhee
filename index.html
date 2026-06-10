@@ -704,6 +704,59 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 .cn{color:#ccc;filter:grayscale(1)}
 .cv{font-size:.82rem;font-weight:800;color:var(--p)}
 
+/* ═══════════════════ MOBILE COMPARE TABS ═══════════════════ */
+.ct-mobile-tabs{display:none}
+.ct-mobile-tabs .ct-tabs-nav{
+  display:flex;gap:8px;margin-bottom:28px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch
+}
+.ct-tab-btn{
+  flex-shrink:0;padding:12px 18px;background:var(--ppp);border:1.5px solid var(--border);
+  border-radius:10px;font-size:.82rem;font-weight:700;color:var(--ink);cursor:pointer;
+  transition:all .2s;white-space:nowrap
+}
+.ct-tab-btn.active{background:var(--p);color:#fff;border-color:var(--p)}
+.ct-tab-btn.active.gold{background:linear-gradient(135deg,var(--gold),var(--gold-d));border-color:var(--gold-l);color:#fff}
+.ct-tab-content{display:none}
+.ct-tab-content.active{display:block;animation:fadeUp .3s}
+.ct-tab-card{background:var(--white);border:1px solid var(--border2);border-radius:16px;padding:28px;overflow:hidden}
+.ct-tab-card.gold-bg{
+  background:linear-gradient(135deg,rgba(212,175,55,.08),rgba(212,175,55,.04));
+  border:2px solid var(--gold-l)
+}
+.ct-card-header{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--border2)}
+.ct-card-header.gold-border{border-bottom-color:var(--gold-l)}
+.ct-pkg-title{font-size:1.3rem;font-weight:900;color:var(--ink);margin-bottom:6px;letter-spacing:-.5px}
+.ct-pkg-desc{font-size:.78rem;color:var(--muted);line-height:1.6}
+.ct-pkg-price{
+  font-size:2rem;font-weight:900;color:var(--p);letter-spacing:-1px;
+  margin-top:12px;display:flex;align-items:baseline;gap:6px
+}
+.ct-pkg-price.gold{color:var(--gold-l)}
+.ct-pkg-price-currency{font-size:.95rem;color:var(--muted);font-weight:700}
+.ct-features-list{display:flex;flex-direction:column;gap:14px}
+.ct-feature-item{display:flex;gap:12px;font-size:.85rem;line-height:1.5}
+.ct-feature-icon{flex-shrink:0;width:20px;height:20px;display:flex;align-items:center;justify-content:center;color:var(--p);font-weight:900}
+.ct-feature-icon.no{color:#ccc}
+.ct-feature-icon.gold{color:var(--gold-l)}
+.ct-feature-text{color:var(--ink2);flex:1}
+.ct-feature-text.desc{font-size:.78rem;color:var(--muted);font-weight:500}
+.ct-card-cta{
+  margin-top:24px;padding-top:20px;border-top:1px solid var(--border2);
+  display:flex;gap:10px
+}
+.ct-card-cta.gold-border{border-top-color:var(--gold-l)}
+.ct-card-cta a{
+  flex:1;padding:13px 16px;text-align:center;border-radius:10px;
+  font-size:.85rem;font-weight:800;text-decoration:none;transition:all .2s;
+  white-space:nowrap
+}
+.ct-card-cta a.primary{background:var(--p);color:#fff;border:none}
+.ct-card-cta a.primary:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(4,181,184,.25)}
+.ct-card-cta a.secondary{background:rgba(4,181,184,.1);color:var(--p);border:1.5px solid var(--p)}
+.ct-card-cta a.secondary:hover{background:rgba(4,181,184,.15)}
+.ct-card-cta a.gold{background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;box-shadow:0 4px 12px rgba(212,175,55,.2)}
+.ct-card-cta a.gold:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(212,175,55,.3)}
+
 /* ═══════════════════ SERVICES ═══════════════════ */
 .srv-section{background:var(--white)}
 .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:48px}
@@ -934,11 +987,8 @@ footer{
   .card-viewport,.wc-hero .card-viewport{height:260px}
   .pm-item{height:140px}
   .srv-grid{grid-template-columns:1fr}
-  .ct-head,.ct-row{grid-template-columns:1fr 1fr 1fr 1fr}
-  .ct-cell{padding:10px 8px;font-size:.74rem;word-break:break-word}
-  .ct-cell:first-child{padding-right:8px;font-size:.72rem}
-  .ct-hcol{padding:14px 8px}
-  .ct-hcol:nth-child(3){border-left:1px solid var(--gold-l);border-right:1px solid var(--gold-l)}
+  .ct{display:none}
+  .ct-mobile-tabs{display:block}
   .ft-top{grid-template-columns:1fr;gap:26px}
   .hero h1{letter-spacing:-1px}
   .cf-row{grid-template-columns:1fr}
@@ -1688,6 +1738,220 @@ footer{
         <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/q36oljg/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9" target="_blank" style="display:inline-block;background:rgba(4,181,184,.12);color:var(--p);border:1.5px solid var(--p);padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none;white-space:nowrap">اطلب الذهبية</a></div>
       </div>
     </div>
+
+    <!-- MOBILE TABS VIEW -->
+    <div class="ct-mobile-tabs reveal">
+      <div class="ct-tabs-nav">
+        <button class="ct-tab-btn active" onclick="switchTab(0, this)">PLUS</button>
+        <button class="ct-tab-btn active gold" onclick="switchTab(1, this)">⭐ الاحترافية</button>
+        <button class="ct-tab-btn" onclick="switchTab(2, this)">الذهبية برو</button>
+      </div>
+
+      <!-- PLUS Package -->
+      <div class="ct-tab-content active">
+        <div class="ct-tab-card">
+          <div class="ct-card-header">
+            <div class="ct-pkg-title">PLUS</div>
+            <div class="ct-pkg-desc">للانطلاق السريع</div>
+            <div class="ct-pkg-price"><span>1,099</span><span class="ct-pkg-price-currency">ر</span></div>
+          </div>
+          <div class="ct-features-list">
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">تصميم شعار</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">10 منتجات</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">3</span>
+              <span class="ct-feature-text">بنرات (3)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">3</span>
+              <span class="ct-feature-text">أقسام (3)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">تحسين SEO</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">Google Analytics</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">أيقونة WhatsApp</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">Google Search Console</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">توثيق منصة الأعمال</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">بكسل سناب + تيك توك</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">CSS احترافية</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">دومين .com مجاني</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">تابي وتمارا</span>
+            </div>
+          </div>
+          <div class="ct-card-cta">
+            <a href="https://ezhalhe.com/jm1gf2X4IW/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%81%D8%B6%D9%8A%D8%A9" target="_blank" class="secondary">اطلب PLUS →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFESSIONAL Package -->
+      <div class="ct-tab-content">
+        <div class="ct-tab-card gold-bg">
+          <div class="ct-card-header gold-border">
+            <div style="display:inline-block;background:rgba(212,175,55,.25);border:1px solid rgba(212,175,55,.5);color:var(--gold-l);padding:2px 10px;border-radius:50px;font-size:.72rem;font-weight:800;margin-bottom:8px">⭐ الأفضل</div>
+            <div class="ct-pkg-title" style="color:var(--gold-l)">الاحترافية</div>
+            <div class="ct-pkg-desc">الحل الأمثل</div>
+            <div class="ct-pkg-price gold"><span>1,490</span><span class="ct-pkg-price-currency" style="color:var(--gold-l)">ر</span></div>
+          </div>
+          <div class="ct-features-list">
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">✓</span>
+              <span class="ct-feature-text">تصميم شعار</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">20</span>
+              <span class="ct-feature-text">منتج (20)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">4</span>
+              <span class="ct-feature-text">بنرات (4)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">5</span>
+              <span class="ct-feature-text">أقسام (5)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">✓</span>
+              <span class="ct-feature-text">تحسين SEO أساسي</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">✓</span>
+              <span class="ct-feature-text">Google Analytics</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">✓</span>
+              <span class="ct-feature-text">أيقونة WhatsApp</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">✓</span>
+              <span class="ct-feature-text">Google Search Console</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">توثيق منصة الأعمال</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">بكسل سناب + تيك توك</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">CSS احترافية متحركة</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon no">✗</span>
+              <span class="ct-feature-text">دومين .com مجاني</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon gold">إضافة</span>
+              <span class="ct-feature-text desc">تابي وتمارا (اختياري)</span>
+            </div>
+          </div>
+          <div class="ct-card-cta gold-border">
+            <a href="https://ezhalhe.com/q36oljg/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9" target="_blank" class="gold">⭐ اطلب الاحترافية</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- GOLD PRO Package -->
+      <div class="ct-tab-content">
+        <div class="ct-tab-card">
+          <div class="ct-card-header">
+            <div class="ct-pkg-title">الذهبية برو</div>
+            <div class="ct-pkg-desc">الحل الشامل</div>
+            <div class="ct-pkg-price"><span>1,980</span><span class="ct-pkg-price-currency">ر</span></div>
+          </div>
+          <div class="ct-features-list">
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">تصميم شعار</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">35</span>
+              <span class="ct-feature-text">منتج (35)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">6</span>
+              <span class="ct-feature-text">بنرات (6)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">∞</span>
+              <span class="ct-feature-text">أقسام (غير محدود)</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">تحسين SEO متقدم</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">Google Analytics</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">أيقونة WhatsApp</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">Google Search Console</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">توثيق منصة الأعمال</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">بكسل سناب + تيك توك</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">CSS احترافية متحركة</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">دومين .com مجاني</span>
+            </div>
+            <div class="ct-feature-item">
+              <span class="ct-feature-icon">✓</span>
+              <span class="ct-feature-text">تابي وتمارا مفعّل</span>
+            </div>
+          </div>
+          <div class="ct-card-cta">
+            <a href="https://ezhalhe.com/q36oljg/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9" target="_blank" class="secondary">اطلب الذهبية →</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -2056,6 +2320,20 @@ function showToast(m){
   const t=document.getElementById('toast');
   t.textContent=m;t.classList.add('on');
   setTimeout(()=>t.classList.remove('on'),3500);
+}
+
+// Mobile Tabs Switcher
+function switchTab(idx, btn){
+  const tabs = document.querySelectorAll('.ct-tab-content');
+  const btns = document.querySelectorAll('.ct-tab-btn');
+  
+  // Remove active from all
+  tabs.forEach(t => t.classList.remove('active'));
+  btns.forEach(b => b.classList.remove('active'));
+  
+  // Add active to current
+  tabs[idx].classList.add('active');
+  btn.classList.add('active');
 }
 </script>
 </body>
