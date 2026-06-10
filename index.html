@@ -677,24 +677,29 @@ nav a:hover{color:var(--p);background:var(--ppp)}
   margin-top:48px;
 }
 .ct-head{
-  display:grid;grid-template-columns:1.5fr 1fr 1fr;
+  display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;
   background:linear-gradient(135deg,var(--ink),var(--ink2));
 }
-.ct-hcol{padding:22px 24px;text-align:center}
-.ct-hcol:first-child{text-align:right;padding-right:28px}
+.ct-hcol{padding:22px 24px;text-align:center;border-right:1px solid rgba(255,255,255,.1)}
+.ct-hcol:first-child{text-align:right;padding-right:28px;border-right:none}
+.ct-hcol:nth-child(3){background:linear-gradient(135deg,rgba(212,175,55,.08),rgba(212,175,55,.04));border-left:2px solid var(--gold-l);border-right:2px solid var(--gold-l)}
 .ct-hname{font-size:.98rem;font-weight:800;color:#fff}
+.ct-hcol:nth-child(3) .ct-hname{color:var(--gold-l);font-size:1.05rem}
 .ct-hsub{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:3px}
+.ct-hcol:nth-child(3) .ct-hsub{color:rgba(212,175,55,.7)}
 .ct-gold-chip{
   display:inline-block;background:rgba(212,175,55,.25);
   border:1px solid rgba(212,175,55,.5);color:var(--gold-l);
   padding:2px 10px;border-radius:50px;font-size:.66rem;font-weight:800;
   margin-bottom:6px;
 }
-.ct-row{display:grid;grid-template-columns:1.5fr 1fr 1fr;border-top:1px solid var(--border2);transition:background .2s}
+.ct-row{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;border-top:1px solid var(--border2);transition:background .2s}
 .ct-row:hover{background:var(--ppp)}
+.ct-row:hover .ct-pro-col{background:rgba(212,175,55,.12)}
 .ct-cell{padding:14px 24px;font-size:.85rem}
 .ct-cell:first-child{padding-right:28px;font-weight:700;color:var(--ink2)}
 .ct-cell:not(:first-child){text-align:center}
+.ct-pro-col{background:rgba(212,175,55,.04);border-left:2px solid var(--gold-l);border-right:2px solid var(--gold-l)}
 .cy{color:var(--p);font-weight:800}
 .cn{color:#ccc;filter:grayscale(1)}
 .cv{font-size:.82rem;font-weight:800;color:var(--p)}
@@ -930,8 +935,10 @@ footer{
   .pm-item{height:140px}
   .srv-grid{grid-template-columns:1fr}
   .ct-head,.ct-row{grid-template-columns:1fr 1fr 1fr 1fr}
-  .ct-cell{padding:10px 8px;font-size:.75rem}
-  .ct-cell:first-child{padding-right:8px}
+  .ct-cell{padding:10px 8px;font-size:.74rem;word-break:break-word}
+  .ct-cell:first-child{padding-right:8px;font-size:.72rem}
+  .ct-hcol{padding:14px 8px}
+  .ct-hcol:nth-child(3){border-left:1px solid var(--gold-l);border-right:1px solid var(--gold-l)}
   .ft-top{grid-template-columns:1fr;gap:26px}
   .hero h1{letter-spacing:-1px}
   .cf-row{grid-template-columns:1fr}
@@ -1069,10 +1076,6 @@ footer{
 .price-currency{font-size:1rem;font-weight:700;color:var(--muted)}
 .pro-pkg-gallery{overflow:hidden;position:relative;background:var(--bg2)}
 @media(max-width:860px){.pro-pkg-card{grid-template-columns:1fr}.pro-pkg-gallery{display:none}.pro-pkg-body{padding:52px 28px 36px}}
-
-/* ═══════════════════ THREE-COLUMN COMPARE ═══════════════════ */
-.ct-head{display:grid;grid-template-columns:1.4fr 1fr 1.1fr 1fr;background:linear-gradient(135deg,var(--ink),var(--ink2))}
-.ct-row{display:grid;grid-template-columns:1.4fr 1fr 1.1fr 1fr;border-top:1px solid var(--border2);transition:background .2s}
 .ct-pro-col{background:rgba(4,181,184,.06);border-left:1.5px solid rgba(4,181,184,.2);border-right:1.5px solid rgba(4,181,184,.2)}
 
 /* ═══════════════════ FAQ ═══════════════════ */
@@ -1654,32 +1657,35 @@ footer{
 <section class="compare-section sec" id="compare">
   <div class="sec-inner">
     <div style="text-align:center;margin-bottom:0" class="reveal">
-      <div class="tag-chip"><span class="tag-dot"></span>مقارنة الباقتين</div>
-      <h2 class="sh">بلس أم <span>الذهبية</span>؟</h2>
+      <div class="tag-chip"><span class="tag-dot"></span>مقارنة الباقات</div>
+      <h2 class="sh">اختر <span>باقتك</span> المثالية</h2>
     </div>
     <div class="ct reveal">
       <div class="ct-head">
         <div class="ct-hcol"><span style="font-size:.76rem;color:rgba(255,255,255,.4);font-weight:700">الميزة</span></div>
         <div class="ct-hcol"><div class="ct-hname">PLUS</div><div class="ct-hsub">للانطلاق السريع</div></div>
-        <div class="ct-hcol"><div class="ct-gold-chip">⭐ الأفضل</div><div class="ct-hname" style="color:var(--gold-l)">الذهبية</div><div class="ct-hsub">الحل الاحترافي الكامل</div></div>
+        <div class="ct-hcol"><div class="ct-gold-chip">⭐ الأفضل</div><div class="ct-hname">الاحترافية</div><div class="ct-hsub">الحل الأمثل</div></div>
+        <div class="ct-hcol"><div class="ct-hname">الذهبية برو</div><div class="ct-hsub">الحل الشامل</div></div>
       </div>
-      <div class="ct-row"><div class="ct-cell">اشتراك المنصة</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">دومين .com</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">تصميم لوجو</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">عدد البنرات</div><div class="ct-cell"><span class="cv">2 بنرات</span></div><div class="ct-cell"><span class="cv">بنرات متعددة</span></div></div>
-      <div class="ct-row"><div class="ct-cell">الأقسام</div><div class="ct-cell"><span class="cv">قسمين</span></div><div class="ct-cell"><span class="cv">غير محدود</span></div></div>
-      <div class="ct-row"><div class="ct-cell">إضافة المنتجات</div><div class="ct-cell"><span class="cv">منتجين</span></div><div class="ct-cell"><span class="cv">20 منتجاً</span></div></div>
-      <div class="ct-row"><div class="ct-cell">تابي & تمارا</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">برمجة CSS مخصصة</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">SEO متقدم</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">Google Analytics 4</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">بكسل سناب + تيك توك</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">توثيق منصة الأعمال</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
-      <div class="ct-row"><div class="ct-cell">وسائل الدفع + الشحن</div><div class="ct-cell"><span class="cy">✓</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">السعر</div><div class="ct-cell"><span class="cv">1,099 ر</span></div><div class="ct-cell ct-pro-col"><span class="cv" style="color:var(--gold-l)">1,490 ر</span></div><div class="ct-cell"><span class="cv">1,980 ر</span></div></div>
+      <div class="ct-row"><div class="ct-cell">عدد المنتجات</div><div class="ct-cell"><span class="cv">10</span></div><div class="ct-cell ct-pro-col"><span class="cv">20</span></div><div class="ct-cell"><span class="cv">35</span></div></div>
+      <div class="ct-row"><div class="ct-cell">تصميم شعار</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cy">✓</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">عدد البنرات</div><div class="ct-cell"><span class="cv">3</span></div><div class="ct-cell ct-pro-col"><span class="cv">4</span></div><div class="ct-cell"><span class="cv">6</span></div></div>
+      <div class="ct-row"><div class="ct-cell">الأقسام</div><div class="ct-cell"><span class="cv">3</span></div><div class="ct-cell ct-pro-col"><span class="cv">5</span></div><div class="ct-cell"><span class="cv">غير محدود</span></div></div>
+      <div class="ct-row"><div class="ct-cell">تحسين SEO</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cv">أساسي</span></div><div class="ct-cell"><span class="cv">متقدم</span></div></div>
+      <div class="ct-row"><div class="ct-cell">Google Analytics 4</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cy">✓</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">أيقونة WhatsApp</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cy">✓</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">Google Search Console</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cy">✓</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">توثيق منصة الأعمال</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">بكسل سناب + تيك توك</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">CSS احترافية متحركة</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">دومين .com مجاني</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cn">✗</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
+      <div class="ct-row"><div class="ct-cell">تابي وتمارا</div><div class="ct-cell"><span class="cn">✗</span></div><div class="ct-cell ct-pro-col"><span class="cv" style="color:#f39c12">إضافة اختيارية</span></div><div class="ct-cell"><span class="cy">✓</span></div></div>
       <div class="ct-row" style="border-bottom:none">
         <div class="ct-cell"></div>
-        <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/jm1gf2X4IW/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%81%D8%B6%D9%8A%D8%A9" target="_blank" style="display:inline-block;background:rgba(4,181,184,.12);color:var(--p);border:1.5px solid var(--p);padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none">اطلب PLUS</a></div>
-        <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/q36oljg/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9" target="_blank" style="display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none;box-shadow:0 4px 14px rgba(212,175,55,.3)">اطلب الذهبية ←</a></div>
+        <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/jm1gf2X4IW/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%81%D8%B6%D9%8A%D8%A9" target="_blank" style="display:inline-block;background:rgba(4,181,184,.12);color:var(--p);border:1.5px solid var(--p);padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none;white-space:nowrap">اطلب PLUS</a></div>
+        <div class="ct-cell ct-pro-col" style="padding:18px 10px"><a href="https://ezhalhe.com/q36oljg/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D8%B1%D8%A7%D9%81%D9%8A%D8%A9" target="_blank" style="display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold-d));color:#fff;padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none;box-shadow:0 4px 14px rgba(212,175,55,.3);white-space:nowrap">اطلب الاحترافية ⭐</a></div>
+        <div class="ct-cell" style="padding:18px 10px"><a href="https://ezhalhe.com/q36oljg/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9" target="_blank" style="display:inline-block;background:rgba(4,181,184,.12);color:var(--p);border:1.5px solid var(--p);padding:9px 20px;border-radius:9px;font-weight:800;font-size:.8rem;text-decoration:none;white-space:nowrap">اطلب الذهبية</a></div>
       </div>
     </div>
   </div>
