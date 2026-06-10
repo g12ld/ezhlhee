@@ -855,6 +855,68 @@ nav a:hover{color:var(--p);background:var(--ppp)}
 }
 .cq-consult:hover{background:rgba(255,255,255,.15);color:#fff;transform:translateY(-2px)}
 
+/* ═══════════════════ MINI PORTFOLIO BY PACKAGE ═══════════════════ */
+.pkg-works-section{
+  margin-top:48px;padding-top:40px;border-top:1px solid var(--border2);
+}
+.pkg-works-header{
+  margin-bottom:28px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.pkg-works-header h3{
+  font-size:1.1rem;font-weight:900;color:var(--ink);
+  margin:0;letter-spacing:-.3px;
+}
+.pkg-works-count{
+  font-size:.75rem;font-weight:700;color:var(--muted);
+  background:var(--ppp);padding:4px 12px;border-radius:50px;
+}
+
+.pkg-works-grid{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+  gap:12px;
+}
+.mini-work-card{
+  position:relative;overflow:hidden;border-radius:12px;
+  background:var(--white);border:1px solid var(--border2);
+  cursor:pointer;transition:all .3s;aspect-ratio:1;
+}
+.mini-work-card:hover{
+  transform:translateY(-4px);box-shadow:0 8px 24px rgba(4,181,184,.15);
+  border-color:var(--p);
+}
+.mini-work-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s ease;
+}
+.mini-work-card:hover img{transform:scale(1.05) translateY(-8px)}
+.mini-work-overlay{
+  position:absolute;inset:0;background:linear-gradient(to top,rgba(7,40,41,.6),transparent 60%);
+  opacity:0;transition:.3s;display:flex;align-items:flex-end;justify-content:center;
+  padding:12px;
+}
+.mini-work-card:hover .mini-work-overlay{opacity:1}
+.mini-work-title{
+  font-size:.75rem;font-weight:800;color:#fff;text-align:center;
+  text-shadow:0 1px 3px rgba(0,0,0,.3);line-height:1.3;
+}
+
+/* Pro section specific */
+.pro-section .pkg-works-header h3{color:#fff}
+.pro-section .pkg-works-header{border-bottom:none;padding-bottom:0}
+.pro-section .pkg-works-count{
+  background:rgba(212,175,55,.2);color:var(--gold-l);
+  border:1px solid rgba(212,175,55,.3);
+}
+.pro-section .mini-work-card{
+  border-color:rgba(212,175,55,.25);
+  background:rgba(255,255,255,.04);
+}
+.pro-section .mini-work-card:hover{
+  border-color:var(--gold-l);
+  box-shadow:0 8px 24px rgba(212,175,55,.2);
+}
+
 /* ═══════════════════ FOOTER ═══════════════════ */
 footer{
   background:#040F10;
@@ -1555,6 +1617,43 @@ footer{
           <a href="https://ezhalhe.com/تطوير-والتصميم-متجر-الالكتروني-الباقة-الذهبية-باقة-برو/p1934611542" target="_blank" class="btn-gold">اطلب الذهبية برو ←</a>
           <a href="https://wa.me/966501940155?text=أريد الباقة الذهبية برو على منصة زد" target="_blank" class="btn-ghost-w">استفسار عبر واتساب</a>
         </div>
+
+        <!-- Mini Portfolio -->
+        <div class="pkg-works-section reveal">
+          <div class="pkg-works-header">
+            <h3>🎨 أعمال من الذهبية برو</h3>
+            <span class="pkg-works-count">9+ أعمال</span>
+          </div>
+          <div class="pkg-works-grid">
+            <div class="mini-work-card" onclick="openLb('images/mtger_abk1.webp','متجر عبايات','abaya.salla.sa')">
+              <img src="images/mtger_abk1.webp" alt="متجر عبايات" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">عبايات</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
+              <img src="images/darlisa_pro.webp" alt="متجر دار" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">دار</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/leder.webp','متجر ليدر','leder.salla.sa')">
+              <img src="images/leder.webp" alt="متجر ليدر" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">ليدر</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/black%20bear%20salla%20pro.webp','بلاك بير','blackbear.salla.sa')">
+              <img src="images/black%20bear%20salla%20pro.webp" alt="بلاك بير" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">بلاك بير</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/sanbosaalbalad_pro.webp','سمبوسة البلد','sanbosa.salla.sa')">
+              <img src="images/sanbosaalbalad_pro.webp" alt="سمبوسة البلد" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">سمبوسة البلد</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/mtger_anaia3.webp','منتجات العناية','anaia.salla.sa')">
+              <img src="images/mtger_anaia3.webp" alt="عناية" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">العناية</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/sarok_salla.webp','شروق الطيب','shirwak.salla.sa')">
+              <img src="images/sarok_salla.webp" alt="شروق" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">شروق الطيب</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/coffepro.webp','Roast Master','roastmaster.salla.sa')">
+              <img src="images/coffepro.webp" alt="قهوة" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">Roast Master</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
+              <img src="images/rivna.webp" alt="عسل" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">Rivna</div></div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <!-- RIGHT: mosaic — سلة vs زد separated -->
@@ -1633,8 +1732,21 @@ footer{
           <a href="https://ezhalhe.com/الباقة-الاحترافية-—-تطوير-وتصميم-متجر-إلكتروني/p2132256496" target="_blank" class="btn-primary">اطلب الاحترافية ←</a>
           <a href="#compare" style="display:inline-flex;align-items:center;padding:14px 22px;border-radius:12px;border:2px solid var(--p);color:var(--p);text-decoration:none;font-weight:800;font-size:.88rem;transition:all .3s" onmouseover="this.style.background='var(--ppp)'" onmouseout="this.style.background='transparent'">قارن الباقات</a>
         </div>
-        <div style="margin-top:20px;padding:12px 16px;background:var(--bg);border-radius:10px;font-size:.8rem;color:var(--muted)">
-          <strong style="color:var(--ink2)">لا تشمل:</strong> توثيق منصة الأعمال · بكسلات سناب/تيك توك · CSS متحرك · الدومين (متوفرة في الذهبية برو)
+
+        <!-- Mini Portfolio -->
+        <div class="pkg-works-section reveal" style="border-top:1px solid rgba(4,181,184,.15);margin-top:32px;padding-top:32px">
+          <div class="pkg-works-header">
+            <h3>🎨 أعمال من الاحترافية</h3>
+            <span class="pkg-works-count">عدد أعمال</span>
+          </div>
+          <div class="pkg-works-grid">
+            <div class="mini-work-card" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
+              <img src="images/darlisa_pro.webp" alt="متجر دار" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">دار</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
+              <img src="images/rivna.webp" alt="عسل" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">Rivna</div></div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Gallery -->
@@ -1696,8 +1808,27 @@ footer{
           <a href="https://ezhalhe.com/تصميم-المتجر-احترفي-سلة-وزد-باقة-بلس/p560117077" target="_blank" class="btn-primary">اطلب باقة بلس ←</a>
           <a href="#compare" style="display:inline-flex;align-items:center;padding:14px 22px;border-radius:12px;border:2px solid var(--p);color:var(--p);text-decoration:none;font-weight:800;font-size:.88rem;transition:all .3s" onmouseover="this.style.background='var(--ppp)'" onmouseout="this.style.background='transparent'">قارن الباقات</a>
         </div>
-        <div style="margin-top:16px;padding:10px 14px;background:var(--bg);border-radius:9px;font-size:.78rem;color:var(--muted)">
-          <strong style="color:var(--ink2)">لا تشمل:</strong> أكثر من 10 منتجات · اشتراك المنصة (100 ر) · الدومين (50 ر) — يدفعها العميل
+
+        <!-- Mini Portfolio -->
+        <div class="pkg-works-section reveal" style="border-top:1px solid var(--border2);margin-top:32px;padding-top:32px">
+          <div class="pkg-works-header">
+            <h3>🎨 أعمال من باقة بلس</h3>
+            <span class="pkg-works-count">3 أعمال</span>
+          </div>
+          <div class="pkg-works-grid">
+            <div class="mini-work-card" onclick="openLb('images/asl_noura_plus.webp','متجر عسل نورة','asl-noura.salla.sa')">
+              <img src="images/asl_noura_plus.webp" alt="عسل نورة" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">عسل نورة</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/matger_abaia4.webp','عبايات وجلابيات','abaya2.salla.sa')">
+              <img src="images/matger_abaia4.webp" alt="عبايات" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">عبايات</div></div>
+            </div>
+            <div class="mini-work-card" onclick="openLb('images/fstinplus.webp','متجر فساتين','fasatin.salla.sa')">
+              <img src="images/fstinplus.webp" alt="فساتين" loading="lazy"><div class="mini-work-overlay"><div class="mini-work-title">فساتين</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Gallery -->
         </div>
       </div>
   
@@ -1742,13 +1873,13 @@ footer{
     <!-- MOBILE TABS VIEW -->
     <div class="ct-mobile-tabs reveal">
       <div class="ct-tabs-nav">
-        <button class="ct-tab-btn active" onclick="switchTab(0, this)">PLUS</button>
+        <button class="ct-tab-btn" onclick="switchTab(0, this)">PLUS</button>
         <button class="ct-tab-btn active gold" onclick="switchTab(1, this)">⭐ الاحترافية</button>
         <button class="ct-tab-btn" onclick="switchTab(2, this)">الذهبية برو</button>
       </div>
 
       <!-- PLUS Package -->
-      <div class="ct-tab-content active">
+      <div class="ct-tab-content">
         <div class="ct-tab-card">
           <div class="ct-card-header">
             <div class="ct-pkg-title">PLUS</div>
@@ -1816,7 +1947,7 @@ footer{
       </div>
 
       <!-- PROFESSIONAL Package -->
-      <div class="ct-tab-content">
+      <div class="ct-tab-content active">
         <div class="ct-tab-card gold-bg">
           <div class="ct-card-header gold-border">
             <div style="display:inline-block;background:rgba(212,175,55,.25);border:1px solid rgba(212,175,55,.5);color:var(--gold-l);padding:2px 10px;border-radius:50px;font-size:.72rem;font-weight:800;margin-bottom:8px">⭐ الأفضل</div>
