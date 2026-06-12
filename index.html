@@ -1265,6 +1265,43 @@ footer{
 .testi-score{font-size:1.5rem;font-weight:900;color:var(--p);letter-spacing:-1px}
 .testi-score-stars{color:#D4AF37;font-size:.88rem}
 .testi-score-label{font-size:.72rem;color:var(--muted);font-weight:700;margin-top:1px}
+
+/* ── SMART ADVISOR ── */
+.advisor-sec{background:linear-gradient(135deg,#081420 0%,#0c1c2e 100%);padding:32px 24px;position:relative;overflow:hidden}
+.advisor-sec::before{content:'';position:absolute;width:340px;height:340px;background:radial-gradient(circle,rgba(4,181,184,.13) 0%,transparent 70%);top:-80px;right:-30px;pointer-events:none}
+.advisor-inner{max-width:920px;margin:0 auto;position:relative;z-index:1}
+.advisor-hdr{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.advisor-av{width:36px;height:36px;background:linear-gradient(135deg,var(--p),#10b981);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;box-shadow:0 0 16px rgba(4,181,184,.4)}
+.advisor-q{font-size:.98rem;font-weight:700;color:#fff;transition:color .3s}
+.adv-back{background:none;border:none;color:rgba(255,255,255,.3);font-size:.75rem;cursor:pointer;margin-bottom:8px;display:none;align-items:center;gap:4px;transition:color .3s}
+.adv-back.show{display:inline-flex}
+.adv-back:hover{color:rgba(255,255,255,.7)}
+.advisor-step{display:none;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:8px}
+.advisor-step.active{display:grid;animation:advFadeIn .35s ease}
+@keyframes advFadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+.adv-card{background:rgba(255,255,255,.04);border:1.5px solid rgba(4,181,184,.15);border-radius:13px;padding:12px 10px;cursor:pointer;transition:all .3s;text-align:center;color:#fff}
+.adv-card:hover{border-color:var(--p);background:rgba(4,181,184,.09);transform:translateY(-2px)}
+.adv-emoji{font-size:1.45rem;display:block;margin-bottom:4px}
+.adv-lbl{font-size:.82rem;font-weight:700;display:block}
+.adv-sub{font-size:.69rem;color:rgba(255,255,255,.38);margin-top:2px;display:block}
+
+/* ── TESTIMONIALS TICKER ── */
+.testi-ticker-sec{background:var(--bg2);padding:28px 0 24px;overflow:hidden}
+.testi-ticker-hdr{text-align:center;margin-bottom:16px;padding:0 24px}
+.testi-ticker-hdr .tag-chip{margin:0 auto 8px}
+.testi-ticker-hdr .sh{font-size:clamp(1.1rem,2.3vw,1.55rem);margin-bottom:0}
+.testi-ticker-outer{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent 0%,#000 7%,#000 93%,transparent 100%);mask:linear-gradient(90deg,transparent 0%,#000 7%,#000 93%,transparent 100%);padding:4px 0}
+.testi-ticker-row{display:flex;gap:10px;width:max-content;animation:advScroll 100s linear infinite}
+.testi-ticker-outer:hover .testi-ticker-row{animation-play-state:paused}
+@keyframes advScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.testi-t-card{background:var(--white);border:1px solid var(--border2);border-radius:14px;padding:11px 14px;width:230px;flex-shrink:0;transition:box-shadow .3s,border-color .3s}
+.testi-t-card:hover{box-shadow:var(--shadow);border-color:rgba(4,181,184,.3)}
+.testi-t-top{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.testi-t-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:900;color:#fff;flex-shrink:0}
+.testi-t-name{font-size:.78rem;font-weight:800;color:var(--ink);line-height:1.2}
+.testi-t-stars{color:#D4AF37;font-size:.63rem;margin-top:1px}
+.testi-t-text{font-size:.74rem;color:var(--muted);line-height:1.65;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.testi-ticker-badge{text-align:center;margin-top:16px;padding:0 24px}
 </style>
 </head>
 <body>
@@ -2592,6 +2629,26 @@ footer{
 <div class="toast" id="toast"></div>
 
 <script>
+/* ── SMART ADVISOR ── */
+function advSelect(type){
+  if(type==='design'){
+    document.getElementById('adv-s1').classList.remove('active');
+    document.getElementById('adv-s2').classList.add('active');
+    document.getElementById('adv-q').textContent='على أي منصة تريد متجرك؟ 🛒';
+    document.getElementById('adv-back').classList.add('show');
+  }
+}
+function advBack(){
+  document.getElementById('adv-s2').classList.remove('active');
+  document.getElementById('adv-s1').classList.add('active');
+  document.getElementById('adv-q').textContent='أهلاً! 👋 وش تحتاج اليوم؟';
+  document.getElementById('adv-back').classList.remove('show');
+}
+function advGo(href){
+  if(href.startsWith('http')){window.open(href,'_blank');}
+  else{const el=document.querySelector(href);if(el)el.scrollIntoView({behavior:'smooth',block:'start'});}
+}
+
 /* ── NAV ── */
 function toggleNav(){document.getElementById('nav').classList.toggle('mob-open')}
 
