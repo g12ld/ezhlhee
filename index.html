@@ -1343,28 +1343,54 @@ footer{
     </div>
     <button class="adv-back" id="adv-back" onclick="advBack()" style="display:none; margin-bottom:15px; color:#04B5B8; border:1px solid #04B5B8; background:#fff; border-radius:5px; padding:5px 10px; cursor:pointer;">← رجوع</button>
     <div class="advisor-step active" id="adv-s1" style="display:flex; flex-wrap:wrap; gap:12px;">
-      <div class="adv-card" onclick="advSelect('design')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); border-top:4px solid #04B5B8;">
+      
+      <!-- تصميم متجر جديد ينقلك للباقة الذهبية -->
+      <div class="adv-card" onclick="advGo('#gold-package')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); border-top:4px solid #04B5B8;">
         <span class="adv-emoji" style="font-size:1.5rem;">🎨</span>
         <span class="adv-lbl" style="font-weight:bold; display:block; margin-bottom:2px; color:#04B5B8;">أريد تصميم متجر</span>
-        <span class="adv-sub" style="font-size:.85rem; color:#555; display:block;">إنشاء متجر جديد من الصفر</span>
+        <span class="adv-sub" style="font-size:.85rem; color:#555; display:block;">إنشاء متجر جديد من الصفر – باقة الذهبية</span>
       </div>
+
       <div class="adv-card" onclick="advGo('#professional')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); border-top:4px solid #04B5B8;">
         <span class="adv-emoji" style="font-size:1.5rem;">⚡</span>
         <span class="adv-lbl" style="font-weight:bold; display:block; margin-bottom:2px; color:#04B5B8;">تطوير متجر موجود</span>
         <span class="adv-sub" style="font-size:.85rem; color:#555; display:block;">تحسين وتعديل متجرك الحالي – باقة الاحترافية</span>
       </div>
+
       <div class="adv-card" onclick="advGo('#work')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); border-top:4px solid #04B5B8;">
         <span class="adv-emoji" style="font-size:1.5rem;">🏆</span>
         <span class="adv-lbl" style="font-weight:bold; display:block; margin-bottom:2px; color:#04B5B8;">شوف أعمالنا أولاً</span>
         <span class="adv-sub" style="font-size:.85rem; color:#555; display:block;">معرض تصاميمنا السابقة</span>
       </div>
+
       <div class="adv-card" onclick="advGo('https://wa.me/966501940155?text=أريد الاستفسار')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1); border-top:4px solid #04B5B8;">
         <span class="adv-emoji" style="font-size:1.5rem;">💬</span>
         <span class="adv-lbl" style="font-weight:bold; display:block; margin-bottom:2px; color:#04B5B8;">استفسار واتساب</span>
         <span class="adv-sub" style="font-size:.85rem; color:#555; display:block;">رد فوري خلال دقائق</span>
       </div>
+
     </div>
   </div>
+</section>
+
+<script>
+function advGo(target) {
+  document.querySelector(target).scrollIntoView({behavior:'smooth'});
+}
+
+function advBack() {
+  console.log('رجوع');
+}
+
+function advSelect(option) {
+  // الخيار القديم يمكن حذفه لأنه لم يعد مستخدم
+}
+</script>
+
+<!-- مثال قسم الباقة الذهبية -->
+<section id="gold-package" style="margin-top:100px; padding:40px 20px; background:#e6f7f9;">
+  <h2 style="color:#04B5B8;">باقة التصميم الذهبية</h2>
+  <p>تفاصيل الباقة الذهبية لإنشاء متجر احترافي من الصفر.</p>
 </section>
 
 <!-- TESTIMONIALS - MOVING TICKER -->
