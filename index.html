@@ -1335,26 +1335,34 @@ footer{
   </div>
 </header>
 
-
-<!-- SMART ADVISOR -->
-<section class="advisor-sec" id="advisor">
-  <div class="advisor-inner">
-    <div class="advisor-hdr">
-      <div class="advisor-av">🤖</div>
-      <div class="advisor-q" id="adv-q">أهلاً! 👋 وش تحتاج اليوم؟</div>
+<section class="advisor-sec" id="advisor" style="margin-top:40px; padding:20px 0; background:#f9f9f9;">
+  <div class="advisor-inner" style="max-width:1200px; margin:0 auto;">
+    <div class="advisor-hdr" style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
+      <div class="advisor-av" style="font-size:2rem;">🤖</div>
+      <div class="advisor-q" id="adv-q" style="font-size:1.1rem;">أهلاً! 👋 وش تحتاج اليوم؟</div>
     </div>
-    <button class="adv-back" id="adv-back" onclick="advBack()">← رجوع</button>
-    <div class="advisor-step active" id="adv-s1">
-      <div class="adv-card" onclick="advSelect('design')"><span class="adv-emoji">🎨</span><span class="adv-lbl">أريد تصميم متجر</span><span class="adv-sub">إنشاء متجر جديد من الصفر</span></div>
-      <div class="adv-card" onclick="advGo('#services')"><span class="adv-emoji">⚡</span><span class="adv-lbl">تطوير متجر موجود</span><span class="adv-sub">تحسين وتعديل متجرك الحالي</span></div>
-      <div class="adv-card" onclick="advGo('#work')"><span class="adv-emoji">🏆</span><span class="adv-lbl">شوف أعمالنا أولاً</span><span class="adv-sub">معرض تصاميمنا السابقة</span></div>
-      <div class="adv-card" onclick="advGo('https://wa.me/966501940155?text=أريد الاستفسار')"><span class="adv-emoji">💬</span><span class="adv-lbl">استفسار واتساب</span><span class="adv-sub">رد فوري خلال دقائق</span></div>
-    </div>
-    <div class="advisor-step" id="adv-s2">
-      <div class="adv-card" onclick="advGo('#professional')"><span class="adv-emoji">🟢</span><span class="adv-lbl">منصة سلة</span><span class="adv-sub">الأكثر شيوعاً في السعودية</span></div>
-      <div class="adv-card" onclick="advGo('#professional')"><span class="adv-emoji">🔵</span><span class="adv-lbl">منصة زد</span><span class="adv-sub">مرونة تصميم عالية</span></div>
-      <div class="adv-card" onclick="advGo('#compare')"><span class="adv-emoji">🤔</span><span class="adv-lbl">ما قررت بعد</span><span class="adv-sub">ساعدني في الاختيار</span></div>
-      <div class="adv-card" onclick="advGo('https://wa.me/966501940155?text=أريد استشارة')"><span class="adv-emoji">📞</span><span class="adv-lbl">استشارة مجانية</span><span class="adv-sub">تواصل مع مختص الآن</span></div>
+    <button class="adv-back" id="adv-back" onclick="advBack()" style="display:none; margin-bottom:15px;">← رجوع</button>
+    <div class="advisor-step active" id="adv-s1" style="display:flex; flex-wrap:wrap; gap:12px;">
+      <div class="adv-card" onclick="advSelect('design')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1)">
+        <span class="adv-emoji">🎨</span>
+        <span class="adv-lbl">أريد تصميم متجر</span>
+        <span class="adv-sub">إنشاء متجر جديد من الصفر</span>
+      </div>
+      <div class="adv-card" onclick="advGo('#professional')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1)">
+        <span class="adv-emoji">⚡</span>
+        <span class="adv-lbl">تطوير متجر موجود</span>
+        <span class="adv-sub">تحسين وتعديل متجرك الحالي – باقة الاحترافية</span>
+      </div>
+      <div class="adv-card" onclick="advGo('#work')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1)">
+        <span class="adv-emoji">🏆</span>
+        <span class="adv-lbl">شوف أعمالنا أولاً</span>
+        <span class="adv-sub">معرض تصاميمنا السابقة</span>
+      </div>
+      <div class="adv-card" onclick="advGo('https://wa.me/966501940155?text=أريد الاستفسار')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.1)">
+        <span class="adv-emoji">💬</span>
+        <span class="adv-lbl">استفسار واتساب</span>
+        <span class="adv-sub">رد فوري خلال دقائق</span>
+      </div>
     </div>
   </div>
 </section>
