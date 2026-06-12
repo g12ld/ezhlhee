@@ -1338,6 +1338,9 @@ footer{
 <!-- TESTIMONIALS - MOVING TICKER -->
 <section id="testimonials" class="testimonials-ticker-section">
   <style>
+    #testimonials {
+    margin-top: 40px; /* تزيد المسافة فوق العنصر */
+}
   /* Testimonials ticker: responsive, low-height, right-to-left movement */
   #testimonials.testimonials-ticker-section{
     padding:clamp(18px,3vw,32px) 0;
@@ -1372,7 +1375,7 @@ footer{
     display:flex;
     align-items:stretch;
     width:max-content;
-    animation:testi-scroll-rtl 70s linear infinite;
+    animation:testi-scroll-rtl 150s linear infinite;
     will-change:transform;
   }
   #testimonials .testi-marquee:hover .testi-track{
