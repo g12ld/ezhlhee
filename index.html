@@ -1241,6 +1241,30 @@ footer{
   .process-steps::before{display:none}
 }
 @media(max-width:480px){.process-steps{grid-template-columns:1fr}}
+
+/* ═══════════════════ TESTIMONIALS ═══════════════════ */
+.testi-sec{padding:100px 0;background:var(--bg2);overflow:hidden}
+.testi-hdr{max-width:1320px;margin:0 auto 52px;padding:0 28px;text-align:center}
+.testi-track-wrap{overflow:hidden;-webkit-mask:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);padding:4px 0;margin-bottom:14px}
+.testi-track{display:flex;gap:14px;width:max-content}
+.testi-fwd{animation:testiFwd 70s linear infinite}
+.testi-rev{animation:testiRev 72s linear infinite}
+.testi-track-wrap:hover .testi-fwd,.testi-track-wrap:hover .testi-rev{animation-play-state:paused}
+@keyframes testiFwd{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes testiRev{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+.testi-card{background:var(--white);border:1px solid var(--border2);border-radius:16px;padding:18px 20px;width:282px;flex-shrink:0;transition:box-shadow .3s,border-color .3s}
+.testi-card:hover{box-shadow:var(--shadow);border-color:rgba(4,181,184,.3);cursor:default}
+.testi-top{display:flex;align-items:center;gap:10px;margin-bottom:11px}
+.testi-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.92rem;font-weight:900;color:#fff;flex-shrink:0}
+.av-1{background:var(--p)}.av-2{background:#7C5CBF}.av-3{background:#D4AF37}.av-4{background:#E17055}.av-5{background:#00B894}
+.testi-name{font-size:.82rem;font-weight:800;color:var(--ink);line-height:1.2}
+.testi-stars{color:#D4AF37;font-size:.74rem;letter-spacing:.5px;margin-top:2px}
+.testi-text{font-size:.81rem;color:var(--muted);line-height:1.75;margin:0}
+.testi-summary{text-align:center;margin-top:44px;padding:0 28px}
+.testi-badge{display:inline-flex;align-items:center;gap:12px;background:var(--white);border:1px solid var(--border);border-radius:50px;padding:12px 28px;box-shadow:var(--shadow)}
+.testi-score{font-size:1.5rem;font-weight:900;color:var(--p);letter-spacing:-1px}
+.testi-score-stars{color:#D4AF37;font-size:.88rem}
+.testi-score-label{font-size:.72rem;color:var(--muted);font-weight:700;margin-top:1px}
 </style>
 </head>
 <body>
@@ -2331,6 +2355,139 @@ footer{
       <div class="why-card reveal"><div class="why-num">7</div><div class="why-title">أيام متوسط التسليم</div><div class="why-desc">نلتزم بمواعيد التسليم لأن إطلاق متجرك في الوقت الصحيح يعني أرباحاً أسرع.</div></div>
       <div class="why-card reveal"><div class="why-num">100%</div><div class="why-title">ضمان رضا أو استرداد المبلغ</div><div class="why-desc">إذا لم تكن راضياً تماماً عن النتيجة، نُعيد المبلغ كاملاً بدون أي جدال.</div></div>
       <div class="why-card reveal"><div class="why-num">SA</div><div class="why-title">متخصصون في السوق السعودي</div><div class="why-desc">نفهم بيئة التجارة الإلكترونية السعودية: مدى، سمسا، توثيق الأعمال، والمستهلك المحلي.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-sec" id="testimonials">
+  <div class="testi-hdr reveal">
+    <div class="tag-chip" style="margin:0 auto 16px"><span class="tag-dot"></span>آراء العملاء</div>
+    <h2 class="sh">ماذا قال <span>عملاؤنا</span></h2>
+    <p class="sub" style="margin:0 auto">+50 عميل شاركوا تجربتهم الحقيقية — مرّر على البطاقة لإيقاف التمرير.</p>
+  </div>
+
+  <!-- Track 1 — scrolls left -->
+  <div class="testi-track-wrap">
+    <div class="testi-track testi-fwd">
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ع</div><div><div class="testi-name">عبدالله الحربي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية ممتازة، التصميم مرتب وخدمة الدعم رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ف</div><div><div class="testi-name">فيصل المطيري</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"التصميم جميل، بس ممكن يكون التواصل أسرع شوي، عموماً ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ن</div><div><div class="testi-name">نواف العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الاحترافية أعطت متجري شكل احترافي، أنصح فيها."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">م</div><div><div class="testi-name">محمد الشهري</div><div class="testi-stars">★★★★<span style="opacity:.15">★</span></div></div></div><p class="testi-text">"الخدمة ممتازة، التصميم مرتب، لكن حبيت لو يكون فيه شرح أكثر لبعض الميزات."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">س</div><div><div class="testi-name">سارة القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار جذاب للعملاء بعد الباقة الذهبية، تجربة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ب</div><div><div class="testi-name">بندر السبيعي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"السرعة في التنفيذ ممتازة، التصميم احترافي جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ه</div><div><div class="testi-name">هيفاء الرويلي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم سلس وواضح، متجري صار مرتب أكثر."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">س</div><div><div class="testi-name">سالم اليامي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية أنسب اختيار، جودة التصميم ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">أ</div><div><div class="testi-name">أمل الدوسري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"تصميم مرتب ومريح للعين، خدمة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ت</div><div><div class="testi-name">تركي العنزي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"التصميم سهل الاستخدام وفريق الدعم متعاون جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ل</div><div><div class="testi-name">لطيفة الحربي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"وجهة نظر واقعية، كل شيء ممتاز، متجري صار أكثر احترافية."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ع</div><div><div class="testi-name">عبدالعزيز المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم أنيق وجذاب، خدمة الدعم ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ر</div><div><div class="testi-name">ريم الزهراني</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية تجربة جيدة جدًا، بس يمكن إضافة بعض التفاصيل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">م</div><div><div class="testi-name">ماجد العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الخدمة ممتازة من البداية للنهاية، فريق محترف."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">د</div><div><div class="testi-name">دانة الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم واضح وسهل التعامل معه، متجري صار مرتب."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">خ</div><div><div class="testi-name">خالد اليقمي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"خدمة سريعة، التصميم احترافي لكن حبيت لو فيه شرح أكثر لبعض الأدوات."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ن</div><div><div class="testi-name">نواف القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار أفضل بكثير بعد الباقة الذهبية."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ف</div><div><div class="testi-name">فاطمة الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"أنصح كل شخص يفتح متجره بالباقة الذهبية، تصميم ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ع</div><div><div class="testi-name">عبدالمجيد الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"التصميم سلس وواضح، بس ممكن تحسين بسيط على ترتيب القوائم."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">و</div><div><div class="testi-name">وضاح المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم احترافي والفريق متعاون جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">م</div><div><div class="testi-name">مها العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار مرتب وواضح للعملاء، تجربة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">س</div><div><div class="testi-name">سعد اليامي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية قدمت لي متجر احترافي، بعض التفاصيل البسيطة تحتاج تعديل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالله السبيعي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"خدمة ممتازة، تصميم مرتب وواضح."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ع</div><div><div class="testi-name">العنود الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم جميل جداً، متجري صار أكثر احترافية."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ب</div><div><div class="testi-name">بندر الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية تستحق كل ريال، بس فيه بعض الخيارات يحتاج شرح."</p></div>
+      <!-- duplicate for seamless loop -->
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ع</div><div><div class="testi-name">عبدالله الحربي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية ممتازة، التصميم مرتب وخدمة الدعم رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ف</div><div><div class="testi-name">فيصل المطيري</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"التصميم جميل، بس ممكن يكون التواصل أسرع شوي، عموماً ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ن</div><div><div class="testi-name">نواف العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الاحترافية أعطت متجري شكل احترافي، أنصح فيها."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">م</div><div><div class="testi-name">محمد الشهري</div><div class="testi-stars">★★★★<span style="opacity:.15">★</span></div></div></div><p class="testi-text">"الخدمة ممتازة، التصميم مرتب، لكن حبيت لو يكون فيه شرح أكثر لبعض الميزات."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">س</div><div><div class="testi-name">سارة القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار جذاب للعملاء بعد الباقة الذهبية، تجربة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ب</div><div><div class="testi-name">بندر السبيعي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"السرعة في التنفيذ ممتازة، التصميم احترافي جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ه</div><div><div class="testi-name">هيفاء الرويلي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم سلس وواضح، متجري صار مرتب أكثر."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">س</div><div><div class="testi-name">سالم اليامي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية أنسب اختيار، جودة التصميم ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">أ</div><div><div class="testi-name">أمل الدوسري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"تصميم مرتب ومريح للعين، خدمة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ت</div><div><div class="testi-name">تركي العنزي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"التصميم سهل الاستخدام وفريق الدعم متعاون جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ل</div><div><div class="testi-name">لطيفة الحربي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"وجهة نظر واقعية، كل شيء ممتاز، متجري صار أكثر احترافية."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ع</div><div><div class="testi-name">عبدالعزيز المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم أنيق وجذاب، خدمة الدعم ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ر</div><div><div class="testi-name">ريم الزهراني</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية تجربة جيدة جدًا، بس يمكن إضافة بعض التفاصيل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">م</div><div><div class="testi-name">ماجد العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الخدمة ممتازة من البداية للنهاية، فريق محترف."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">د</div><div><div class="testi-name">دانة الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم واضح وسهل التعامل معه، متجري صار مرتب."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">خ</div><div><div class="testi-name">خالد اليقمي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"خدمة سريعة، التصميم احترافي لكن حبيت لو فيه شرح أكثر لبعض الأدوات."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ن</div><div><div class="testi-name">نواف القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار أفضل بكثير بعد الباقة الذهبية."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ف</div><div><div class="testi-name">فاطمة الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"أنصح كل شخص يفتح متجره بالباقة الذهبية، تصميم ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ع</div><div><div class="testi-name">عبدالمجيد الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"التصميم سلس وواضح، بس ممكن تحسين بسيط على ترتيب القوائم."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">و</div><div><div class="testi-name">وضاح المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم احترافي والفريق متعاون جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">م</div><div><div class="testi-name">مها العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار مرتب وواضح للعملاء، تجربة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">س</div><div><div class="testi-name">سعد اليامي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية قدمت لي متجر احترافي، بعض التفاصيل البسيطة تحتاج تعديل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالله السبيعي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"خدمة ممتازة، تصميم مرتب وواضح."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ع</div><div><div class="testi-name">العنود الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم جميل جداً، متجري صار أكثر احترافية."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ب</div><div><div class="testi-name">بندر الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية تستحق كل ريال، بس فيه بعض الخيارات يحتاج شرح."</p></div>
+    </div>
+  </div>
+
+  <!-- Track 2 — scrolls right -->
+  <div class="testi-track-wrap">
+    <div class="testi-track testi-rev">
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ن</div><div><div class="testi-name">نورة المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"تصميم مرتب ومنظم، كل شيء واضح وسهل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ف</div><div><div class="testi-name">فيصل العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"جودة التصميم ممتازة، فريق العمل متعاون."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ح</div><div><div class="testi-name">حصه القحطاني</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار مرتب أكثر من قبل، تجربة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">خ</div><div><div class="testi-name">خالد الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"السرعة في التنفيذ والدقة في التصميم ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">س</div><div><div class="testi-name">سمية العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية كانت الخيار الأفضل، تصميم أنيق."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">م</div><div><div class="testi-name">محمد السبيعي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"احترافيين جدًا في التصميم، النتائج رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ن</div><div><div class="testi-name">نجلاء الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"تصميم سلس وجذاب، الدعم الفني ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالله المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار أكثر احترافية بعد الخدمة، أنصح الجميع."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ر</div><div><div class="testi-name">ريم العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية أنصح بها لكل من يريد متجر مرتب واحترافي."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ت</div><div><div class="testi-name">تركي اليامي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار جاهز للاستخدام والبيع بشكل احترافي."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ل</div><div><div class="testi-name">لبنى القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم احترافي وسهل، والنتيجة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ب</div><div><div class="testi-name">بدر الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم مرتب وواضح، فريق الدعم متعاون."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالعزيز اليامي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"خدمة ممتازة، نتائج التصميم جيدة لكن ممكن تحسينات بسيطة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">م</div><div><div class="testi-name">مريم السبيعي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار جذاب أكثر للعملاء، تجربة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ف</div><div><div class="testi-name">فهد المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم مرتب وسهل الاستخدام، الجودة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">س</div><div><div class="testi-name">سارة الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية تستحق التجربة، متجر احترافي بالكامل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">م</div><div><div class="testi-name">محمد القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الخدمة ممتازة، التصميم أنيق وسلس."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ه</div><div><div class="testi-name">هدى العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار جاهز بالكامل للبيع، تصميم ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ر</div><div><div class="testi-name">راشد الشهري</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية خيار رائع، بعض التفاصيل الصغيرة تحتاج تعديل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ف</div><div><div class="testi-name">فواز القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"تصميم مرتب وواضح، متجري صار جذاب للعملاء."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ن</div><div><div class="testi-name">نوف الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"خدمة ممتازة وسريعة، التصميم احترافي جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">س</div><div><div class="testi-name">سلمان الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار أكثر جاذبية بعد التصميم، جودة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالله العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية كانت خيار ممتاز، كل شيء مرتب وواضح."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ف</div><div><div class="testi-name">فواز المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"خدمة ممتازة، تصميم احترافي وواضح."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">أ</div><div><div class="testi-name">أروى القحطاني</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار مرتب أكثر، تصميم جميل واحترافي."</p></div>
+      <!-- duplicate for seamless loop -->
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ن</div><div><div class="testi-name">نورة المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"تصميم مرتب ومنظم، كل شيء واضح وسهل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ف</div><div><div class="testi-name">فيصل العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"جودة التصميم ممتازة، فريق العمل متعاون."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ح</div><div><div class="testi-name">حصه القحطاني</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار مرتب أكثر من قبل، تجربة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">خ</div><div><div class="testi-name">خالد الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"السرعة في التنفيذ والدقة في التصميم ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">س</div><div><div class="testi-name">سمية العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية كانت الخيار الأفضل، تصميم أنيق."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">م</div><div><div class="testi-name">محمد السبيعي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"احترافيين جدًا في التصميم، النتائج رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ن</div><div><div class="testi-name">نجلاء الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"تصميم سلس وجذاب، الدعم الفني ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالله المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار أكثر احترافية بعد الخدمة، أنصح الجميع."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ر</div><div><div class="testi-name">ريم العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية أنصح بها لكل من يريد متجر مرتب واحترافي."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ت</div><div><div class="testi-name">تركي اليامي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار جاهز للاستخدام والبيع بشكل احترافي."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ل</div><div><div class="testi-name">لبنى القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم احترافي وسهل، والنتيجة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">ب</div><div><div class="testi-name">بدر الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم مرتب وواضح، فريق الدعم متعاون."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالعزيز اليامي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"خدمة ممتازة، نتائج التصميم جيدة لكن ممكن تحسينات بسيطة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">م</div><div><div class="testi-name">مريم السبيعي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار جذاب أكثر للعملاء، تجربة رائعة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ف</div><div><div class="testi-name">فهد المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"التصميم مرتب وسهل الاستخدام، الجودة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">س</div><div><div class="testi-name">سارة الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية تستحق التجربة، متجر احترافي بالكامل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">م</div><div><div class="testi-name">محمد القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الخدمة ممتازة، التصميم أنيق وسلس."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ه</div><div><div class="testi-name">هدى العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"متجري صار جاهز بالكامل للبيع، تصميم ممتاز."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ر</div><div><div class="testi-name">راشد الشهري</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"الباقة الذهبية خيار رائع، بعض التفاصيل الصغيرة تحتاج تعديل."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">ف</div><div><div class="testi-name">فواز القحطاني</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"تصميم مرتب وواضح، متجري صار جذاب للعملاء."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-1">ن</div><div><div class="testi-name">نوف الشهري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"خدمة ممتازة وسريعة، التصميم احترافي جدًا."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-2">س</div><div><div class="testi-name">سلمان الحربي</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار أكثر جاذبية بعد التصميم، جودة ممتازة."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-3">ع</div><div><div class="testi-name">عبدالله العنزي</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"الباقة الذهبية كانت خيار ممتاز، كل شيء مرتب وواضح."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-4">ف</div><div><div class="testi-name">فواز المطيري</div><div class="testi-stars">★★★★★</div></div></div><p class="testi-text">"خدمة ممتازة، تصميم احترافي وواضح."</p></div>
+      <div class="testi-card"><div class="testi-top"><div class="testi-av av-5">أ</div><div><div class="testi-name">أروى القحطاني</div><div class="testi-stars">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text">"متجري صار مرتب أكثر، تصميم جميل واحترافي."</p></div>
+    </div>
+  </div>
+
+  <div class="testi-summary reveal">
+    <div class="testi-badge">
+      <div class="testi-score">4.8</div>
+      <div>
+        <div class="testi-score-stars">★★★★★</div>
+        <div class="testi-score-label">متوسط التقييم من 50 عميل</div>
+      </div>
     </div>
   </div>
 </section>
