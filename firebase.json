@@ -2,20 +2,107 @@
   "hosting": [
     {
       "target": "webapp_site",
-      "public": "public",
+      "public": ".",
       "ignore": [
         "firebase.json",
         "**/.*",
-        "**/node_modules/**"
+        "**/node_modules/**",
+        "*.py",
+        "functions/**",
+        "firestore.*",
+        "package*.json",
+        "*.txt",
+        "README.md",
+        "للل"
+      ],
+      "cleanUrls": false,
+      "trailingSlash": false,
+      "redirects": [
+        { "source": "/index.html", "destination": "/", "type": 301 },
+        { "source": "/data-analysis.html", "destination": "/", "type": 301 },
+        { "source": "/articles/guide-design-store.html", "destination": "/salla-store-design.html", "type": 301 },
+        { "source": "/articles/service1-article1.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service1-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service2-article5.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service3-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service3-article6.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service4-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service4-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service4-article10.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service5-article1.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service6-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service6-article6.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service7-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service7-article8.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service7-article10.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service8-article2.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service8-article9.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service9-article2.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service9-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article5.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article6.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article8.html", "destination": "/", "type": 301 }
+      ],
+      "headers": [
+        {
+          "source": "**/*.html",
+          "headers": [
+            { "key": "Cache-Control", "value": "public, max-age=3600" },
+            { "key": "X-Content-Type-Options", "value": "nosniff" }
+          ]
+        },
+        {
+          "source": "/articles/**",
+          "headers": [
+            { "key": "X-Robots-Tag", "value": "index, follow" }
+          ]
+        }
       ]
     },
     {
       "target": "firebaseapp_site",
-      "public": "public",
+      "public": ".",
       "ignore": [
         "firebase.json",
         "**/.*",
-        "**/node_modules/**"
+        "**/node_modules/**",
+        "*.py",
+        "functions/**",
+        "firestore.*",
+        "package*.json",
+        "*.txt",
+        "README.md",
+        "للل"
+      ],
+      "cleanUrls": false,
+      "trailingSlash": false,
+      "redirects": [
+        { "source": "/index.html", "destination": "/", "type": 301 },
+        { "source": "/data-analysis.html", "destination": "/", "type": 301 },
+        { "source": "/articles/guide-design-store.html", "destination": "/salla-store-design.html", "type": 301 },
+        { "source": "/articles/service1-article1.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service1-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service2-article5.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service3-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service3-article6.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service4-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service4-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service4-article10.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service5-article1.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service6-article4.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service6-article6.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service7-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service7-article8.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service7-article10.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service8-article2.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service8-article9.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service9-article2.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service9-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article5.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article6.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article7.html", "destination": "/", "type": 301 },
+        { "source": "/articles/service10-article8.html", "destination": "/", "type": 301 }
       ]
     }
   ],
