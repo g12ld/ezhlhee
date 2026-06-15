@@ -17,6 +17,7 @@
       ],
       "cleanUrls": false,
       "trailingSlash": false,
+      "errorPage": "404.html",
       "redirects": [
         { "source": "/index.html", "destination": "/", "type": 301 },
         { "source": "/data-analysis.html", "destination": "/", "type": 301 },
@@ -77,6 +78,7 @@
       ],
       "cleanUrls": false,
       "trailingSlash": false,
+      "errorPage": "404.html",
       "redirects": [
         { "source": "/index.html", "destination": "/", "type": 301 },
         { "source": "/data-analysis.html", "destination": "/", "type": 301 },

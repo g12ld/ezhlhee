@@ -1,0 +1,52 @@
+{
+  "redirects": [
+    { "source": "/index.html", "destination": "/", "permanent": true },
+    { "source": "/data-analysis.html", "destination": "/", "permanent": true },
+    { "source": "/articles/guide-design-store.html", "destination": "/salla-store-design.html", "permanent": true },
+    { "source": "/articles/service1-article1.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service1-article4.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service2-article5.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service3-article4.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service3-article6.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service4-article4.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service4-article7.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service4-article10.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service5-article1.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service6-article4.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service6-article6.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service7-article7.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service7-article8.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service7-article10.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service8-article2.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service8-article9.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service9-article2.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service9-article7.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service10-article5.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service10-article6.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service10-article7.html", "destination": "/", "permanent": true },
+    { "source": "/articles/service10-article8.html", "destination": "/", "permanent": true }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    },
+    {
+      "source": "/articles/(.*)\\.html",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "index, follow" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.css",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}
