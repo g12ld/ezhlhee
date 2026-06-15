@@ -1545,7 +1545,53 @@ footer{
   </div>
 </header>
 
-<section class="advisor-sec" id="advisor" style="margin-top:85px; padding:20px 0; background:#f9f9f9;"> 
+<section class="coupon-sec" id="coupon-salla" aria-label="كوبون خصم اشتراك سلة" style="margin-top:70px">
+  <div class="coupon-inner">
+    <div class="coupon-grid">
+      <!-- اليسار: النصوص -->
+      <div class="reveal">
+        <div class="coupon-tag"><span style="width:5px;height:5px;background:var(--p);border-radius:50%;display:inline-block"></span>كوبون خصم حصري</div>
+        <h2 class="coupon-title">وفّر على اشتراكك في<br><span>منصة سلة</span></h2>
+        <p class="coupon-desc">
+          لأننا شركاؤك في النجاح، نُقدّم لك كوبون خصم حصري للاشتراك في باقتي <strong style="color:var(--pl)">بلس</strong> أو <strong style="color:var(--gold-l)">برو</strong> في منصة سلة.
+          استخدم الكود عند الاشتراك ووفّر على تكلفة إطلاق متجرك.
+        </p>
+        <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="discount-salla-plus.html" style="display:inline-flex;align-items:center;gap:6px;background:rgba(4,181,184,.15);border:1px solid rgba(4,181,184,.3);color:var(--pl);padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.25s">
+            اقرأ تفاصيل كود بلس →
+          </a>
+          <a href="discount-salla-pro.html" style="display:inline-flex;align-items:center;gap:6px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);color:var(--gold-l);padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.25s">
+            اقرأ تفاصيل كود برو →
+          </a>
+        </div>
+      </div>
+      <!-- اليمين: صندوق الكود -->
+      <div class="coupon-box reveal">
+        <div class="coupon-box-lbl">الكود الحصري — انسخه الآن</div>
+        <div class="coupon-code-wrap">
+          <span class="coupon-code-main" id="mainCouponCode">F-SJA3KGL7</span>
+          <button class="btn-copy-hero" onclick="copyCouponMain()" id="mainCopyBtn">نسخ الكود</button>
+        </div>
+        <div class="coupon-links">
+          <a href="discount-salla-plus.html" class="clb clb-plus">
+            <span>🏷️ استخدم مع باقة بلس — تصميم + اشتراك</span>
+            <span class="clb-arr">←</span>
+          </a>
+          <a href="discount-salla-pro.html" class="clb clb-pro">
+            <span>👑 استخدم مع باقة برو — الحل الاحترافي</span>
+            <span class="clb-arr">←</span>
+          </a>
+        </div>
+        <p style="margin-top:14px;font-size:.75rem;color:rgba(255,255,255,.38);line-height:1.7">
+          الكود يُدخَل في خانة "كوبون الخصم" عند الاشتراك في منصة سلة.
+          صالح للمستخدمين الجدد.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="advisor-sec" id="advisor" style="margin-top:0; padding:20px 0; background:#f9f9f9;"> 
   <div class="advisor-inner" style="max-width:1200px; margin:0 auto;">
     <div class="advisor-hdr" style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
       <div class="advisor-av" style="font-size:2rem; color:#04B5B8;">🤖</div>
@@ -2848,52 +2894,6 @@ function advSelect(option) {
   </div>
 </section>
 <!-- ═══ COUPON SECTION ═══ -->
-<section class="coupon-sec" id="coupon-salla" aria-label="كوبون خصم اشتراك سلة">
-  <div class="coupon-inner">
-    <div class="coupon-grid">
-      <!-- اليسار: النصوص -->
-      <div class="reveal">
-        <div class="coupon-tag"><span style="width:5px;height:5px;background:var(--p);border-radius:50%;display:inline-block"></span>كوبون خصم حصري</div>
-        <h2 class="coupon-title">وفّر على اشتراكك في<br><span>منصة سلة</span></h2>
-        <p class="coupon-desc">
-          لأننا شركاؤك في النجاح، نُقدّم لك كوبون خصم حصري للاشتراك في باقتي <strong style="color:var(--pl)">بلس</strong> أو <strong style="color:var(--gold-l)">برو</strong> في منصة سلة.
-          استخدم الكود عند الاشتراك ووفّر على تكلفة إطلاق متجرك.
-        </p>
-        <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
-          <a href="discount-salla-plus.html" style="display:inline-flex;align-items:center;gap:6px;background:rgba(4,181,184,.15);border:1px solid rgba(4,181,184,.3);color:var(--pl);padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.25s">
-            اقرأ تفاصيل كود بلس →
-          </a>
-          <a href="discount-salla-pro.html" style="display:inline-flex;align-items:center;gap:6px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);color:var(--gold-l);padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.25s">
-            اقرأ تفاصيل كود برو →
-          </a>
-        </div>
-      </div>
-      <!-- اليمين: صندوق الكود -->
-      <div class="coupon-box reveal">
-        <div class="coupon-box-lbl">الكود الحصري — انسخه الآن</div>
-        <div class="coupon-code-wrap">
-          <span class="coupon-code-main" id="mainCouponCode">F-SJA3KGL7</span>
-          <button class="btn-copy-hero" onclick="copyCouponMain()" id="mainCopyBtn">نسخ الكود</button>
-        </div>
-        <div class="coupon-links">
-          <a href="discount-salla-plus.html" class="clb clb-plus">
-            <span>🏷️ استخدم مع باقة بلس — تصميم + اشتراك</span>
-            <span class="clb-arr">←</span>
-          </a>
-          <a href="discount-salla-pro.html" class="clb clb-pro">
-            <span>👑 استخدم مع باقة برو — الحل الاحترافي</span>
-            <span class="clb-arr">←</span>
-          </a>
-        </div>
-        <p style="margin-top:14px;font-size:.75rem;color:rgba(255,255,255,.38);line-height:1.7">
-          الكود يُدخَل في خانة "كوبون الخصم" عند الاشتراك في منصة سلة.
-          صالح للمستخدمين الجدد.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
