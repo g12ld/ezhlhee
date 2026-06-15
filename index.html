@@ -1408,69 +1408,57 @@ footer{
 .nav-dd-menu a:hover{background:var(--ppp);color:var(--p)}
 
 /* ═══════════════════ COUPON SECTION ═══════════════════ */
+/* ── COUPON STRIP ── */
 .coupon-sec{
-  background:linear-gradient(135deg,var(--ink) 0%,#0e3a3c 60%,#123537 100%);
-  padding:80px 28px;position:relative;overflow:hidden;
+  background:linear-gradient(90deg,#071e20 0%,#0b2e30 50%,#071e20 100%);
+  padding:0 20px;
+  border-bottom:1px solid rgba(4,181,184,.18);
+  position:relative;overflow:hidden;
 }
-.coupon-sec::before{
-  content:'';position:absolute;width:600px;height:600px;border-radius:50%;
-  background:radial-gradient(circle,rgba(4,181,184,.07) 0%,transparent 70%);
-  top:-180px;left:-180px;pointer-events:none;
+.coupon-inner{max-width:1100px;margin:0 auto}
+.coupon-grid{
+  display:flex;align-items:center;gap:12px;
+  flex-wrap:wrap;padding:12px 0;
 }
-.coupon-sec::after{
-  content:'';position:absolute;width:400px;height:400px;border-radius:50%;
-  background:radial-gradient(circle,rgba(212,175,55,.05) 0%,transparent 70%);
-  bottom:-100px;right:-100px;pointer-events:none;
-}
-.coupon-inner{max-width:960px;margin:0 auto;position:relative;z-index:1}
-.coupon-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .coupon-tag{
-  display:inline-flex;align-items:center;gap:7px;
-  background:rgba(4,181,184,.15);border:1px solid rgba(4,181,184,.3);
-  color:var(--pl);padding:5px 14px;border-radius:50px;
-  font-size:.72rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;
-  margin-bottom:18px;
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(4,181,184,.14);border:1px solid rgba(4,181,184,.28);
+  color:var(--pl);padding:4px 12px;border-radius:50px;
+  font-size:.72rem;font-weight:800;white-space:nowrap;flex-shrink:0;
 }
-.coupon-title{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:14px}
-.coupon-title span{color:var(--p)}
-.coupon-desc{font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.85}
-.coupon-box{
-  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10);
-  border-radius:20px;padding:32px;
-}
-.coupon-box-lbl{font-size:.74rem;color:rgba(255,255,255,.45);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:14px}
 .coupon-code-wrap{
-  display:flex;align-items:center;gap:10px;
-  background:rgba(255,255,255,.09);border:1.5px dashed rgba(255,255,255,.25);
-  border-radius:12px;padding:13px 16px;margin-bottom:20px;flex-wrap:wrap;
+  display:flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,.07);border:1.5px dashed rgba(255,255,255,.22);
+  border-radius:9px;padding:7px 12px;flex-shrink:0;
 }
 .coupon-code-main{
-  font-size:1.65rem;font-weight:900;color:#fff;
-  letter-spacing:3px;font-family:'Courier New',monospace;flex:1;
+  font-size:1.05rem;font-weight:900;color:#fff;
+  letter-spacing:2.5px;font-family:'Courier New',monospace;
 }
 .btn-copy-hero{
   background:var(--p);color:#fff;border:none;
-  padding:10px 18px;border-radius:9px;
-  font-family:inherit;font-size:.85rem;font-weight:800;
-  cursor:pointer;transition:all .25s;white-space:nowrap;flex-shrink:0;
+  padding:6px 13px;border-radius:7px;
+  font-family:inherit;font-size:.78rem;font-weight:800;
+  cursor:pointer;transition:all .2s;white-space:nowrap;flex-shrink:0;
 }
-.btn-copy-hero:hover{background:var(--pd);transform:scale(1.03)}
-.coupon-links{display:flex;flex-direction:column;gap:10px}
+.btn-copy-hero:hover{background:var(--pd);transform:scale(1.04)}
+.coupon-links{display:flex;gap:8px;flex-wrap:wrap;margin-right:auto}
 .clb{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:13px 16px;border-radius:12px;text-decoration:none;
-  font-size:.88rem;font-weight:700;transition:all .25s;
+  display:inline-flex;align-items:center;gap:5px;
+  padding:6px 13px;border-radius:8px;text-decoration:none;
+  font-size:.78rem;font-weight:700;transition:all .2s;white-space:nowrap;
 }
-.clb-plus{background:rgba(4,181,184,.12);border:1px solid rgba(4,181,184,.25);color:var(--pl)}
-.clb-plus:hover{background:rgba(4,181,184,.22);transform:translateX(-4px)}
+.clb-plus{background:rgba(4,181,184,.11);border:1px solid rgba(4,181,184,.25);color:var(--pl)}
+.clb-plus:hover{background:rgba(4,181,184,.2)}
 .clb-pro{background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.25);color:var(--gold-l)}
-.clb-pro:hover{background:rgba(212,175,55,.18);transform:translateX(-4px)}
-.clb-arr{font-size:.9rem;opacity:.7}
+.clb-pro:hover{background:rgba(212,175,55,.18)}
+.clb-arr{opacity:.7;font-size:.8rem}
+/* hide desc / box-lbl / note — compact strip has no room */
+.coupon-box-lbl,.coupon-desc{display:none}
 
 @media(max-width:860px){
-  .coupon-grid{grid-template-columns:1fr;gap:28px}
-  .coupon-box{padding:22px}
-  .coupon-code-main{font-size:1.35rem;letter-spacing:2px}
+  .coupon-grid{gap:8px;padding:10px 0}
+  .coupon-code-main{font-size:.95rem;letter-spacing:2px}
   /* Dropdown on mobile: always visible inside open nav */
   .nav-dd{flex-direction:column;align-items:flex-start;width:100%}
   .nav-dd-toggle{width:100%;justify-content:space-between;border-radius:9px}
@@ -1548,44 +1536,14 @@ footer{
 <section class="coupon-sec" id="coupon-salla" aria-label="كوبون خصم اشتراك سلة" style="margin-top:70px">
   <div class="coupon-inner">
     <div class="coupon-grid">
-      <!-- اليسار: النصوص -->
-      <div class="reveal">
-        <div class="coupon-tag"><span style="width:5px;height:5px;background:var(--p);border-radius:50%;display:inline-block"></span>كوبون خصم حصري</div>
-        <h2 class="coupon-title">وفّر على اشتراكك في<br><span>منصة سلة</span></h2>
-        <p class="coupon-desc">
-          لأننا شركاؤك في النجاح، نُقدّم لك كوبون خصم حصري للاشتراك في باقتي <strong style="color:var(--pl)">بلس</strong> أو <strong style="color:var(--gold-l)">برو</strong> في منصة سلة.
-          استخدم الكود عند الاشتراك ووفّر على تكلفة إطلاق متجرك.
-        </p>
-        <div style="margin-top:24px;display:flex;gap:10px;flex-wrap:wrap">
-          <a href="discount-salla-plus.html" style="display:inline-flex;align-items:center;gap:6px;background:rgba(4,181,184,.15);border:1px solid rgba(4,181,184,.3);color:var(--pl);padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.25s">
-            اقرأ تفاصيل كود بلس →
-          </a>
-          <a href="discount-salla-pro.html" style="display:inline-flex;align-items:center;gap:6px;background:rgba(212,175,55,.1);border:1px solid rgba(212,175,55,.3);color:var(--gold-l);padding:9px 18px;border-radius:10px;font-size:.85rem;font-weight:700;text-decoration:none;transition:.25s">
-            اقرأ تفاصيل كود برو →
-          </a>
-        </div>
+      <div class="coupon-tag">🏷️ كوبون خصم سلة حصري</div>
+      <div class="coupon-code-wrap">
+        <span class="coupon-code-main" id="mainCouponCode">F-SJA3KGL7</span>
+        <button class="btn-copy-hero" onclick="copyCouponMain()" id="mainCopyBtn">نسخ</button>
       </div>
-      <!-- اليمين: صندوق الكود -->
-      <div class="coupon-box reveal">
-        <div class="coupon-box-lbl">الكود الحصري — انسخه الآن</div>
-        <div class="coupon-code-wrap">
-          <span class="coupon-code-main" id="mainCouponCode">F-SJA3KGL7</span>
-          <button class="btn-copy-hero" onclick="copyCouponMain()" id="mainCopyBtn">نسخ الكود</button>
-        </div>
-        <div class="coupon-links">
-          <a href="discount-salla-plus.html" class="clb clb-plus">
-            <span>🏷️ استخدم مع باقة بلس — تصميم + اشتراك</span>
-            <span class="clb-arr">←</span>
-          </a>
-          <a href="discount-salla-pro.html" class="clb clb-pro">
-            <span>👑 استخدم مع باقة برو — الحل الاحترافي</span>
-            <span class="clb-arr">←</span>
-          </a>
-        </div>
-        <p style="margin-top:14px;font-size:.75rem;color:rgba(255,255,255,.38);line-height:1.7">
-          الكود يُدخَل في خانة "كوبون الخصم" عند الاشتراك في منصة سلة.
-          صالح للمستخدمين الجدد.
-        </p>
+      <div class="coupon-links">
+        <a href="discount-salla-plus.html" class="clb clb-plus">باقة بلس <span class="clb-arr">←</span></a>
+        <a href="discount-salla-pro.html" class="clb clb-pro">باقة برو <span class="clb-arr">←</span></a>
       </div>
     </div>
   </div>
