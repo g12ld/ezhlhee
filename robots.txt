@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_new_testi.html
 
-Sitemap: https://ezhalhe-sa.com/sitemap.xml
+Sitemap: https://www.ezhalhe-sa.com/sitemap.xml
