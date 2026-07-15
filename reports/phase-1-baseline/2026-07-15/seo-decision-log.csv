@@ -1,0 +1,12 @@
+id,date,phase,area,decision,rationale,evidence,approval_status
+SEO-001,2026-07-15,Project-wide,Canonical origin,Use https://www.ezhalhe-sa.com as the single intended production origin,The live host already consolidates to www and the owner approved one-domain canonicalization,canonical-map.csv and redirect-baseline.csv,Approved principle; implementation pending baseline review
+SEO-002,2026-07-15,Phase 1,Existing URLs,Preserve every existing production URL unless an exact equivalent and backlink/ranking evidence justify a change,Protect accumulated relevance history and external-link equity,backlink-targets.csv,Approved
+SEO-003,2026-07-15,Phase 1,URL changes,Block URL changes while Search Console and backlink evidence is unavailable,The authenticated account lacks property access and no backlink export is present,search-console-baseline.csv and backlink-targets.csv,Active gate
+SEO-004,2026-07-15,Phase 1,Redirects,Any approved content migration must use one direct permanent redirect to the exact equivalent without a chain,Protect crawl efficiency and relevance; platform host-level 308 behavior is documented separately,redirect-baseline.csv,Approved principle
+SEO-005,2026-07-15,Phase 1,Sitemap,Future sitemap must contain only canonical indexable final-200 URLs and accurate verifiable lastmod values,Current sitemap contains duplicates redirects and final 404 URLs,sitemap-inventory.csv,Approved principle
+SEO-006,2026-07-15,Project-wide,Content deletion,Do not delete pages or content without explicit owner approval,Project preservation rule and ranking-risk control,AGENTS.md,Approved
+SEO-007,2026-07-15,Project-wide,Structured data,Do not use FAQPage schema; LocalBusiness requires verified real-world location evidence,Project schema rules and accuracy requirements,structured-data-inventory.json,Approved
+SEO-008,2026-07-15,Project-wide,Brand colors,Use only #15B5B0 #0D2224 #3BBBC2 #FFFFFF and #555555 with no additions or substitutions,Exact brand-preservation requirement,brand-color-inventory.csv,Approved
+SEO-009,2026-07-15,Release,Deployment,Deploy redirects canonicals robots sitemap headers and related links atomically after staging validation,Prevent partial crawl/indexing behavior and temporary errors,Approved release gates,Approved
+SEO-010,2026-07-15,Release,Monitoring,Freeze structural changes and prepare a corrective patch if unexpected indexing canonical ranking or crawl issues appear,Thirty-day monitoring and success criteria,Approved release gates,Approved
+

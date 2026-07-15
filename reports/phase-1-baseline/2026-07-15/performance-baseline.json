@@ -1,0 +1,50 @@
+{
+  "recorded_at": "2026-07-15T12:53:09+03:00",
+  "url": "https://www.ezhalhe-sa.com/",
+  "field_data": {
+    "crux_available": false,
+    "search_console_core_web_vitals_available": false,
+    "reason": "Authenticated Search Console property access is unavailable and no verified CrUX result was obtained. Field-pass claims are prohibited."
+  },
+  "phase0_mobile_browser_diagnostic": {
+    "method": "Mobile-sized Chrome reload diagnostic completed during Phase 0; not Lighthouse or CrUX",
+    "fcp_ms": 2160,
+    "lcp_ms": 5490,
+    "cls": 0.153,
+    "load_ms": 7520,
+    "derived_tbt_ms": 5480,
+    "interpretation": "Diagnostic failure against the project LCP and CLS targets; INP was not measured."
+  },
+  "phase1_mobile_throttled_cdp_diagnostic": {
+    "method": "Single Chrome CDP diagnostic; not Lighthouse or CrUX",
+    "viewport": "375x812",
+    "cpu_throttling_rate": 4,
+    "network_latency_ms": 150,
+    "download_throughput_bytes_per_second": 200000,
+    "upload_throughput_bytes_per_second": 93750,
+    "cache_disabled": true,
+    "first_meaningful_paint_ms": 4585,
+    "dom_content_loaded_ms": 9803,
+    "dom_nodes": 4976,
+    "layout_objects": 3300,
+    "javascript_event_listeners": 147,
+    "resources": 35,
+    "layout_duration_seconds": 6.003547,
+    "recalculate_style_duration_seconds": 0.703385,
+    "script_duration_seconds": 5.441605,
+    "task_duration_seconds": 16.183418,
+    "javascript_heap_used_bytes": 3871536,
+    "javascript_heap_total_bytes": 8912896,
+    "lcp_ms": null,
+    "cls": null,
+    "inp_ms": null,
+    "limitation": "The browser surface did not expose supported buffered LCP/CLS observers for this run. Core Web Vitals must be validated with Lighthouse and field data before release."
+  },
+  "targets": {
+    "lcp_ms_max": 2500,
+    "cls_max": 0.1,
+    "inp_ms_max": 200,
+    "field_percentile": 75
+  }
+}
+
