@@ -2,6 +2,8 @@
   "use strict";
 
   const WA_PHONE = "966501940155";
+  const CALL_PHONE_DISPLAY = "0503228029";
+  const CALL_PHONE_TEL = "+966503228029";
   const WA_BRIEF = encodeURIComponent("أريد استشارة حول تصميم وتطوير متجري الإلكتروني");
   const HOME_PATHS = new Set(["/", "/index.html"]);
 
@@ -68,9 +70,9 @@
   function createHeader() {
     const currentPath = window.location.pathname;
     const links = [
+      ["أعمالنا", "/#work"],
       ["الباقات", "/#packages"],
       ["الخدمات", "/#services"],
-      ["أعمالنا", "/#work"],
       ["كيف نعمل", "/#process"],
       ["المقالات", "/articles.html"],
       ["الأسئلة", "/#faq"]
@@ -199,7 +201,7 @@
       <a class="ui-button" href="https://wa.me/${WA_PHONE}?text=${WA_BRIEF}" target="_blank" rel="noopener noreferrer">
         ${whatsappIcon}<span>استشارة واتساب</span>
       </a>
-      <a class="ui-button ui-button--secondary" href="/#packages">عرض الباقات</a>`;
+      <a class="ui-button ui-button--call" href="tel:${CALL_PHONE_TEL}" aria-label="اتصال مباشر ${CALL_PHONE_DISPLAY}">${CALL_PHONE_DISPLAY}</a>`;
     document.body.append(bar);
   }
 
@@ -360,9 +362,9 @@
 
     const selectors = [
       ".hero",
+      "#work",
       "#packages",
       "#services",
-      "#work",
       "#process",
       "#testimonials",
       "#why-us",
@@ -376,10 +378,10 @@
     ];
 
     const ordered = selectors.map((selector) => main.querySelector(`:scope > ${selector}`) || document.querySelector(`.ui-home ${selector}`)).filter(Boolean);
-    if (packages && !ordered.includes(packages)) ordered.splice(1, 0, packages);
-    if (process && !ordered.includes(process)) ordered.splice(5, 0, process);
+    if (packages && !ordered.includes(packages)) ordered.splice(2, 0, packages);
+    if (process && !ordered.includes(process)) ordered.splice(4, 0, process);
     ordered
-      .filter((section) => !section.matches(".hero, #packages"))
+      .filter((section) => !section.matches(".hero"))
       .forEach((section) => main.append(section));
   }
 

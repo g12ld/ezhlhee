@@ -38,7 +38,7 @@
     {
       "name": "UI, accessibility, and CRO",
       "status": "PASS",
-      "detail": "0/0 checks",
+      "detail": "19 file-level checks + 13 homepage CRO checks; failed_files=0",
       "report": "reports/roadmap-implementation/07-ui-accessibility-cro/validation.json"
     },
     {

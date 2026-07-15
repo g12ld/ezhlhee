@@ -15,7 +15,7 @@ Production has not been modified. The preview is protected from indexing and rep
 | Metadata and structured data | PASS | 14/14 checks |
 | Content and internal links | PASS | 13/13 checks |
 | Performance | PASS | 16/16 checks |
-| UI, accessibility, and CRO | PASS | 0/0 checks |
+| UI, accessibility, and CRO | PASS | 19 file-level checks + 13 homepage CRO checks; failed_files=0 |
 | Authority and E-E-A-T | PASS | 8/8 checks |
 | Protected staging runtime | PASS | 17/17 checks |
 
