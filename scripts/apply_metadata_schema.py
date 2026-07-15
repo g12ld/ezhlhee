@@ -42,6 +42,42 @@ SERVICE_PAGES = {
     "zid-store-design.html",
 }
 
+TITLE_OVERRIDES = {
+    "index.html": "تصميم متجر سلة وزد | إنشاء متجر إلكتروني احترافي — إزهلها",
+    "salla-store-design-dammam.html": "تصميم متجر سلة في الدمام | إزهلها",
+    "salla-store-design-makkah.html": "تصميم متجر سلة في مكة | إزهلها",
+    "salla-store-design-riyadh.html": "تصميم متجر سلة في الرياض | إزهلها",
+    "articles/أهمية-تتبع-التحويلات-في-الحملات-الإعلانية-قياس-العائد-على-الاستثمار-roi.html": "تتبع التحويلات وقياس ROI للحملات الإعلانية | إزهلها",
+    "articles/استخدام-linktree-أو-بدائله-لتحسين-الروابط-في-حسابات-التواصل-الاجتماعي.html": "استخدام Linktree وبدائله للمتاجر الإلكترونية | إزهلها",
+    "articles/استراتيجيات-إدارة-حسابات-التواصل-الاجتماعي-لمتجرك-زيادة-التفاعل-والمبيعات.html": "إدارة حسابات التواصل للمتاجر وزيادة المبيعات | إزهلها",
+    "articles/الخدمات-المصرفية-الرقمية-المتاحة-لأصحاب-المتاجر-في-الراجحي-والإنماء.html": "الخدمات المصرفية الرقمية للمتاجر | إزهلها",
+    "articles/الخطوات-التفصيلية-لربط-خدمة-تمارا-بمتجرك-الإلكتروني-على-سلة-أو-زد.html": "ربط تمارا بمتجر سلة أو زد خطوة بخطوة | إزهلها",
+    "articles/الدليل-الشامل-لإعداد-وربط-البكسلات-التحويلية-فيسبوك-سناب-شات-تيك-توك.html": "ربط بكسلات فيسبوك وسناب وتيك توك بالمتجر | إزهلها",
+    "articles/الوثائق-المطلوبة-لفتح-حساب-بنكي-للأعمال-في-المملكة-العربية-السعودية.html": "وثائق فتح حساب بنكي للأعمال في السعودية | إزهلها",
+    "articles/بناء-مجتمع-حول-متجرك-الإلكتروني-عبر-استراتيجيات-التواصل-الاجتماعي.html": "بناء مجتمع حول متجرك عبر التواصل الاجتماعي | إزهلها",
+    "articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html": "تحليل أداء المتجر ومؤشرات KPIs الأساسية | إزهلها",
+    "articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html": "تصميم متجر زد متوافق مع الجوال Mobile First | إزهلها",
+}
+
+DESCRIPTION_OVERRIDES = {
+    "articles.html": "تصفح أدلة إزهلها العملية لأصحاب المتاجر السعودية حول تصميم متاجر سلة وزد، التوثيق، الدفع، التسويق، السيو وإدارة المتجر.",
+    "blog.html": "مكتبة إزهلها لأصحاب المتاجر في السعودية: أدلة عملية عن تصميم المتاجر، سلة وزد، تحسين الظهور، التوثيق، الدفع والتسويق.",
+    "brand-building.html": "خدمة بناء هوية وعلامة تجارية متناسقة لمتجرك الإلكتروني في السعودية، من الرسالة البصرية حتى تطبيق الهوية داخل متجر سلة أو زد.",
+    "competitor-analysis.html": "تحليل عملي لمنافسي متجرك الإلكتروني في السعودية يشمل تجربة المستخدم، الأسعار، المحتوى والظهور في البحث لتحديد فرص التميز.",
+    "digital-ads.html": "إعداد وتتبع حملات إعلانية لمتجرك الإلكتروني على المنصات المناسبة في السعودية، مع ربط البكسلات وقياس التحويلات وتحسين النتائج.",
+    "product-marketing.html": "تسويق منتجات متجرك الإلكتروني بمحتوى وصفحات وعروض تدعم قرار الشراء وتناسب سلوك العملاء في السوق السعودي.",
+    "secure-payments.html": "ربط وتفعيل حلول الدفع الآمنة لمتاجر سلة وزد في السعودية، بما يشمل مدى وApple Pay والبطاقات وتابي وتمارا حسب أهلية المتجر.",
+    "store-verification.html": "مساعدة أصحاب المتاجر السعودية في تجهيز متطلبات التوثيق وربط الدومين والبيانات التجارية لمنصتي سلة وزد بخطوات واضحة.",
+    "index.html": "إزهلها وكالة سعودية لتصميم وتطوير متاجر سلة وزد وووكومرس، مع باقات تشمل الهوية والسيو وربط الدفع والتحليلات وإطلاق المتجر.",
+    "discount-salla-plus.html": "تعرف على طريقة استخدام كود خصم باقة سلة بلس، شروط الاستفادة، خطوات التفعيل والفرق بينها وبين الباقات الأخرى قبل الاشتراك.",
+    "discount-salla-pro.html": "دليل استخدام كود خصم باقة سلة برو مع توضيح المميزات وخطوات التفعيل وأهم الشروط التي يحتاجها صاحب المتجر قبل الترقية.",
+    "articles/أهمية-تتبع-التحويلات-في-الحملات-الإعلانية-قياس-العائد-على-الاستثمار-roi.html": "تعرف على إعداد تتبع التحويلات وقراءة العائد على الاستثمار للحملات الإعلانية، وربط النتائج بالمبيعات الفعلية في متجرك الإلكتروني.",
+    "articles/استخدام-linktree-أو-بدائله-لتحسين-الروابط-في-حسابات-التواصل-الاجتماعي.html": "دليل اختيار Linktree أو بديل مناسب لتنظيم روابط متجرك وحساباتك، وتحسين وصول العملاء إلى المنتجات ووسائل التواصل والطلب.",
+    "articles/استراتيجيات-إدارة-حسابات-التواصل-الاجتماعي-لمتجرك-زيادة-التفاعل-والمبيعات.html": "استراتيجيات عملية لإدارة حسابات متجر إلكتروني، تنظيم المحتوى، رفع التفاعل وتحويل المتابعين إلى زيارات ومبيعات قابلة للقياس.",
+    "articles/الدليل-الشامل-لإعداد-وربط-البكسلات-التحويلية-فيسبوك-سناب-شات-تيك-توك.html": "خطوات إعداد وربط بكسلات فيسبوك وسناب شات وتيك توك بمتجرك، واختبار الأحداث الأساسية لتحسين الاستهداف وقياس التحويلات.",
+    "articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html": "تعرف على أهم مؤشرات أداء المتجر وحسابات التواصل، وكيف تقرأ الزيارات والتحويل ومتوسط الطلب والتفاعل لاتخاذ قرارات أفضل.",
+}
+
 TITLE_RE = re.compile(r"<title>(.*?)</title>", re.I | re.S)
 DESCRIPTION_RE = re.compile(
     r'<meta\b(?=[^>]*\bname=["\']description["\'])[^>]*\bcontent=["\']([^"\']*)',
@@ -63,6 +99,7 @@ JSONLD_RE = re.compile(
     r"\s*<script\b[^>]*type=[\"']application/ld\+json[\"'][^>]*>.*?</script>\s*",
     re.I | re.S,
 )
+FAQ_COMMENT_RE = re.compile(r"\s*<!--[^>]*FAQPage[^>]*-->\s*", re.I)
 CANONICAL_TAG_RE = re.compile(
     r'<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*>', re.I
 )
@@ -391,17 +428,27 @@ def update_page(path: Path) -> dict[str, str]:
     canonical_match = CANONICAL_RE.search(content)
     if not title_match or not description_match or not canonical_match:
         raise RuntimeError(f"Required metadata missing in {relative}")
-    title = clean_text(title_match.group(1))
-    description = clean_text(description_match.group(1))
+    title = TITLE_OVERRIDES.get(relative, clean_text(title_match.group(1)))
+    description = DESCRIPTION_OVERRIDES.get(relative, clean_text(description_match.group(1)))
     canonical = canonical_match.group(1)
     h1_match = H1_RE.search(content)
     h1 = clean_text(h1_match.group(1)) if h1_match else title
     article = relative.startswith("articles/")
 
     content = update_html_attributes(content)
+    content = TITLE_RE.sub(f"<title>{html.escape(title)}</title>", content, count=1)
+    description_tag = f'<meta name="description" content="{html.escape(description, quote=True)}">'
+    content = re.sub(
+        r'<meta\b(?=[^>]*\bname=["\']description["\'])[^>]*>',
+        description_tag,
+        content,
+        count=1,
+        flags=re.I,
+    )
     content = SOCIAL_META_RE.sub("\n", content)
     content = AUTHOR_META_RE.sub("\n", content)
     content = JSONLD_RE.sub("\n", content)
+    content = FAQ_COMMENT_RE.sub("\n", content)
     block = social_block(title, description, canonical, article)
     canonical_tag = CANONICAL_TAG_RE.search(content)
     if not canonical_tag:
