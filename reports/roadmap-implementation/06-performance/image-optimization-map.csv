@@ -218,6 +218,9 @@ index.html,images/logo.webp,1000,1000,eager,async,high,3
 index.html,images/lana-badawood-salla-gold-pro.webp,525,10697,lazy,async,auto,2
 index.html,images/lara-alsaad-boutique-salla-gold-pro.webp,525,10817,lazy,async,auto,2
 index.html,images/duk-altayeb-salla-gold-pro.webp,525,6441,lazy,async,auto,2
+index.html,/images/responsive/lana-badawood-salla-gold-pro-360.webp,360,7335,lazy,async,low,2
+index.html,/images/responsive/duk-altayeb-salla-gold-pro-360.webp,360,4417,lazy,async,low,2
+index.html,/images/responsive/lara-alsaad-boutique-salla-gold-pro-360.webp,360,7417,lazy,async,low,2
 index.html,images/cloud-xsa.webp,615,7580,lazy,async,auto,2
 index.html,images/juicyvapesa.webp,615,9358,lazy,async,auto,2
 index.html,images/mtger_abk1.webp,615,10503,lazy,async,auto,2

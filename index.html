@@ -54,7 +54,7 @@
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <!-- Favicon via emoji -->
-<rect width='100' height='100' rx='20' fill='%2304B5B8'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🛒</text></svg>">
+
 <link rel="preload" as="image" href="images/responsive/logo-128.webp" type="image/webp" fetchpriority="high">
 <link rel="dns-prefetch" href="https://wa.me">
 <!-- LocalBusiness Schema -->
@@ -1526,8 +1526,9 @@ footer .ft-col h3{font-size:.75rem;font-weight:800;color:#FFFFFF;text-transform:
   ]
 }
     </script>
+  <link rel="stylesheet" href="/ui-system.css" data-ui-system>
 </head>
-<body>
+<body class="ui-pro ui-pending ui-home ui-page-home">
 <a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
 
 <!-- ANNOUNCEMENT BAR -->
@@ -1584,12 +1585,13 @@ footer .ft-col h3{font-size:.75rem;font-weight:800;color:#FFFFFF;text-transform:
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
+    <div class="ui-hero__copy">
     <div class="hero-pill"><span class="hero-pill-dot"></span>متخصصون في سلة وزد منذ 2022</div>
     <h1>تصميم متجر <em>سلة</em> احترافي<br>وتصميم متجر <em>زد</em><br>حلول تجارة إلكترونية متكاملة في السعودية</h1>
     <p class="hero-sub">نبني متجرك الإلكتروني من الصفر — تصميم احترافي، SEO، تابي وتمارا، وبكسلات التسويق. باقات تبدأ من 1,099 ريال فقط.</p>
     <div class="hero-btns">
       <a href="#pro" class="btn-primary">اطلب الباقة الذهبية برو ←</a>
-      <a href="#compare" class="btn-outline">قارن الباقات</a>
+      <a href="#packages" class="btn-outline">قارن الباقات</a>
     </div>
     <div class="hero-consult">
       <a rel="noopener noreferrer" href="https://wa.me/966501940155?text=أريد الاستفسار عن باقات تصميم المتجر" target="_blank" class="btn-consult">
@@ -1602,6 +1604,19 @@ footer .ft-col h3{font-size:.75rem;font-weight:800;color:#FFFFFF;text-transform:
       <div class="hstat"><div class="hstat-n">2022</div><div class="hstat-l">سنة الخبرة</div></div>
       <div class="hstat"><div class="hstat-n">100%</div><div class="hstat-l">رضا العملاء</div></div>
       <div class="hstat"><div class="hstat-n">7</div><div class="hstat-l">أيام تسليم</div></div>
+    </div>
+    </div>
+    <div class="ui-hero__visual" aria-label="نماذج من متاجر سلة التي صممناها">
+      <span class="ui-hero__proof">أعمال حقيقية على منصة سلة</span>
+      <figure class="ui-hero__screen">
+        <img src="/images/responsive/lana-badawood-salla-gold-pro-360.webp" width="360" height="7335" alt="واجهة متجر لانا للأزياء على منصة سلة" loading="lazy" decoding="async" fetchpriority="low" srcset="/images/responsive/lana-badawood-salla-gold-pro-360.webp 360w, /images/lana-badawood-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 28vw, 180px">
+      </figure>
+      <figure class="ui-hero__screen">
+        <img src="/images/responsive/duk-altayeb-salla-gold-pro-360.webp" width="360" height="4417" alt="واجهة متجر دوك الطيب للعود والمسك على منصة سلة" loading="lazy" decoding="async" fetchpriority="low" srcset="/images/responsive/duk-altayeb-salla-gold-pro-360.webp 360w, /images/duk-altayeb-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 28vw, 180px">
+      </figure>
+      <figure class="ui-hero__screen">
+        <img src="/images/responsive/lara-alsaad-boutique-salla-gold-pro-360.webp" width="360" height="7417" alt="واجهة متجر لارا السعد بوتيك على منصة سلة" loading="lazy" decoding="async" fetchpriority="low" srcset="/images/responsive/lara-alsaad-boutique-salla-gold-pro-360.webp 360w, /images/lara-alsaad-boutique-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 28vw, 180px">
+      </figure>
     </div>
   </div>
 </section>
@@ -3494,5 +3509,6 @@ nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setTim
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){nav.classList.remove('mob-open','active');button.classList.remove('active');sync();button.focus();}});
 })();
 </script>
+  <script src="/ui-system.js" defer data-ui-system></script>
 </body>
 </html>

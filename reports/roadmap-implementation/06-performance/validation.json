@@ -6,7 +6,7 @@
     {
       "check": "intrinsic-image-dimensions",
       "passed": true,
-      "evidence": "images=269, missing=0"
+      "evidence": "images=272, missing=0"
     },
     {
       "check": "image-loading-explicit",
@@ -21,7 +21,7 @@
     {
       "check": "responsive-images",
       "passed": true,
-      "evidence": "responsive=269, total=269"
+      "evidence": "responsive=272, total=272"
     },
     {
       "check": "critical-image-priority",
@@ -41,7 +41,7 @@
     {
       "check": "hero-in-critical-order",
       "passed": true,
-      "evidence": "hero_offset=69439, coupon_offset=71901"
+      "evidence": "hero_offset=69418, coupon_offset=73344"
     },
     {
       "check": "below-fold-render-containment",
@@ -66,7 +66,7 @@
     {
       "check": "image-change-log",
       "passed": true,
-      "evidence": "rows=269"
+      "evidence": "rows=272"
     },
     {
       "check": "mobile-lab-lcp",

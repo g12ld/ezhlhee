@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "deployment": "https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app",
+  "deployment": "https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app",
   "deployment_type": "protected Vercel preview (non-production)",
   "checks": {
     "preview_is_protected_from_indexing": true,

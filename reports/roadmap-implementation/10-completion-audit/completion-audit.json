@@ -1,8 +1,8 @@
 {
   "status": "READY_FOR_OWNER_RELEASE_GATES",
   "generated": "2026-07-15",
-  "branch": "codex/phase-1-information-architecture",
-  "protected_preview": "https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app",
+  "branch": "codex/ui-ux-pro-max-redesign",
+  "protected_preview": "https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app",
   "implementation_checks": {
     "approved_baseline_package_and_workbook_preserved": true,
     "authenticated_search_console_baseline_preserved": true,

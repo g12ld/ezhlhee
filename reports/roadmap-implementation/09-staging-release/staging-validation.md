@@ -2,7 +2,7 @@
 
 **Status:** PASS
 
-**Protected preview:** `https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app`
+**Protected preview:** `https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app`
 
 ## Release gates
 

@@ -31,4 +31,4 @@ Reassign the production alias to the previously known-good Vercel deployment. Re
 
 ## Validated candidate
 
-Protected preview: `https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app`. It must be rebuilt after credentials are configured; the resulting deployment becomes the promotion candidate only after validation passes again.
+Protected preview: `https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app`. It must be rebuilt after credentials are configured; the resulting deployment becomes the promotion candidate only after validation passes again.

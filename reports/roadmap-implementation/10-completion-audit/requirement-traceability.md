@@ -26,8 +26,8 @@
 | REQ-003 | Baseline | Authenticated Search Console performance/indexing baseline | PASS | 01-search-console-baseline/authenticated-baseline.json |
 | REQ-004 | Baseline | Keyword and ranking baseline captured for before/after comparison | PASS | 01-search-console-baseline/performance-queries.csv |
 | REQ-005 | Baseline | Backlink targets identified and protected | PASS | 01-search-console-baseline/authenticated-baseline.json; Phase 0 backlink-targets.csv |
-| REQ-006 | Release safety | All work performed on a separate feature branch | PASS | codex/phase-1-information-architecture |
-| REQ-007 | Release safety | Protected staging environment is non-indexable | PASS | https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app |
+| REQ-006 | Release safety | All work performed on a separate feature branch | PASS | codex/ui-ux-pro-max-redesign |
+| REQ-007 | Release safety | Protected staging environment is non-indexable | PASS | https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app |
 | REQ-008 | Release safety | Production remains outside the implementation release | PASS | 09-staging-release/staging-validation.json |
 | REQ-009 | Release safety | Atomic deployment and immediate rollback procedure documented | PASS | 09-staging-release/deployment-rollback-runbook.md |
 | REQ-010 | Release safety | Detailed file/redirect/canonical/SEO decision logs maintained | PASS | 09-staging-release/file-change-inventory.csv; 02-information-architecture/*.csv; change-log.md |

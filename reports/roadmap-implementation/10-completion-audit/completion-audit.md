@@ -2,7 +2,7 @@
 
 **Status:** READY_FOR_OWNER_RELEASE_GATES
 
-**Protected preview:** `https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app`
+**Protected preview:** `https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app`
 
 **Implementation result:** 19/19 checks passed.
 

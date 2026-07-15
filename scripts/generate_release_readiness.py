@@ -110,6 +110,17 @@ def git_inventory() -> list[dict[str, str]]:
     return sorted(records, key=lambda row: row["path"])
 
 
+def current_branch() -> str:
+    result = subprocess.run(
+        ["git", "branch", "--show-current"],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    return result.stdout.strip() or "detached-head"
+
+
 def validation_status(path: Path) -> tuple[str, str]:
     payload = read_json(path)
     if "status" in payload:
@@ -188,7 +199,7 @@ def main() -> None:
     readiness = {
         "status": "READY_FOR_OWNER_RELEASE_GATES",
         "generated": str(date.today()),
-        "branch": "codex/phase-1-information-architecture",
+        "branch": current_branch(),
         "production_modified": False,
         "protected_preview": staging["deployment"],
         "validation_suites": suite_results,

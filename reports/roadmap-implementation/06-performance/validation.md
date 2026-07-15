@@ -4,19 +4,19 @@ Result: 16/16 checks passed.
 
 | Check | Result | Evidence |
 |---|---|---|
-| intrinsic-image-dimensions | PASS | images=269, missing=0 |
+| intrinsic-image-dimensions | PASS | images=272, missing=0 |
 | image-loading-explicit | PASS | missing=0 |
 | async-image-decoding | PASS | missing=0 |
-| responsive-images | PASS | responsive=269, total=269 |
+| responsive-images | PASS | responsive=272, total=272 |
 | critical-image-priority | PASS | eager=1, high_priority=1 |
 | responsive-variant-set | PASS | variants=37, bytes=2647170 |
 | no-render-blocking-google-fonts | PASS | files=0 |
-| hero-in-critical-order | PASS | hero_offset=69439, coupon_offset=71901 |
+| hero-in-critical-order | PASS | hero_offset=69418, coupon_offset=73344 |
 | below-fold-render-containment | PASS | Below-fold sections use content visibility with an intrinsic fallback |
 | scroll-listeners-deduplicated | PASS | Scroll previews bind once and resize only resets transforms |
 | passive-header-scroll | PASS | Header shadow work is animation-frame throttled and passive |
 | reduced-motion-support | PASS | Non-essential animation collapses for reduced-motion users |
-| image-change-log | PASS | rows=269 |
+| image-change-log | PASS | rows=272 |
 | mobile-lab-lcp | PASS | lcp_ms=564 |
 | mobile-lab-cls | PASS | cls=0.0049 |
 | field-data-claim-safety | PASS | INP and field CWV are explicitly deferred to staged Lighthouse and 30-day monitoring |

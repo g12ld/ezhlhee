@@ -2,7 +2,7 @@
 
 **Status:** READY FOR OWNER RELEASE GATES
 
-**Protected preview:** `https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app`
+**Protected preview:** `https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app`
 
 Production has not been modified. The preview is protected from indexing and represents the validated release candidate.
 

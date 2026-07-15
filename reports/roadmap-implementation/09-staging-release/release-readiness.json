@@ -1,9 +1,9 @@
 {
   "status": "READY_FOR_OWNER_RELEASE_GATES",
   "generated": "2026-07-15",
-  "branch": "codex/phase-1-information-architecture",
+  "branch": "codex/ui-ux-pro-max-redesign",
   "production_modified": false,
-  "protected_preview": "https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app",
+  "protected_preview": "https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app",
   "validation_suites": [
     {
       "name": "Information architecture",
@@ -93,7 +93,7 @@
     "articles": 101,
     "path_redirects": 204,
     "host_redirects": 1,
-    "changed_or_new_files": 245,
+    "changed_or_new_files": 248,
     "legacy_public_urls_preserved": 1
   },
   "owner_gates": [

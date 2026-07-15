@@ -44,7 +44,7 @@
 <meta name="robots" content="index, follow">
 <meta name="geo.region" content="SA-04">
 <meta name="geo.placename" content="الدمام">
-<rect width='100' height='100' rx='20' fill='%2304B5B8'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🛒</text></svg>">
+
 <link rel="stylesheet" href="pages.css">
 <style id="ez-accessibility-system">
 .skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
@@ -193,8 +193,9 @@ footer .ft-col h3{font-size:.75rem;font-weight:800;color:#FFFFFF;text-transform:
   ]
 }
     </script>
+  <link rel="stylesheet" href="/ui-system.css" data-ui-system>
 </head>
-<body>
+<body class="ui-pro ui-pending ui-inner-page ui-page-inner">
 <a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
 
 <header id="hdr">
@@ -420,5 +421,6 @@ nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setTim
 document.addEventListener('keydown',event=>{if(event.key==='Escape'){nav.classList.remove('mob-open','active');button.classList.remove('active');sync();button.focus();}});
 })();
 </script>
+  <script src="/ui-system.js" defer data-ui-system></script>
 </body>
 </html>
