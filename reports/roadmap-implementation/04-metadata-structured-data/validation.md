@@ -1,6 +1,6 @@
 # Metadata and structured data validation
 
-Result: 11/11 checks passed.
+Result: 13/13 checks passed.
 
 | Check | Result | Evidence |
 |---|---|---|
@@ -15,6 +15,8 @@ Result: 11/11 checks passed.
 | required-schema-types | PASS | types=Article|BreadcrumbList|City|CollectionPage|ContactPoint|Country|ImageObject|ItemList|ListItem|Offer|Organization|Product|Service|WebPage|WebSite |
 | social-image-present | PASS | bytes=27084 |
 | single-language-hreflang-decision | PASS | Arabic-only site: hreflang intentionally omitted |
+| browser-identity-metadata-coverage | PASS | valid=119, errors=0 |
+| browser-identity-files-valid | PASS | favicon.svg, site.webmanifest, manifest.json, browserconfig.xml, and logo asset |
 
 ## Deployment validation still required
 

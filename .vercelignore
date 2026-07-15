@@ -9,7 +9,7 @@ functions/
 __pycache__/
 *.py
 *.pyc
-*.txt
+تصميم ازهلها جديد.txt
 AGENTS.md
 README.md
 firebase.json

@@ -7,6 +7,7 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -73,7 +74,7 @@ def main() -> None:
         "twitter:card", "twitter:title", "twitter:description", "twitter:image", "twitter:image:alt",
     }
     titles, descriptions = [], []
-    metadata_errors, schema_errors = [], []
+    metadata_errors, schema_errors, browser_identity_errors = [], [], []
     faq_pages, article_count, service_count, breadcrumb_count = [], 0, 0, 0
     all_types: set[str] = set()
 
@@ -96,6 +97,16 @@ def main() -> None:
             or not html_ok
         ):
             metadata_errors.append(relative)
+
+        icon_hrefs = simple(content, r'<link\b(?=[^>]*\brel=["\']icon["\'])[^>]*\bhref=["\']([^"\']+)')
+        manifest_hrefs = simple(content, r'<link\b(?=[^>]*\brel=["\']manifest["\'])[^>]*\bhref=["\']([^"\']+)')
+        if (
+            set(icon_hrefs) != {"/favicon.svg", "/images/logo.webp"}
+            or manifest_hrefs != ["/site.webmanifest"]
+            or tags(content, "name", "theme-color") != ["#0D2224"]
+            or tags(content, "name", "msapplication-config") != ["/browserconfig.xml"]
+        ):
+            browser_identity_errors.append(relative)
             continue
         titles.append(title_values[0])
         descriptions.append(description_values[0])
@@ -205,6 +216,36 @@ def main() -> None:
         "single-language-hreflang-decision",
         not any("hreflang=" in path.read_text(encoding="utf-8").lower() for _, path in pages),
         "Arabic-only site: hreflang intentionally omitted",
+    )
+    check(
+        "browser-identity-metadata-coverage",
+        not browser_identity_errors,
+        f"valid={119 - len(set(browser_identity_errors))}, errors={len(set(browser_identity_errors))}",
+    )
+    identity_files_ok = False
+    try:
+        webmanifest = json.loads((ROOT / "site.webmanifest").read_text(encoding="utf-8"))
+        manifest_alias = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
+        browserconfig = ET.fromstring((ROOT / "browserconfig.xml").read_text(encoding="utf-8"))
+        favicon = ET.fromstring((ROOT / "favicon.svg").read_text(encoding="utf-8"))
+        icon = webmanifest.get("icons", [{}])[0]
+        identity_files_ok = (
+            webmanifest == manifest_alias
+            and webmanifest.get("lang") == "ar-SA"
+            and webmanifest.get("dir") == "rtl"
+            and webmanifest.get("theme_color") == "#0D2224"
+            and webmanifest.get("background_color") == "#FFFFFF"
+            and icon.get("src") == "/images/logo.webp"
+            and (ROOT / "images" / "logo.webp").is_file()
+            and browserconfig.findtext("./msapplication/tile/TileColor") == "#0D2224"
+            and favicon.tag.endswith("svg")
+        )
+    except (OSError, ValueError, ET.ParseError, json.JSONDecodeError):
+        identity_files_ok = False
+    check(
+        "browser-identity-files-valid",
+        identity_files_ok,
+        "favicon.svg, site.webmanifest, manifest.json, browserconfig.xml, and logo asset",
     )
 
     passed = sum(1 for result in results if result["passed"])

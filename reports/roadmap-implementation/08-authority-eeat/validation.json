@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "summary": {
+    "articles": 101,
+    "authority_pages": 8,
+    "official_links": 324,
+    "minimum_article_words": 402,
+    "minimum_authority_page_words": 239,
+    "regulated_articles_with_disclaimer": 58
+  },
+  "checks": {
+    "all_101_articles_have_author_review_and_official_sources": true,
+    "all_authority_pages_are_substantive": true,
+    "article_index_explains_editorial_method": true,
+    "official_source_hosts_are_allowlisted": true,
+    "regulated_topics_include_disclaimers": true,
+    "raw_markdown_removed": true,
+    "unsupported_guarantees_removed": true,
+    "related_reading_is_inside_main": true
+  },
+  "failures": {},
+  "risky_claims": [],
+  "thin_page_word_counts": {
+    "brand-building.html": 292,
+    "competitor-analysis.html": 263,
+    "data-analysis.html": 253,
+    "digital-ads.html": 244,
+    "product-marketing.html": 239,
+    "search-engine-optimization.html": 288,
+    "secure-payments.html": 252,
+    "store-verification.html": 274
+  }
+}

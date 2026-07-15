@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar-SA" dir="rtl">
 <head>
 <meta charset="UTF-8">
@@ -17,6 +17,11 @@
 <meta name="geo.region" content="SA-01">
 <meta name="geo.placename" content="الرياض">
 <link rel="canonical" href="https://www.ezhalhe-sa.com/">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/images/logo.webp" type="image/webp" sizes="1000x1000">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0D2224">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     <meta property="og:locale" content="ar_SA">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="إزهلها">
@@ -47,10 +52,9 @@
 
 
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <!-- Favicon via emoji -->
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2304B5B8'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🛒</text></svg>">
+<rect width='100' height='100' rx='20' fill='%2304B5B8'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🛒</text></svg>">
 <link rel="preload" as="image" href="images/responsive/logo-128.webp" type="image/webp" fetchpriority="high">
 <link rel="dns-prefetch" href="https://wa.me">
 <!-- LocalBusiness Schema -->
@@ -1332,6 +1336,40 @@ body>section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800p
 }
 
 </style>
+<style id="ez-accessibility-system">
+.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
+.skip-link:focus{top:16px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
+:where(button,[role="button"]){font:inherit}
+[role="button"]{cursor:pointer}
+.burger{border:0;background:#FFFFFF;color:#0D2224}
+.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer;background:#FFFFFF!important;color:#0D2224!important;min-height:44px;padding-inline:12px}
+.ann-close{min-width:44px;min-height:44px;color:#FFFFFF!important}
+.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
+.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
+.btn-consult svg{fill:#0D2224 !important}
+.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
+#testimonials .testi-head .sh span,#testimonials .testi-score{color:#0D2224!important}
+.btn-submit{color:#0D2224!important}
+footer .ft-col a,footer .ft-col a[style]{color:#FFFFFF!important}
+footer .ft-copy{color:#FFFFFF!important}
+footer .ft-col h3{font-size:.75rem;font-weight:800;color:#FFFFFF;text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px}
+#testimonials .testi-marquee{overflow-x:auto!important;scrollbar-width:thin;mask:none!important;-webkit-mask:none!important}
+#testimonials .testi-track{animation:none!important;width:100%!important}
+#testimonials .testi-track-set{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px}
+#testimonials .testi-card{scroll-snap-align:start}
+.deferred-content-action{display:flex;justify-content:center;margin:24px auto 0;padding:0 20px}
+.load-more-btn{min-height:48px;border:1px solid #15B5B0;border-radius:10px;background:#FFFFFF;color:#0D2224;padding:12px 24px;font-weight:800;cursor:pointer}
+.load-more-btn:hover{background:rgba(21,181,176,.06)}
+.consult-trigger{position:fixed;inset-inline-end:18px;bottom:100px;z-index:890;min-height:44px;border:1px solid #15B5B0;border-radius:50px;background:#FFFFFF;color:#0D2224;padding:10px 16px;font-weight:800;box-shadow:0 8px 24px rgba(13,34,36,.18);cursor:pointer}
+.consult-trigger[aria-expanded="true"]{background:#15B5B0;color:#0D2224}
+.cp-close{min-width:44px!important;min-height:44px!important}
+.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
+.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@supports (content-visibility:auto){#work,#pro,#professional,#plus,#compare,#services,#testimonials,#articles,#faq,#contact,footer{content-visibility:auto;contain-intrinsic-size:auto 900px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1488,23 +1526,6 @@ body>section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800p
   ]
 }
     </script>
-<style id="ez-accessibility-system">
-.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
-.skip-link:focus{top:16px}
-:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
-:where(button,[role="button"]){font:inherit}
-[role="button"]{cursor:pointer}
-.burger{border:0;background:#FFFFFF;color:#0D2224}
-.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer}
-.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
-.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
-.btn-consult svg{fill:#0D2224 !important}
-.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
-.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
-.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
-.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
-</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
@@ -1604,7 +1625,7 @@ body>section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800p
   </div>
 </section>
 
-<section class="advisor-sec" id="advisor" style="padding:20px 0; background:#FFFFFF;"> 
+<section class="advisor-sec" id="advisor" style="padding:20px 0; background:#FFFFFF;">
   <div class="advisor-inner" style="max-width:1200px; margin:0 auto;">
     <div class="advisor-hdr" style="display:flex; align-items:center; gap:10px; margin-bottom:20px;">
       <div class="advisor-av" style="font-size:2rem; color:#15B5B0;">🤖</div>
@@ -1612,7 +1633,7 @@ body>section:not(.hero){content-visibility:auto;contain-intrinsic-size:auto 800p
     </div>
     <button class="adv-back" id="adv-back" onclick="advBack()" style="display:none; margin-bottom:15px; color:#15B5B0; border:1px solid #15B5B0; background:#FFFFFF; border-radius:5px; padding:5px 10px; cursor:pointer;">← رجوع</button>
     <div class="advisor-step active" id="adv-s1" style="display:flex; flex-wrap:wrap; gap:12px;">
-      
+
       <!-- تصميم متجر جديد ينقلك إلى القسم pro-section sec -->
       <div class="adv-card" role="button" tabindex="0" aria-label="اختيار الخدمة" onclick="advGo('.pro-section.sec')" style="flex:1 1 220px; padding:12px; border-radius:8px; cursor:pointer; background:#FFFFFF; box-shadow:0 2px 6px rgba(13,34,36,0.1); border-top:4px solid #15B5B0;">
         <span class="adv-emoji" style="font-size:1.5rem;">🎨</span>
@@ -1774,108 +1795,63 @@ function advSelect(option) {
         <div class="testi-track-set">
           <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية ممتازة، التصميم مرتب وخدمة الدعم رائعة."</p></div>
           <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فيصل المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم جميل، بس ممكن يكون التواصل أسرع شوي، عموماً ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نواف العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الاحترافية أعطت متجري شكل احترافي، أنصح فيها."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.15">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة، التصميم مرتب، لكن حبيت لو يكون فيه شرح أكثر."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سارة القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جذاب للعملاء بعد الباقة الذهبية، تجربة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بندر السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"السرعة في التنفيذ ممتازة، التصميم احترافي جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ه</div><div><div class="testi-name" style="font-size:.78rem">هيفاء الرويلي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سلس وواضح، متجري صار مرتب أكثر."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سالم اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية أنسب اختيار، جودة التصميم ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">أ</div><div><div class="testi-name" style="font-size:.78rem">أمل الدوسري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب ومريح للعين، خدمة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ت</div><div><div class="testi-name" style="font-size:.78rem">تركي العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سهل الاستخدام وفريق الدعم متعاون جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ل</div><div><div class="testi-name" style="font-size:.78rem">لطيفة الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"كل شيء ممتاز، متجري صار أكثر احترافية."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالعزيز المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم أنيق وجذاب، خدمة الدعم ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">ريم الزهراني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تجربة جيدة جدًا، بس يمكن إضافة بعض التفاصيل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">ماجد العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة من البداية للنهاية، فريق محترف."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">د</div><div><div class="testi-name" style="font-size:.78rem">دانة الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم واضح وسهل التعامل معه، متجري صار مرتب."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">خ</div><div><div class="testi-name" style="font-size:.78rem">خالد اليقمي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة سريعة، التصميم احترافي لكن حبيت لو فيه شرح أكثر."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نواف القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أفضل بكثير بعد الباقة الذهبية."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فاطمة الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"أنصح كل شخص يفتح متجره بالباقة الذهبية، تصميم ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالمجيد الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سلس وواضح، بس ممكن تحسين بسيط على ترتيب القوائم."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">و</div><div><div class="testi-name" style="font-size:.78rem">وضاح المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم احترافي والفريق متعاون جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">مها العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب وواضح للعملاء، تجربة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سعد اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية قدمت لي متجر احترافي، بعض التفاصيل تحتاج تعديل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، تصميم مرتب وواضح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">العنود الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم جميل جداً، متجري صار أكثر احترافية."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بندر الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تستحق كل ريال، بس فيه بعض الخيارات يحتاج شرح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نورة المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب ومنظم، كل شيء واضح وسهل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فيصل العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"جودة التصميم ممتازة، فريق العمل متعاون."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ح</div><div><div class="testi-name" style="font-size:.78rem">حصه القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب أكثر من قبل، تجربة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">خ</div><div><div class="testi-name" style="font-size:.78rem">خالد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"السرعة في التنفيذ والدقة في التصميم ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سمية العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية كانت الخيار الأفضل، تصميم أنيق."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"احترافيين جدًا في التصميم، النتائج رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نجلاء الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم سلس وجذاب، الدعم الفني ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أكثر احترافية بعد الخدمة، أنصح الجميع."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">ريم العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية أنصح بها لكل من يريد متجر مرتب واحترافي."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ت</div><div><div class="testi-name" style="font-size:.78rem">تركي اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جاهز للاستخدام والبيع بشكل احترافي."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ل</div><div><div class="testi-name" style="font-size:.78rem">لبنى القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم احترافي وسهل، والنتيجة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بدر الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم مرتب وواضح، فريق الدعم متعاون."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالعزيز اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، نتائج التصميم جيدة لكن ممكن تحسينات بسيطة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">مريم السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جذاب أكثر للعملاء، تجربة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فهد المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم مرتب وسهل الاستخدام، الجودة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سارة الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تستحق التجربة، متجر احترافي بالكامل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة، التصميم أنيق وسلس."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ه</div><div><div class="testi-name" style="font-size:.78rem">هدى العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جاهز بالكامل للبيع، تصميم ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">راشد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية خيار رائع، بعض التفاصيل الصغيرة تحتاج تعديل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فواز القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب وواضح، متجري صار جذاب للعملاء."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نوف الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة وسريعة، التصميم احترافي جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سلمان الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أكثر جاذبية بعد التصميم، جودة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية كانت خيار ممتاز، كل شيء مرتب وواضح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فواز المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، تصميم احترافي وواضح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">أ</div><div><div class="testi-name" style="font-size:.78rem">أروى القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب أكثر، تصميم جميل واحترافي."</p></div>
+
+
+
         </div>
-        <div class="testi-track-set" aria-hidden="true">
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية ممتازة، التصميم مرتب وخدمة الدعم رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فيصل المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم جميل، بس ممكن يكون التواصل أسرع شوي، عموماً ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نواف العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الاحترافية أعطت متجري شكل احترافي، أنصح فيها."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.15">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة، التصميم مرتب، لكن حبيت لو يكون فيه شرح أكثر."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سارة القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جذاب للعملاء بعد الباقة الذهبية، تجربة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بندر السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"السرعة في التنفيذ ممتازة، التصميم احترافي جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ه</div><div><div class="testi-name" style="font-size:.78rem">هيفاء الرويلي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سلس وواضح، متجري صار مرتب أكثر."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سالم اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية أنسب اختيار، جودة التصميم ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">أ</div><div><div class="testi-name" style="font-size:.78rem">أمل الدوسري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب ومريح للعين، خدمة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ت</div><div><div class="testi-name" style="font-size:.78rem">تركي العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سهل الاستخدام وفريق الدعم متعاون جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ل</div><div><div class="testi-name" style="font-size:.78rem">لطيفة الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"كل شيء ممتاز، متجري صار أكثر احترافية."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالعزيز المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم أنيق وجذاب، خدمة الدعم ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">ريم الزهراني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تجربة جيدة جدًا، بس يمكن إضافة بعض التفاصيل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">ماجد العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة من البداية للنهاية، فريق محترف."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">د</div><div><div class="testi-name" style="font-size:.78rem">دانة الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم واضح وسهل التعامل معه، متجري صار مرتب."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">خ</div><div><div class="testi-name" style="font-size:.78rem">خالد اليقمي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة سريعة، التصميم احترافي لكن حبيت لو فيه شرح أكثر."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نواف القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أفضل بكثير بعد الباقة الذهبية."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فاطمة الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"أنصح كل شخص يفتح متجره بالباقة الذهبية، تصميم ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالمجيد الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سلس وواضح، بس ممكن تحسين بسيط على ترتيب القوائم."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">و</div><div><div class="testi-name" style="font-size:.78rem">وضاح المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم احترافي والفريق متعاون جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">مها العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب وواضح للعملاء، تجربة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سعد اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية قدمت لي متجر احترافي، بعض التفاصيل تحتاج تعديل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، تصميم مرتب وواضح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">العنود الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم جميل جداً، متجري صار أكثر احترافية."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بندر الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تستحق كل ريال، بس فيه بعض الخيارات يحتاج شرح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نورة المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب ومنظم، كل شيء واضح وسهل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فيصل العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"جودة التصميم ممتازة، فريق العمل متعاون."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ح</div><div><div class="testi-name" style="font-size:.78rem">حصه القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب أكثر من قبل، تجربة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">خ</div><div><div class="testi-name" style="font-size:.78rem">خالد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"السرعة في التنفيذ والدقة في التصميم ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سمية العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية كانت الخيار الأفضل، تصميم أنيق."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"احترافيين جدًا في التصميم، النتائج رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نجلاء الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم سلس وجذاب، الدعم الفني ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أكثر احترافية بعد الخدمة، أنصح الجميع."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">ريم العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية أنصح بها لكل من يريد متجر مرتب واحترافي."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ت</div><div><div class="testi-name" style="font-size:.78rem">تركي اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جاهز للاستخدام والبيع بشكل احترافي."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ل</div><div><div class="testi-name" style="font-size:.78rem">لبنى القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم احترافي وسهل، والنتيجة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بدر الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم مرتب وواضح، فريق الدعم متعاون."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالعزيز اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، نتائج التصميم جيدة لكن ممكن تحسينات بسيطة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">مريم السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جذاب أكثر للعملاء، تجربة رائعة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فهد المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم مرتب وسهل الاستخدام، الجودة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سارة الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تستحق التجربة، متجر احترافي بالكامل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة، التصميم أنيق وسلس."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ه</div><div><div class="testi-name" style="font-size:.78rem">هدى العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جاهز بالكامل للبيع، تصميم ممتاز."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">راشد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية خيار رائع، بعض التفاصيل الصغيرة تحتاج تعديل."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فواز القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب وواضح، متجري صار جذاب للعملاء."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نوف الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة وسريعة، التصميم احترافي جدًا."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سلمان الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أكثر جاذبية بعد التصميم، جودة ممتازة."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية كانت خيار ممتاز، كل شيء مرتب وواضح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فواز المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، تصميم احترافي وواضح."</p></div>
-          <div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">أ</div><div><div class="testi-name" style="font-size:.78rem">أروى القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب أكثر، تصميم جميل واحترافي."</p></div>
-        </div>
+
       </div>
+<template id="moreTestimonials">
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نواف العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الاحترافية أعطت متجري شكل احترافي، أنصح فيها."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.15">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة، التصميم مرتب، لكن حبيت لو يكون فيه شرح أكثر."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سارة القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جذاب للعملاء بعد الباقة الذهبية، تجربة رائعة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بندر السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"السرعة في التنفيذ ممتازة، التصميم احترافي جدًا."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ه</div><div><div class="testi-name" style="font-size:.78rem">هيفاء الرويلي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سلس وواضح، متجري صار مرتب أكثر."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سالم اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية أنسب اختيار، جودة التصميم ممتازة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">أ</div><div><div class="testi-name" style="font-size:.78rem">أمل الدوسري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب ومريح للعين، خدمة رائعة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ت</div><div><div class="testi-name" style="font-size:.78rem">تركي العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سهل الاستخدام وفريق الدعم متعاون جدًا."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ل</div><div><div class="testi-name" style="font-size:.78rem">لطيفة الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"كل شيء ممتاز، متجري صار أكثر احترافية."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالعزيز المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم أنيق وجذاب، خدمة الدعم ممتازة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">ريم الزهراني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تجربة جيدة جدًا، بس يمكن إضافة بعض التفاصيل."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">ماجد العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة من البداية للنهاية، فريق محترف."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">د</div><div><div class="testi-name" style="font-size:.78rem">دانة الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم واضح وسهل التعامل معه، متجري صار مرتب."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">خ</div><div><div class="testi-name" style="font-size:.78rem">خالد اليقمي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة سريعة، التصميم احترافي لكن حبيت لو فيه شرح أكثر."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نواف القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أفضل بكثير بعد الباقة الذهبية."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فاطمة الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"أنصح كل شخص يفتح متجره بالباقة الذهبية، تصميم ممتاز."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالمجيد الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم سلس وواضح، بس ممكن تحسين بسيط على ترتيب القوائم."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">و</div><div><div class="testi-name" style="font-size:.78rem">وضاح المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم احترافي والفريق متعاون جدًا."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">مها العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب وواضح للعملاء، تجربة رائعة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سعد اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية قدمت لي متجر احترافي، بعض التفاصيل تحتاج تعديل."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، تصميم مرتب وواضح."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">العنود الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم جميل جداً، متجري صار أكثر احترافية."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بندر الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تستحق كل ريال، بس فيه بعض الخيارات يحتاج شرح."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نورة المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب ومنظم، كل شيء واضح وسهل."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فيصل العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"جودة التصميم ممتازة، فريق العمل متعاون."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ح</div><div><div class="testi-name" style="font-size:.78rem">حصه القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب أكثر من قبل، تجربة ممتازة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">خ</div><div><div class="testi-name" style="font-size:.78rem">خالد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"السرعة في التنفيذ والدقة في التصميم ممتازة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سمية العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية كانت الخيار الأفضل، تصميم أنيق."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"احترافيين جدًا في التصميم، النتائج رائعة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نجلاء الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم سلس وجذاب، الدعم الفني ممتاز."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أكثر احترافية بعد الخدمة، أنصح الجميع."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">ريم العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية أنصح بها لكل من يريد متجر مرتب واحترافي."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ت</div><div><div class="testi-name" style="font-size:.78rem">تركي اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جاهز للاستخدام والبيع بشكل احترافي."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ل</div><div><div class="testi-name" style="font-size:.78rem">لبنى القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم احترافي وسهل، والنتيجة ممتازة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">ب</div><div><div class="testi-name" style="font-size:.78rem">بدر الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم مرتب وواضح، فريق الدعم متعاون."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالعزيز اليامي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، نتائج التصميم جيدة لكن ممكن تحسينات بسيطة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">مريم السبيعي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جذاب أكثر للعملاء، تجربة رائعة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فهد المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"التصميم مرتب وسهل الاستخدام، الجودة ممتازة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سارة الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية تستحق التجربة، متجر احترافي بالكامل."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">م</div><div><div class="testi-name" style="font-size:.78rem">محمد القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الخدمة ممتازة، التصميم أنيق وسلس."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ه</div><div><div class="testi-name" style="font-size:.78rem">هدى العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار جاهز بالكامل للبيع، تصميم ممتاز."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ر</div><div><div class="testi-name" style="font-size:.78rem">راشد الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية خيار رائع، بعض التفاصيل الصغيرة تحتاج تعديل."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فواز القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"تصميم مرتب وواضح، متجري صار جذاب للعملاء."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-1" style="width:26px;height:26px;font-size:.72rem">ن</div><div><div class="testi-name" style="font-size:.78rem">نوف الشهري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة وسريعة، التصميم احترافي جدًا."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-2" style="width:26px;height:26px;font-size:.72rem">س</div><div><div class="testi-name" style="font-size:.78rem">سلمان الحربي</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار أكثر جاذبية بعد التصميم، جودة ممتازة."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-3" style="width:26px;height:26px;font-size:.72rem">ع</div><div><div class="testi-name" style="font-size:.78rem">عبدالله العنزي</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"الباقة الذهبية كانت خيار ممتاز، كل شيء مرتب وواضح."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-4" style="width:26px;height:26px;font-size:.72rem">ف</div><div><div class="testi-name" style="font-size:.78rem">فواز المطيري</div><div class="testi-stars" style="font-size:.62rem">★★★★★</div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"خدمة ممتازة، تصميم احترافي وواضح."</p></div>
+<div class="testi-card"><div class="testi-top" style="margin-bottom:5px"><div class="testi-av av-5" style="width:26px;height:26px;font-size:.72rem">أ</div><div><div class="testi-name" style="font-size:.78rem">أروى القحطاني</div><div class="testi-stars" style="font-size:.62rem">★★★★<span style="opacity:.3">★</span></div></div></div><p class="testi-text" style="font-size:.74rem;line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">"متجري صار مرتب أكثر، تصميم جميل واحترافي."</p></div>
+</template>
+<div class="deferred-content-action"><button type="button" class="load-more-btn" id="loadMoreTestimonials" onclick="loadMoreTestimonials()">عرض جميع آراء العملاء</button></div>
     </div>
 
     <div style="text-align:center">
@@ -1972,7 +1948,56 @@ function advSelect(option) {
       </div>
 
   <!--جوسي فيب — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر كلاود اكس" onclick="openLb('images/cloud-xsa.webp','متجر كلاود اكس','cloud-xsa.com/')">
+
+
+      <!--جوسي فيب — سلة -->
+
+
+      <!-- عبايات — سلة -->
+
+
+      <!-- دار — سلة -->
+
+
+      <!-- ليدر — سلة -->
+
+
+      <!-- بلاك بير — سلة -->
+
+<!-- سمبوسة البلد — سلة -->
+
+      <!-- متجر الياسمين — توسع -->
+
+
+      <!-- عناية — سلة -->
+
+
+      <!-- سوار الطيب — ZID فقط -->
+
+
+      <!-- شروق الطيب — سلة -->
+
+
+      <!-- Roast Master — سلة -->
+
+
+      <!-- Rivna — سلة -->
+
+
+
+
+      <!-- متجر عسل نورة — PLUS -->
+
+
+      <!-- عبايات — PLUS -->
+
+
+      <!-- فساتين — PLUS -->
+
+
+    </div>
+<template id="morePortfolio">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر كلاود اكس" onclick="openLb('images/cloud-xsa.webp','متجر كلاود اكس','cloud-xsa.com/')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>cloud-xsa.com/</div>
@@ -1986,9 +2011,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!--جوسي فيب — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر فيب وتدخين" onclick="openLb('images/juicyvapesa.webp','متجر فيب وتدخين','juicyvapesa.com/')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر فيب وتدخين" onclick="openLb('images/juicyvapesa.webp','متجر فيب وتدخين','juicyvapesa.com/')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>juicyvapesa.com/</div>
@@ -2002,9 +2025,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- عبايات — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر عبايات" onclick="openLb('images/mtger_abk1.webp','متجر عبايات','abaya.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر عبايات" onclick="openLb('images/mtger_abk1.webp','متجر عبايات','abaya.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>abaya.salla.sa</div>
@@ -2018,9 +2039,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- دار — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر دار" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر دار" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>dar.salla.sa</div>
@@ -2034,9 +2053,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- ليدر — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر ليدر" onclick="openLb('images/leder.webp','متجر ليدر','leder.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر ليدر" onclick="openLb('images/leder.webp','متجر ليدر','leder.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>leder.salla.sa</div>
@@ -2050,9 +2067,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- بلاك بير — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض بلاك بير" onclick="openLb('images/black%20bear%20salla%20pro.webp','بلاك بير','blackbear.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض بلاك بير" onclick="openLb('images/black%20bear%20salla%20pro.webp','بلاك بير','blackbear.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>blackbear.salla.sa</div>
@@ -2066,8 +2081,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-<!-- سمبوسة البلد — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض سمبوسة البلد" onclick="openLb('images/sanbosaalbalad_pro.webp','سمبوسة البلد','sanbosa.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض سمبوسة البلد" onclick="openLb('images/sanbosaalbalad_pro.webp','سمبوسة البلد','sanbosa.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>sanbosa.salla.sa</div>
@@ -2081,8 +2095,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-      <!-- متجر الياسمين — توسع -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="tawsaa" role="button" tabindex="0" aria-label="عرض متجر الياسمين" onclick="openLb('images/alyasaminoil_tawsaa_.webp','متجر الياسمين','alyasmin.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="tawsaa" role="button" tabindex="0" aria-label="عرض متجر الياسمين" onclick="openLb('images/alyasaminoil_tawsaa_.webp','متجر الياسمين','alyasmin.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>alyasmin.salla.sa</div>
@@ -2096,9 +2109,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- عناية — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض منتجات العناية" onclick="openLb('images/mtger_anaia3.webp','منتجات العناية','anaia.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض منتجات العناية" onclick="openLb('images/mtger_anaia3.webp','منتجات العناية','anaia.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>anaia.salla.sa</div>
@@ -2112,9 +2123,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- سوار الطيب — ZID فقط -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="zid" role="button" tabindex="0" aria-label="عرض Siwar Altyeb" onclick="openLb('images/swartyp_zid.webp','Siwar Altyeb','siwar.zid.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="zid" role="button" tabindex="0" aria-label="عرض Siwar Altyeb" onclick="openLb('images/swartyp_zid.webp','Siwar Altyeb','siwar.zid.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>siwar.zid.sa</div>
@@ -2128,9 +2137,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- شروق الطيب — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض شروق الطيب" onclick="openLb('images/sarok_salla.webp','شروق الطيب','shirwak.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض شروق الطيب" onclick="openLb('images/sarok_salla.webp','شروق الطيب','shirwak.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>shirwak.salla.sa</div>
@@ -2144,9 +2151,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- Roast Master — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض Roast Master" onclick="openLb('images/coffepro.webp','Roast Master','roastmaster.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض Roast Master" onclick="openLb('images/coffepro.webp','Roast Master','roastmaster.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>roastmaster.salla.sa</div>
@@ -2160,9 +2165,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- Rivna — سلة -->
-      <div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض Rivna" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
+<div class="work-card reveal" data-pkg="pro" data-plat="salla" role="button" tabindex="0" aria-label="عرض Rivna" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>rivna.salla.sa</div>
@@ -2176,11 +2179,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-
-
-      <!-- متجر عسل نورة — PLUS -->
-      <div class="work-card wc-hero reveal" data-pkg="plus" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر عسل نورة" onclick="openLb('images/asl_noura_plus.webp','متجر عسل نورة','asl-noura.salla.sa')">
+<div class="work-card wc-hero reveal" data-pkg="plus" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر عسل نورة" onclick="openLb('images/asl_noura_plus.webp','متجر عسل نورة','asl-noura.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>asl-noura.salla.sa</div>
@@ -2194,9 +2193,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- عبايات — PLUS -->
-      <div class="work-card reveal" data-pkg="plus" data-plat="salla" role="button" tabindex="0" aria-label="عرض عبايات وجلابيات" onclick="openLb('images/matger_abaia4.webp','عبايات وجلابيات','abaya2.salla.sa')">
+<div class="work-card reveal" data-pkg="plus" data-plat="salla" role="button" tabindex="0" aria-label="عرض عبايات وجلابيات" onclick="openLb('images/matger_abaia4.webp','عبايات وجلابيات','abaya2.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>abaya2.salla.sa</div>
@@ -2210,9 +2207,7 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-      <!-- فساتين — PLUS -->
-      <div class="work-card reveal" data-pkg="plus" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر فساتين" onclick="openLb('images/fstinplus.webp','متجر فساتين','fasatin.salla.sa')">
+<div class="work-card reveal" data-pkg="plus" data-plat="salla" role="button" tabindex="0" aria-label="عرض متجر فساتين" onclick="openLb('images/fstinplus.webp','متجر فساتين','fasatin.salla.sa')">
         <div class="card-chrome">
           <div class="chrome-dots"><div class="cdot cdot-r"></div><div class="cdot cdot-y"></div><div class="cdot cdot-g"></div></div>
           <div class="chrome-bar"><span class="chrome-lock">🔒</span>fasatin.salla.sa</div>
@@ -2226,13 +2221,13 @@ function advSelect(option) {
           <div class="card-view">↗</div>
         </div>
       </div>
-
-    </div><!-- /work-grid -->
+</template>
+<div class="deferred-content-action"><button type="button" class="load-more-btn" id="loadMorePortfolio" onclick="loadMorePortfolio(true)">عرض جميع الأعمال السابقة</button></div><!-- /work-grid -->
   </div>
 </section>
 
 <!-- LIGHTBOX -->
-<div id="lb" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lbTitle" onclick="closeLb()">
+<div id="lb" role="dialog" aria-modal="true" aria-hidden="true" inert aria-labelledby="lbTitle" onclick="closeLb()">
   <h2 id="lbTitle" class="visually-hidden">معاينة تصميم المتجر</h2>
   <button type="button" class="lb-x" onclick="closeLb()" aria-label="إغلاق معاينة التصميم">✕</button>
   <div class="lb-frame" onclick="event.stopPropagation()">
@@ -2290,42 +2285,54 @@ function advSelect(option) {
           </div>
           <div class="pkg-works-grid">
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر لانا للأزياء" onclick="openLb('images/lana-badawood-salla-gold-pro.webp','متجر لانا للأزياء','متجر لانا · منصة سلة')">
-              <img src="images/lana-badawood-salla-gold-pro.webp" alt="متجر لانا للأزياء على منصة سلة" width="525" height="10697" loading="lazy" decoding="async" srcset="images/responsive/lana-badawood-salla-gold-pro-360.webp 360w, images/lana-badawood-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">لانا</div></div>
+              <img src="images/lana-badawood-salla-gold-pro.webp" alt="معاينة واجهة متجر لانا للأزياء على منصة سلة" width="525" height="10697" loading="lazy" decoding="async" srcset="images/responsive/lana-badawood-salla-gold-pro-360.webp 360w, images/lana-badawood-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">لانا</div></div>
             </div>
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر لارا السعد بوتيك" onclick="openLb('images/lara-alsaad-boutique-salla-gold-pro.webp','متجر لارا السعد بوتيك','salla.sa/laraalsaadboutique')">
-              <img src="images/lara-alsaad-boutique-salla-gold-pro.webp" alt="متجر لارا السعد بوتيك على منصة سلة" width="525" height="10817" loading="lazy" decoding="async" srcset="images/responsive/lara-alsaad-boutique-salla-gold-pro-360.webp 360w, images/lara-alsaad-boutique-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">لارا السعد</div></div>
+              <img src="images/lara-alsaad-boutique-salla-gold-pro.webp" alt="معاينة واجهة متجر لارا السعد بوتيك على منصة سلة" width="525" height="10817" loading="lazy" decoding="async" srcset="images/responsive/lara-alsaad-boutique-salla-gold-pro-360.webp 360w, images/lara-alsaad-boutique-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">لارا السعد</div></div>
             </div>
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر دوك الطيب" onclick="openLb('images/duk-altayeb-salla-gold-pro.webp','متجر دوك الطيب','dukaltayed.com')">
-              <img src="images/duk-altayeb-salla-gold-pro.webp" alt="متجر دوك الطيب للعود والمسك على منصة سلة" width="525" height="6441" loading="lazy" decoding="async" srcset="images/responsive/duk-altayeb-salla-gold-pro-360.webp 360w, images/duk-altayeb-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">دوك الطيب</div></div>
+              <img src="images/duk-altayeb-salla-gold-pro.webp" alt="معاينة واجهة متجر دوك الطيب للعود والمسك على منصة سلة" width="525" height="6441" loading="lazy" decoding="async" srcset="images/responsive/duk-altayeb-salla-gold-pro-360.webp 360w, images/duk-altayeb-salla-gold-pro.webp 525w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">دوك الطيب</div></div>
             </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر عبايات" onclick="openLb('images/mtger_abk1.webp','متجر عبايات','abaya.salla.sa')">
-              <img src="images/mtger_abk1.webp" alt="متجر عبايات" width="615" height="10503" loading="lazy" decoding="async" srcset="images/responsive/mtger_abk1-360.webp 360w, images/mtger_abk1.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">عبايات</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر دار" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
-              <img src="images/darlisa_pro.webp" alt="متجر دار" width="620" height="16276" loading="lazy" decoding="async" srcset="images/responsive/darlisa_pro-360.webp 360w, images/darlisa_pro.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">دار</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر ليدر" onclick="openLb('images/leder.webp','متجر ليدر','leder.salla.sa')">
-              <img src="images/leder.webp" alt="متجر ليدر" width="620" height="4255" loading="lazy" decoding="async" srcset="images/responsive/leder-360.webp 360w, images/leder.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">ليدر</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض بلاك بير" onclick="openLb('images/black%20bear%20salla%20pro.webp','بلاك بير','blackbear.salla.sa')">
-              <img src="images/black%20bear%20salla%20pro.webp" alt="بلاك بير" width="615" height="7518" loading="lazy" decoding="async" srcset="images/responsive/black%20bear%20salla%20pro-360.webp 360w, images/black%20bear%20salla%20pro.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">بلاك بير</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض سمبوسة البلد" onclick="openLb('images/sanbosaalbalad_pro.webp','سمبوسة البلد','sanbosa.salla.sa')">
-              <img src="images/sanbosaalbalad_pro.webp" alt="سمبوسة البلد" width="615" height="3766" loading="lazy" decoding="async" srcset="images/responsive/sanbosaalbalad_pro-360.webp 360w, images/sanbosaalbalad_pro.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">سمبوسة البلد</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض منتجات العناية" onclick="openLb('images/mtger_anaia3.webp','منتجات العناية','anaia.salla.sa')">
-              <img src="images/mtger_anaia3.webp" alt="عناية" width="652" height="4044" loading="lazy" decoding="async" srcset="images/responsive/mtger_anaia3-360.webp 360w, images/mtger_anaia3.webp 652w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">العناية</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض شروق الطيب" onclick="openLb('images/sarok_salla.webp','شروق الطيب','shirwak.salla.sa')">
-              <img src="images/sarok_salla.webp" alt="شروق" width="615" height="7426" loading="lazy" decoding="async" srcset="images/responsive/sarok_salla-360.webp 360w, images/sarok_salla.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">شروق الطيب</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض Roast Master" onclick="openLb('images/coffepro.webp','Roast Master','roastmaster.salla.sa')">
-              <img src="images/coffepro.webp" alt="قهوة" width="615" height="5097" loading="lazy" decoding="async" srcset="images/responsive/coffepro-360.webp 360w, images/coffepro.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">Roast Master</div></div>
-            </div>
-            <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض Rivna" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
-              <img src="images/rivna.webp" alt="عسل" width="620" height="8664" loading="lazy" decoding="async" srcset="images/responsive/rivna-360.webp 360w, images/rivna.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">Rivna</div></div>
-            </div>
+
+
+
+
+
+
+
+
+
           </div>
+<template id="moreGoldProWorks">
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر عبايات" onclick="openLb('images/mtger_abk1.webp','متجر عبايات','abaya.salla.sa')">
+              <img src="images/mtger_abk1.webp" alt="معاينة واجهة متجر عبايات" width="615" height="10503" loading="lazy" decoding="async" srcset="images/responsive/mtger_abk1-360.webp 360w, images/mtger_abk1.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">عبايات</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر دار" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
+              <img src="images/darlisa_pro.webp" alt="معاينة واجهة متجر دار" width="620" height="16276" loading="lazy" decoding="async" srcset="images/responsive/darlisa_pro-360.webp 360w, images/darlisa_pro.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">دار</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر ليدر" onclick="openLb('images/leder.webp','متجر ليدر','leder.salla.sa')">
+              <img src="images/leder.webp" alt="معاينة واجهة متجر ليدر" width="620" height="4255" loading="lazy" decoding="async" srcset="images/responsive/leder-360.webp 360w, images/leder.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">ليدر</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض بلاك بير" onclick="openLb('images/black%20bear%20salla%20pro.webp','بلاك بير','blackbear.salla.sa')">
+              <img src="images/black%20bear%20salla%20pro.webp" alt="معاينة واجهة بلاك بير" width="615" height="7518" loading="lazy" decoding="async" srcset="images/responsive/black%20bear%20salla%20pro-360.webp 360w, images/black%20bear%20salla%20pro.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">بلاك بير</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض سمبوسة البلد" onclick="openLb('images/sanbosaalbalad_pro.webp','سمبوسة البلد','sanbosa.salla.sa')">
+              <img src="images/sanbosaalbalad_pro.webp" alt="معاينة واجهة سمبوسة البلد" width="615" height="3766" loading="lazy" decoding="async" srcset="images/responsive/sanbosaalbalad_pro-360.webp 360w, images/sanbosaalbalad_pro.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">سمبوسة البلد</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض منتجات العناية" onclick="openLb('images/mtger_anaia3.webp','منتجات العناية','anaia.salla.sa')">
+              <img src="images/mtger_anaia3.webp" alt="معاينة واجهة عناية" width="652" height="4044" loading="lazy" decoding="async" srcset="images/responsive/mtger_anaia3-360.webp 360w, images/mtger_anaia3.webp 652w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">العناية</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض شروق الطيب" onclick="openLb('images/sarok_salla.webp','شروق الطيب','shirwak.salla.sa')">
+              <img src="images/sarok_salla.webp" alt="معاينة واجهة شروق" width="615" height="7426" loading="lazy" decoding="async" srcset="images/responsive/sarok_salla-360.webp 360w, images/sarok_salla.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">شروق الطيب</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض Roast Master" onclick="openLb('images/coffepro.webp','Roast Master','roastmaster.salla.sa')">
+              <img src="images/coffepro.webp" alt="معاينة واجهة قهوة" width="615" height="5097" loading="lazy" decoding="async" srcset="images/responsive/coffepro-360.webp 360w, images/coffepro.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">Roast Master</div></div>
+            </div>
+<div class="mini-work-card" role="button" tabindex="0" aria-label="عرض Rivna" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
+              <img src="images/rivna.webp" alt="معاينة واجهة عسل" width="620" height="8664" loading="lazy" decoding="async" srcset="images/responsive/rivna-360.webp 360w, images/rivna.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">Rivna</div></div>
+            </div>
+</template>
+<div class="deferred-content-action"><button type="button" class="load-more-btn" id="loadMoreGoldProWorks" onclick="loadMoreGoldProWorks()">عرض جميع أعمال الذهبية برو</button></div>
         </div>
       </div>
 
@@ -2381,10 +2388,10 @@ function advSelect(option) {
           </div>
           <div class="pkg-works-grid">
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر دار" onclick="openLb('images/darlisa_pro.webp','متجر دار','dar.salla.sa')">
-              <img src="images/darlisa_pro.webp" alt="متجر دار" width="620" height="16276" loading="lazy" decoding="async" srcset="images/responsive/darlisa_pro-360.webp 360w, images/darlisa_pro.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">دار</div></div>
+              <img src="images/darlisa_pro.webp" alt="معاينة واجهة متجر دار" width="620" height="16276" loading="lazy" decoding="async" srcset="images/responsive/darlisa_pro-360.webp 360w, images/darlisa_pro.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">دار</div></div>
             </div>
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض Rivna" onclick="openLb('images/rivna.webp','Rivna','rivna.salla.sa')">
-              <img src="images/rivna.webp" alt="عسل" width="620" height="8664" loading="lazy" decoding="async" srcset="images/responsive/rivna-360.webp 360w, images/rivna.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">Rivna</div></div>
+              <img src="images/rivna.webp" alt="معاينة واجهة عسل" width="620" height="8664" loading="lazy" decoding="async" srcset="images/responsive/rivna-360.webp 360w, images/rivna.webp 620w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">Rivna</div></div>
             </div>
           </div>
         </div>
@@ -2457,13 +2464,13 @@ function advSelect(option) {
           </div>
           <div class="pkg-works-grid">
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر عسل نورة" onclick="openLb('images/asl_noura_plus.webp','متجر عسل نورة','asl-noura.salla.sa')">
-              <img src="images/asl_noura_plus.webp" alt="عسل نورة" width="615" height="3990" loading="lazy" decoding="async" srcset="images/responsive/asl_noura_plus-360.webp 360w, images/asl_noura_plus.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">عسل نورة</div></div>
+              <img src="images/asl_noura_plus.webp" alt="معاينة واجهة عسل نورة" width="615" height="3990" loading="lazy" decoding="async" srcset="images/responsive/asl_noura_plus-360.webp 360w, images/asl_noura_plus.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">عسل نورة</div></div>
             </div>
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض عبايات وجلابيات" onclick="openLb('images/matger_abaia4.webp','عبايات وجلابيات','abaya2.salla.sa')">
-              <img src="images/matger_abaia4.webp" alt="عبايات" width="1080" height="3090" loading="lazy" decoding="async" srcset="images/responsive/matger_abaia4-360.webp 360w, images/responsive/matger_abaia4-720.webp 720w, images/matger_abaia4.webp 1080w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">عبايات</div></div>
+              <img src="images/matger_abaia4.webp" alt="معاينة واجهة عبايات" width="1080" height="3090" loading="lazy" decoding="async" srcset="images/responsive/matger_abaia4-360.webp 360w, images/responsive/matger_abaia4-720.webp 720w, images/matger_abaia4.webp 1080w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">عبايات</div></div>
             </div>
             <div class="mini-work-card" role="button" tabindex="0" aria-label="عرض متجر فساتين" onclick="openLb('images/fstinplus.webp','متجر فساتين','fasatin.salla.sa')">
-              <img src="images/fstinplus.webp" alt="فساتين" width="615" height="2657" loading="lazy" decoding="async" srcset="images/responsive/fstinplus-360.webp 360w, images/fstinplus.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">فساتين</div></div>
+              <img src="images/fstinplus.webp" alt="معاينة واجهة فساتين" width="615" height="2657" loading="lazy" decoding="async" srcset="images/responsive/fstinplus-360.webp 360w, images/fstinplus.webp 615w" sizes="(max-width: 767px) 92vw, (max-width: 1100px) 46vw, 380px"><div class="mini-work-overlay"><div class="mini-work-title">فساتين</div></div>
             </div>
           </div>
         </div>
@@ -2471,7 +2478,7 @@ function advSelect(option) {
       <!-- Gallery -->
         </div>
       </div>
-  
+
 </section>
 
 <!-- ═══ COMPARE ═══ -->
@@ -2519,7 +2526,8 @@ function advSelect(option) {
       </div>
 
       <!-- PLUS Package -->
-      <div class="ct-tab-content">
+      <div class="ct-tab-content" data-deferred-template="comparisonTab0"></div>
+<template id="comparisonTab0">
         <div class="ct-tab-card">
           <div class="ct-card-header">
             <div class="ct-pkg-title">PLUS</div>
@@ -2584,7 +2592,7 @@ function advSelect(option) {
             <a rel="noopener noreferrer" href="https://ezhalhe.com/jm1gf2X4IW/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%81%D8%B6%D9%8A%D8%A9" target="_blank" class="secondary">اطلب PLUS →</a>
           </div>
         </div>
-      </div>
+      </template>
 
       <!-- PROFESSIONAL Package -->
       <div class="ct-tab-content active">
@@ -2656,7 +2664,8 @@ function advSelect(option) {
       </div>
 
       <!-- GOLD PRO Package -->
-      <div class="ct-tab-content">
+      <div class="ct-tab-content" data-deferred-template="comparisonTab2"></div>
+<template id="comparisonTab2">
         <div class="ct-tab-card">
           <div class="ct-card-header">
             <div class="ct-pkg-title">الذهبية برو</div>
@@ -2721,7 +2730,7 @@ function advSelect(option) {
             <a rel="noopener noreferrer" href="https://ezhalhe.com/q36oljg/%D8%A7%D9%84%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D8%B0%D9%87%D8%A8%D9%8A%D8%A9" target="_blank" class="secondary">اطلب الذهبية →</a>
           </div>
         </div>
-      </div>
+      </template>
     </div>
   </div>
 </section>
@@ -2814,7 +2823,37 @@ function advSelect(option) {
         <a rel="noopener noreferrer" href="https://ezhalhe.com/حجز-وربط-دومين-خاص-بمتجرك/p1510397301" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
 
-      <div class="srv-card reveal">
+
+
+      <!-- ─── البكسلات والتسويق الرقمي ─── -->
+      <div style="grid-column:1/-1;font-size:.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding-bottom:10px;border-bottom:1px solid var(--border2);margin-bottom:4px;margin-top:16px">🎯 البكسلات والتسويق الرقمي</div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ─── خدمات تقنية متنوعة ─── -->
+      <div style="grid-column:1/-1;font-size:.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding-bottom:10px;border-bottom:1px solid var(--border2);margin-bottom:4px;margin-top:16px">⚙️ خدمات تقنية متنوعة</div>
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+<template id="moreServices">
+<div class="srv-card reveal">
         <div class="srv-ic">💳</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">تفعيل تابي أو تمارا للأعمال</div>
@@ -2822,11 +2861,7 @@ function advSelect(option) {
         <div class="srv-desc">نفعّل حساب تابي أو تمارا لمتجرك لتتيح الدفع الآجل — يرفع متوسط قيمة الطلب.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/فتح-حساب-تابي-أو-تمارا-للأعمال-تفعيل-الدفع-الآجل/p1652439672" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <!-- ─── البكسلات والتسويق الرقمي ─── -->
-      <div style="grid-column:1/-1;font-size:.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding-bottom:10px;border-bottom:1px solid var(--border2);margin-bottom:4px;margin-top:16px">🎯 البكسلات والتسويق الرقمي</div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">🎯</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">بكسل سناب شات + تيك توك معاً</div>
@@ -2835,8 +2870,7 @@ function advSelect(option) {
         <div class="srv-desc">تركيب وتفعيل بكسل سناب شات وتيك توك معاً بسعر مجمّع موفر.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/ارفع-مبيعاتك-بذكاء-–-بكج-ربط-بكسل-تيك-توك-وسناب-شات/p1060059214" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">👻</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">تركيب سناب شات بكسل</div>
@@ -2845,8 +2879,7 @@ function advSelect(option) {
         <div class="srv-desc">تركيب وتفعيل Snap Pixel لمتجرك لتتبع التحويلات وإعادة الاستهداف في سناب شات.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/تفعيل-سناب-بيكسل-بالمتجر-الالكتروني/p166288191" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">🎵</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">تركيب تيك توك بكسل</div>
@@ -2855,8 +2888,7 @@ function advSelect(option) {
         <div class="srv-desc">تركيب وتفعيل TikTok Pixel لمتجرك لتتبع الإعلانات وتحسين أداء حملاتك.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/ربط-تيك-توك-بكسل-بموقعك-او-متجرك-الالكتروني/p1375743607" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">🐦</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">تفعيل تويتر X بكسل</div>
@@ -2865,8 +2897,7 @@ function advSelect(option) {
         <div class="srv-desc">تركيب وتفعيل X (تويتر) Pixel لمتجرك في سلة لتتبع الإعلانات بدقة.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/تفعيل-تويتر-بكسل-بمتجرك-الالكتروني/p929050308" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">🔍</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">تفعيل Google Merchant Center</div>
@@ -2875,11 +2906,7 @@ function advSelect(option) {
         <div class="srv-desc">ربط متجرك بـ Google Merchant Center لعرض منتجاتك في نتائج بحث جوجل التسوقية.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/تفعيل-جوجل-ميرشنت-بالمتجر-الالكتروني/p1173309150" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <!-- ─── خدمات تقنية متنوعة ─── -->
-      <div style="grid-column:1/-1;font-size:.72rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;padding-bottom:10px;border-bottom:1px solid var(--border2);margin-bottom:4px;margin-top:16px">⚙️ خدمات تقنية متنوعة</div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">💬</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">استشارة لتحسين متجرك</div>
@@ -2888,8 +2915,7 @@ function advSelect(option) {
         <div class="srv-desc">استشارة احترافية مخصصة لتحليل متجرك وتحديد نقاط التحسين الأكثر أثراً على المبيعات.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/استشارة-احترافية-لتحسين-متجرك-الإلكتروني/p64121475" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">📧</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">إنشاء إيميل تجاري احترافي</div>
@@ -2898,8 +2924,7 @@ function advSelect(option) {
         <div class="srv-desc">إنشاء إيميل باسم نطاق متجرك (info@yourstore.com) يعزز مصداقيتك مع العملاء.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/إنشاء-إيميل-تجاري-احترافي-باسم-نطاق-متجرك/p766767169" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">📊</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">ربط Google Analytics</div>
@@ -2908,8 +2933,7 @@ function advSelect(option) {
         <div class="srv-desc">ربط جوجل أناليتكس بمتجرك لمعرفة عدد الزوار وتحركاتهم وتحسين قراراتك التسويقية.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/ربط-قوقل-انالتيكس/p313092457" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">🔗</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">إنشاء Linktree احترافي</div>
@@ -2918,8 +2942,7 @@ function advSelect(option) {
         <div class="srv-desc">رابط واحد يجمع كل حساباتك ومتجرك — مثالي لصفحة البايو في إنستقرام وسناب.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/صميم-ربط-واحد-لجميع-حساباتك-linktree/p925829032" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-      <div class="srv-card reveal">
+<div class="srv-card reveal">
         <div class="srv-ic">📄</div>
         <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:7px;flex-wrap:wrap">
           <div class="srv-title" style="margin:0">كتابة سياسة الاسترجاع والتبديل</div>
@@ -2928,8 +2951,8 @@ function advSelect(option) {
         <div class="srv-desc">نكتب سياسة استرجاع وتبديل احترافية ومتوافقة مع متطلبات المنصة وحقوق المستهلك.</div>
         <a rel="noopener noreferrer" href="https://ezhalhe.com/كتابة-سياسة-الاسترجاع-والتبديل-لمتجرك-الإلكتروني/p606867619" class="srv-link" target="_blank">اطلب الخدمة →</a>
       </div>
-
-    </div>
+</template>
+<div class="deferred-content-action"><button type="button" class="load-more-btn" id="loadMoreServices" onclick="loadMoreServices()">عرض جميع الخدمات الإضافية</button></div>
   </div>
 </section>
 
@@ -3112,7 +3135,7 @@ function advSelect(option) {
         <p class="ft-desc">شريكك المتكامل في بناء وتطوير متجرك الإلكتروني على سلة وزد — من التصميم حتى النجاح.</p>
       </div>
       <div class="ft-col">
-        <h4>روابط</h4>
+        <h3>روابط</h3>
         <a href="#work">معرض الأعمال</a>
         <a href="#pro">الباقة الذهبية</a>
         <a href="#plus">باقة PLUS</a>
@@ -3120,13 +3143,13 @@ function advSelect(option) {
         <a href="articles.html">المقالات</a>
       </div>
       <div class="ft-col">
-        <h4>كوبونات خصم سلة</h4>
+        <h3>كوبونات خصم سلة</h3>
         <a href="discount-salla-plus.html">🏷️ كود خصم باقة بلس</a>
         <a href="discount-salla-pro.html">👑 كود خصم باقة برو</a>
         <a href="discount-salla-plus.html" style="font-size:.78rem;color:var(--muted)">الكود: F-SJA3KGL7</a>
       </div>
       <div class="ft-col">
-        <h4>تواصل</h4>
+        <h3>تواصل</h3>
         <a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank">📱 تواصل مع مختص تجارة إلكترونية</a>
         <a rel="noopener noreferrer" href="https://wa.me/966501940155?text=أريد استشارة هاتفية" target="_blank">📞 استشارة هاتفية مجانية</a>
         <a href="mailto:mr.leith9999@gmail.com">✉ mr.leith9999@gmail.com</a>
@@ -3150,8 +3173,10 @@ function advSelect(option) {
 </a>
 <div class="wa-tooltip">تواصل معنا على واتساب</div>
 
+<button type="button" class="consult-trigger" id="consultTrigger" onclick="toggleConsult()" aria-controls="consultPopup" aria-expanded="false">استشارة سريعة</button>
+
 <!-- CONSULTATION POPUP -->
-<div class="consult-popup" id="consultPopup" role="region" aria-label="خيارات التواصل" aria-hidden="true">
+<div class="consult-popup" id="consultPopup" role="region" aria-label="خيارات التواصل" aria-hidden="true" inert>
   <button type="button" class="cp-close" onclick="toggleConsult()" aria-label="إغلاق خيارات التواصل">✕</button>
   <div class="cp-title">تحدث مع مختص 👋</div>
   <div class="cp-sub">اختر طريقة التواصل المناسبة لك</div>
@@ -3233,75 +3258,15 @@ let consultOpen=false;
 let lastLightboxTrigger=null;
 function toggleConsult(){
   consultOpen=!consultOpen;
-  const popup=document.getElementById('consultPopup');popup.classList.toggle('open',consultOpen);popup.setAttribute('aria-hidden',String(!consultOpen));
+  const popup=document.getElementById('consultPopup');const trigger=document.getElementById('consultTrigger');popup.classList.toggle('open',consultOpen);popup.setAttribute('aria-hidden',String(!consultOpen));popup.inert=!consultOpen;trigger.setAttribute('aria-expanded',String(consultOpen));popup.inert=!consultOpen;
 }
 // Consultation choices remain user-initiated; no timed interruption.
 document.getElementById('consultPopup').addEventListener('click',function(e){e.stopPropagation()});
 document.addEventListener('click',function(event){
-  if(consultOpen&&!document.getElementById('consultPopup').contains(event.target)){
-    consultOpen=false;document.getElementById('consultPopup').classList.remove('open');
+  if(consultOpen&&!document.getElementById('consultPopup').contains(event.target)&&!document.getElementById('consultTrigger').contains(event.target)){
+    consultOpen=false;const popup=document.getElementById('consultPopup');popup.classList.remove('open');popup.setAttribute('aria-hidden','true');popup.inert=true;document.getElementById('consultTrigger').setAttribute('aria-expanded','false');
   }
 });
-
-document.addEventListener('keydown',function(event){
-  const target=event.target.closest('[role="button"][onclick]');
-  if(target&&(event.key==='Enter'||event.key===' ')){
-    event.preventDefault();
-    target.click();
-  }
-});
-document.querySelectorAll('#nav a').forEach(link=>link.addEventListener('click',()=>{
-  const nav=document.getElementById('nav');const button=document.getElementById('burg');
-  nav.classList.remove('mob-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','فتح القائمة');
-}));
-
-document.addEventListener('keydown',function(event){
-  const target=event.target.closest('[role="button"][onclick]');
-  if(target&&(event.key==='Enter'||event.key===' ')){
-    event.preventDefault();
-    target.click();
-  }
-});
-document.querySelectorAll('#nav a').forEach(link=>link.addEventListener('click',()=>{
-  const nav=document.getElementById('nav');const button=document.getElementById('burg');
-  nav.classList.remove('mob-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','فتح القائمة');
-}));
-
-document.addEventListener('keydown',function(event){
-  const target=event.target.closest('[role="button"][onclick]');
-  if(target&&(event.key==='Enter'||event.key===' ')){
-    event.preventDefault();
-    target.click();
-  }
-});
-document.querySelectorAll('#nav a').forEach(link=>link.addEventListener('click',()=>{
-  const nav=document.getElementById('nav');const button=document.getElementById('burg');
-  nav.classList.remove('mob-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','فتح القائمة');
-}));
-
-document.addEventListener('keydown',function(event){
-  const target=event.target.closest('[role="button"][onclick]');
-  if(target&&(event.key==='Enter'||event.key===' ')){
-    event.preventDefault();
-    target.click();
-  }
-});
-document.querySelectorAll('#nav a').forEach(link=>link.addEventListener('click',()=>{
-  const nav=document.getElementById('nav');const button=document.getElementById('burg');
-  nav.classList.remove('mob-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','فتح القائمة');
-}));
-
-document.addEventListener('keydown',function(event){
-  const target=event.target.closest('[role="button"][onclick]');
-  if(target&&(event.key==='Enter'||event.key===' ')){
-    event.preventDefault();
-    target.click();
-  }
-});
-document.querySelectorAll('#nav a').forEach(link=>link.addEventListener('click',()=>{
-  const nav=document.getElementById('nav');const button=document.getElementById('burg');
-  nav.classList.remove('mob-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','فتح القائمة');
-}));
 
 document.addEventListener('keydown',function(event){
   const target=event.target.closest('[role="button"][onclick]');
@@ -3362,20 +3327,64 @@ function openLb(src,title,url){
   document.getElementById('lbImg').src=src;
   document.getElementById('lbImg').alt=title||'';
   document.getElementById('lbUrl').textContent=url||'';
-  const dialog=document.getElementById('lb');dialog.classList.add('on');dialog.setAttribute('aria-hidden','false');
+  const dialog=document.getElementById('lb');dialog.classList.add('on');dialog.setAttribute('aria-hidden','false');dialog.inert=false;
   document.body.style.overflow='hidden';
   document.querySelector('.lb-frame').scrollTop=0;
   dialog.querySelector('.lb-x').focus();
 }
 function closeLb(){
-  const dialog=document.getElementById('lb');dialog.classList.remove('on');dialog.setAttribute('aria-hidden','true');
+  const dialog=document.getElementById('lb');dialog.classList.remove('on');dialog.setAttribute('aria-hidden','true');dialog.inert=true;
   document.body.style.overflow='';
   if(lastLightboxTrigger&&typeof lastLightboxTrigger.focus==='function')lastLightboxTrigger.focus();
 }
 document.addEventListener('keydown',e=>{const dialog=document.getElementById('lb');if(e.key==='Escape'&&dialog.classList.contains('on'))closeLb();if(e.key==='Tab'&&dialog.classList.contains('on')){e.preventDefault();dialog.querySelector('.lb-x').focus();}});
 
+function loadMoreTestimonials(){
+  const template=document.getElementById('moreTestimonials');
+  const target=document.querySelector('#testimonials .testi-track-set');
+  const button=document.getElementById('loadMoreTestimonials');
+  if(template&&target){target.append(template.content.cloneNode(true));template.remove();}
+  if(button)button.closest('.deferred-content-action').remove();
+}
+function loadMorePortfolio(moveFocus){
+  const template=document.getElementById('morePortfolio');
+  const target=document.getElementById('wGrid');
+  const button=document.getElementById('loadMorePortfolio');
+  if(template&&target){
+    target.append(template.content.cloneNode(true));template.remove();
+    initScrollPreviews();
+    target.querySelectorAll('.reveal:not(.in)').forEach(card=>{card.classList.add('in');obs.observe(card);});
+  }
+  if(button)button.closest('.deferred-content-action').remove();
+  if(moveFocus&&target){const firstDeferred=target.querySelectorAll('.work-card')[3];if(firstDeferred)firstDeferred.focus();}
+}
+
+function loadMoreGoldProWorks(){
+  const template=document.getElementById('moreGoldProWorks');
+  const target=document.querySelector('#pro .pkg-works-grid');
+  const button=document.getElementById('loadMoreGoldProWorks');
+  if(template&&target){
+    target.append(template.content.cloneNode(true));template.remove();
+    initScrollPreviews();
+    target.querySelectorAll('.reveal:not(.in)').forEach(card=>{card.classList.add('in');obs.observe(card);});
+  }
+  if(button)button.closest('.deferred-content-action').remove();
+}
+
+function loadMoreServices(){
+  const template=document.getElementById('moreServices');
+  const target=document.querySelector('#services .srv-grid');
+  const button=document.getElementById('loadMoreServices');
+  if(template&&target){
+    target.append(template.content.cloneNode(true));template.remove();
+    target.querySelectorAll('.reveal:not(.in)').forEach(card=>{card.classList.add('in');obs.observe(card);});
+  }
+  if(button)button.closest('.deferred-content-action').remove();
+}
+
 /* ── FILTER ── */
 function filterWork(type,btn){
+  if(document.getElementById('morePortfolio'))loadMorePortfolio(false);
   document.querySelectorAll('.wf-btn').forEach(b=>b.classList.remove('on'));
   btn.classList.add('on');
   const grid=document.getElementById('wGrid');
@@ -3466,15 +3475,14 @@ function showToast(m){
 
 // Mobile Tabs Switcher
 function switchTab(idx, btn){
-  const tabs = document.querySelectorAll('.ct-tab-content');
-  const btns = document.querySelectorAll('.ct-tab-btn');
-  
-  // Remove active from all
-  tabs.forEach(t => t.classList.remove('active'));
-  btns.forEach(b => b.classList.remove('active'));
-  
-  // Add active to current
-  tabs[idx].classList.add('active');
+  const tabs=document.querySelectorAll('.ct-tab-content');
+  const btns=document.querySelectorAll('.ct-tab-btn');
+  const selected=tabs[idx];
+  const templateId=selected.dataset.deferredTemplate;
+  if(templateId){const template=document.getElementById(templateId);if(template){selected.append(template.content.cloneNode(true));template.remove();}delete selected.dataset.deferredTemplate;}
+  tabs.forEach(tab=>tab.classList.remove('active'));
+  btns.forEach(button=>button.classList.remove('active'));
+  selected.classList.add('active');
   btn.classList.add('active');
 }
 </script>

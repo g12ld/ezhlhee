@@ -2,7 +2,7 @@
 
 **Status:** PASS
 
-Validated 121 maintained HTML files (119 indexable) against 18 repeatable file-level checks.
+Validated 121 maintained HTML files (119 indexable) against 19 repeatable file-level checks.
 
 ## Aggregate release gates
 
@@ -19,6 +19,11 @@ Validated 121 maintained HTML files (119 indexable) against 18 repeatable file-l
 - PASS — `keyboard_portfolio_cards`
 - PASS — `user_initiated_consultation`
 - PASS — `no_intrusive_auto_popup`
+- PASS — `hidden_interactive_regions_inert`
+- PASS — `keyboard_handler_deduplicated`
+- PASS — `deferred_dom_preserves_content`
+- PASS — `footer_heading_order`
+- PASS — `minimum_touch_targets`
 
 ## Notes
 

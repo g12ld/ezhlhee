@@ -185,6 +185,7 @@ def main() -> None:
         if href.startswith(("#", "http://", "https://", "mailto:", "tel:", "javascript:")):
             continue
         target = unquote(href.split("#", 1)[0].split("?", 1)[0])
+        target = target.lstrip("/") or "index.html"
         if target and not (ROOT / target).is_file():
             broken_blog.append(href)
     check(

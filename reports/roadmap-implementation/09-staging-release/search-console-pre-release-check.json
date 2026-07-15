@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-07-15",
+  "property": "sc-domain:ezhalhe-sa.com",
+  "authenticated_session_available": true,
+  "critical_url": "https://www.ezhalhe-sa.com/articles/مقارنة-بين-بوابات-الدفع-الإلكتروني-ميس-مدفوع-وإمكان.html",
+  "url_inspection_result": "URL is available on Google",
+  "production_changed": false,
+  "sitemap_resubmitted": false,
+  "decision": "Do not submit the new sitemap or request reindexing before the atomic production release passes immediate validation.",
+  "post_release_actions": [
+    "Inspect the homepage and all critical service and cluster URLs after deployment.",
+    "Submit the canonical 119-URL sitemap only after the production crawl and canonical checks pass.",
+    "Monitor Page Indexing, Sitemaps, Crawl Stats, Core Web Vitals, Manual Actions, Security Issues, performance, and links for 30 days."
+  ]
+}

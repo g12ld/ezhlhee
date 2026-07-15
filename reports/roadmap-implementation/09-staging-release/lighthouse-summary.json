@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "generated": "2026-07-15",
+  "profiles": [
+    {
+      "profile": "mobile 375x812",
+      "report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-performance-release.report.json",
+      "report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-performance-release.report.html",
+      "performance": 82,
+      "quality_report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-optimized-final-3.report.json",
+      "quality_report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-optimized-final-3.report.html",
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_ms": 2071,
+      "lcp_ms": 2268,
+      "tbt_ms": 594,
+      "cls": 0,
+      "dom": "980 elements"
+    },
+    {
+      "profile": "desktop",
+      "report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.json",
+      "report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.html",
+      "performance": 99,
+      "quality_report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.json",
+      "quality_report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.html",
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_ms": 552,
+      "lcp_ms": 627,
+      "tbt_ms": 32,
+      "cls": 0,
+      "dom": "980 elements"
+    }
+  ]
+}

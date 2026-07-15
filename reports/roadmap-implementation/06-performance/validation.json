@@ -41,7 +41,7 @@
     {
       "check": "hero-in-critical-order",
       "passed": true,
-      "evidence": "hero_offset=65381, coupon_offset=67825"
+      "evidence": "hero_offset=69230, coupon_offset=71692"
     },
     {
       "check": "below-fold-render-containment",

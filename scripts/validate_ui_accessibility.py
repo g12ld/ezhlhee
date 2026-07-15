@@ -162,6 +162,7 @@ def main() -> None:
             "reduced_motion": "prefers-reduced-motion:reduce" in source,
             "approved_brand_colors": not unapproved,
             "no_faq_schema": "FAQPage" not in source,
+            "no_invalid_x_frame_meta": not re.search(r'<meta\s+http-equiv=["\']X-Frame-Options["\']', source, re.I),
             "inline_script_syntax": not script_errors,
             "single_h1_if_indexable": not indexable or len(re.findall(r"<h1\b", source, re.I)) == 1,
         }
@@ -179,6 +180,8 @@ def main() -> None:
         }
 
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
+    footer_match = re.search(r"<footer\b.*?</footer>", homepage, re.I | re.S)
+    footer = footer_match.group(0) if footer_match else ""
     homepage_checks = {
         "gold_pro_primary_cta": 'href="#pro" class="btn-primary">اطلب الباقة الذهبية برو' in homepage,
         "accessible_mobile_menu": all(value in homepage for value in ['id="burg"', 'aria-controls="nav"', 'aria-expanded="false"', "event.key==='Escape'"]),
@@ -186,6 +189,29 @@ def main() -> None:
         "keyboard_portfolio_cards": "[role=\"button\"][onclick]" in homepage and "event.key==='Enter'" in homepage,
         "user_initiated_consultation": "after 8s" not in homepage and "setTimeout(()=>{if(!consultOpen)" not in homepage,
         "no_intrusive_auto_popup": "Consultation choices remain user-initiated" in homepage,
+        "hidden_interactive_regions_inert": all(
+            value in homepage
+            for value in [
+                'id="lb" role="dialog" aria-modal="true" aria-hidden="true" inert',
+                'id="consultPopup" role="region" aria-label="خيارات التواصل" aria-hidden="true" inert',
+                "popup.inert=!consultOpen",
+                "dialog.inert=false",
+                "dialog.inert=true",
+            ]
+        ),
+        "keyboard_handler_deduplicated": homepage.count("const target=event.target.closest('[role=\"button\"][onclick]')") == 1,
+        "deferred_dom_preserves_content": all(
+            [
+                'id="moreTestimonials"' in homepage,
+                'id="morePortfolio"' in homepage,
+                len(re.findall(r'<div class="testi-card">', homepage)) == 50,
+                len(re.findall(r'<div class="work-card(?:\s|\")', homepage)) == 19,
+                "function loadMoreTestimonials()" in homepage,
+                "function loadMorePortfolio(moveFocus)" in homepage,
+            ]
+        ),
+        "footer_heading_order": bool(footer) and "<h4>" not in footer and footer.count("<h3>") == 3,
+        "minimum_touch_targets": all(value in homepage for value in [".ann-close{min-width:44px;min-height:44px", "min-height:48px"]),
     }
 
     aggregate_checks = {
@@ -206,7 +232,7 @@ def main() -> None:
         "summary": {
             "maintained_html": len(files),
             "indexable_html": sum(bool(item["indexable"]) for item in results.values()),
-            "file_level_checks": 18,
+            "file_level_checks": 19,
             "homepage_cro_checks": len(homepage_checks),
             "failed_files": len(failures),
         },
@@ -222,7 +248,7 @@ def main() -> None:
         "",
         f"**Status:** {payload['status']}",
         "",
-        f"Validated {len(files)} maintained HTML files ({payload['summary']['indexable_html']} indexable) against 18 repeatable file-level checks.",
+        f"Validated {len(files)} maintained HTML files ({payload['summary']['indexable_html']} indexable) against 19 repeatable file-level checks.",
         "",
         "## Aggregate release gates",
         "",
