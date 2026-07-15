@@ -1,6 +1,6 @@
 # Information architecture validation
 
-Result: 15/15 checks passed.
+Result: 16/16 checks passed.
 
 | Check | Result | Evidence |
 |---|---|---|
@@ -18,4 +18,5 @@ Result: 15/15 checks passed.
 | blog-legacy-links-repaired | PASS | legacy=0, broken=0 |
 | robots-sitemap-canonical | PASS | Robots references the canonical sitemap |
 | error-page-noindex | PASS | 404 page is noindex and has no canonical declaration |
+| legacy-public-url-preserved | PASS | Legacy fragment remains deployable at its existing URL, crawl-disallowed, and excluded from sitemap |
 | telegram-token-scan | PASS | potential_live_token_patterns=0 |

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar-SA" dir="rtl">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;800&display=optional">
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../pages.css">
     <link rel="canonical" href="https://www.ezhalhe-sa.com/articles/كيفية-تصميم-متجر-إلكتروني-احترافي-على-منصة-سلة-وزد.html">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/images/logo.webp" type="image/webp" sizes="1000x1000">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0D2224">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     <meta property="og:locale" content="ar_SA">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="إزهلها">
@@ -38,41 +40,75 @@
     <meta name="keywords" content="كيفية تصميم متجر إلكتروني احترافي على منصة سلة وزد، تصميم متجر إلكتروني، خدمات التجارة الإلكترونية، تسويق إلكتروني، تسويق رقمي، متجر إلكتروني، تواصل واتساب، تسويق المحتوى، تطوير متجر، سلة، زد، SEO">
     <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Tajawal', sans-serif; line-height: 1.6; color: #333; background-color: #f9f9f9; direction: rtl; text-align: right; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #1db4bd; margin-bottom: 20px; }
-        h2 { color: #137c82; margin-top: 30px; margin-bottom: 10px; }
+        body { font-family:Tahoma,Arial,sans-serif; line-height: 1.6; color: #0D2224; background-color: #FFFFFF; direction: rtl; text-align: right; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: #FFFFFF; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(13,34,36,0.1); }
+        h1 { color: #15B5B0; margin-bottom: 20px; }
+        h2 { color: #15B5B0; margin-top: 30px; margin-bottom: 10px; }
         p { margin-bottom: 15px; }
         ul { margin-right: 20px; margin-bottom: 15px; }
         li { margin-bottom: 5px; }
-        .highlight { background: #e0f7fa; padding: 10px; border-left: 5px solid #1db4bd; margin: 20px 0; }
-    
+        .highlight { background: #FFFFFF; padding: 10px; border-left: 5px solid #15B5B0; margin: 20px 0; }
+
     .main-nav ul { list-style: none; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
     .main-nav li { margin: 0; }
     .main-nav a { color: var(--color-text); text-decoration: none; font-weight: 700; padding: 8px 14px; border-radius: 12px; transition: all 0.25s ease; }
-    .main-nav a:hover { color: var(--color-primary-dark); background: rgba(29,180,189,0.12); }
-    .nav-cta { background: var(--color-primary-dark); color: #fff; padding: 10px 18px; border-radius: 14px; box-shadow: 0 10px 28px rgba(19,124,130,0.18); }
-    .nav-cta:hover { background: #0f6a72; }
+    .main-nav a:hover { color: var(--color-primary-dark); background: rgba(21,181,176,0.12); }
+    .nav-cta { background: var(--color-primary-dark); color: #FFFFFF; padding: 10px 18px; border-radius: 14px; box-shadow: 0 10px 28px rgba(21,181,176,0.18); }
+    .nav-cta:hover { background: #15B5B0; }
     .logo-mark { width: 44px; height: 44px; border-radius: 14px; object-fit: cover; }
-    .page-cta { background: linear-gradient(135deg, rgba(19,124,130,0.18), rgba(29,180,189,0.09)); border: 1px solid rgba(19,124,130,0.18); border-radius: 22px; padding: 30px 26px; margin: 40px auto 0; max-width: 900px; }
+    .page-cta { background: linear-gradient(135deg, rgba(21,181,176,0.18), rgba(21,181,176,0.09)); border: 1px solid rgba(21,181,176,0.18); border-radius: 22px; padding: 30px 26px; margin: 40px auto 0; max-width: 900px; }
     .page-cta .cta-inner { display: flex; justify-content: space-between; gap: 18px; align-items: center; flex-wrap: wrap; }
-    .page-cta h2 { font-size: 1.6rem; color: #137c82; margin-bottom: 8px; }
-    .page-cta p { color: #425c61; max-width: 640px; line-height: 1.8; }
+    .page-cta h2 { font-size: 1.6rem; color: #15B5B0; margin-bottom: 8px; }
+    .page-cta p { color: #15B5B0; max-width: 640px; line-height: 1.8; }
     .cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn-primary, .btn-secondary { display: inline-flex; align-items: center; justify-content: center; padding: 14px 24px; border-radius: 14px; font-weight: 800; text-decoration: none; transition: transform 0.25s ease, opacity 0.25s ease; }
-    .btn-primary { background: linear-gradient(135deg, #137c82, #1db4bd); color: #fff; }
-    .btn-secondary { background: #fff; color: #137c82; border: 2px solid #137c82; }
+    .btn-primary { background: linear-gradient(135deg, #15B5B0, #15B5B0); color: #FFFFFF; }
+    .btn-secondary { background: #FFFFFF; color: #15B5B0; border: 2px solid #15B5B0; }
     .btn-primary:hover, .btn-secondary:hover { transform: translateY(-1px); opacity: 0.95; }
-    .main-footer { background: #f4f9fb; padding: 44px 20px 20px; margin-top: 60px; border-top: 1px solid rgba(19,124,130,0.16); }
+    .main-footer { background: #FFFFFF; padding: 44px 20px 20px; margin-top: 60px; border-top: 1px solid rgba(21,181,176,0.16); }
     .footer-grid { display: grid; grid-template-columns: repeat(3, minmax(220px, 1fr)); gap: 24px; max-width: 1080px; margin: 0 auto; }
-    .footer-logo { width: 60px; border-radius: 16px; box-shadow: 0 16px 36px rgba(4,181,184,0.18); margin-bottom: 18px; }
-    .footer-links h4, .footer-contact h4 { color: #137c82; margin-bottom: 14px; font-size: 1rem; }
-    .footer-links a, .footer-contact a { display: block; color: #314948; text-decoration: none; margin-bottom: 10px; font-weight: 700; }
-    .footer-links a:hover, .footer-contact a:hover { color: #0f6a72; }
-    .footer-bottom { margin-top: 32px; border-top: 1px solid rgba(19,124,130,0.14); padding-top: 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; color: #5c6e70; font-size: 0.95rem; }
-    .whatsapp-float { position: fixed; bottom: 22px; left: 22px; background: #25D366; color: #fff; padding: 14px 18px; border-radius: 999px; font-weight: 800; text-decoration: none; box-shadow: 0 18px 40px rgba(37,211,102,0.22); z-index: 999; }
+    .footer-logo { width: 60px; border-radius: 16px; box-shadow: 0 16px 36px rgba(21,181,176,0.18); margin-bottom: 18px; }
+    .footer-links h4, .footer-contact h4 { color: #15B5B0; margin-bottom: 14px; font-size: 1rem; }
+    .footer-links a, .footer-contact a { display: block; color: #0D2224; text-decoration: none; margin-bottom: 10px; font-weight: 700; }
+    .footer-links a:hover, .footer-contact a:hover { color: #15B5B0; }
+    .footer-bottom { margin-top: 32px; border-top: 1px solid rgba(21,181,176,0.14); padding-top: 18px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; color: #555555; font-size: 0.95rem; }
+    .whatsapp-float { position: fixed; bottom: 22px; left: 22px; background: #3BBBC2; color: #FFFFFF; padding: 14px 18px; border-radius: 999px; font-weight: 800; text-decoration: none; box-shadow: 0 18px 40px rgba(59,187,194,0.22); z-index: 999; }
     @media (max-width: 820px) { .footer-grid { grid-template-columns: 1fr; } .page-cta .cta-inner { flex-direction: column; align-items: stretch; } .cta-actions { width: 100%; justify-content: stretch; } .page-cta h2 { font-size: 1.35rem; } }
     </style>
+<style id="ez-accessibility-system">
+.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
+.skip-link:focus{top:16px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
+:where(button,[role="button"]){font:inherit}
+[role="button"]{cursor:pointer}
+.burger{border:0;background:#FFFFFF;color:#0D2224}
+.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer;background:#FFFFFF!important;color:#0D2224!important;min-height:44px;padding-inline:12px}
+.ann-close{min-width:44px;min-height:44px;color:#FFFFFF!important}
+.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
+.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
+.btn-consult svg{fill:#0D2224 !important}
+.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
+#testimonials .testi-head .sh span,#testimonials .testi-score{color:#0D2224!important}
+.btn-submit{color:#0D2224!important}
+footer .ft-col a,footer .ft-col a[style]{color:#FFFFFF!important}
+footer .ft-copy{color:#FFFFFF!important}
+footer .ft-col h3{font-size:.75rem;font-weight:800;color:#FFFFFF;text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px}
+#testimonials .testi-marquee{overflow-x:auto!important;scrollbar-width:thin;mask:none!important;-webkit-mask:none!important}
+#testimonials .testi-track{animation:none!important;width:100%!important}
+#testimonials .testi-track-set{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px}
+#testimonials .testi-card{scroll-snap-align:start}
+.deferred-content-action{display:flex;justify-content:center;margin:24px auto 0;padding:0 20px}
+.load-more-btn{min-height:48px;border:1px solid #15B5B0;border-radius:10px;background:#FFFFFF;color:#0D2224;padding:12px 24px;font-weight:800;cursor:pointer}
+.load-more-btn:hover{background:rgba(21,181,176,.06)}
+.consult-trigger{position:fixed;inset-inline-end:18px;bottom:100px;z-index:890;min-height:44px;border:1px solid #15B5B0;border-radius:50px;background:#FFFFFF;color:#0D2224;padding:10px 16px;font-weight:800;box-shadow:0 8px 24px rgba(13,34,36,.18);cursor:pointer}
+.consult-trigger[aria-expanded="true"]{background:#15B5B0;color:#0D2224}
+.cp-close{min-width:44px!important;min-height:44px!important}
+.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
+.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@supports (content-visibility:auto){#work,#pro,#professional,#plus,#compare,#services,#testimonials,#articles,#faq,#contact,footer{content-visibility:auto;contain-intrinsic-size:auto 900px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -194,22 +230,25 @@
   ]
 }
     </script>
+  <link rel="stylesheet" href="/ui-system.css" data-ui-system>
 </head>
-<body>
+<body class="ui-pro ui-pending ui-inner-page ui-page-article">
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
     <header class="main-header">
     <div class="header-content">
         <a href="/" class="logo"><img src="../images/logo.webp" alt="ازهلها - تصميم متاجر إلكترونية" class="logo-mark" width="1000" height="1000" loading="lazy" decoding="async" srcset="../images/responsive/logo-128.webp 128w, ../images/responsive/logo-256.webp 256w, ../images/logo.webp 1000w" sizes="72px"></a>
-        <nav class="main-nav">
+        <nav aria-label="التنقل الرئيسي" class="main-nav">
             <ul>
                 <li><a href="/">الرئيسية</a></li>
                 <li><a href="../articles.html">المقالات</a></li>
-                <li><a href="https://wa.me/966501940155" target="_blank">تواصل مع مختص تجارة إلكترونية</a></li>
+                <li><a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank">تواصل مع مختص تجارة إلكترونية</a></li>
                 <li><a href="/" class="nav-cta">طلب تصميم / خدمات</a></li>
             </ul>
         </nav>
         <div class="mobile-menu-icon"><span></span><span></span><span></span></div>
     </div>
 </header>
+<main id="main-content">
     <div class="container">
         <h1>كيفية تصميم متجر إلكتروني احترافي على منصة سلة وزد</h1>
         <p class="article-byline"><span>إعداد: <a href="/#why-us">فريق إزهلها</a></span><span aria-hidden="true">•</span><time datetime="2026-07-15">آخر تحديث: 15 يوليو 2026</time></p>
@@ -256,7 +295,21 @@
         <p>في أزهلها، نقدم خدمات تصميم متاجر إلكترونية كاملة على منصة سلة وزد. من التصميم الأولي إلى التفعيل والتسويق. اتصل بنا للحصول على استشارة مجانية.</p>
         <p><a href="/">العودة إلى الصفحة الرئيسية</a></p>
     </div>
-    <aside class="related-reading" aria-labelledby="related-reading-title">
+<a rel="noopener noreferrer" class="whatsapp-float" href="https://wa.me/966501940155" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
+<section class="official-sources" aria-labelledby="official-sources-title">
+  <h2 id="official-sources-title">مراجع رسمية مرتبطة بالموضوع</h2>
+  <p>راجع فريق إزهلها هذا الدليل بالاستناد إلى مصادر المنصة وتجربة المتجر التالية، مع تطبيقها على سياق المتاجر السعودية:</p>
+  <ul><li><a href="https://help.salla.sa/" target="_blank" rel="noopener noreferrer">مركز مساعدة سلة</a></li>
+<li><a href="https://help.zid.sa/" target="_blank" rel="noopener noreferrer">مركز مساعدة زد</a></li>
+<li><a href="https://mc.gov.sa/ar/guides/CustomerGuide/Pages/ch4.aspx" target="_blank" rel="noopener noreferrer">وزارة التجارة: دليل المتاجر الإلكترونية</a></li></ul>
+
+</section>
+<aside class="content-review" aria-label="معلومات إعداد ومراجعة المقال">
+  <h2>إعداد ومراجعة المقال</h2>
+  <p><strong>فريق إزهلها</strong> — متخصصون في تصميم وتطوير متاجر سلة وزد وتهيئتها تقنياً للسوق السعودي منذ 2022.</p>
+  <p><strong>آخر مراجعة:</strong> 15 يوليو 2026 · نراجع المصادر الرسمية عند تحديث المتطلبات أو المنصات.</p>
+</aside>
+<aside class="related-reading" aria-labelledby="related-reading-title">
   <h2 id="related-reading-title">تابع القراءة في هذا المسار</h2>
   <p>مسار <strong>تصميم وتجربة المتجر</strong> يجمع الأدلة والخدمات المرتبطة بالموضوع.</p>
   <ul>
@@ -265,7 +318,7 @@
         <li><a href="/articles/كيف-تختار-قالب-متجر-زد-المناسب-لمنتجاتك-دليل-عملي.html">كيف تختار قالب متجر زد المناسب لمنتجاتك؟ دليل عملي.</a></li>
   </ul>
 </aside>
-<a class="whatsapp-float" href="https://wa.me/966501940155" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
+</main>
 <footer class="main-footer">
   <div class="footer-container">
     <div class="footer-grid">
@@ -281,7 +334,7 @@
       </div>
       <div class="footer-contact">
         <h4>تواصل الآن</h4>
-        <a href="https://wa.me/966501940155" target="_blank">💬 تواصل مع مختص تجارة إلكترونية</a>
+        <a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank">💬 تواصل مع مختص تجارة إلكترونية</a>
         <a href="mailto:mr.leith9999@gmail.com">✉ mr.leith9999@gmail.com</a>
         <p>+966 501 940 155</p>
       </div>
@@ -292,5 +345,6 @@
     </div>
   </div>
 </footer>
+  <script src="/ui-system.js" defer data-ui-system></script>
 </body>
 </html>

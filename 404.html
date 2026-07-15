@@ -6,10 +6,7 @@
 <title>404 — الصفحة غير موجودة | إزهلها</title>
 <meta name="description" content="الصفحة التي تبحث عنها غير موجودة. عد إلى الرئيسية أو تصفح خدماتنا في تصميم متاجر سلة وزد.">
 <meta name="robots" content="noindex, follow">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2304B5B8'/><text y='.9em' font-size='70' text-anchor='middle' x='50'>🛒</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=optional" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="pages.css">
 <style>
 .err-page{min-height:calc(100vh - 84px);display:flex;align-items:center;justify-content:center;text-align:center;padding:60px 28px}
@@ -20,11 +17,47 @@
 .err-desc{color:var(--muted);font-size:1rem;line-height:1.75;margin-bottom:36px}
 .err-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
 .err-links{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
-.err-link{background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:9px 18px;text-decoration:none;color:var(--ink2);font-weight:700;font-size:.85rem;transition:all .25s}
+.err-link{background:#FFFFFF;border:1.5px solid var(--border);border-radius:10px;padding:9px 18px;text-decoration:none;color:var(--ink2);font-weight:700;font-size:.85rem;transition:all .25s}
 .err-link:hover{border-color:var(--p);color:var(--p)}
 </style>
+<style id="ez-accessibility-system">
+.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
+.skip-link:focus{top:16px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
+:where(button,[role="button"]){font:inherit}
+[role="button"]{cursor:pointer}
+.burger{border:0;background:#FFFFFF;color:#0D2224}
+.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer;background:#FFFFFF!important;color:#0D2224!important;min-height:44px;padding-inline:12px}
+.ann-close{min-width:44px;min-height:44px;color:#FFFFFF!important}
+.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
+.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
+.btn-consult svg{fill:#0D2224 !important}
+.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
+#testimonials .testi-head .sh span,#testimonials .testi-score{color:#0D2224!important}
+.btn-submit{color:#0D2224!important}
+footer .ft-col a,footer .ft-col a[style]{color:#FFFFFF!important}
+footer .ft-copy{color:#FFFFFF!important}
+footer .ft-col h3{font-size:.75rem;font-weight:800;color:#FFFFFF;text-transform:uppercase;letter-spacing:.8px;margin-bottom:16px}
+#testimonials .testi-marquee{overflow-x:auto!important;scrollbar-width:thin;mask:none!important;-webkit-mask:none!important}
+#testimonials .testi-track{animation:none!important;width:100%!important}
+#testimonials .testi-track-set{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x proximity;padding:4px}
+#testimonials .testi-card{scroll-snap-align:start}
+.deferred-content-action{display:flex;justify-content:center;margin:24px auto 0;padding:0 20px}
+.load-more-btn{min-height:48px;border:1px solid #15B5B0;border-radius:10px;background:#FFFFFF;color:#0D2224;padding:12px 24px;font-weight:800;cursor:pointer}
+.load-more-btn:hover{background:rgba(21,181,176,.06)}
+.consult-trigger{position:fixed;inset-inline-end:18px;bottom:100px;z-index:890;min-height:44px;border:1px solid #15B5B0;border-radius:50px;background:#FFFFFF;color:#0D2224;padding:10px 16px;font-weight:800;box-shadow:0 8px 24px rgba(13,34,36,.18);cursor:pointer}
+.consult-trigger[aria-expanded="true"]{background:#15B5B0;color:#0D2224}
+.cp-close{min-width:44px!important;min-height:44px!important}
+.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
+.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@supports (content-visibility:auto){#work,#pro,#professional,#plus,#compare,#services,#testimonials,#articles,#faq,#contact,footer{content-visibility:auto;contain-intrinsic-size:auto 900px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+  <link rel="stylesheet" href="/ui-system.css" data-ui-system>
 </head>
-<body>
+<body class="ui-pro ui-pending ui-inner-page ui-page-inner">
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
 
 <header id="hdr">
   <div class="hdr-inner">
@@ -38,19 +71,19 @@
         <div class="logo-tagline">متاجر إلكترونية احترافية</div>
       </div>
     </a>
-    <div class="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
-    <nav id="nav">
+    <button type="button" class="burger" id="burg" onclick="toggleNav()" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav aria-label="التنقل الرئيسي" id="nav">
       <a href="/">الرئيسية</a>
       <a href="salla-store-design.html">متجر سلة</a>
       <a href="zid-store-design.html">متجر زد</a>
       <a href="articles.html">المقالات</a>
       <a href="discount-salla-plus.html">كوبون سلة</a>
-      <a href="https://wa.me/966501940155" target="_blank" class="nav-cta">ابدأ الآن</a>
+      <a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank" class="nav-cta">ابدأ الآن</a>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main-content">
   <div class="err-page">
     <div class="err-wrap">
       <span class="err-num">404</span>
@@ -62,7 +95,7 @@
       </p>
       <div class="err-btns">
         <a href="/" class="btn-primary">العودة للرئيسية</a>
-        <a href="https://wa.me/966501940155" target="_blank" class="btn-wa">
+        <a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank" class="btn-wa">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
           تواصل معنا
         </a>
@@ -103,7 +136,7 @@
       </div>
       <div class="ft-col">
         <h4>تواصل</h4>
-        <a href="https://wa.me/966501940155" target="_blank">📱 واتساب</a>
+        <a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank">📱 واتساب</a>
         <a href="mailto:mr.leith9999@gmail.com">✉ البريد الإلكتروني</a>
         <a href="/">🏠 الرئيسية</a>
       </div>
@@ -114,15 +147,30 @@
   </div>
 </footer>
 
-<a href="https://wa.me/966501940155" class="wa-float" target="_blank" title="تواصل معنا">
+<a rel="noopener noreferrer" href="https://wa.me/966501940155" class="wa-float" target="_blank" title="تواصل معنا">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
 
 <script>
-function toggleNav(){document.getElementById('nav').classList.toggle('mob-open')}
+function toggleNav(){const nav=document.getElementById('nav');const button=document.querySelector('.burger');const open=nav.classList.toggle('mob-open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'إغلاق القائمة':'فتح القائمة');}
+let headerFrame=0;
 window.addEventListener('scroll',()=>{
-  document.getElementById('hdr').style.boxShadow=window.scrollY>30?'0 4px 24px rgba(4,181,184,.1)':'none';
-});
+  if(headerFrame) return;
+  headerFrame=requestAnimationFrame(()=>{
+    headerFrame=0;
+    const header=document.getElementById('hdr');
+    if(header) header.style.boxShadow=window.scrollY>30?'0 4px 24px rgba(21,181,176,.1)':'none';
+  });
+},{passive:true});
 </script>
+<script id="ez-menu-accessibility">
+(()=>{const button=document.querySelector('.burger');const nav=document.getElementById('nav');if(!button||!nav)return;
+const sync=()=>{const open=nav.classList.contains('mob-open')||nav.classList.contains('active');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'إغلاق القائمة':'فتح القائمة');};
+button.addEventListener('click',()=>setTimeout(sync,0));
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setTimeout(sync,0)));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){nav.classList.remove('mob-open','active');button.classList.remove('active');sync();button.focus();}});
+})();
+</script>
+  <script src="/ui-system.js" defer data-ui-system></script>
 </body>
 </html>

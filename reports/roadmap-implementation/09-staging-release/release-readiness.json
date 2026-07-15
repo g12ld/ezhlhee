@@ -1,0 +1,109 @@
+{
+  "status": "READY_FOR_OWNER_RELEASE_GATES",
+  "generated": "2026-07-15",
+  "branch": "codex/ui-ux-pro-max-redesign",
+  "production_modified": false,
+  "protected_preview": "https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app",
+  "validation_suites": [
+    {
+      "name": "Information architecture",
+      "status": "PASS",
+      "detail": "16/16 checks",
+      "report": "reports/roadmap-implementation/02-information-architecture/validation.json"
+    },
+    {
+      "name": "Security",
+      "status": "PASS",
+      "detail": "10/10 checks",
+      "report": "reports/roadmap-implementation/03-security/validation.json"
+    },
+    {
+      "name": "Metadata and structured data",
+      "status": "PASS",
+      "detail": "14/14 checks",
+      "report": "reports/roadmap-implementation/04-metadata-structured-data/validation.json"
+    },
+    {
+      "name": "Content and internal links",
+      "status": "PASS",
+      "detail": "13/13 checks",
+      "report": "reports/roadmap-implementation/05-content-architecture/validation.json"
+    },
+    {
+      "name": "Performance",
+      "status": "PASS",
+      "detail": "16/16 checks",
+      "report": "reports/roadmap-implementation/06-performance/validation.json"
+    },
+    {
+      "name": "UI, accessibility, and CRO",
+      "status": "PASS",
+      "detail": "0/0 checks",
+      "report": "reports/roadmap-implementation/07-ui-accessibility-cro/validation.json"
+    },
+    {
+      "name": "Authority and E-E-A-T",
+      "status": "PASS",
+      "detail": "8/8 checks",
+      "report": "reports/roadmap-implementation/08-authority-eeat/validation.json"
+    },
+    {
+      "name": "Protected staging runtime",
+      "status": "PASS",
+      "detail": "17/17 checks",
+      "report": "reports/roadmap-implementation/09-staging-release/staging-validation.json"
+    }
+  ],
+  "lighthouse": [
+    {
+      "profile": "mobile 375x812",
+      "report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-performance-release.report.json",
+      "report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-performance-release.report.html",
+      "performance": 97,
+      "quality_report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-optimized-final-3.report.json",
+      "quality_report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-optimized-final-3.report.html",
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_ms": 2059,
+      "lcp_ms": 2073,
+      "tbt_ms": 0,
+      "cls": 0,
+      "dom": "987 elements"
+    },
+    {
+      "profile": "desktop",
+      "report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.json",
+      "report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.html",
+      "performance": 100,
+      "quality_report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.json",
+      "quality_report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.html",
+      "accessibility": 100,
+      "best_practices": 100,
+      "seo": 100,
+      "fcp_ms": 431,
+      "lcp_ms": 440,
+      "tbt_ms": 0,
+      "cls": 0,
+      "dom": "987 elements"
+    }
+  ],
+  "release_scope": {
+    "indexable_pages": 119,
+    "articles": 101,
+    "path_redirects": 204,
+    "host_redirects": 1,
+    "changed_or_new_files": 248,
+    "legacy_public_urls_preserved": 1
+  },
+  "owner_gates": [
+    "Revoke the exposed Telegram bot token in BotFather and create a replacement.",
+    "Configure TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID for Vercel Preview and Production without placing values in the repository.",
+    "Approve the final production promotion after a credentialed preview contact-form test passes."
+  ],
+  "post_release_gates": [
+    "Immediate crawl, redirect, canonical, robots, sitemap, header, link, and structured-data verification.",
+    "Submit the canonical sitemap in Search Console only after production validation passes.",
+    "Inspect critical URLs and monitor indexing, crawl, CWV, security, traffic, and rankings for 30 days."
+  ]
+}

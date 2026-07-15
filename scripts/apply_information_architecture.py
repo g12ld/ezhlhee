@@ -136,6 +136,9 @@ def extract_legacy_links() -> list[dict[str, str]]:
         )
         if baseline.returncode == 0:
             LEGACY_LINK_RE.sub(replace, baseline.stdout)
+    if not rows and (REPORT_DIR / "legacy-blog-link-map.csv").is_file():
+        with (REPORT_DIR / "legacy-blog-link-map.csv").open(encoding="utf-8-sig", newline="") as handle:
+            rows = list(csv.DictReader(handle))
     if len(rows) != 100:
         raise RuntimeError(f"Expected 100 legacy blog references, found {len(rows)}")
     write_text(blog_path, updated)
@@ -303,6 +306,16 @@ def apply_noindex(path: Path) -> None:
 
 def git_lastmod(path: Path) -> str:
     relative = path.relative_to(ROOT).as_posix()
+    working_tree = subprocess.run(
+        ["git", "status", "--porcelain", "--", relative],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        check=False,
+    )
+    if working_tree.stdout.strip():
+        return date.today().isoformat()
     result = subprocess.run(
         ["git", "log", "-1", "--format=%cs", "--", relative],
         cwd=ROOT,
@@ -440,6 +453,9 @@ def main() -> None:
         "host_redirect_rules": 1,
         "canonical_pages": len(canonical_rows),
         "sitemap_urls": len(sitemap_rows),
+        "sitemap_format": "single-urlset-below-50000-url-limit",
+        "sitemap_index_policy": "generate-an-index-before-the-standard-50000-url-or-50MB-limit",
+        "sitemap_compression_policy": "rely-on-CDN-HTTP-compression-at-current-size; publish-gzip-members-if-an-index-is-required",
         "production_modified": False,
     }
     write_text(

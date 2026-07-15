@@ -1,0 +1,59 @@
+{
+  "status": "PASS",
+  "deployment": "https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app",
+  "deployment_type": "protected Vercel preview (non-production)",
+  "checks": {
+    "preview_is_protected_from_indexing": true,
+    "all_119_sitemap_pages_return_200": true,
+    "all_redirects_are_permanent_and_chain_free": true,
+    "apex_host_redirect_is_atomic": true,
+    "runtime_redirect_sample_matches_map": true,
+    "security_headers_complete": true,
+    "robots_is_200_and_names_production_sitemap": true,
+    "sitemap_is_200_and_www_only": true,
+    "real_404_status": true,
+    "webp_asset_is_served": true,
+    "browser_identity_files_are_served_and_valid": true,
+    "google_verification_file_is_preserved": true,
+    "legacy_public_url_is_preserved": true,
+    "contact_get_rejected": true,
+    "contact_validation_rejects_bad_payload": true,
+    "contact_fails_closed_without_credentials": true,
+    "contact_responses_do_not_expose_secrets": true
+  },
+  "summary": {
+    "sitemap_pages_checked": 119,
+    "sitemap_page_failures": 0,
+    "redirects_static_checked": 204,
+    "host_redirects_static_checked": 1,
+    "redirect_runtime_samples": 12,
+    "redirect_runtime_failures": 0,
+    "static_redirect_chains": 0,
+    "security_headers": [
+      "content-security-policy",
+      "cross-origin-opener-policy",
+      "permissions-policy",
+      "referrer-policy",
+      "strict-transport-security",
+      "x-content-type-options",
+      "x-frame-options"
+    ]
+  },
+  "failures": {
+    "crawl": [],
+    "redirect_runtime": [],
+    "redirect_chains": []
+  },
+  "api_statuses": {
+    "GET": 405,
+    "invalid_POST": 422,
+    "unconfigured_valid_POST": 503
+  },
+  "notes": [
+    "Vercel emits HTTP 308 for permanent redirects configured with permanent=true; the Firebase fallback retains explicit HTTP 301 rules.",
+    "The contact endpoint intentionally returns 503 until the owner rotates the exposed Telegram token and supplies the replacement environment credentials.",
+    "The preview deployment adds X-Robots-Tag: noindex through Vercel deployment protection; production indexing behavior is not changed.",
+    "Bing verification is intentionally not asserted because the approved baseline marks it optional and no owner verification key was supplied.",
+    "The existing /_new_testi.html URL remains available with HTTP 200, but stays out of the sitemap and crawl-disallowed until the owner approves any URL treatment."
+  ]
+}

@@ -185,6 +185,7 @@ def main() -> None:
         if href.startswith(("#", "http://", "https://", "mailto:", "tel:", "javascript:")):
             continue
         target = unquote(href.split("#", 1)[0].split("?", 1)[0])
+        target = target.lstrip("/") or "index.html"
         if target and not (ROOT / target).is_file():
             broken_blog.append(href)
     check(
@@ -204,6 +205,16 @@ def main() -> None:
         "error-page-noindex",
         'content="noindex, follow"' in page_404 and "canonical" not in page_404.lower(),
         "404 page is noindex and has no canonical declaration",
+    )
+    vercel_ignore = (ROOT / ".vercelignore").read_text(encoding="utf-8", errors="replace")
+    legacy_fragment = ROOT / "_new_testi.html"
+    check(
+        "legacy-public-url-preserved",
+        legacy_fragment.is_file()
+        and "_new_testi.html" not in vercel_ignore
+        and "Disallow: /_new_testi.html" in robots
+        and f"{ORIGIN}/_new_testi.html" not in sitemap_urls,
+        "Legacy fragment remains deployable at its existing URL, crawl-disallowed, and excluded from sitemap",
     )
 
     secret_hits = 0

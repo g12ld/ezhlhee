@@ -7,6 +7,7 @@ import json
 import re
 from collections import Counter
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +51,36 @@ def walk_types(value) -> set[str]:
     return found
 
 
+def walk_nodes(value, requested_type: str) -> list[dict]:
+    """Return every JSON-LD object carrying the requested @type, including nested nodes."""
+    found: list[dict] = []
+    if isinstance(value, dict):
+        item_type = value.get("@type")
+        if item_type == requested_type or (
+            isinstance(item_type, list) and requested_type in item_type
+        ):
+            found.append(value)
+        for child in value.values():
+            found.extend(walk_nodes(child, requested_type))
+    elif isinstance(value, list):
+        for child in value:
+            found.extend(walk_nodes(child, requested_type))
+    return found
+
+
+def resolve_reference(value, schema) -> dict:
+    """Resolve a same-document JSON-LD @id reference for field validation."""
+    if not isinstance(value, dict):
+        return {}
+    reference = value.get("@id")
+    if reference and len(value) == 1:
+        return next(
+            (node for node in walk_nodes(schema, "Organization") if node.get("@id") == reference),
+            value,
+        )
+    return value
+
+
 def main() -> None:
     results: list[dict[str, object]] = []
 
@@ -73,7 +104,7 @@ def main() -> None:
         "twitter:card", "twitter:title", "twitter:description", "twitter:image", "twitter:image:alt",
     }
     titles, descriptions = [], []
-    metadata_errors, schema_errors = [], []
+    metadata_errors, schema_errors, rich_result_errors, browser_identity_errors = [], [], [], []
     faq_pages, article_count, service_count, breadcrumb_count = [], 0, 0, 0
     all_types: set[str] = set()
 
@@ -96,6 +127,16 @@ def main() -> None:
             or not html_ok
         ):
             metadata_errors.append(relative)
+
+        icon_hrefs = simple(content, r'<link\b(?=[^>]*\brel=["\']icon["\'])[^>]*\bhref=["\']([^"\']+)')
+        manifest_hrefs = simple(content, r'<link\b(?=[^>]*\brel=["\']manifest["\'])[^>]*\bhref=["\']([^"\']+)')
+        if (
+            set(icon_hrefs) != {"/favicon.svg", "/images/logo.webp"}
+            or manifest_hrefs != ["/site.webmanifest"]
+            or tags(content, "name", "theme-color") != ["#0D2224"]
+            or tags(content, "name", "msapplication-config") != ["/browserconfig.xml"]
+        ):
+            browser_identity_errors.append(relative)
             continue
         titles.append(title_values[0])
         descriptions.append(description_values[0])
@@ -148,7 +189,7 @@ def main() -> None:
             )
             if not all(
                 article_node.get(key)
-                for key in ("headline", "description", "datePublished", "dateModified", "author", "publisher", "image")
+                for key in ("headline", "description", "datePublished", "dateModified", "author", "publisher", "image", "mainEntityOfPage")
             ):
                 schema_errors.append(relative)
         elif relative in SERVICE_PAGES:
@@ -163,6 +204,52 @@ def main() -> None:
             schema_errors.append(relative)
         if "SearchAction" in types or "LocalBusiness" in types:
             schema_errors.append(relative)
+
+        page_rich_errors: list[str] = []
+        for article in walk_nodes(schema, "Article"):
+            author = article.get("author", {})
+            publisher = resolve_reference(article.get("publisher", {}), schema)
+            if not all(
+                article.get(key)
+                for key in (
+                    "headline", "description", "datePublished", "dateModified",
+                    "image", "mainEntityOfPage",
+                )
+            ):
+                page_rich_errors.append("Article required fields")
+            if not isinstance(author, dict) or not author.get("name"):
+                page_rich_errors.append("Article author")
+            if not isinstance(publisher, dict) or not publisher.get("name") or not publisher.get("logo"):
+                page_rich_errors.append("Article publisher")
+        for product in walk_nodes(schema, "Product"):
+            offers = product.get("offers")
+            offer_nodes = offers if isinstance(offers, list) else [offers]
+            if not product.get("name") or not offer_nodes or offer_nodes == [None]:
+                page_rich_errors.append("Product name/offers")
+                continue
+            for offer in offer_nodes:
+                if not isinstance(offer, dict) or not all(
+                    offer.get(key) for key in ("price", "priceCurrency", "availability", "url")
+                ):
+                    page_rich_errors.append("Offer required fields")
+                elif offer.get("priceCurrency") != "SAR" or not str(offer.get("availability", "")).startswith("https://schema.org/"):
+                    page_rich_errors.append("Offer currency/availability")
+        for breadcrumb in walk_nodes(schema, "BreadcrumbList"):
+            items = breadcrumb.get("itemListElement")
+            if not isinstance(items, list) or not items:
+                page_rich_errors.append("Breadcrumb items")
+                continue
+            for position, item in enumerate(items, start=1):
+                if (
+                    not isinstance(item, dict)
+                    or item.get("@type") != "ListItem"
+                    or item.get("position") != position
+                    or not item.get("name")
+                    or not item.get("item")
+                ):
+                    page_rich_errors.append("Breadcrumb ListItem")
+        if page_rich_errors:
+            rich_result_errors.append(f"{relative}: {', '.join(sorted(set(page_rich_errors)))}")
 
     title_duplicates = [title for title, count in Counter(titles).items() if count > 1]
     description_duplicates = [value for value, count in Counter(descriptions).items() if count > 1]
@@ -180,6 +267,11 @@ def main() -> None:
         "structured-data-json-valid",
         not schema_errors,
         f"errors={len(set(schema_errors))}",
+    )
+    check(
+        "google-rich-result-required-fields",
+        not rich_result_errors,
+        f"errors={len(rich_result_errors)}",
     )
     check("faqpage-prohibited", not faq_pages and "FAQPage" not in all_types, f"pages={len(faq_pages)}")
     expected_article_count = sum(1 for relative, _ in pages if relative.startswith("articles/"))
@@ -205,6 +297,36 @@ def main() -> None:
         "single-language-hreflang-decision",
         not any("hreflang=" in path.read_text(encoding="utf-8").lower() for _, path in pages),
         "Arabic-only site: hreflang intentionally omitted",
+    )
+    check(
+        "browser-identity-metadata-coverage",
+        not browser_identity_errors,
+        f"valid={119 - len(set(browser_identity_errors))}, errors={len(set(browser_identity_errors))}",
+    )
+    identity_files_ok = False
+    try:
+        webmanifest = json.loads((ROOT / "site.webmanifest").read_text(encoding="utf-8"))
+        manifest_alias = json.loads((ROOT / "manifest.json").read_text(encoding="utf-8"))
+        browserconfig = ET.fromstring((ROOT / "browserconfig.xml").read_text(encoding="utf-8"))
+        favicon = ET.fromstring((ROOT / "favicon.svg").read_text(encoding="utf-8"))
+        icon = webmanifest.get("icons", [{}])[0]
+        identity_files_ok = (
+            webmanifest == manifest_alias
+            and webmanifest.get("lang") == "ar-SA"
+            and webmanifest.get("dir") == "rtl"
+            and webmanifest.get("theme_color") == "#0D2224"
+            and webmanifest.get("background_color") == "#FFFFFF"
+            and icon.get("src") == "/images/logo.webp"
+            and (ROOT / "images" / "logo.webp").is_file()
+            and browserconfig.findtext("./msapplication/tile/TileColor") == "#0D2224"
+            and favicon.tag.endswith("svg")
+        )
+    except (OSError, ValueError, ET.ParseError, json.JSONDecodeError):
+        identity_files_ok = False
+    check(
+        "browser-identity-files-valid",
+        identity_files_ok,
+        "favicon.svg, site.webmanifest, manifest.json, browserconfig.xml, and logo asset",
     )
 
     passed = sum(1 for result in results if result["passed"])

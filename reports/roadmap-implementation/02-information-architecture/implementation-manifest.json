@@ -6,5 +6,8 @@
   "host_redirect_rules": 1,
   "canonical_pages": 119,
   "sitemap_urls": 119,
+  "sitemap_format": "single-urlset-below-50000-url-limit",
+  "sitemap_index_policy": "generate-an-index-before-the-standard-50000-url-or-50MB-limit",
+  "sitemap_compression_policy": "rely-on-CDN-HTTP-compression-at-current-size; publish-gzip-members-if-an-index-is-required",
   "production_modified": false
 }

@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "tested_at": "2026-07-15",
+  "origin": "http://127.0.0.1:4173",
+  "method": "Authenticated in-app Chromium session with computed-style and interaction checks",
+  "homepage_viewports": [
+    {"width": 375, "height": 812, "horizontal_overflow_px": -4, "main_landmarks": 1, "h1_count": 1, "mobile_menu_mode": true, "hero_primary_cta": "اطلب الباقة الذهبية برو ←", "hero_primary_cta_top_px": 709, "keyboard_portfolio_cards": 40, "computed_contrast_failures": 0},
+    {"width": 768, "height": 1024, "horizontal_overflow_px": -4, "main_landmarks": 1, "h1_count": 1, "mobile_menu_mode": true, "hero_primary_cta": "اطلب الباقة الذهبية برو ←", "hero_primary_cta_top_px": 630, "keyboard_portfolio_cards": 40},
+    {"width": 1024, "height": 900, "horizontal_overflow_px": -4, "main_landmarks": 1, "h1_count": 1, "desktop_navigation_mode": true, "hero_primary_cta": "اطلب الباقة الذهبية برو ←", "hero_primary_cta_top_px": 692, "keyboard_portfolio_cards": 40},
+    {"width": 1440, "height": 1000, "horizontal_overflow_px": -4, "main_landmarks": 1, "h1_count": 1, "desktop_navigation_mode": true, "hero_primary_cta": "اطلب الباقة الذهبية برو ←", "hero_primary_cta_top_px": 813, "keyboard_portfolio_cards": 40}
+  ],
+  "interaction_checks": {
+    "mobile_menu_opens_and_syncs_aria_expanded": true,
+    "escape_closes_mobile_menu_and_restores_focus": true,
+    "enter_opens_portfolio_dialog": true,
+    "dialog_exposes_modal_name_and_hidden_state": true,
+    "escape_closes_portfolio_dialog": true,
+    "consultation_popup_is_user_initiated": true,
+    "automatic_timed_popup_removed": true
+  },
+  "representative_mobile_pages": [
+    {"path": "/salla-store-design.html", "overflow_px": -4, "main": 1, "h1": 1, "navigation_labeled": true, "computed_contrast_failures": 0},
+    {"path": "/zid-store-design.html", "overflow_px": -4, "main": 1, "h1": 1, "navigation_labeled": true, "computed_contrast_failures": 0},
+    {"path": "/articles.html", "overflow_px": -4, "main": 1, "h1": 1, "navigation_labeled": true, "computed_contrast_failures": 0},
+    {"path": "/blog.html", "overflow_px": -15, "main": 1, "h1": 1, "navigation_labeled": true, "computed_contrast_failures": 0}
+  ],
+  "limitations": [
+    "Computed contrast checks cover rendered text against resolved opaque or gradient brand backgrounds; final assistive-technology and automated staging audits remain release gates.",
+    "Negative overflow values reflect the browser viewport gutter and mean no horizontal content overflow was present."
+  ]
+}

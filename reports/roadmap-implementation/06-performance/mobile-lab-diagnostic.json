@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-07-15T14:35:00+03:00",
+  "url": "http://127.0.0.1:4173/index.html?perf=cwv3",
+  "method": "Chrome CDP diagnostic in the authenticated Codex browser; not Lighthouse and not CrUX",
+  "viewport": {
+    "width": 375,
+    "height": 812
+  },
+  "throttling": {
+    "cpu_rate": 4,
+    "latency_ms": 150,
+    "download_throughput_bytes_per_second": 200000,
+    "upload_throughput_bytes_per_second": 93750,
+    "cache_disabled": true
+  },
+  "metrics": {
+    "lcp_ms": 564,
+    "cls": 0.0049261083743842365,
+    "inp_ms": null,
+    "first_meaningful_paint_ms": 659,
+    "dom_content_loaded_ms": 1527,
+    "layout_duration_seconds": 0.277243,
+    "recalculate_style_duration_seconds": 0.431979,
+    "script_duration_seconds": 0.006852,
+    "task_duration_seconds": 2.304133,
+    "document_dom_nodes": 2246,
+    "document_images": 45,
+    "lazy_images": 43,
+    "responsive_images": 44,
+    "h1_document_offset_px": 342
+  },
+  "targets": {
+    "lcp_ms_max": 2500,
+    "cls_max": 0.1,
+    "inp_ms_max": 200
+  },
+  "result": {
+    "lcp": "pass_lab_diagnostic",
+    "cls": "pass_lab_diagnostic",
+    "inp": "not_measured_requires_lighthouse_and_field_monitoring"
+  },
+  "limitations": [
+    "This local diagnostic is not a Google Lighthouse report.",
+    "Search Console and CrUX currently report insufficient field data.",
+    "INP requires real or supported synthetic interactions and was not claimed.",
+    "Run Lighthouse/PageSpeed against the public Vercel preview before production approval."
+  ]
+}

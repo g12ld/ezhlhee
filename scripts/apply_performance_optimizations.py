@@ -81,6 +81,42 @@ NOOP_SCROLL_RE = re.compile(
     r"\s*// تحسين الأداء عند التمرير\s*let scrollTimeout;\s*window\.addEventListener\('scroll'.*?\n\s*\}\);",
     re.S,
 )
+HEADER_SCROLL_RE = re.compile(
+    r"window\.addEventListener\('scroll',\(\)=>\{\s*"
+    r"document\.getElementById\('hdr'\)\.style\.boxShadow=window\.scrollY>30\?"
+    r"'0 4px 24px rgba\(4,181,184,\.1\)':'none';\s*\}\);",
+    re.S,
+)
+HEADER_SCROLL = """let headerFrame=0;
+window.addEventListener('scroll',()=>{
+  if(headerFrame) return;
+  headerFrame=requestAnimationFrame(()=>{
+    headerFrame=0;
+    const header=document.getElementById('hdr');
+    if(header) header.style.boxShadow=window.scrollY>30?'0 4px 24px rgba(21,181,176,.1)':'none';
+  });
+},{passive:true});"""
+
+
+def remove_external_fonts(content: str) -> str:
+    content = re.sub(
+        r'\s*<link rel="preconnect" href="https://fonts\.googleapis\.com">\s*', "\n", content
+    )
+    content = re.sub(
+        r'\s*<link rel="preconnect" href="https://fonts\.gstatic\.com" crossorigin>\s*', "\n", content
+    )
+    content = re.sub(
+        r'\s*<link (?:href="https://fonts\.googleapis\.com/[^"]+" rel="stylesheet"|rel="stylesheet" href="https://fonts\.googleapis\.com/[^"]+")>\s*',
+        "\n",
+        content,
+    )
+    content = re.sub(
+        r"font-family:\s*['\"]Tajawal['\"]\s*,\s*sans-serif",
+        "font-family:Tahoma,Arial,sans-serif",
+        content,
+        flags=re.I,
+    )
+    return content
 
 
 def optimize_fonts(path: Path, content: str) -> tuple[str, bool]:
@@ -154,8 +190,11 @@ def main() -> None:
         if any(part in {".git", "reports", "outputs", "scratch"} for part in path.parts):
             continue
         content = path.read_text(encoding="utf-8")
+        content = content.replace('src="logo.png"', 'src="images/logo.webp"')
         content, changed = optimize_fonts(path, content)
         content = content.replace("display=swap", "display=optional")
+        content = remove_external_fonts(content)
+        content = HEADER_SCROLL_RE.sub(HEADER_SCROLL, content, count=1)
         font_pages += int(changed)
         if path == ROOT / "index.html":
             content = optimize_homepage(content)

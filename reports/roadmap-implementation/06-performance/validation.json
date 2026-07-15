@@ -1,0 +1,87 @@
+{
+  "checks": 16,
+  "passed": 16,
+  "failed": 0,
+  "results": [
+    {
+      "check": "intrinsic-image-dimensions",
+      "passed": true,
+      "evidence": "images=272, missing=0"
+    },
+    {
+      "check": "image-loading-explicit",
+      "passed": true,
+      "evidence": "missing=0"
+    },
+    {
+      "check": "async-image-decoding",
+      "passed": true,
+      "evidence": "missing=0"
+    },
+    {
+      "check": "responsive-images",
+      "passed": true,
+      "evidence": "responsive=272, total=272"
+    },
+    {
+      "check": "critical-image-priority",
+      "passed": true,
+      "evidence": "eager=1, high_priority=1"
+    },
+    {
+      "check": "responsive-variant-set",
+      "passed": true,
+      "evidence": "variants=37, bytes=2647170"
+    },
+    {
+      "check": "no-render-blocking-google-fonts",
+      "passed": true,
+      "evidence": "files=0"
+    },
+    {
+      "check": "hero-in-critical-order",
+      "passed": true,
+      "evidence": "hero_offset=69418, coupon_offset=73344"
+    },
+    {
+      "check": "below-fold-render-containment",
+      "passed": true,
+      "evidence": "Below-fold sections use content visibility with an intrinsic fallback"
+    },
+    {
+      "check": "scroll-listeners-deduplicated",
+      "passed": true,
+      "evidence": "Scroll previews bind once and resize only resets transforms"
+    },
+    {
+      "check": "passive-header-scroll",
+      "passed": true,
+      "evidence": "Header shadow work is animation-frame throttled and passive"
+    },
+    {
+      "check": "reduced-motion-support",
+      "passed": true,
+      "evidence": "Non-essential animation collapses for reduced-motion users"
+    },
+    {
+      "check": "image-change-log",
+      "passed": true,
+      "evidence": "rows=272"
+    },
+    {
+      "check": "mobile-lab-lcp",
+      "passed": true,
+      "evidence": "lcp_ms=564"
+    },
+    {
+      "check": "mobile-lab-cls",
+      "passed": true,
+      "evidence": "cls=0.0049"
+    },
+    {
+      "check": "field-data-claim-safety",
+      "passed": true,
+      "evidence": "INP and field CWV are explicitly deferred to staged Lighthouse and 30-day monitoring"
+    }
+  ]
+}

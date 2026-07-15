@@ -92,6 +92,13 @@ SOCIAL_META_RE = re.compile(
     r"\s*<meta\b(?:(?=[^>]*\bproperty=[\"']og:)|(?=[^>]*\bname=[\"']twitter:))[^>]*>\s*",
     re.I,
 )
+BROWSER_IDENTITY_RE = re.compile(
+    r"\s*(?:"
+    r"<link\b(?=[^>]*\brel=[\"'](?:icon|manifest)[\"'])[^>]*>"
+    r"|<meta\b(?=[^>]*\bname=[\"'](?:theme-color|msapplication-config)[\"'])[^>]*>"
+    r")\s*",
+    re.I,
+)
 AUTHOR_META_RE = re.compile(
     r"\s*<meta\b(?=[^>]*\bname=[\"']author[\"'])[^>]*>\s*", re.I
 )
@@ -401,6 +408,12 @@ def social_block(title: str, description: str, url: str, article: bool) -> str:
         ("name", "twitter:image:alt", "إزهلها لتصميم وتطوير المتاجر الإلكترونية"),
     ]
     lines = [
+        '<link rel="icon" href="/favicon.svg" type="image/svg+xml">',
+        '<link rel="icon" href="/images/logo.webp" type="image/webp" sizes="1000x1000">',
+        '<link rel="manifest" href="/site.webmanifest">',
+        '<meta name="theme-color" content="#0D2224">',
+        '<meta name="msapplication-config" content="/browserconfig.xml">',
+    ] + [
         f'<meta {attribute}="{name}" content="{html.escape(value, quote=True)}">'
         for attribute, name, value in values
     ]
@@ -446,6 +459,7 @@ def update_page(path: Path) -> dict[str, str]:
         flags=re.I,
     )
     content = SOCIAL_META_RE.sub("\n", content)
+    content = BROWSER_IDENTITY_RE.sub("\n", content)
     content = AUTHOR_META_RE.sub("\n", content)
     content = JSONLD_RE.sub("\n", content)
     content = FAQ_COMMENT_RE.sub("\n", content)

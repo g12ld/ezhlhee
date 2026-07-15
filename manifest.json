@@ -1,0 +1,21 @@
+{
+  "id": "/",
+  "name": "إزهلها لتصميم المتاجر الإلكترونية",
+  "short_name": "إزهلها",
+  "description": "وكالة سعودية لتصميم وتطوير متاجر سلة وزد وWooCommerce.",
+  "lang": "ar-SA",
+  "dir": "rtl",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0D2224",
+  "icons": [
+    {
+      "src": "/images/logo.webp",
+      "sizes": "1000x1000",
+      "type": "image/webp",
+      "purpose": "any"
+    }
+  ]
+}
