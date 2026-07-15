@@ -1,0 +1,62 @@
+{
+  "checks": 11,
+  "passed": 11,
+  "failed": 0,
+  "results": [
+    {
+      "check": "indexable-page-count",
+      "passed": true,
+      "evidence": "pages=119"
+    },
+    {
+      "check": "metadata-complete-and-bounded",
+      "passed": true,
+      "evidence": "valid=119, errors=0"
+    },
+    {
+      "check": "metadata-unique",
+      "passed": true,
+      "evidence": "duplicate_titles=0, duplicate_descriptions=0"
+    },
+    {
+      "check": "structured-data-json-valid",
+      "passed": true,
+      "evidence": "errors=0"
+    },
+    {
+      "check": "faqpage-prohibited",
+      "passed": true,
+      "evidence": "pages=0"
+    },
+    {
+      "check": "article-schema-coverage",
+      "passed": true,
+      "evidence": "articles=101, expected=101"
+    },
+    {
+      "check": "service-schema-coverage",
+      "passed": true,
+      "evidence": "services=13"
+    },
+    {
+      "check": "breadcrumb-schema-coverage",
+      "passed": true,
+      "evidence": "pages=118"
+    },
+    {
+      "check": "required-schema-types",
+      "passed": true,
+      "evidence": "types=Article|BreadcrumbList|City|CollectionPage|ContactPoint|Country|ImageObject|ItemList|ListItem|Offer|Organization|Product|Service|WebPage|WebSite"
+    },
+    {
+      "check": "social-image-present",
+      "passed": true,
+      "evidence": "bytes=27084"
+    },
+    {
+      "check": "single-language-hreflang-decision",
+      "passed": true,
+      "evidence": "Arabic-only site: hreflang intentionally omitted"
+    }
+  ]
+}
