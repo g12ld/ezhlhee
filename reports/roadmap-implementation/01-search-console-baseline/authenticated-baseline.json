@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-07-15T13:30:00+03:00",
+  "property": "sc-domain:ezhalhe-sa.com",
+  "access": "authenticated_owner",
+  "performance": {
+    "search_type": "web",
+    "range": {
+      "start": "2026-04-14",
+      "end": "2026-07-13",
+      "label": "3 months"
+    },
+    "clicks": 73,
+    "impressions": 2156,
+    "ctr_percent": 3.4,
+    "average_position": 16,
+    "query_rows_captured": 100,
+    "total_queries_reported": 104,
+    "page_rows_captured": 43,
+    "country_rows_captured": 51,
+    "device_rows_captured": 3,
+    "saudi_arabia": {
+      "clicks": 70,
+      "impressions": 1795,
+      "ctr_percent": 3.9,
+      "average_position": 16.5
+    },
+    "mobile": {
+      "clicks": 62,
+      "impressions": 1431,
+      "ctr_percent": 4.3,
+      "average_position": 10.2
+    }
+  },
+  "indexing": {
+    "indexed": 44,
+    "not_indexed": 60,
+    "reasons": {
+      "redirected_page": 13,
+      "not_found_404": 27,
+      "redirect_error": 5,
+      "crawled_not_indexed": 15,
+      "server_error_5xx": 0
+    }
+  },
+  "sitemap": {
+    "submitted": "https://ezhalhe-sa.com/sitemap.xml",
+    "submitted_date": "2026-06-15",
+    "last_read": "2026-06-15",
+    "status": "success",
+    "discovered_pages": 122,
+    "legacy_submission": {
+      "url": "http://ezhalhe-sa.com/",
+      "status": "one_error",
+      "discovered_pages": 0
+    }
+  },
+  "core_web_vitals": {
+    "mobile": "insufficient_90_day_field_data",
+    "desktop": "insufficient_90_day_field_data",
+    "last_updated": "2026-07-14"
+  },
+  "enhancements": {
+    "breadcrumbs": {
+      "valid": 2,
+      "invalid": 0
+    }
+  },
+  "links": {
+    "external_total": 2,
+    "top_target": "https://www.ezhalhe-sa.com/",
+    "top_target_links": 2,
+    "top_linking_sites": [
+      [
+        "blogspot.com",
+        1
+      ],
+      [
+        "tiktok.com",
+        1
+      ]
+    ],
+    "top_anchor_text": [
+      "ezhalhe sa com",
+      "مختصين بتصميم متاجر الالكترونية"
+    ],
+    "internal_total": 50
+  },
+  "crawl_stats": {
+    "range_days": 90,
+    "last_updated": "2026-07-13",
+    "requests": 676,
+    "download_bytes": 13092895,
+    "average_response_ms": 157,
+    "hosts": {
+      "www_requests": 430,
+      "apex_requests": 246
+    },
+    "responses_percent": {
+      "status_200": 56,
+      "status_301": 33,
+      "status_404": 8,
+      "status_5xx": 2,
+      "robots_unavailable": "<1"
+    },
+    "purpose_percent": {
+      "discovery": 60,
+      "refresh": 40
+    }
+  },
+  "security": {
+    "manual_actions": "none_detected",
+    "security_issues": "none_detected"
+  },
+  "robots": {
+    "search_console_status": "all_files_valid"
+  },
+  "inspections": [
+    {
+      "url": "https://www.ezhalhe-sa.com/",
+      "status": "indexed",
+      "user_canonical": "https://www.ezhalhe-sa.com/",
+      "google_canonical": "inspected_url",
+      "sitemap_referral": "none_detected",
+      "last_crawl": "2026-07-10"
+    },
+    {
+      "url": "https://ezhalhe-sa.com/index.html",
+      "status": "indexed",
+      "user_canonical": "none_at_last_crawl",
+      "google_canonical": "inspected_url",
+      "sitemap_referral": "https://ezhalhe-sa.com/sitemap.xml",
+      "last_crawl": "2026-05-09"
+    },
+    {
+      "url": "https://www.ezhalhe-sa.com/salla-store-design.html",
+      "status": "indexed",
+      "user_canonical": "none_at_last_crawl",
+      "google_canonical": "inspected_url",
+      "sitemap_referral": "none_detected",
+      "last_crawl": "2026-05-17"
+    },
+    {
+      "url": "https://www.ezhalhe-sa.com/zid-store-design.html",
+      "status": "indexed",
+      "user_canonical": "none_at_last_crawl",
+      "google_canonical": "inspected_url",
+      "sitemap_referral": "none_detected",
+      "last_crawl": "2026-05-17"
+    },
+    {
+      "url": "https://www.ezhalhe-sa.com/articles/مقارنة-بين-بوابات-الدفع-الإلكتروني-ميس-مدفوع-وإمكان.html",
+      "status": "indexed"
+    }
+  ]
+}

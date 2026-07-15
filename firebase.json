@@ -19,44 +19,1048 @@
       "trailingSlash": false,
       "errorPage": "404.html",
       "redirects": [
-        { "source": "/index.html", "destination": "/", "type": 301 },
-        { "source": "/data-analysis.html", "destination": "/", "type": 301 },
-        { "source": "/articles/guide-design-store.html", "destination": "/salla-store-design.html", "type": 301 },
-        { "source": "/articles/service1-article1.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service1-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service2-article5.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service3-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service3-article6.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service4-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service4-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service4-article10.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service5-article1.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service6-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service6-article6.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service7-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service7-article8.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service7-article10.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service8-article2.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service8-article9.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service9-article2.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service9-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article5.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article6.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article8.html", "destination": "/", "type": 301 }
+        {
+          "source": "/index.html",
+          "destination": "https://www.ezhalhe-sa.com/",
+          "type": 301
+        },
+        {
+          "source": "/data-analysis.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/guide-design-store.html",
+          "destination": "https://www.ezhalhe-sa.com/salla-store-design.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/guide-design-store",
+          "destination": "https://www.ezhalhe-sa.com/salla-store-design.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/أسرار-تصميم-صفحات-المنتجات-الجذابة-على-منصة-سلة.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/أسرار-تصميم-صفحات-المنتجات-الجذابة-على-منصة-سلة.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحسين-seo-للمتاجر-الإلكترونية-على-سلة-دليل-شامل-للبداية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article4",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحسين-seo-للمتاجر-الإلكترونية-على-سلة-دليل-شامل-للبداية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/مقارنة-شاملة-بين-باقات-تصميم-متجر-سلة-بيسك-بلس-برو-ذهبية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/مقارنة-شاملة-بين-باقات-تصميم-متجر-سلة-بيسك-بلس-برو-ذهبية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تختار-قالب-متجر-زد-المناسب-لمنتجاتك-دليل-عملي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article6",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تختار-قالب-متجر-زد-المناسب-لمنتجاتك-دليل-عملي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/أخطاء-شائعة-في-تصميم-المتاجر-الإلكترونية-وكيفية-تجنبها.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/أخطاء-شائعة-في-تصميم-المتاجر-الإلكترونية-وكيفية-تجنبها.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article2",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article3",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article4",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article5",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article6",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article8",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article9",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article10",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article2",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article3",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article4",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article5",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article6",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article8",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article9",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article10",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        }
       ],
       "headers": [
         {
           "source": "**/*.html",
           "headers": [
-            { "key": "Cache-Control", "value": "public, max-age=3600" },
-            { "key": "X-Content-Type-Options", "value": "nosniff" }
+            {
+              "key": "Cache-Control",
+              "value": "public, max-age=3600"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            }
           ]
         },
         {
           "source": "/articles/**",
           "headers": [
-            { "key": "X-Robots-Tag", "value": "index, follow" }
+            {
+              "key": "X-Robots-Tag",
+              "value": "index, follow"
+            }
           ]
         }
       ]
@@ -80,31 +1084,1026 @@
       "trailingSlash": false,
       "errorPage": "404.html",
       "redirects": [
-        { "source": "/index.html", "destination": "/", "type": 301 },
-        { "source": "/data-analysis.html", "destination": "/", "type": 301 },
-        { "source": "/articles/guide-design-store.html", "destination": "/salla-store-design.html", "type": 301 },
-        { "source": "/articles/service1-article1.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service1-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service2-article5.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service3-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service3-article6.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service4-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service4-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service4-article10.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service5-article1.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service6-article4.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service6-article6.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service7-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service7-article8.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service7-article10.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service8-article2.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service8-article9.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service9-article2.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service9-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article5.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article6.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article7.html", "destination": "/", "type": 301 },
-        { "source": "/articles/service10-article8.html", "destination": "/", "type": 301 }
+        {
+          "source": "/index.html",
+          "destination": "https://www.ezhalhe-sa.com/",
+          "type": 301
+        },
+        {
+          "source": "/data-analysis.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/guide-design-store.html",
+          "destination": "https://www.ezhalhe-sa.com/salla-store-design.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/guide-design-store",
+          "destination": "https://www.ezhalhe-sa.com/salla-store-design.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/أسرار-تصميم-صفحات-المنتجات-الجذابة-على-منصة-سلة.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/أسرار-تصميم-صفحات-المنتجات-الجذابة-على-منصة-سلة.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحسين-seo-للمتاجر-الإلكترونية-على-سلة-دليل-شامل-للبداية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article4",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحسين-seo-للمتاجر-الإلكترونية-على-سلة-دليل-شامل-للبداية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/مقارنة-شاملة-بين-باقات-تصميم-متجر-سلة-بيسك-بلس-برو-ذهبية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/مقارنة-شاملة-بين-باقات-تصميم-متجر-سلة-بيسك-بلس-برو-ذهبية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تختار-قالب-متجر-زد-المناسب-لمنتجاتك-دليل-عملي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article6",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تختار-قالب-متجر-زد-المناسب-لمنتجاتك-دليل-عملي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/أخطاء-شائعة-في-تصميم-المتاجر-الإلكترونية-وكيفية-تجنبها.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service1-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/أخطاء-شائعة-في-تصميم-المتاجر-الإلكترونية-وكيفية-تجنبها.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article2",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article3",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article4",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article5",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article6",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article8",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article9",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service2-article10",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service3-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service4-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service5-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service6-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service7-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service8-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article2",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article3",
+          "destination": "https://www.ezhalhe-sa.com/articles/دور-الهوية-البصرية-في-نجاح-متجرك-الإلكتروني-الاحترافي.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article4",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article5",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article6",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-تجربة-المستخدم-ux-في-متجرك-الإلكتروني-خطوات-التنفيذ.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article8",
+          "destination": "https://www.ezhalhe-sa.com/articles/عناصر-التصميم-التي-تزيد-من-معدل-التحويل-في-المتاجر-الإلكترونية.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article9",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-احترافي-استراتيجيات-لتمييز-متجرك-عن-المنافسين.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service9-article10",
+          "destination": "https://www.ezhalhe-sa.com/articles/تصميم-متجر-إلكتروني-متوافق-مع-الجوال-mobile-first-design-على-زد.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article1.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article1",
+          "destination": "https://www.ezhalhe-sa.com/articles/كيف-تضمن-إدارة-متجرك-الإلكتروني-بكفاءة-عالية-لمدة-شهر.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article2.html",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article2",
+          "destination": "https://www.ezhalhe-sa.com/store-verification.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article3.html",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article3",
+          "destination": "https://www.ezhalhe-sa.com/secure-payments.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article4.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article4",
+          "destination": "https://www.ezhalhe-sa.com/articles/تحليل-أداء-المتجر-وحسابات-التواصل-الاجتماعي-مؤشرات-الأداء-الرئيسية-kpis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article5.html",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article5",
+          "destination": "https://www.ezhalhe-sa.com/product-marketing.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article6.html",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article6",
+          "destination": "https://www.ezhalhe-sa.com/search-engine-optimization.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article7.html",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article7",
+          "destination": "https://www.ezhalhe-sa.com/articles/إدارة-خدمة-العملاء-عبر-التواصل-الاجتماعي-نصائح-لرضا-العميل.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article8.html",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article8",
+          "destination": "https://www.ezhalhe-sa.com/competitor-analysis.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article9.html",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article9",
+          "destination": "https://www.ezhalhe-sa.com/digital-ads.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article10.html",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        },
+        {
+          "source": "/articles/service10-article10",
+          "destination": "https://www.ezhalhe-sa.com/brand-building.html",
+          "type": 301
+        }
       ]
     }
   ],
