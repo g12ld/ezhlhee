@@ -1,0 +1,82 @@
+{
+  "checks": 15,
+  "passed": 15,
+  "failed": 0,
+  "results": [
+    {
+      "check": "redirect-map-count",
+      "passed": true,
+      "evidence": "map=204, vercel_path_rules=204"
+    },
+    {
+      "check": "redirect-sources-unique",
+      "passed": true,
+      "evidence": "unique=204, total=204"
+    },
+    {
+      "check": "redirect-status-permanent",
+      "passed": true,
+      "evidence": "All redirect-map and Vercel path rules are permanent"
+    },
+    {
+      "check": "redirect-destinations-exist",
+      "passed": true,
+      "evidence": "missing=0"
+    },
+    {
+      "check": "no-redirect-chains",
+      "passed": true,
+      "evidence": "chains=0"
+    },
+    {
+      "check": "canonical-host-rule",
+      "passed": true,
+      "evidence": "host_rules=1"
+    },
+    {
+      "check": "firebase-redirect-parity",
+      "passed": true,
+      "evidence": "mismatched_targets=0"
+    },
+    {
+      "check": "search-console-exclusions-covered",
+      "passed": true,
+      "evidence": "checked=32, uncovered=0"
+    },
+    {
+      "check": "canonical-coverage",
+      "passed": true,
+      "evidence": "valid=119, errors=0"
+    },
+    {
+      "check": "sitemap-valid-canonical-urls",
+      "passed": true,
+      "evidence": "urls=119, unique=119, missing=0, redirected=0"
+    },
+    {
+      "check": "sitemap-lastmod-complete",
+      "passed": true,
+      "evidence": "lastmods=119"
+    },
+    {
+      "check": "blog-legacy-links-repaired",
+      "passed": true,
+      "evidence": "legacy=0, broken=0"
+    },
+    {
+      "check": "robots-sitemap-canonical",
+      "passed": true,
+      "evidence": "Robots references the canonical sitemap"
+    },
+    {
+      "check": "error-page-noindex",
+      "passed": true,
+      "evidence": "404 page is noindex and has no canonical declaration"
+    },
+    {
+      "check": "telegram-token-scan",
+      "passed": true,
+      "evidence": "potential_live_token_patterns=0"
+    }
+  ]
+}

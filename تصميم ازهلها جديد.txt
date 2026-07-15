@@ -377,11 +377,11 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
   `.trim();
 
   try {
-    await fetch("https://api.telegram.org/bot8312551518:AAH7zIVAW0QkmPrhaQGsDaUJSrl6fg9TvgM/sendMessage", {
+    await fetch("https://api.telegram.org/bot[REMOVED-COMPROMISED-TOKEN]/sendMessage", {
       method: "POST",
       headers: {"Content-Type":"application/json"},
       body: JSON.stringify({
-        chat_id: "6795507850",
+        chat_id:"[SERVER-ENV]",
         text: Y,
         parse_mode: "Markdown"
       })
