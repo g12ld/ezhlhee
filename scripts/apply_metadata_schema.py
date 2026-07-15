@@ -358,7 +358,7 @@ def graph_for(path: Path, title: str, description: str, h1: str) -> dict:
                 "author": {
                     "@type": "Organization",
                     "name": "فريق إزهلها",
-                    "url": f"{ORIGIN}/#about",
+                    "url": f"{ORIGIN}/#why-us",
                 },
                 "publisher": {"@id": f"{ORIGIN}/#organization"},
                 "inLanguage": "ar-SA",

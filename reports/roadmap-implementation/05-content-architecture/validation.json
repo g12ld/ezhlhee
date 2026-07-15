@@ -1,0 +1,72 @@
+{
+  "checks": 13,
+  "passed": 13,
+  "failed": 0,
+  "results": [
+    {
+      "check": "no-broken-internal-links",
+      "passed": true,
+      "evidence": "broken=0"
+    },
+    {
+      "check": "no-redirecting-internal-links",
+      "passed": true,
+      "evidence": "redirected=0"
+    },
+    {
+      "check": "internal-links-host-relative",
+      "passed": true,
+      "evidence": "absolute_same_domain=0"
+    },
+    {
+      "check": "internal-fragments-resolve",
+      "passed": true,
+      "evidence": "invalid_fragments=0"
+    },
+    {
+      "check": "no-indexable-orphans",
+      "passed": true,
+      "evidence": "orphans=0"
+    },
+    {
+      "check": "crawl-reachable-from-home",
+      "passed": true,
+      "evidence": "reached=119, total=119, unreachable=0"
+    },
+    {
+      "check": "article-author-and-date",
+      "passed": true,
+      "evidence": "articles=101, missing=0"
+    },
+    {
+      "check": "article-contextual-links",
+      "passed": true,
+      "evidence": "articles=101, missing=0, wrong_link_count=0"
+    },
+    {
+      "check": "topic-hub-navigation",
+      "passed": true,
+      "evidence": "hub_links=5"
+    },
+    {
+      "check": "article-index-complete",
+      "passed": true,
+      "evidence": "cards=101, articles=101"
+    },
+    {
+      "check": "no-editor-artifacts",
+      "passed": true,
+      "evidence": "files=0"
+    },
+    {
+      "check": "redirect-link-change-log",
+      "passed": true,
+      "evidence": "changes=755"
+    },
+    {
+      "check": "cluster-inventory-complete",
+      "passed": true,
+      "evidence": "rows=101"
+    }
+  ]
+}
