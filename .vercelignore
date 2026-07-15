@@ -16,5 +16,7 @@ firebase.json
 firestore.indexes.json
 firestore.rules
 package-lock.json
+.env
+.env.*
 _new_testi.html
 للل

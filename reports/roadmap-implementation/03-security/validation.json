@@ -1,0 +1,62 @@
+{
+  "checks": 10,
+  "passed": 10,
+  "failed": 0,
+  "external_release_requirements": [
+    "Revoke the compromised bot token in BotFather",
+    "Create a replacement token",
+    "Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in Vercel staging and production"
+  ],
+  "results": [
+    {
+      "check": "no-token-patterns",
+      "passed": true,
+      "evidence": "files=0"
+    },
+    {
+      "check": "no-client-telegram-calls",
+      "passed": true,
+      "evidence": "files=0"
+    },
+    {
+      "check": "contact-form-server-endpoint",
+      "passed": true,
+      "evidence": "Homepage submits only to the same-origin server endpoint"
+    },
+    {
+      "check": "contact-form-accessibility",
+      "passed": true,
+      "evidence": "Labels and live status are present"
+    },
+    {
+      "check": "endpoint-env-only-secrets",
+      "passed": true,
+      "evidence": "Endpoint reads both credentials from environment variables"
+    },
+    {
+      "check": "endpoint-defenses",
+      "passed": true,
+      "evidence": "Origin, rate, honeypot, timing, response, and timeout defenses are present"
+    },
+    {
+      "check": "vercel-security-headers",
+      "passed": true,
+      "evidence": "required=7, present=7"
+    },
+    {
+      "check": "csp-baseline",
+      "passed": true,
+      "evidence": "CSP constrains default, object, framing, and API connections"
+    },
+    {
+      "check": "firebase-header-parity",
+      "passed": true,
+      "evidence": "Both alternate Firebase hosting targets carry the same headers and exclude the Vercel API source"
+    },
+    {
+      "check": "environment-template-safe",
+      "passed": true,
+      "evidence": "Environment template contains names only"
+    }
+  ]
+}
