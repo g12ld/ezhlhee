@@ -1,0 +1,9 @@
+id,standard,area,evidence,status,release_requirement
+A11Y-001,WCAG 2.2 AA,Page landmarks,Homepage has no main landmark,Fail,Add a single logical main landmark and preserve RTL reading order
+A11Y-002,WCAG 2.2 AA,Mobile navigation,Menu trigger is a clickable div without keyboard role tabindex or expanded-state semantics,Fail,Use a semantic button with accessible name keyboard support and aria-expanded state
+A11Y-003,WCAG 2.2 AA,Forms,Three homepage inputs rely on placeholders instead of associated labels,Fail,Provide visible or programmatically associated labels and accessible validation
+A11Y-004,WCAG 2.2 AA,Dialog semantics,Automatic consultation popup lacks dialog semantics and focus management,Fail,Provide dialog labelling focus containment close behavior and focus restoration
+A11Y-005,WCAG 2.2 AA,External-link safety,Thirty-eight target=_blank links lack rel protection in the Phase 0 DOM audit,Fail,Add appropriate rel values without changing destinations
+A11Y-006,WCAG 2.2 AA,Keyboard and focus,Interactive non-semantic elements and inline click handlers require complete keyboard/focus verification,Unverified,Complete automated and manual keyboard testing at 375 768 1024 and 1440 widths
+A11Y-007,WCAG 2.2 AA,Color contrast,Current color usage conflicts with the approved palette and has not been validated across every text/background pair,Unverified,Validate all approved fixed-palette combinations and meet AA contrast without adding colors
+

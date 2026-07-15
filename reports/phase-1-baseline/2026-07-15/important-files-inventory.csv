@@ -1,0 +1,15 @@
+﻿kind,reference,required_or_expected,local_exists,live_url,live_status,final_url,notes
+robots,robots.txt,True,True,https://www.ezhalhe-sa.com/robots.txt,200,https://www.ezhalhe-sa.com/robots.txt,
+sitemap,sitemap.xml,True,True,https://www.ezhalhe-sa.com/sitemap.xml,200,https://www.ezhalhe-sa.com/sitemap.xml,
+favicon,favicon.ico,False,False,https://www.ezhalhe-sa.com/favicon.ico,404,https://www.ezhalhe-sa.com/favicon.ico,
+manifest,manifest.json,False,False,https://www.ezhalhe-sa.com/manifest.json,404,https://www.ezhalhe-sa.com/manifest.json,
+manifest,site.webmanifest,False,False,https://www.ezhalhe-sa.com/site.webmanifest,404,https://www.ezhalhe-sa.com/site.webmanifest,
+browserconfig,browserconfig.xml,False,False,https://www.ezhalhe-sa.com/browserconfig.xml,404,https://www.ezhalhe-sa.com/browserconfig.xml,
+google-verification,google387142411d334808.html,True,True,https://www.ezhalhe-sa.com/google387142411d334808.html,200,https://www.ezhalhe-sa.com/google387142411d334808.html,
+bing-verification,BingSiteAuth.xml,False,False,https://www.ezhalhe-sa.com/BingSiteAuth.xml,404,https://www.ezhalhe-sa.com/BingSiteAuth.xml,
+Open Graph image,discount-salla-plus.html,True,True,https://ezhalhe-sa.com/images/salla.webp,200,https://www.ezhalhe-sa.com/images/salla.webp,
+Twitter image,discount-salla-plus.html,True,True,https://ezhalhe-sa.com/images/salla.webp,200,https://www.ezhalhe-sa.com/images/salla.webp,
+Open Graph image,discount-salla-pro.html,True,True,https://ezhalhe-sa.com/images/salla.webp,200,https://www.ezhalhe-sa.com/images/salla.webp,
+Twitter image,discount-salla-pro.html,True,True,https://ezhalhe-sa.com/images/salla.webp,200,https://www.ezhalhe-sa.com/images/salla.webp,
+Open Graph image,index.html,True,False,https://www.ezhalhe-sa.com/images/og-cover.webp,404,https://www.ezhalhe-sa.com/images/og-cover.webp,
+favicon,index.html inline data URI,True,True,inline,embedded,,Homepage uses an inline SVG data URI; color compliance requires review.

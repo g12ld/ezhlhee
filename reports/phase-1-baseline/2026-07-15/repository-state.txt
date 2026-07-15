@@ -1,0 +1,42 @@
+Ezhalha Phase 1 baseline repository state
+Generated: 2026-07-15 (Asia/Riyadh)
+
+Baseline commit:
+4505cfe89a5ae5766f94a0b7933ffeeb7b3edfa7
+
+Baseline commit date:
+2026-06-16T05:28:08+03:00
+
+Initial repository state at Phase 1 authorization:
+- Branch: main tracking origin/main
+- Pre-existing untracked user file: AGENTS.md
+
+Isolated working state:
+- Branch: codex/phase-1-information-architecture
+- Existing tracked files modified: none
+- Existing tracked files deleted: none
+- Production deployment performed: no
+- Production configuration changed: no
+- Production URL behavior changed: no
+
+New review-only paths created by the baseline process:
+- reports/phase-1-baseline/2026-07-15/
+- scripts/generate_phase1_baseline.py
+- scripts/__pycache__/ (temporary local interpreter cache; not part of the baseline package and not intended for commit or deployment)
+
+Pre-existing untracked file preserved without modification:
+- AGENTS.md
+
+Hosting evidence:
+- Live responses identify Vercel as the serving platform.
+- vercel.json and firebase.json both exist in the repository.
+- No provider deployment identifier was available through authorized read-only access.
+- x-vercel-id values in http-status-and-headers.csv are request identifiers, not deployment identifiers.
+
+Rollback anchors:
+- Git baseline commit shown above.
+- SHA-256 inventory in file-checksums.txt.
+- Live and repository robots/sitemap snapshots.
+- Redirect and header baselines.
+- Previous immutable Vercel deployment must be identified through owner/provider access before any production release.
+
