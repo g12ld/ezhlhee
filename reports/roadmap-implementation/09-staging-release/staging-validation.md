@@ -2,7 +2,7 @@
 
 **Status:** PASS
 
-**Protected preview:** `https://ezhlhee-4802eiajs-g12lds-projects.vercel.app`
+**Protected preview:** `https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app`
 
 ## Release gates
 
@@ -16,6 +16,9 @@
 - PASS — `sitemap_is_200_and_www_only`
 - PASS — `real_404_status`
 - PASS — `webp_asset_is_served`
+- PASS — `browser_identity_files_are_served_and_valid`
+- PASS — `google_verification_file_is_preserved`
+- PASS — `legacy_public_url_is_preserved`
 - PASS — `contact_get_rejected`
 - PASS — `contact_validation_rejects_bad_payload`
 - PASS — `contact_fails_closed_without_credentials`

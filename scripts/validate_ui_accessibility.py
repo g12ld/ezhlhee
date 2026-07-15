@@ -182,6 +182,17 @@ def main() -> None:
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
     footer_match = re.search(r"<footer\b.*?</footer>", homepage, re.I | re.S)
     footer = footer_match.group(0) if footer_match else ""
+    new_store_assets = [
+        "lana-badawood-salla-gold-pro.webp",
+        "lara-alsaad-boutique-salla-gold-pro.webp",
+        "duk-altayeb-salla-gold-pro.webp",
+    ]
+    portfolio_start = homepage.find('<div class="work-grid" id="wGrid">')
+    portfolio_template = homepage.find('<template id="morePortfolio">', portfolio_start)
+    visible_portfolio = homepage[portfolio_start:portfolio_template]
+    gold_start = homepage.find('<section class="pro-section sec" id="pro">')
+    gold_template = homepage.find('<template id="moreGoldProWorks">', gold_start)
+    visible_gold = homepage[gold_start:gold_template]
     homepage_checks = {
         "gold_pro_primary_cta": 'href="#pro" class="btn-primary">اطلب الباقة الذهبية برو' in homepage,
         "accessible_mobile_menu": all(value in homepage for value in ['id="burg"', 'aria-controls="nav"', 'aria-expanded="false"', "event.key==='Escape'"]),
@@ -208,6 +219,25 @@ def main() -> None:
                 len(re.findall(r'<div class="work-card(?:\s|\")', homepage)) == 19,
                 "function loadMoreTestimonials()" in homepage,
                 "function loadMorePortfolio(moveFocus)" in homepage,
+            ]
+        ),
+        "new_gold_pro_salla_stores": (
+            min(portfolio_start, portfolio_template, gold_start, gold_template) >= 0
+            and all(asset in visible_portfolio for asset in new_store_assets)
+            and all(asset in visible_gold for asset in new_store_assets)
+            and [visible_portfolio.find(asset) for asset in new_store_assets]
+            == sorted(visible_portfolio.find(asset) for asset in new_store_assets)
+            and all(homepage.count(asset) >= 2 for asset in new_store_assets)
+        ),
+        "deferred_package_and_service_catalogs": all(
+            value in homepage
+            for value in [
+                'id="moreGoldProWorks"',
+                'id="moreServices"',
+                "function loadMoreGoldProWorks()",
+                "function loadMoreServices()",
+                'id="comparisonTab0"',
+                'id="comparisonTab2"',
             ]
         ),
         "footer_heading_order": bool(footer) and "<h4>" not in footer and footer.count("<h3>") == 3,

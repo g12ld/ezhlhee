@@ -22,6 +22,8 @@ Validated 121 maintained HTML files (119 indexable) against 19 repeatable file-l
 - PASS — `hidden_interactive_regions_inert`
 - PASS — `keyboard_handler_deduplicated`
 - PASS — `deferred_dom_preserves_content`
+- PASS — `new_gold_pro_salla_stores`
+- PASS — `deferred_package_and_service_catalogs`
 - PASS — `footer_heading_order`
 - PASS — `minimum_touch_targets`
 

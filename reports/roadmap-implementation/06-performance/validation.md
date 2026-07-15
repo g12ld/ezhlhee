@@ -11,7 +11,7 @@ Result: 16/16 checks passed.
 | critical-image-priority | PASS | eager=1, high_priority=1 |
 | responsive-variant-set | PASS | variants=37, bytes=2647170 |
 | no-render-blocking-google-fonts | PASS | files=0 |
-| hero-in-critical-order | PASS | hero_offset=69230, coupon_offset=71692 |
+| hero-in-critical-order | PASS | hero_offset=69439, coupon_offset=71901 |
 | below-fold-render-containment | PASS | Below-fold sections use content visibility with an intrinsic fallback |
 | scroll-listeners-deduplicated | PASS | Scroll previews bind once and resize only resets transforms |
 | passive-header-scroll | PASS | Header shadow work is animation-frame throttled and passive |

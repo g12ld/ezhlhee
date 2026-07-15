@@ -1,6 +1,6 @@
 {
-  "checks": 13,
-  "passed": 13,
+  "checks": 14,
+  "passed": 14,
   "failed": 0,
   "results": [
     {
@@ -20,6 +20,11 @@
     },
     {
       "check": "structured-data-json-valid",
+      "passed": true,
+      "evidence": "errors=0"
+    },
+    {
+      "check": "google-rich-result-required-fields",
       "passed": true,
       "evidence": "errors=0"
     },

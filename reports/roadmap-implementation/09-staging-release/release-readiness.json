@@ -3,12 +3,12 @@
   "generated": "2026-07-15",
   "branch": "codex/phase-1-information-architecture",
   "production_modified": false,
-  "protected_preview": "https://ezhlhee-4802eiajs-g12lds-projects.vercel.app",
+  "protected_preview": "https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app",
   "validation_suites": [
     {
       "name": "Information architecture",
       "status": "PASS",
-      "detail": "15/15 checks",
+      "detail": "16/16 checks",
       "report": "reports/roadmap-implementation/02-information-architecture/validation.json"
     },
     {
@@ -20,7 +20,7 @@
     {
       "name": "Metadata and structured data",
       "status": "PASS",
-      "detail": "11/11 checks",
+      "detail": "14/14 checks",
       "report": "reports/roadmap-implementation/04-metadata-structured-data/validation.json"
     },
     {
@@ -50,7 +50,7 @@
     {
       "name": "Protected staging runtime",
       "status": "PASS",
-      "detail": "14/14 checks",
+      "detail": "17/17 checks",
       "report": "reports/roadmap-implementation/09-staging-release/staging-validation.json"
     }
   ],
@@ -59,33 +59,33 @@
       "profile": "mobile 375x812",
       "report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-performance-release.report.json",
       "report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-performance-release.report.html",
-      "performance": 82,
+      "performance": 97,
       "quality_report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-optimized-final-3.report.json",
       "quality_report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-mobile-optimized-final-3.report.html",
       "accessibility": 100,
       "best_practices": 100,
       "seo": 100,
-      "fcp_ms": 2071,
-      "lcp_ms": 2268,
-      "tbt_ms": 594,
+      "fcp_ms": 2059,
+      "lcp_ms": 2073,
+      "tbt_ms": 0,
       "cls": 0,
-      "dom": "980 elements"
+      "dom": "987 elements"
     },
     {
       "profile": "desktop",
       "report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.json",
       "report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.html",
-      "performance": 99,
+      "performance": 100,
       "quality_report_json": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.json",
       "quality_report_html": "reports/roadmap-implementation/09-staging-release/lighthouse-desktop-current-release.report.html",
       "accessibility": 100,
       "best_practices": 100,
       "seo": 100,
-      "fcp_ms": 552,
-      "lcp_ms": 627,
-      "tbt_ms": 32,
+      "fcp_ms": 431,
+      "lcp_ms": 440,
+      "tbt_ms": 0,
       "cls": 0,
-      "dom": "980 elements"
+      "dom": "987 elements"
     }
   ],
   "release_scope": {
@@ -93,7 +93,8 @@
     "articles": 101,
     "path_redirects": 204,
     "host_redirects": 1,
-    "changed_or_new_files": 185
+    "changed_or_new_files": 245,
+    "legacy_public_urls_preserved": 1
   },
   "owner_gates": [
     "Revoke the exposed Telegram bot token in BotFather and create a replacement.",

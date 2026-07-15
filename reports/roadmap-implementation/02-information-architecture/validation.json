@@ -1,6 +1,6 @@
 {
-  "checks": 15,
-  "passed": 15,
+  "checks": 16,
+  "passed": 16,
   "failed": 0,
   "results": [
     {
@@ -72,6 +72,11 @@
       "check": "error-page-noindex",
       "passed": true,
       "evidence": "404 page is noindex and has no canonical declaration"
+    },
+    {
+      "check": "legacy-public-url-preserved",
+      "passed": true,
+      "evidence": "Legacy fragment remains deployable at its existing URL, crawl-disallowed, and excluded from sitemap"
     },
     {
       "check": "telegram-token-scan",

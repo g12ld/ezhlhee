@@ -1,0 +1,86 @@
+{
+  "status": "READY_FOR_OWNER_RELEASE_GATES",
+  "generated": "2026-07-15",
+  "branch": "codex/phase-1-information-architecture",
+  "protected_preview": "https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app",
+  "implementation_checks": {
+    "approved_baseline_package_and_workbook_preserved": true,
+    "authenticated_search_console_baseline_preserved": true,
+    "separate_feature_branch_used": true,
+    "all_cross_phase_validation_suites_pass": true,
+    "protected_nonproduction_preview_passes": true,
+    "all_119_canonical_pages_return_200": true,
+    "redirect_map_is_permanent_and_chain_free": true,
+    "legacy_public_url_is_not_lost": true,
+    "browser_and_verification_files_are_preserved": true,
+    "security_headers_and_fail_closed_endpoint_pass": true,
+    "metadata_and_rich_result_required_fields_pass": true,
+    "no_prohibited_faqpage_schema": true,
+    "no_broken_redirecting_or_orphan_internal_links": true,
+    "mobile_lab_cwv_targets_pass": true,
+    "mobile_quality_scores_are_100": true,
+    "desktop_lighthouse_scores_are_100": true,
+    "atomic_release_and_rollback_runbook_exists": true,
+    "thirty_day_search_console_plan_exists": true,
+    "production_not_deployed_by_this_roadmap": true
+  },
+  "summary": {
+    "passed": 19,
+    "total": 19,
+    "failed": 0
+  },
+  "lighthouse": {
+    "mobile_performance": {
+      "categories": {
+        "performance": 97
+      },
+      "lcp_ms": 2073.0,
+      "tbt_ms": 0,
+      "cls": 0
+    },
+    "mobile_quality": {
+      "categories": {
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp_ms": null,
+      "tbt_ms": null,
+      "cls": null
+    },
+    "desktop": {
+      "categories": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp_ms": 440.0,
+      "tbt_ms": 0,
+      "cls": 0
+    }
+  },
+  "external_release_gates": [
+    {
+      "gate": "Rotate the compromised Telegram bot token and configure TELEGRAM_BOT_TOKEN plus TELEGRAM_CHAT_ID in Vercel Preview and Production.",
+      "status": "OWNER_ACTION_REQUIRED",
+      "reason": "Secret rotation requires the owner-controlled BotFather account; no replacement credential is stored in the repository."
+    },
+    {
+      "gate": "Run one credentialed preview contact submission after environment variables are configured.",
+      "status": "BLOCKED_BY_CREDENTIAL_GATE",
+      "reason": "The endpoint correctly fails closed with HTTP 503 until credentials exist."
+    },
+    {
+      "gate": "Explicitly approve the atomic production promotion.",
+      "status": "OWNER_APPROVAL_REQUIRED",
+      "reason": "The user prohibited production deployment before final approval."
+    }
+  ],
+  "post_release_measurements": [
+    "Google Rich Results URL Test on public production URLs (static required-field validation already passes).",
+    "Submit the canonical sitemap and confirm Google acceptance plus intended canonical selection.",
+    "Measure field LCP, INP, and CLS after sufficient CrUX data exists.",
+    "Compare traffic and rankings with the approved baseline during the 30-day monitoring window."
+  ]
+}

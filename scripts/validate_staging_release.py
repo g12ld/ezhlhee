@@ -112,6 +112,12 @@ def main() -> None:
     sitemap = vercel_request("/sitemap.xml", method="GET")
     missing = vercel_request("/definitely-not-a-real-page", method="GET")
     asset = vercel_request("/images/og-cover.webp")
+    favicon = vercel_request("/favicon.svg", method="GET")
+    webmanifest = vercel_request("/site.webmanifest", method="GET")
+    manifest_alias = vercel_request("/manifest.json", method="GET")
+    browserconfig = vercel_request("/browserconfig.xml", method="GET")
+    google_verification = vercel_request("/google387142411d334808.html", method="GET")
+    legacy_fragment = vercel_request("/_new_testi.html", method="GET")
     api_get = vercel_request("/api/contact", method="GET")
     api_invalid = vercel_request("/api/contact", method="POST", data='{"name":"","email":"","message":"","website":"","startedAt":1}')
     api_unconfigured = vercel_request("/api/contact", method="POST", data='{"name":"Staging Validation","email":"staging@example.com","message":"Gold Pro release gate validation only.","website":"","startedAt":1}')
@@ -131,6 +137,25 @@ def main() -> None:
     sitemap_text = str(sitemap.get("body", ""))
     robots_text = str(robots.get("body", ""))
     api_text = " ".join(str(item.get("body", "")) for item in [api_get, api_invalid, api_unconfigured])
+    browser_identity_valid = False
+    try:
+        webmanifest_json = json.loads(str(webmanifest.get("body", "")))
+        manifest_alias_json = json.loads(str(manifest_alias.get("body", "")))
+        browserconfig_xml = ET.fromstring(str(browserconfig.get("body", "")))
+        favicon_xml = ET.fromstring(str(favicon.get("body", "")))
+        browser_identity_valid = (
+            favicon["status"] == 200
+            and webmanifest["status"] == 200
+            and manifest_alias["status"] == 200
+            and browserconfig["status"] == 200
+            and webmanifest_json == manifest_alias_json
+            and webmanifest_json.get("theme_color") == "#0D2224"
+            and webmanifest_json.get("background_color") == "#FFFFFF"
+            and browserconfig_xml.findtext("./msapplication/tile/TileColor") == "#0D2224"
+            and favicon_xml.tag.endswith("svg")
+        )
+    except (json.JSONDecodeError, ET.ParseError, TypeError):
+        browser_identity_valid = False
 
     checks = {
         "preview_is_protected_from_indexing": home_headers.get("x-robots-tag") == "noindex",
@@ -143,6 +168,9 @@ def main() -> None:
         "sitemap_is_200_and_www_only": sitemap["status"] == 200 and "https://www.ezhalhe-sa.com/" in sitemap_text and "https://ezhalhe-sa.com/" not in sitemap_text,
         "real_404_status": missing["status"] == 404,
         "webp_asset_is_served": asset["status"] == 200 and "image/webp" in asset.get("headers", {}).get("content-type", ""),
+        "browser_identity_files_are_served_and_valid": browser_identity_valid,
+        "google_verification_file_is_preserved": google_verification["status"] == 200 and bool(str(google_verification.get("body", "")).strip()),
+        "legacy_public_url_is_preserved": legacy_fragment["status"] == 200 and "https://www.ezhalhe-sa.com/_new_testi.html" not in sitemap_text and "Disallow: /_new_testi.html" in robots_text,
         "contact_get_rejected": api_get["status"] == 405,
         "contact_validation_rejects_bad_payload": api_invalid["status"] == 422,
         "contact_fails_closed_without_credentials": api_unconfigured["status"] == 503,
@@ -184,6 +212,8 @@ def main() -> None:
             "Vercel emits HTTP 308 for permanent redirects configured with permanent=true; the Firebase fallback retains explicit HTTP 301 rules.",
             "The contact endpoint intentionally returns 503 until the owner rotates the exposed Telegram token and supplies the replacement environment credentials.",
             "The preview deployment adds X-Robots-Tag: noindex through Vercel deployment protection; production indexing behavior is not changed.",
+            "Bing verification is intentionally not asserted because the approved baseline marks it optional and no owner verification key was supplied.",
+            "The existing /_new_testi.html URL remains available with HTTP 200, but stays out of the sitemap and crawl-disallowed until the owner approves any URL treatment.",
         ],
     }
     (REPORT_DIR / "staging-validation.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")

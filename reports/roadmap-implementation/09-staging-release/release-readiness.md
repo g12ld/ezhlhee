@@ -2,7 +2,7 @@
 
 **Status:** READY FOR OWNER RELEASE GATES
 
-**Protected preview:** `https://ezhlhee-4802eiajs-g12lds-projects.vercel.app`
+**Protected preview:** `https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app`
 
 Production has not been modified. The preview is protected from indexing and represents the validated release candidate.
 
@@ -10,14 +10,14 @@ Production has not been modified. The preview is protected from indexing and rep
 
 | Area | Status | Evidence |
 |---|---|---|
-| Information architecture | PASS | 15/15 checks |
+| Information architecture | PASS | 16/16 checks |
 | Security | PASS | 10/10 checks |
-| Metadata and structured data | PASS | 11/11 checks |
+| Metadata and structured data | PASS | 14/14 checks |
 | Content and internal links | PASS | 13/13 checks |
 | Performance | PASS | 16/16 checks |
 | UI, accessibility, and CRO | PASS | 0/0 checks |
 | Authority and E-E-A-T | PASS | 8/8 checks |
-| Protected staging runtime | PASS | 14/14 checks |
+| Protected staging runtime | PASS | 17/17 checks |
 
 ## Runtime staging result
 

@@ -40,13 +40,32 @@ def lighthouse_summary(path: Path, profile: str, quality_path: Path | None = Non
 
 
 def git_inventory() -> list[dict[str, str]]:
+    branch_diff = subprocess.run(
+        ["git", "diff", "--name-status", "-z", "main...HEAD"],
+        cwd=ROOT,
+        capture_output=True,
+        check=True,
+    )
     result = subprocess.run(
         ["git", "status", "--porcelain", "-z", "--untracked-files=all"],
         cwd=ROOT,
         capture_output=True,
         check=True,
     )
-    records: list[dict[str, str]] = []
+    statuses: dict[str, str] = {}
+    diff_entries = [entry for entry in branch_diff.stdout.split(b"\0") if entry]
+    index = 0
+    while index < len(diff_entries):
+        status = diff_entries[index].decode("ascii", errors="replace")
+        index += 1
+        if status.startswith(("R", "C")):
+            index += 1  # Preserve only the final path for rename/copy inventory rows.
+            path = diff_entries[index].decode("utf-8", errors="replace")
+        else:
+            path = diff_entries[index].decode("utf-8", errors="replace")
+        index += 1
+        statuses[path.replace("\\", "/")] = status
+
     entries = [entry for entry in result.stdout.split(b"\0") if entry]
     index = 0
     while index < len(entries):
@@ -57,6 +76,11 @@ def git_inventory() -> list[dict[str, str]]:
             index += 1
             path = entries[index].decode("utf-8", errors="replace")
         normalized = path.replace("\\", "/")
+        statuses[normalized] = f"{statuses[normalized]}+WT:{status.strip()}" if normalized in statuses else f"WT:{status.strip()}"
+        index += 1
+
+    records: list[dict[str, str]] = []
+    for normalized, status in statuses.items():
         if normalized.startswith("reports/"):
             category = "validation evidence"
             production = "no"
@@ -83,7 +107,6 @@ def git_inventory() -> list[dict[str, str]]:
                 "production_artifact": production,
             }
         )
-        index += 1
     return sorted(records, key=lambda row: row["path"])
 
 
@@ -176,6 +199,7 @@ def main() -> None:
             "path_redirects": 204,
             "host_redirects": 1,
             "changed_or_new_files": len(inventory),
+            "legacy_public_urls_preserved": 1,
         },
         "owner_gates": [
             "Revoke the exposed Telegram bot token in BotFather and create a replacement.",

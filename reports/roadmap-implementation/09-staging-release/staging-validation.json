@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "deployment": "https://ezhlhee-4802eiajs-g12lds-projects.vercel.app",
+  "deployment": "https://ezhlhee-mxb4rvkuv-g12lds-projects.vercel.app",
   "deployment_type": "protected Vercel preview (non-production)",
   "checks": {
     "preview_is_protected_from_indexing": true,
@@ -13,6 +13,9 @@
     "sitemap_is_200_and_www_only": true,
     "real_404_status": true,
     "webp_asset_is_served": true,
+    "browser_identity_files_are_served_and_valid": true,
+    "google_verification_file_is_preserved": true,
+    "legacy_public_url_is_preserved": true,
     "contact_get_rejected": true,
     "contact_validation_rejects_bad_payload": true,
     "contact_fails_closed_without_credentials": true,
@@ -49,6 +52,8 @@
   "notes": [
     "Vercel emits HTTP 308 for permanent redirects configured with permanent=true; the Firebase fallback retains explicit HTTP 301 rules.",
     "The contact endpoint intentionally returns 503 until the owner rotates the exposed Telegram token and supplies the replacement environment credentials.",
-    "The preview deployment adds X-Robots-Tag: noindex through Vercel deployment protection; production indexing behavior is not changed."
+    "The preview deployment adds X-Robots-Tag: noindex through Vercel deployment protection; production indexing behavior is not changed.",
+    "Bing verification is intentionally not asserted because the approved baseline marks it optional and no owner verification key was supplied.",
+    "The existing /_new_testi.html URL remains available with HTTP 200, but stays out of the sitemap and crawl-disallowed until the owner approves any URL treatment."
   ]
 }

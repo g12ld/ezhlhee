@@ -1,6 +1,6 @@
 # Metadata and structured data validation
 
-Result: 13/13 checks passed.
+Result: 14/14 checks passed.
 
 | Check | Result | Evidence |
 |---|---|---|
@@ -8,6 +8,7 @@ Result: 13/13 checks passed.
 | metadata-complete-and-bounded | PASS | valid=119, errors=0 |
 | metadata-unique | PASS | duplicate_titles=0, duplicate_descriptions=0 |
 | structured-data-json-valid | PASS | errors=0 |
+| google-rich-result-required-fields | PASS | errors=0 |
 | faqpage-prohibited | PASS | pages=0 |
 | article-schema-coverage | PASS | articles=101, expected=101 |
 | service-schema-coverage | PASS | services=13 |

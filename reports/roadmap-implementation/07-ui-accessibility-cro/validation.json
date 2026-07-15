@@ -4,7 +4,7 @@
     "maintained_html": 121,
     "indexable_html": 119,
     "file_level_checks": 19,
-    "homepage_cro_checks": 11,
+    "homepage_cro_checks": 13,
     "failed_files": 0
   },
   "aggregate_checks": {
@@ -23,6 +23,8 @@
     "hidden_interactive_regions_inert": true,
     "keyboard_handler_deduplicated": true,
     "deferred_dom_preserves_content": true,
+    "new_gold_pro_salla_stores": true,
+    "deferred_package_and_service_catalogs": true,
     "footer_heading_order": true,
     "minimum_touch_targets": true
   },
