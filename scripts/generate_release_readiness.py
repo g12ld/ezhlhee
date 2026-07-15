@@ -10,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ROADMAP = ROOT / "reports" / "roadmap-implementation"
 RELEASE = ROADMAP / "09-staging-release"
+SITE_ARTIFACT_EXTENSIONS = (".html", ".css", ".js", ".xml", ".txt", ".json", ".svg", ".webmanifest")
 
 
 def read_json(path: Path) -> dict:
@@ -93,7 +94,7 @@ def git_inventory() -> list[dict[str, str]]:
         elif normalized.startswith("images/"):
             category = "optimized media"
             production = "yes"
-        elif normalized.endswith((".html", ".css", ".xml", ".txt", ".json")):
+        elif normalized.endswith(SITE_ARTIFACT_EXTENSIONS):
             category = "site/deployment artifact"
             production = "yes"
         else:
@@ -130,7 +131,20 @@ def validation_status(path: Path) -> tuple[str, str]:
     else:
         status = "FAIL"
     checks = payload.get("checks", {})
-    if isinstance(checks, int):
+    summary = payload.get("summary", {})
+    if isinstance(summary, dict) and "file_level_checks" in summary and "homepage_cro_checks" in summary:
+        detail = (
+            f"{summary.get('file_level_checks', 0)} file-level checks + "
+            f"{summary.get('homepage_cro_checks', 0)} homepage CRO checks; "
+            f"failed_files={summary.get('failed_files', 0)}"
+        )
+    elif "file_level_checks" in payload and "homepage_cro_checks" in payload:
+        detail = (
+            f"{payload.get('file_level_checks', 0)} file-level checks + "
+            f"{payload.get('homepage_cro_checks', 0)} homepage CRO checks; "
+            f"failed_files={payload.get('failed_files', 0)}"
+        )
+    elif isinstance(checks, int):
         detail = f"{payload.get('passed', 0)}/{checks} checks"
     elif isinstance(checks, dict):
         detail = f"{sum(bool(value) for value in checks.values())}/{len(checks)} checks"
