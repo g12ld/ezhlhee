@@ -1947,3 +1947,278 @@ body.ui-menu-open {
     display: none !important;
   }
 }
+
+/* Final visual correction layer: contrast, compact responsive layout, and consistent shared chrome */
+.ui-pro :where(h1, h2, h3, h4, h5, h6, p, li, span, label, summary, a, button) {
+  text-shadow: none !important;
+}
+
+.ui-pro :where(.article-card, .service-card, .price-card, .feat-card, .step, .info-card, .topic-hub, .adv-card, .ui-package-card) {
+  color: var(--ui-secondary) !important;
+}
+
+.ui-pro :where(.article-card, .service-card, .price-card, .feat-card, .step, .info-card, .topic-hub, .adv-card, .ui-package-card) :where(h1, h2, h3, h4, strong, b) {
+  color: var(--ui-secondary) !important;
+}
+
+.ui-pro :where(.article-card, .service-card, .price-card, .feat-card, .step, .info-card, .topic-hub, .adv-card, .ui-package-card) :where(p, li, span, small) {
+  color: var(--ui-text) !important;
+}
+
+.ui-pro :where(.article-card, .service-card, .price-card, .feat-card, .step, .info-card, .topic-hub, .adv-card, .ui-package-card) a {
+  color: var(--ui-secondary) !important;
+  text-decoration-color: var(--ui-primary) !important;
+}
+
+.ui-pro :where(.article-card, .service-card, .price-card, .feat-card, .step, .info-card, .topic-hub, .adv-card, .ui-package-card) a:hover {
+  background: var(--ui-primary-soft) !important;
+  color: var(--ui-secondary) !important;
+}
+
+.ui-home .pro-section {
+  background: var(--ui-secondary) !important;
+  color: var(--ui-background) !important;
+}
+
+.ui-home .pro-section :where(.sh, .sh span, .sub, .pf-t, .pf-t strong, .pf-group, .pkg-works-header h3) {
+  color: var(--ui-background) !important;
+}
+
+.ui-home .pro-section :where(.sub, .pf-t) {
+  opacity: 0.9 !important;
+}
+
+.ui-home .pro-section :where(.pf-ck, .pkg-works-count) {
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  background: var(--ui-background) !important;
+  color: var(--ui-secondary) !important;
+}
+
+.ui-home .pro-section :where(.price-new, .cv),
+.ui-home :where(.price-new, .cv, .pkg-works-count) {
+  color: var(--ui-secondary) !important;
+}
+
+.ui-home .pro-section :where(.btn-ghost-w, .btn-outline, .btn-secondary) {
+  border-color: rgba(255, 255, 255, 0.32) !important;
+  background: var(--ui-background) !important;
+  color: var(--ui-secondary) !important;
+}
+
+.ui-home .pro-strip {
+  background: var(--ui-secondary) !important;
+}
+
+.ui-home .pro-strip :where(.ps-text, .ps-sub) {
+  color: var(--ui-background) !important;
+}
+
+.ui-home .pro-strip .ps-badge {
+  color: var(--ui-secondary) !important;
+}
+
+.ui-home .ui-hero__visual,
+.ui-home .ui-hero__visual :where(.ui-hero__proof, .ui-hero__proof *) {
+  color: var(--ui-background) !important;
+}
+
+.ui-home :where(.cbadge-gold, .ui-package-card__badge),
+.ui-pro .ui-package-card--featured .ui-package-card__badge {
+  border: 1px solid var(--ui-secondary) !important;
+  background: var(--ui-secondary) !important;
+  background-image: none !important;
+  color: var(--ui-background) !important;
+}
+
+.ui-home .card-view {
+  border-color: var(--ui-secondary) !important;
+  background: var(--ui-secondary) !important;
+  color: var(--ui-background) !important;
+}
+
+.ui-home .work-card:hover .card-view {
+  border-color: var(--ui-secondary) !important;
+  background: var(--ui-secondary) !important;
+  color: var(--ui-background) !important;
+}
+
+.ui-home #mainCouponCode,
+.ui-home .coupon-code-main {
+  border-color: var(--ui-secondary) !important;
+  background: var(--ui-background) !important;
+  background-image: none !important;
+  color: var(--ui-secondary) !important;
+}
+
+.ui-home .tdot {
+  color: var(--ui-secondary) !important;
+}
+
+.ui-page-articles .page-cta {
+  background: var(--ui-background) !important;
+  color: var(--ui-secondary) !important;
+}
+
+.ui-page-articles .page-cta :where(h2, h3, strong) {
+  color: var(--ui-secondary) !important;
+}
+
+.ui-page-articles .page-cta :where(p, span, li) {
+  color: var(--ui-text) !important;
+}
+
+.ui-home .partners-sec {
+  padding-block: clamp(28px, 4vw, 48px) !important;
+}
+
+.ui-home .partners-row {
+  flex-wrap: nowrap !important;
+  justify-content: center !important;
+  gap: clamp(6px, 2vw, 12px) !important;
+  overflow: visible !important;
+}
+
+.ui-home .partner-chip {
+  flex: 0 0 clamp(58px, 21vw, 112px) !important;
+  width: clamp(58px, 21vw, 112px) !important;
+  height: clamp(44px, 12vw, 78px) !important;
+  padding: clamp(7px, 2vw, 12px) !important;
+  border-radius: 14px !important;
+}
+
+.ui-home .partner-chip img {
+  width: clamp(38px, 12vw, 64px) !important;
+  max-width: 100% !important;
+  height: clamp(28px, 8vw, 46px) !important;
+  max-height: 46px !important;
+  object-fit: contain !important;
+}
+
+.ui-footer {
+  padding-block: clamp(40px, 6vw, 64px) 24px !important;
+}
+
+.ui-footer .ui-brand {
+  align-items: center !important;
+}
+
+.ui-footer .ui-brand__mark {
+  width: 46px !important;
+  height: 46px !important;
+  border-color: rgba(255, 255, 255, 0.16) !important;
+}
+
+.ui-footer__links a,
+.ui-footer__about p,
+.ui-footer__bottom {
+  color: var(--ui-background) !important;
+}
+
+.ui-footer__links a {
+  opacity: 0.9 !important;
+}
+
+.ui-footer__bottom {
+  opacity: 0.82 !important;
+}
+
+.ui-page-articles .hero-section {
+  min-height: auto !important;
+  padding: clamp(42px, 8vw, 78px) max(16px, calc((100vw - var(--ui-container)) / 2)) !important;
+  margin-block-end: clamp(24px, 5vw, 44px) !important;
+}
+
+.ui-page-articles .hero-section h1 {
+  font-size: clamp(2rem, 9vw, 3.8rem) !important;
+  line-height: 1.16 !important;
+}
+
+.ui-page-articles .articles-container {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 14px !important;
+  width: min(calc(100% - 24px), var(--ui-container)) !important;
+  padding: 0 !important;
+}
+
+.ui-page-articles .article-card {
+  padding: 18px !important;
+}
+
+.ui-page-articles .article-card a::after {
+  position: static !important;
+  display: inline-block !important;
+  margin-right: 8px !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  color: currentColor !important;
+  box-shadow: none !important;
+}
+
+.ui-inner-page :where(.page-hero, .hero-section, .authority-hero, .article-hero) {
+  min-height: auto !important;
+}
+
+@media (max-width: 699px) {
+  .ui-home .hero {
+    padding-block: 18px 28px !important;
+  }
+
+  .ui-home .hero-inner {
+    gap: 14px !important;
+  }
+
+  .ui-home .hero h1 {
+    margin-block: 12px 10px !important;
+    font-size: clamp(1.72rem, 8.5vw, 2.15rem) !important;
+  }
+
+  .ui-home .hero-sub {
+    margin-block-end: 14px !important;
+    font-size: 0.95rem !important;
+    line-height: 1.75 !important;
+  }
+
+  .ui-home .hero-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    width: 100% !important;
+  }
+
+  .ui-home .hstat {
+    min-width: 0 !important;
+  }
+
+  .ui-home .hero-consult {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+  }
+
+  .ui-sticky-contact {
+    inset-inline: 10px !important;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1023px) {
+  .ui-home .hero {
+    padding-block: 28px 42px !important;
+  }
+
+  .ui-home .hero h1 {
+    font-size: clamp(2rem, 5.2vw, 2.7rem) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .ui-home .hero {
+    padding-block: clamp(32px, 4vw, 54px) !important;
+  }
+
+  .ui-home .hero h1 {
+    font-size: clamp(2.35rem, 3.5vw, 3.35rem) !important;
+  }
+
+  .ui-page-articles .articles-container {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+  }
+}

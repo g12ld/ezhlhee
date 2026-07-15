@@ -230,7 +230,7 @@
       </figure>`;
     heroInner.append(visual);
 
-    copy.querySelectorAll('.hero-btns a[href="#pro"], .hero-btns a[href="#compare"]').forEach((link) => {
+    copy.querySelectorAll('.hero-btns a[href="#compare"]').forEach((link) => {
       link.href = "#packages";
     });
   }
