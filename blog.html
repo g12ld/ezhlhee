@@ -131,18 +131,35 @@
   ]
 }
     </script>
+<style id="ez-accessibility-system">
+.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
+.skip-link:focus{top:16px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
+:where(button,[role="button"]){font:inherit}
+[role="button"]{cursor:pointer}
+.burger{border:0;background:#FFFFFF;color:#0D2224}
+.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer}
+.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
+.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
+.btn-consult svg{fill:#0D2224 !important}
+.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
+.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
+.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
-    <header>
-    </header>
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
+    <header><nav class="simple-site-nav" aria-label="التنقل الرئيسي"><a href="/">الرئيسية</a><a href="/salla-store-design.html">تصميم متجر سلة</a><a href="/zid-store-design.html">تصميم متجر زد</a><a href="/articles.html">مكتبة المقالات</a></nav></header>
 
-    <main class="blog-page container">
+    <main id="main-content" class="blog-page container">
         <h1>مقالاتنا وخدمات التسويق</h1>
         <p class="page-intro">نحن متخصصون في تصميم متجر سلة وتصميم متجر زد، إنشاء متجر إلكتروني، وتهيئة متجر للسيو لخدمة متجرك الإلكتروني بأفضل صورة.</p>
         <div class="service-links" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:20px 0;">
-          <a href="salla-store-design.html" style="color:#fff;background:#04B5B8;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700;">تصميم متجر سلة</a>
-          <a href="zid-store-design.html" style="color:#04B5B8;border:2px solid #04B5B8;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700;">تصميم متجر زد</a>
-          <a href="search-engine-optimization.html" style="color:#04B5B8;border:2px solid #04B5B8;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700;">تهيئة متجر للسيو</a>
+          <a href="salla-store-design.html" style="color:#FFFFFF;background:#15B5B0;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700;">تصميم متجر سلة</a>
+          <a href="zid-store-design.html" style="color:#15B5B0;border:2px solid #15B5B0;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700;">تصميم متجر زد</a>
+          <a href="search-engine-optimization.html" style="color:#15B5B0;border:2px solid #15B5B0;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700;">تهيئة متجر للسيو</a>
         </div>
 
         <section class="articles-list">

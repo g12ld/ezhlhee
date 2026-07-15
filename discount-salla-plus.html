@@ -64,15 +64,15 @@
 <style>
     /* ======== متغيرات الألوان ======== */
     :root {
-      --primary: #1db4bd;
-      --primary-dark: #137c82;
-      --primary-mid: #16757b;
-      --accent: #00a9ac;
-      --text: #2c3e50;
-      --text-light: #5d6d7e;
-      --bg: #f8fdfa;
-      --white: #ffffff;
-      --shadow: 0 8px 30px rgba(19,124,130,0.10);
+      --primary: #15B5B0;
+      --primary-dark: #15B5B0;
+      --primary-mid: #15B5B0;
+      --accent: #15B5B0;
+      --text: #0D2224;
+      --text-light: #15B5B0;
+      --bg: #FFFFFF;
+      --white: #FFFFFF;
+      --shadow: 0 8px 30px rgba(21,181,176,0.10);
       --radius: 14px;
     }
 
@@ -94,7 +94,7 @@
       z-index: 100;
       background: rgba(255,255,255,0.95);
       backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(19,124,130,0.10);
+      border-bottom: 1px solid rgba(21,181,176,0.10);
       padding: 12px 0;
     }
     .header-inner {
@@ -125,12 +125,12 @@
       border-radius: 10px;
       transition: all 0.2s;
     }
-    .site-nav a:hover { color: var(--primary-dark); background: rgba(29,180,189,0.10); }
+    .site-nav a:hover { color: var(--primary-dark); background: rgba(21,181,176,0.10); }
     .nav-cta-btn {
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #fff !important;
+      color: #FFFFFF !important;
       border-radius: 12px !important;
-      box-shadow: 0 4px 14px rgba(19,124,130,0.22);
+      box-shadow: 0 4px 14px rgba(21,181,176,0.22);
     }
     .nav-cta-btn:hover { opacity: 0.92; background: var(--primary-dark) !important; }
     .menu-toggle {
@@ -149,8 +149,8 @@
 
     /* ======== Breadcrumb ======== */
     .breadcrumb {
-      background: #fff;
-      border-bottom: 1px solid rgba(19,124,130,0.08);
+      background: #FFFFFF;
+      border-bottom: 1px solid rgba(21,181,176,0.08);
       padding: 10px 20px;
       font-size: 0.85rem;
       color: var(--text-light);
@@ -165,14 +165,14 @@
 
     /* ======== القسم الأول - Hero ======== */
     .hero {
-      background: linear-gradient(145deg, #edfcfc 0%, #f0faf9 50%, #e6f8f8 100%);
+      background: linear-gradient(145deg, #FFFFFF 0%, #FFFFFF 50%, #FFFFFF 100%);
       padding: 60px 20px 50px;
       text-align: center;
     }
     .hero-badge {
       display: inline-block;
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #fff;
+      color: #FFFFFF;
       font-size: 0.85rem;
       font-weight: 700;
       padding: 6px 18px;
@@ -196,7 +196,7 @@
 
     /* ======== صندوق الكوبون ======== */
     .coupon-box {
-      background: #fff;
+      background: #FFFFFF;
       border: 2px dashed var(--primary);
       border-radius: var(--radius);
       padding: 28px 30px;
@@ -225,11 +225,11 @@
       background: var(--bg);
       padding: 10px 22px;
       border-radius: 10px;
-      border: 1px solid rgba(19,124,130,0.15);
+      border: 1px solid rgba(21,181,176,0.15);
     }
     .btn-copy {
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #fff;
+      color: #FFFFFF;
       border: none;
       padding: 12px 22px;
       border-radius: 10px;
@@ -238,7 +238,7 @@
       font-weight: 700;
       cursor: pointer;
       transition: all 0.25s;
-      box-shadow: 0 4px 12px rgba(19,124,130,0.25);
+      box-shadow: 0 4px 12px rgba(21,181,176,0.25);
     }
     .btn-copy:hover { transform: translateY(-1px); opacity: 0.92; }
     .coupon-note {
@@ -251,17 +251,17 @@
     .btn-cta {
       display: inline-block;
       background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-      color: #fff;
+      color: #FFFFFF;
       text-decoration: none;
       font-weight: 800;
       font-size: 1.1rem;
       padding: 16px 40px;
       border-radius: 50px;
-      box-shadow: 0 8px 28px rgba(19,124,130,0.30);
+      box-shadow: 0 8px 28px rgba(21,181,176,0.30);
       transition: all 0.3s;
       margin: 10px 6px;
     }
-    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(19,124,130,0.38); }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(21,181,176,0.38); }
     .btn-cta-outline {
       display: inline-block;
       border: 2px solid var(--primary-dark);
@@ -274,13 +274,13 @@
       transition: all 0.3s;
       margin: 10px 6px;
     }
-    .btn-cta-outline:hover { background: var(--primary-dark); color: #fff; }
+    .btn-cta-outline:hover { background: var(--primary-dark); color: #FFFFFF; }
 
     /* ======== الأقسام العامة ======== */
     .section {
       padding: 60px 20px;
     }
-    .section-alt { background: #fff; }
+    .section-alt { background: #FFFFFF; }
     .container {
       max-width: 860px;
       margin: 0 auto;
@@ -291,7 +291,7 @@
       color: var(--primary-dark);
       margin-bottom: 20px;
       padding-bottom: 12px;
-      border-bottom: 3px solid rgba(29,180,189,0.20);
+      border-bottom: 3px solid rgba(21,181,176,0.20);
     }
     .section p {
       font-size: 1.05rem;
@@ -312,7 +312,7 @@
       align-items: flex-start;
       gap: 16px;
       padding: 16px 0;
-      border-bottom: 1px solid rgba(19,124,130,0.08);
+      border-bottom: 1px solid rgba(21,181,176,0.08);
     }
     .steps-list li:last-child { border-bottom: none; }
     .step-num {
@@ -320,7 +320,7 @@
       width: 38px;
       height: 38px;
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #fff;
+      color: #FFFFFF;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -343,8 +343,8 @@
       margin-top: 28px;
     }
     .feature-card {
-      background: #fff;
-      border: 1px solid rgba(19,124,130,0.12);
+      background: #FFFFFF;
+      border: 1px solid rgba(21,181,176,0.12);
       border-radius: var(--radius);
       padding: 22px 20px;
       box-shadow: var(--shadow);
@@ -369,8 +369,8 @@
 
     /* ======== قسم خدمات ازهلها ======== */
     .services-cta-box {
-      background: linear-gradient(135deg, rgba(19,124,130,0.07) 0%, rgba(29,180,189,0.05) 100%);
-      border: 1px solid rgba(19,124,130,0.15);
+      background: linear-gradient(135deg, rgba(21,181,176,0.07) 0%, rgba(21,181,176,0.05) 100%);
+      border: 1px solid rgba(21,181,176,0.15);
       border-radius: 20px;
       padding: 36px 32px;
       margin-top: 20px;
@@ -408,24 +408,24 @@
     }
     .btn-service-primary {
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: #fff;
-      box-shadow: 0 4px 14px rgba(19,124,130,0.22);
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(21,181,176,0.22);
     }
     .btn-service-primary:hover { transform: translateY(-1px); opacity: 0.92; }
     .btn-service-wa {
-      background: #fff;
-      border: 2px solid #25D366;
-      color: #128C7E;
+      background: #FFFFFF;
+      border: 2px solid #3BBBC2;
+      color: #15B5B0;
     }
-    .btn-service-wa:hover { background: #25D366; color: #fff; }
+    .btn-service-wa:hover { background: #3BBBC2; color: #FFFFFF; }
 
     /* ======== الأسئلة الشائعة ======== */
     .faq-list {
       margin-top: 24px;
     }
     .faq-item {
-      background: #fff;
-      border: 1px solid rgba(19,124,130,0.10);
+      background: #FFFFFF;
+      border: 1px solid rgba(21,181,176,0.10);
       border-radius: var(--radius);
       margin-bottom: 12px;
       overflow: hidden;
@@ -447,7 +447,7 @@
       gap: 12px;
       transition: background 0.2s;
     }
-    .faq-question:hover { background: rgba(19,124,130,0.04); }
+    .faq-question:hover { background: rgba(21,181,176,0.04); }
     .faq-icon { font-size: 1.2rem; flex-shrink: 0; transition: transform 0.25s; }
     .faq-answer {
       display: none;
@@ -462,7 +462,7 @@
     /* ======== الإثبات الاجتماعي ======== */
     .social-proof {
       background: linear-gradient(135deg, var(--primary-dark), var(--primary-mid));
-      color: #fff;
+      color: #FFFFFF;
       padding: 60px 20px;
       text-align: center;
     }
@@ -495,8 +495,8 @@
 
     /* ======== رابط الصفحة الأخرى ======== */
     .related-page-banner {
-      background: #fff;
-      border: 1px solid rgba(19,124,130,0.15);
+      background: #FFFFFF;
+      border: 1px solid rgba(21,181,176,0.15);
       border-radius: 16px;
       padding: 26px 28px;
       display: flex;
@@ -517,8 +517,8 @@
 
     /* ======== الفوتر ======== */
     .site-footer {
-      background: #f0faf9;
-      border-top: 1px solid rgba(19,124,130,0.12);
+      background: #FFFFFF;
+      border-top: 1px solid rgba(21,181,176,0.12);
       padding: 48px 20px 24px;
     }
     .footer-inner {
@@ -544,7 +544,7 @@
       max-width: 1100px;
       margin: 32px auto 0;
       padding-top: 20px;
-      border-top: 1px solid rgba(19,124,130,0.10);
+      border-top: 1px solid rgba(21,181,176,0.10);
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -558,14 +558,14 @@
       position: fixed;
       bottom: 24px;
       left: 24px;
-      background: #25D366;
-      color: #fff;
+      background: #3BBBC2;
+      color: #FFFFFF;
       text-decoration: none;
       font-weight: 700;
       font-size: 0.9rem;
       padding: 13px 20px;
       border-radius: 50px;
-      box-shadow: 0 8px 24px rgba(37,211,102,0.30);
+      box-shadow: 0 8px 24px rgba(59,187,194,0.30);
       z-index: 999;
       transition: transform 0.3s;
       display: flex;
@@ -577,9 +577,9 @@
     /* ======== الموبايل ======== */
     @media (max-width: 768px) {
       .site-nav { display: none; }
-      .site-nav.open { display: block; position: absolute; top: 68px; right: 0; left: 0; background: #fff; box-shadow: 0 8px 20px rgba(0,0,0,0.08); padding: 16px 20px; }
+      .site-nav.open { display: block; position: absolute; top: 68px; right: 0; left: 0; background: #FFFFFF; box-shadow: 0 8px 20px rgba(13,34,36,0.08); padding: 16px 20px; }
       .site-nav.open ul { flex-direction: column; gap: 0; }
-      .site-nav.open a { display: block; padding: 12px 8px; border-bottom: 1px solid rgba(19,124,130,0.07); }
+      .site-nav.open a { display: block; padding: 12px 8px; border-bottom: 1px solid rgba(21,181,176,0.07); }
       .menu-toggle { display: flex; }
       .hero { padding: 44px 16px 36px; }
       .coupon-code-row { flex-direction: column; }
@@ -684,8 +684,26 @@
   ]
 }
     </script>
+<style id="ez-accessibility-system">
+.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
+.skip-link:focus{top:16px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
+:where(button,[role="button"]){font:inherit}
+[role="button"]{cursor:pointer}
+.burger{border:0;background:#FFFFFF;color:#0D2224}
+.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer}
+.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
+.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
+.btn-consult svg{fill:#0D2224 !important}
+.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
+.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
+.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
 
   <!-- ======== الهيدر ======== -->
   <header class="site-header">
@@ -698,7 +716,7 @@
           <li><a href="/">الرئيسية</a></li>
           <li><a href="articles.html">المدونة</a></li>
           <li><a href="discount-salla-pro.html">كود خصم برو</a></li>
-          <li><a href="https://wa.me/966501940155" target="_blank" rel="noopener">تواصل معنا</a></li>
+          <li><a href="https://wa.me/966501940155" target="_blank" rel="noopener noreferrer">تواصل معنا</a></li>
           <li><a href="/#services" class="nav-cta-btn">طلب خدمة تصميم</a></li>
         </ul>
       </nav>
@@ -719,7 +737,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
 
     <!-- ======== Hero ======== -->
     <section class="hero">
@@ -743,7 +761,7 @@
       </div>
 
       <div>
-        <a href="https://mtjr.at/6a28c6e0lmcuhz" class="btn-cta" target="_blank" rel="nofollow sponsored">
+        <a href="https://mtjr.at/6a28c6e0lmcuhz" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
           فعّل باقة بلس الآن ←
         </a>
       </div>
@@ -762,7 +780,7 @@
         <p>
           يبحث كثير من التجار عن "كود خصم باقة بلس سلة" لأن تكلفة الاشتراك السنوي تُعدّ استثماراً حقيقياً في مستقبل المتجر، وأي توفير في هذه التكلفة يعني ميزانية إضافية للتسويق أو تطوير المنتجات. من هنا جاء اهتمامنا بتوفير هذا الكوبون الحصري لك.
         </p>
-        <img src="images/salla.webp" alt="منصة سلة - كود خصم باقة بلس سلة" style="width:100%;height:auto;border-radius:14px;margin-top:10px;box-shadow:0 8px 30px rgba(19,124,130,0.10);" width="1000" height="1000" loading="lazy" decoding="async" srcset="images/responsive/salla-128.webp 128w, images/responsive/salla-256.webp 256w, images/salla.webp 1000w" sizes="72px">
+        <img src="images/salla.webp" alt="منصة سلة - كود خصم باقة بلس سلة" style="width:100%;height:auto;border-radius:14px;margin-top:10px;box-shadow:0 8px 30px rgba(21,181,176,0.10);" width="1000" height="1000" loading="lazy" decoding="async" srcset="images/responsive/salla-128.webp 128w, images/responsive/salla-256.webp 256w, images/salla.webp 1000w" sizes="72px">
       </div>
     </section>
 
@@ -812,7 +830,7 @@
         </ol>
 
         <div style="margin-top:30px; text-align:center;">
-          <a href="https://mtjr.at/6a28c6e0lmcuhz" class="btn-cta" target="_blank" rel="nofollow sponsored">
+          <a href="https://mtjr.at/6a28c6e0lmcuhz" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer">
             فعّل باقة بلس الآن ←
           </a>
         </div>
@@ -879,7 +897,7 @@
           <div class="services-cta-actions">
             <!-- ملاحظة: استبدل href بالرابط المباشر لخدمة تصميم سلة بلس في موقعك -->
             <a href="/#services" class="btn-service btn-service-primary">اطلب خدمة التصميم الآن</a>
-            <a href="https://wa.me/966501940155" class="btn-service btn-service-wa" target="_blank" rel="noopener">استشارة مجانية عبر واتساب</a>
+            <a href="https://wa.me/966501940155" class="btn-service btn-service-wa" target="_blank" rel="noopener noreferrer">استشارة مجانية عبر واتساب</a>
           </div>
         </div>
       </div>
@@ -1005,7 +1023,7 @@
           <span class="stat-label">نسبة رضا العملاء</span>
         </div>
       </div>
-      <a href="https://mtjr.at/6a28c6e0lmcuhz" class="btn-cta" target="_blank" rel="nofollow sponsored" style="background:#fff; color:var(--primary-dark);">
+      <a href="https://mtjr.at/6a28c6e0lmcuhz" class="btn-cta" target="_blank" rel="nofollow sponsored noopener noreferrer" style="background:#FFFFFF; color:var(--primary-dark);">
         فعّل باقة بلس واحصل على الخصم ←
       </a>
     </section>
@@ -1039,7 +1057,7 @@
       </div>
       <div class="footer-col">
         <h4>تواصل معنا</h4>
-        <a href="https://wa.me/966501940155" target="_blank" rel="noopener">واتساب - تواصل مع مختص</a>
+        <a href="https://wa.me/966501940155" target="_blank" rel="noopener noreferrer">واتساب - تواصل مع مختص</a>
         <a href="mailto:mr.leith9999@gmail.com">mr.leith9999@gmail.com</a>
         <a href="tel:+966501940155">+966 501 940 155</a>
       </div>
@@ -1051,7 +1069,7 @@
   </footer>
 
   <!-- ======== واتساب عائم ======== -->
-  <a href="https://wa.me/966501940155" class="whatsapp-float" target="_blank" rel="noopener" aria-label="تواصل معنا عبر واتساب">
+  <a href="https://wa.me/966501940155" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="تواصل معنا عبر واتساب">
     <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.99 2C6.477 2 2 6.477 2 11.99c0 1.762.463 3.41 1.268 4.847L2 22l5.305-1.252A9.956 9.956 0 0011.99 22C17.503 22 22 17.523 22 12.01 22 6.477 17.503 2 11.99 2zm0 18.077a8.055 8.055 0 01-4.311-1.247l-.308-.183-3.148.742.784-2.984-.201-.307A8.077 8.077 0 013.923 12c0-4.455 3.622-8.077 8.067-8.077 4.466 0 8.077 3.622 8.077 8.077 0 4.455-3.611 8.077-8.077 8.077z"/></svg>
     <span class="float-label">تواصل عبر واتساب</span>
   </a>
@@ -1085,7 +1103,7 @@
 
     function showCopied(btn) {
       btn.textContent = 'تم النسخ ✓';
-      btn.style.background = '#25D366';
+      btn.style.background = '#3BBBC2';
       setTimeout(function() {
         btn.textContent = 'نسخ الكود';
         btn.style.background = '';

@@ -144,13 +144,31 @@
   ]
 }
     </script>
+<style id="ez-accessibility-system">
+.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
+.skip-link:focus{top:16px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
+:where(button,[role="button"]){font:inherit}
+[role="button"]{cursor:pointer}
+.burger{border:0;background:#FFFFFF;color:#0D2224}
+.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer}
+.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
+.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
+.btn-consult svg{fill:#0D2224 !important}
+.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
+.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
+.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
     <header>
         <div class="logo">
             <img src="images/logo.webp" alt="Logo" width="1000" height="1000" loading="lazy" decoding="async" srcset="images/responsive/logo-128.webp 128w, images/responsive/logo-256.webp 256w, images/logo.webp 1000w" sizes="72px">
         </div>
-        <nav>
+        <nav aria-label="التنقل الرئيسي">
             <ul>
                 <li><a href="/">الرئيسية</a></li>
                 <li><a href="blog.html">المدونة</a></li>
@@ -158,7 +176,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="content">
             <h1>تهيئة متجر للسيو</h1>
             <p>نقدم خدمة كاملة لتحسين متجر إلكتروني على منصتي سلة وزد. نركز على تحسين عناوين الصفحات، أوصاف المنتجات، بنية المتجر الداخلية، وسرعة التحميل ليصبح متجرك جاهزاً للتصدر في نتائج البحث.</p>

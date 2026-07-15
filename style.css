@@ -1,14 +1,14 @@
 :root {
-    --primary-dark: #16757b;
-    --primary: #1db4bd;
-    --primary-mid: #137c82;
-    --primary-light: #039b9e;
-    --primary-accent: #00a9ac;
-    --bg-white: #f8fdfa;
+    --primary-dark: #15B5B0;
+    --primary: #15B5B0;
+    --primary-mid: #15B5B0;
+    --primary-light: #15B5B0;
+    --primary-accent: #15B5B0;
+    --bg-white: #FFFFFF;
     --bg-blur: rgba(255,255,255,0.9);
-    --text-dark: #2c3e50;
-    --text-gray: #5d6d7e;
-    --shadow: 0 10px 30px rgba(22, 117, 123, 0.08);
+    --text-dark: #0D2224;
+    --text-gray: #15B5B0;
+    --shadow: 0 10px 30px rgba(21,181,176,0.08);
 }
 
 * { box-sizing: border-box; margin:0; padding:0; scroll-behavior:smooth; outline:none; }
@@ -18,7 +18,7 @@ body { font-family:'Tajawal', sans-serif; background-color: var(--bg-white); col
 header {
     position: sticky; top:0; width:100%; z-index:1000;
     background: var(--bg-blur); backdrop-filter: blur(10px);
-    border-bottom:1px solid rgba(0,0,0,0.05); padding:15px 0;
+    border-bottom:1px solid rgba(13,34,36,0.05); padding:15px 0;
 }
 .container { width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
 .header-content { display:flex; justify-content: space-between; align-items:center; }
@@ -79,7 +79,7 @@ nav ul li { text-align:right; }
     padding: 12px 25px;
     margin: 10px 10px 10px 0;
     text-decoration: none;
-    color: #fff;
+    color: #FFFFFF;
     border-radius: 50px;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -87,7 +87,7 @@ nav ul li { text-align:right; }
 }
 
 .whatsapp-button {
-    background-image: linear-gradient(to right, #25D366, #128C7E, #25D366);
+    background-image: linear-gradient(to right, #3BBBC2, #15B5B0, #3BBBC2);
 }
 
 .back-home {
@@ -97,15 +97,15 @@ nav ul li { text-align:right; }
 .whatsapp-button:hover, .back-home:hover {
     background-position: right center;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(13,34,36,0.1);
 }
 
 
 /* --- الفوتر --- */
 footer {
-    background: #f0fcff;
+    background: #FFFFFF;
     padding: 60px 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #FFFFFF;
 }
 
 .footer-content {
@@ -119,10 +119,10 @@ footer {
     color: var(--primary-dark);
     margin-bottom: 40px;
 }
-.contact-form input, .contact-form textarea { width:100%; padding:15px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px; font-family:inherit; }
+.contact-form input, .contact-form textarea { width:100%; padding:15px; margin-bottom:15px; border:1px solid #FFFFFF; border-radius:8px; font-family:inherit; }
 .btn-main  {
-    background: linear-gradient(90deg, #16757b, #1db4bd, #137c82, #039b9e, #00a9ac);
-    color:#fff;
+    background: linear-gradient(90deg, #15B5B0, #15B5B0, #15B5B0, #15B5B0, #15B5B0);
+    color:#FFFFFF;
     padding:12px 30px;
     border-radius:50px;
     text-decoration:none;
@@ -147,7 +147,7 @@ footer {
 
 @media (max-width:768px) {
     .menu-toggle { display:block; }
-    nav { display:none; position: absolute; top: 70px; right: 0; background: #fff; width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    nav { display:none; position: absolute; top: 70px; right: 0; background: #FFFFFF; width: 100%; box-shadow: 0 10px 20px rgba(13,34,36,0.05); }
     nav.active { display: block; }
     nav ul { flex-direction: column; padding: 20px; }
     nav ul li { text-align: right; margin-bottom: 10px; }

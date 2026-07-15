@@ -39,10 +39,10 @@
 
 <style>
 :root {
-        --color-primary-dark: #137c82;
-        --color-primary-light: #1db4bd;
-        --color-text: #333;
-        --color-bg-light: #f8f8f8;
+        --color-primary-dark: #15B5B0;
+        --color-primary-light: #15B5B0;
+        --color-text: #0D2224;
+        --color-bg-light: #FFFFFF;
     }
 
     /* ═══════════════════════════════
@@ -50,9 +50,9 @@
     ════════════════════════════════ */
     header{
       position:fixed;top:0;width:100%;z-index:500;
-      background:rgba(240,250,251,0.88);
+      background:rgba(255,255,255,0.88);
       backdrop-filter:blur(20px);
-      border-bottom:1px solid rgba(4,181,184,0.1);
+      border-bottom:1px solid rgba(21,181,176,0.1);
       transition:all .35s;
     }
     .hdr-inner{
@@ -63,22 +63,22 @@
     .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
     .logo-mark{
       width:40px;height:40px;border-radius:11px;
-      box-shadow:0 4px 14px rgba(4,181,184,0.35);
+      box-shadow:0 4px 14px rgba(21,181,176,0.35);
     }
     .logo-text{font-size:1.2rem;font-weight:900;color:var(--color-text)}
     .logo-text span{color:var(--color-primary-dark)}
     nav{display:flex;align-items:center;gap:4px}
     nav a{
-      color:#5A8486;text-decoration:none;font-size:.88rem;font-weight:700;
+      color:#15B5B0;text-decoration:none;font-size:.88rem;font-weight:700;
       padding:8px 14px;border-radius:9px;transition:all .25s;
     }
-    nav a:hover{color:var(--color-primary-dark);background:#EAF9FA}
+    nav a:hover{color:var(--color-primary-dark);background:#FFFFFF}
     .nav-cta{
-      background:var(--color-primary-dark) !important;color:#fff !important;
+      background:var(--color-primary-dark) !important;color:#FFFFFF !important;
       padding:9px 22px !important;border-radius:10px;
-      box-shadow:0 4px 14px rgba(4,181,184,0.3);
+      box-shadow:0 4px 14px rgba(21,181,176,0.3);
     }
-    .nav-cta:hover{background:#038A8C !important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(4,181,184,0.4) !important}
+    .nav-cta:hover{background:#15B5B0 !important;transform:translateY(-1px);box-shadow:0 6px 20px rgba(21,181,176,0.4) !important}
     .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
     .burger span{display:block;width:22px;height:2px;background:var(--color-text);border-radius:2px;transition:.3s}
 
@@ -92,7 +92,7 @@
         font-family:Tahoma,Arial,sans-serif;
         line-height: 1.6;
         color: var(--color-text);
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        background: linear-gradient(135deg, #FFFFFF 0%, #555555 100%);
         direction: rtl;
         text-align: right;
         padding-top: 70px; /* مسافة للهيدر الثابت */
@@ -133,7 +133,7 @@
         background: white;
         border-radius: 20px;
         padding: 30px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(13,34,36,0.1);
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
@@ -153,7 +153,7 @@
 
     .article-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        box-shadow: 0 20px 40px rgba(13,34,36,0.15);
     }
 
     .article-card:hover::before {
@@ -169,7 +169,7 @@
     }
 
     .article-card p {
-        color: #666;
+        color: #555555;
         margin-bottom: 20px;
         line-height: 1.6;
     }
@@ -210,8 +210,8 @@
     }
 
     .page-cta {
-        background: linear-gradient(135deg, rgba(4,181,184,0.18), rgba(29,180,189,0.1));
-        border: 1px solid rgba(4,181,184,0.18);
+        background: linear-gradient(135deg, rgba(21,181,176,0.18), rgba(21,181,176,0.1));
+        border: 1px solid rgba(21,181,176,0.18);
         border-radius: 24px;
         padding: 28px 26px;
         margin: 40px auto 0;
@@ -234,7 +234,7 @@
     }
 
     .page-cta p {
-        color: #3d5a60;
+        color: #15B5B0;
         line-height: 1.8;
         max-width: 680px;
     }
@@ -259,11 +259,11 @@
 
     .btn-primary {
         background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary-light));
-        color: #fff;
+        color: #FFFFFF;
     }
 
     .btn-secondary {
-        background: #fff;
+        background: #FFFFFF;
         color: var(--color-primary-dark);
         border: 2px solid var(--color-primary-dark);
     }
@@ -276,7 +276,7 @@
 
     .main-footer {
         background: rgba(255,255,255,0.95);
-        border-top: 1px solid rgba(4,181,184,0.18);
+        border-top: 1px solid rgba(21,181,176,0.18);
         padding: 40px 20px 20px;
         margin-top: 60px;
     }
@@ -296,7 +296,7 @@
     .footer-logo {
         width: 60px;
         border-radius: 18px;
-        box-shadow: 0 18px 40px rgba(4,181,184,0.18);
+        box-shadow: 0 18px 40px rgba(21,181,176,0.18);
         margin-bottom: 16px;
     }
 
@@ -309,7 +309,7 @@
     .footer-links a,
     .footer-contact a {
         display: block;
-        color: #2f565d;
+        color: #15B5B0;
         text-decoration: none;
         margin-bottom: 10px;
         font-weight: 700;
@@ -322,13 +322,13 @@
 
     .footer-bottom {
         margin-top: 32px;
-        border-top: 1px solid rgba(4,181,184,0.14);
+        border-top: 1px solid rgba(21,181,176,0.14);
         padding-top: 18px;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 10px;
-        color: #5a7a7e;
+        color: #15B5B0;
         font-size: 0.95rem;
     }
 
@@ -336,13 +336,13 @@
         position: fixed;
         bottom: 22px;
         left: 22px;
-        background: #25D366;
-        color: #fff;
+        background: #3BBBC2;
+        color: #FFFFFF;
         padding: 14px 18px;
         border-radius: 999px;
         font-weight: 800;
         text-decoration: none;
-        box-shadow: 0 18px 40px rgba(37,211,102,0.22);
+        box-shadow: 0 18px 40px rgba(59,187,194,0.22);
         z-index: 999;
     }
 
@@ -459,8 +459,26 @@
   ]
 }
     </script>
+<style id="ez-accessibility-system">
+.skip-link{position:fixed;inset-inline-start:16px;top:-80px;z-index:10000;background:#0D2224;color:#FFFFFF;padding:12px 18px;border-radius:8px;text-decoration:none;font-weight:800}
+.skip-link:focus{top:16px}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{outline:3px solid #3BBBC2;outline-offset:3px}
+:where(button,[role="button"]){font:inherit}
+[role="button"]{cursor:pointer}
+.burger{border:0;background:#FFFFFF;color:#0D2224}
+.ann-code{border:1px solid #15B5B0;font:inherit;cursor:pointer}
+.ann-bar{background:#0D2224 !important;color:#FFFFFF !important}
+.btn-primary,.nav-cta,.btn-copy-hero,.btn-consult,.nav-dd-badge{color:#0D2224 !important}
+.btn-consult svg{fill:#0D2224 !important}
+.hero h1 em,.hstat-n,.btn-outline{color:#0D2224 !important}
+.simple-site-nav{display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;padding:14px 20px;background:#FFFFFF;border-bottom:1px solid rgba(21,181,176,.18)}
+.simple-site-nav a{color:#0D2224;text-decoration:none;font-weight:700}
+.visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">تجاوز إلى المحتوى الرئيسي</a>
     
 <header id="hdr">
   <div class="hdr-inner">
@@ -468,20 +486,19 @@
       <img src="images/logo.webp" alt="ازهلها" class="logo-mark" width="1000" height="1000" loading="lazy" decoding="async" srcset="images/responsive/logo-128.webp 128w, images/responsive/logo-256.webp 256w, images/logo.webp 1000w" sizes="72px">
       <div class="logo-text">ازهلها<span>.</span></div>
     </a>
-    <div class="burger" onclick="toggleNav()" id="burg">
-      <span></span><span></span><span></span>
-    </div>
-    <nav id="nav">
+    <button type="button" class="burger" id="burg" onclick="toggleNav()" aria-label="فتح القائمة" aria-controls="nav" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav aria-label="التنقل الرئيسي" id="nav">
       <a href="/">الرئيسية</a>
       <a href="#work">معرض الأعمال</a>
       <a href="#pro">باقة PRO</a>
       <a href="#plus">الباقة الفضية</a>
       <a href="#services">الخدمات</a>
       <a href="articles.html" class="nav-cta">المقالات</a>
-      <a href="https://wa.me/966501940155" class="nav-cta" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
+      <a rel="noopener noreferrer" href="https://wa.me/966501940155" class="nav-cta" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
     </nav>
   </div>
 </header>
+<main id="main-content">
 
 <section class="hero-section">
     <h1>مدونتنا</h1>
@@ -495,7 +512,7 @@
             </div>
             <div class="cta-actions">
                 <a href="/" class="btn-primary">طلب تصميم / خدمات</a>
-                <a href="https://wa.me/966501940155" target="_blank" class="btn-secondary">تواصل مع مختص عبر واتساب</a>
+                <a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank" class="btn-secondary">تواصل مع مختص عبر واتساب</a>
             </div>
         </div>
     </section>
@@ -1283,6 +1300,7 @@
         });
 
     </script>
+</main>
 <footer class="main-footer">
   <div class="footer-container">
     <div class="footer-grid">
@@ -1298,7 +1316,7 @@
       </div>
       <div class="footer-contact">
         <h4>تواصل الآن</h4>
-        <a href="https://wa.me/966501940155" target="_blank">💬 تواصل مع مختص تجارة إلكترونية</a>
+        <a rel="noopener noreferrer" href="https://wa.me/966501940155" target="_blank">💬 تواصل مع مختص تجارة إلكترونية</a>
         <a href="mailto:mr.leith9999@gmail.com">✉ mr.leith9999@gmail.com</a>
         <p>+966 501 940 155</p>
       </div>
@@ -1309,6 +1327,14 @@
     </div>
   </div>
 </footer>
-<a class="whatsapp-float" href="https://wa.me/966501940155" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
+<a rel="noopener noreferrer" class="whatsapp-float" href="https://wa.me/966501940155" target="_blank">تواصل مع مختص تجارة إلكترونية</a>
+<script id="ez-menu-accessibility">
+(()=>{const button=document.querySelector('.burger');const nav=document.getElementById('nav');if(!button||!nav)return;
+const sync=()=>{const open=nav.classList.contains('mob-open')||nav.classList.contains('active');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'إغلاق القائمة':'فتح القائمة');};
+button.addEventListener('click',()=>setTimeout(sync,0));
+nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>setTimeout(sync,0)));
+document.addEventListener('keydown',event=>{if(event.key==='Escape'){nav.classList.remove('mob-open','active');button.classList.remove('active');sync();button.focus();}});
+})();
+</script>
 </body>
 </html>
