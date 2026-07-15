@@ -147,10 +147,10 @@ footer {
 
 @media (max-width:768px) {
     .menu-toggle { display:block; }
-    nav { display:none; position: absolute; top: 70px; right: 0; background: #FFFFFF; width: 100%; box-shadow: 0 10px 20px rgba(13,34,36,0.05); }
-    nav.active { display: block; }
-    nav ul { flex-direction: column; padding: 20px; }
-    nav ul li { text-align: right; margin-bottom: 10px; }
+    header nav { display:none; position: absolute; top: 70px; right: 0; background: #FFFFFF; width: 100%; box-shadow: 0 10px 20px rgba(13,34,36,0.05); }
+    header nav.active { display: block; }
+    header nav ul { flex-direction: column; padding: 20px; }
+    header nav ul li { text-align: right; margin-bottom: 10px; }
 
     .article-content { padding-top: 100px; }
 }
