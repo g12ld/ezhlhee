@@ -2005,6 +2005,15 @@ body.ui-menu-open {
   color: var(--ui-secondary) !important;
 }
 
+.ui-home #pro .tag-chip,
+.ui-home #pro .tag-chip :where(span, strong, b),
+.ui-home #pro .sh,
+.ui-home #pro .sh > span,
+.ui-home #compare .ct-head .ct-hcol:last-child .ct-hname,
+.ui-home #compare .ct-head .ct-hcol:last-child .ct-hsub {
+  color: var(--ui-background) !important;
+}
+
 .ui-home .pro-strip {
   background: var(--ui-secondary) !important;
 }
