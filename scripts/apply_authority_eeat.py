@@ -65,7 +65,7 @@ THIN_PAGE_CONTENT: dict[str, str] = {
     {source_link(ZID_HELP, "مركز مساعدة زد: إعداد وتصميم المتجر")}
   </ul></section>
   {COMMON_REVIEW}
-  <a class="authority-cta" href="https://wa.me/966501940155?text=أريد%20بناء%20هوية%20متجري" target="_blank" rel="noopener noreferrer">ناقش هوية متجرك مع مختص</a>
+  <a class="authority-cta" href="https://wa.me/966503228029?text=أريد%20بناء%20هوية%20متجري" target="_blank" rel="noopener noreferrer">ناقش هوية متجرك مع مختص</a>
 </section>
 """.strip(),
     "competitor-analysis.html": f"""
@@ -171,7 +171,7 @@ THIN_PAGE_CONTENT: dict[str, str] = {
     {source_link(ZID_HELP, "مركز مساعدة زد: تحسين الظهور وصفحات المتجر")}
   </ul></section>
   {COMMON_REVIEW}
-  <a class="authority-cta" href="https://wa.me/966501940155?text=أريد%20تدقيق%20SEO%20لمتجري" target="_blank" rel="noopener noreferrer">اطلب تدقيق SEO لمتجرك</a>
+  <a class="authority-cta" href="https://wa.me/966503228029?text=أريد%20تدقيق%20SEO%20لمتجري" target="_blank" rel="noopener noreferrer">اطلب تدقيق SEO لمتجرك</a>
 </section>
 """.strip(),
     "secure-payments.html": f"""
@@ -212,7 +212,7 @@ THIN_PAGE_CONTENT: dict[str, str] = {
     {source_link(HRSD_FREELANCE, "وزارة الموارد البشرية: إصدار وتجديد وثيقة العمل الحر")}
   </ul></section>
   {COMMON_REVIEW}
-  <a class="authority-cta" href="https://wa.me/966501940155?text=أريد%20تجهيز%20متجري%20للتوثيق" target="_blank" rel="noopener noreferrer">اطلب مراجعة جاهزية التوثيق</a>
+  <a class="authority-cta" href="https://wa.me/966503228029?text=أريد%20تجهيز%20متجري%20للتوثيق" target="_blank" rel="noopener noreferrer">اطلب مراجعة جاهزية التوثيق</a>
 </section>
 """.strip(),
 }

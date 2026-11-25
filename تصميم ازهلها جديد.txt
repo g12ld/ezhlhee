@@ -501,7 +501,7 @@ document.querySelector('.contact-form').addEventListener('submit', async functio
 
 
 <!-- واتساب عائم -->
-<a href="https://wa.me/966501940155" class="whatsapp-float" target="_blank">
+<a href="https://wa.me/966503228029" class="whatsapp-float" target="_blank">
 <img src="https://i.ibb.co/RGSrb7bw/13.png" alt="واتساب">
 </a>
 

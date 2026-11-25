@@ -1,8 +1,8 @@
 {
   "status": "PASS",
   "summary": {
-    "maintained_html": 121,
-    "indexable_html": 119,
+    "maintained_html": 125,
+    "indexable_html": 123,
     "file_level_checks": 19,
     "homepage_cro_checks": 13,
     "failed_files": 0
@@ -14,7 +14,7 @@
     "indexable_html_count": true
   },
   "homepage_checks": {
-    "gold_pro_primary_cta": true,
+    "consultation_primary_cta": true,
     "accessible_mobile_menu": true,
     "accessible_portfolio_dialog": true,
     "keyboard_portfolio_cards": true,
@@ -55,6 +55,38 @@
       },
       "details": {
         "images": 1,
+        "unlabeled_controls": [],
+        "unnamed_buttons": [],
+        "duplicate_ids": [],
+        "unapproved_rgb": [],
+        "inline_script_errors": []
+      }
+    },
+    "about.html": {
+      "indexable": true,
+      "checks": {
+        "arabic_rtl": true,
+        "single_main_landmark": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "image_alt": true,
+        "image_dimensions": true,
+        "image_loading": true,
+        "external_link_safety": true,
+        "labeled_form_controls": true,
+        "named_buttons": true,
+        "click_targets_semantic": true,
+        "unique_ids": true,
+        "focus_visible": true,
+        "reduced_motion": true,
+        "approved_brand_colors": true,
+        "no_faq_schema": true,
+        "no_invalid_x_frame_meta": true,
+        "inline_script_syntax": true,
+        "single_h1_if_indexable": true
+      },
+      "details": {
+        "images": 0,
         "unlabeled_controls": [],
         "unnamed_buttons": [],
         "duplicate_ids": [],
@@ -3358,6 +3390,38 @@
         "inline_script_errors": []
       }
     },
+    "booking.html": {
+      "indexable": true,
+      "checks": {
+        "arabic_rtl": true,
+        "single_main_landmark": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "image_alt": true,
+        "image_dimensions": true,
+        "image_loading": true,
+        "external_link_safety": true,
+        "labeled_form_controls": true,
+        "named_buttons": true,
+        "click_targets_semantic": true,
+        "unique_ids": true,
+        "focus_visible": true,
+        "reduced_motion": true,
+        "approved_brand_colors": true,
+        "no_faq_schema": true,
+        "no_invalid_x_frame_meta": true,
+        "inline_script_syntax": true,
+        "single_h1_if_indexable": true
+      },
+      "details": {
+        "images": 0,
+        "unlabeled_controls": [],
+        "unnamed_buttons": [],
+        "duplicate_ids": [],
+        "unapproved_rgb": [],
+        "inline_script_errors": []
+      }
+    },
     "brand-building.html": {
       "indexable": true,
       "checks": {
@@ -3574,7 +3638,71 @@
         "single_h1_if_indexable": true
       },
       "details": {
-        "images": 48,
+        "images": 49,
+        "unlabeled_controls": [],
+        "unnamed_buttons": [],
+        "duplicate_ids": [],
+        "unapproved_rgb": [],
+        "inline_script_errors": []
+      }
+    },
+    "portfolio.html": {
+      "indexable": true,
+      "checks": {
+        "arabic_rtl": true,
+        "single_main_landmark": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "image_alt": true,
+        "image_dimensions": true,
+        "image_loading": true,
+        "external_link_safety": true,
+        "labeled_form_controls": true,
+        "named_buttons": true,
+        "click_targets_semantic": true,
+        "unique_ids": true,
+        "focus_visible": true,
+        "reduced_motion": true,
+        "approved_brand_colors": true,
+        "no_faq_schema": true,
+        "no_invalid_x_frame_meta": true,
+        "inline_script_syntax": true,
+        "single_h1_if_indexable": true
+      },
+      "details": {
+        "images": 10,
+        "unlabeled_controls": [],
+        "unnamed_buttons": [],
+        "duplicate_ids": [],
+        "unapproved_rgb": [],
+        "inline_script_errors": []
+      }
+    },
+    "privacy.html": {
+      "indexable": true,
+      "checks": {
+        "arabic_rtl": true,
+        "single_main_landmark": true,
+        "skip_link": true,
+        "labeled_navigation": true,
+        "image_alt": true,
+        "image_dimensions": true,
+        "image_loading": true,
+        "external_link_safety": true,
+        "labeled_form_controls": true,
+        "named_buttons": true,
+        "click_targets_semantic": true,
+        "unique_ids": true,
+        "focus_visible": true,
+        "reduced_motion": true,
+        "approved_brand_colors": true,
+        "no_faq_schema": true,
+        "no_invalid_x_frame_meta": true,
+        "inline_script_syntax": true,
+        "single_h1_if_indexable": true
+      },
+      "details": {
+        "images": 0,
         "unlabeled_controls": [],
         "unnamed_buttons": [],
         "duplicate_ids": [],

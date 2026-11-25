@@ -3,9 +3,7 @@
   "passed": 10,
   "failed": 0,
   "external_release_requirements": [
-    "Revoke the compromised bot token in BotFather",
-    "Create a replacement token",
-    "Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in Vercel staging and production"
+    "Confirm the WhatsApp Business account for +966 50 322 8029 is active"
   ],
   "results": [
     {
@@ -19,9 +17,9 @@
       "evidence": "files=0"
     },
     {
-      "check": "contact-form-server-endpoint",
+      "check": "contact-form-whatsapp-handoff",
       "passed": true,
-      "evidence": "Homepage submits only to the same-origin server endpoint"
+      "evidence": "Homepage form opens a prefilled WhatsApp message"
     },
     {
       "check": "contact-form-accessibility",

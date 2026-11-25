@@ -36,7 +36,7 @@ FOOTER_TEMPLATE = """
 </footer>
 """
 
-WHATSAPP_LINK = "https://wa.me/966501940155?text=مرحبا%20انا%20زائر%20من%20مقالة%20موقع%20ازهلها"
+WHATSAPP_LINK = "https://wa.me/966503228029?text=مرحبا%20انا%20زائر%20من%20مقالة%20موقع%20ازهلها"
 
 def extract_meta_tag(content, name):
     """Extracts a meta tag by name."""

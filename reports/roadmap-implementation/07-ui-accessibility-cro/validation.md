@@ -2,7 +2,7 @@
 
 **Status:** PASS
 
-Validated 121 maintained HTML files (119 indexable) against 19 repeatable file-level checks.
+Validated 125 maintained HTML files (123 indexable) against 19 repeatable file-level checks.
 
 ## Aggregate release gates
 
@@ -13,7 +13,7 @@ Validated 121 maintained HTML files (119 indexable) against 19 repeatable file-l
 
 ## Homepage CRO and interaction gates
 
-- PASS — `gold_pro_primary_cta`
+- PASS — `consultation_primary_cta`
 - PASS — `accessible_mobile_menu`
 - PASS — `accessible_portfolio_dialog`
 - PASS — `keyboard_portfolio_cards`

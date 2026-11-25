@@ -1,5 +1,6 @@
 ﻿file,ui_accessibility_scope
 404.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
+about.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 articles/أخطاء-شائعة-في-تصميم-المتاجر-الإلكترونية-وكيفية-تجنبها.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 articles/أدوات-وتقنيات-تسهل-عليك-إدارة-متجرك-الإلكتروني-اليومية.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 articles/أسرار-تصميم-صفحات-المنتجات-الجذابة-على-منصة-سلة.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
@@ -103,6 +104,7 @@ articles/وثيقة-العمل-الحر-دليل-لتحديد-النشاط-ال�
 articles/وثيقة-العمل-الحر-والالتزامات-الضريبية-ما-يجب-أن-تعرفه.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 articles.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 blog.html,brand normalization; landmarks; accessible primary navigation
+booking.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 brand-building.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 competitor-analysis.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 data-analysis.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
@@ -110,6 +112,8 @@ digital-ads.html,brand normalization; landmarks; focus/reduced-motion; accessibl
 discount-salla-plus.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 discount-salla-pro.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 index.html,brand normalization; landmarks; keyboard interactions; dialog/menu accessibility; Gold Pro CRO
+portfolio.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
+privacy.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 product-marketing.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 salla-store-design-dammam.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards
 salla-store-design-jeddah.html,brand normalization; landmarks; focus/reduced-motion; accessible link safeguards

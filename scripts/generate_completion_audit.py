@@ -45,6 +45,11 @@ def lighthouse(path: Path) -> dict:
     }
 
 
+def staging_sitemap_passed(staging: dict) -> bool:
+    checks = staging.get("checks", {})
+    return checks.get("all_sitemap_pages_return_200") is True or checks.get("all_119_sitemap_pages_return_200") is True
+
+
 def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     baseline = ROOT / "reports" / "phase-1-baseline" / "2026-07-15"
@@ -54,6 +59,7 @@ def main() -> None:
     metadata = read_json(ROADMAP / "04-metadata-structured-data" / "validation.json")
     content = read_json(ROADMAP / "05-content-architecture" / "validation.json")
     security = read_json(ROADMAP / "03-security" / "validation.json")
+    viewport = read_json(ROADMAP / "08-viewport-qa" / "viewport-browser-validation.json")
     mobile = lighthouse(ROADMAP / "09-staging-release" / "lighthouse-mobile-performance-release.report.json")
     mobile_quality = lighthouse(ROADMAP / "09-staging-release" / "lighthouse-mobile-optimized-final-3.report.json")
     desktop = lighthouse(ROADMAP / "09-staging-release" / "lighthouse-desktop-current-release.report.json")
@@ -68,6 +74,7 @@ def main() -> None:
         ROADMAP / "05-content-architecture" / "validation.json",
         ROADMAP / "06-performance" / "validation.json",
         ROADMAP / "07-ui-accessibility-cro" / "validation.json",
+        ROADMAP / "08-viewport-qa" / "viewport-browser-validation.json",
         ROADMAP / "08-authority-eeat" / "validation.json",
         ROADMAP / "09-staging-release" / "staging-validation.json",
     ]
@@ -78,6 +85,7 @@ def main() -> None:
     }
     metadata_checks = {item["check"]: item["passed"] for item in metadata["results"]}
     content_checks = {item["check"]: item["passed"] for item in content["results"]}
+    security_checks = {item["check"]: item["passed"] for item in security["results"]}
 
     implementation = {
         "approved_baseline_package_and_workbook_preserved": baseline_required.issubset({p.name for p in baseline.iterdir()}) and workbook.stat().st_size > 0,
@@ -85,14 +93,15 @@ def main() -> None:
         "separate_feature_branch_used": branch.startswith("codex/") and branch != "main",
         "all_cross_phase_validation_suites_pass": all(suite_passed(path) for path in suite_paths),
         "protected_nonproduction_preview_passes": staging.get("status") == "PASS" and staging.get("deployment_type") == "protected Vercel preview (non-production)",
-        "all_119_canonical_pages_return_200": staging["checks"].get("all_119_sitemap_pages_return_200") is True,
+        "all_canonical_sitemap_pages_return_200": staging_sitemap_passed(staging),
         "redirect_map_is_permanent_and_chain_free": staging["checks"].get("all_redirects_are_permanent_and_chain_free") is True,
         "legacy_public_url_is_not_lost": staging["checks"].get("legacy_public_url_is_preserved") is True,
         "browser_and_verification_files_are_preserved": staging["checks"].get("browser_identity_files_are_served_and_valid") is True and staging["checks"].get("google_verification_file_is_preserved") is True,
-        "security_headers_and_fail_closed_endpoint_pass": staging["checks"].get("security_headers_complete") is True and security.get("failed") == 0 and staging["checks"].get("contact_fails_closed_without_credentials") is True,
+        "security_headers_and_whatsapp_contact_flow_pass": staging["checks"].get("security_headers_complete") is True and security.get("failed") == 0 and security_checks.get("contact-form-whatsapp-handoff") is True,
         "metadata_and_rich_result_required_fields_pass": metadata_checks.get("metadata-complete-and-bounded") is True and metadata_checks.get("google-rich-result-required-fields") is True,
         "no_prohibited_faqpage_schema": metadata_checks.get("faqpage-prohibited") is True,
         "no_broken_redirecting_or_orphan_internal_links": all(content_checks.get(name) is True for name in ("no-broken-internal-links", "no-redirecting-internal-links", "no-indexable-orphans")),
+        "browser_viewport_screenshots_and_interactions_pass": viewport.get("status") == "PASS" and viewport.get("summary", {}).get("failed_pages") == 0 and viewport.get("summary", {}).get("failed_interactions") == 0,
         "mobile_lab_cwv_targets_pass": mobile["lcp_ms"] < 2500 and mobile["cls"] < 0.1 and mobile["categories"].get("performance", 0) >= 90,
         "mobile_quality_scores_are_100": all(mobile_quality["categories"].get(name) == 100 for name in ("accessibility", "best-practices", "seo")),
         "desktop_lighthouse_scores_are_100": all(desktop["categories"].get(name) == 100 for name in ("performance", "accessibility", "best-practices", "seo")),
@@ -103,14 +112,14 @@ def main() -> None:
 
     external_release_gates = [
         {
-            "gate": "Rotate the compromised Telegram bot token and configure TELEGRAM_BOT_TOKEN plus TELEGRAM_CHAT_ID in Vercel Preview and Production.",
+            "gate": "Confirm the WhatsApp Business account for +966 50 322 8029 is active and can receive new chats.",
             "status": "OWNER_ACTION_REQUIRED",
-            "reason": "Secret rotation requires the owner-controlled BotFather account; no replacement credential is stored in the repository.",
+            "reason": "The account status must be confirmed by the owner before production promotion.",
         },
         {
-            "gate": "Run one credentialed preview contact submission after environment variables are configured.",
-            "status": "BLOCKED_BY_CREDENTIAL_GATE",
-            "reason": "The endpoint correctly fails closed with HTTP 503 until credentials exist.",
+            "gate": "Run one preview contact-form test and verify WhatsApp opens with the request prefilled.",
+            "status": "OWNER_ACTION_REQUIRED",
+            "reason": "The final confirmation requires a browser-level WhatsApp handoff check.",
         },
         {
             "gate": "Explicitly approve the atomic production promotion.",

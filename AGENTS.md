@@ -164,6 +164,10 @@
 
 # Brand Identity
 
+## Approved V2 override — 2026-11-25
+
+The owner explicitly approved the original V2 brief's primary color `#125065` during the redesign session. For V2, use the centralized palette in `css/ezhalha-v2.css` (deep `#0B3D4C`, soft `#EAF2F4`, white surfaces, neutral text). This approval supersedes the older fixed teal palette below. Preserve original images and existing URLs.
+
 ## Primary
 
 #15B5B0
@@ -451,5 +455,7 @@ Images:
 ---
 
 # Continuous Improvement
+
+- When Python or Node code contains regexes, HTML quotes, or multiline edits, save it as a `.py` or `.js` script and execute the file. Do not embed complex quoting in PowerShell command arguments; this has caused repeated syntax errors.
 
 إذا تكرر نفس الخطأ مرتين، أضفه مباشرة إلى هذا الملف كقاعدة دائمة حتى لا يتكرر مستقبلاً.

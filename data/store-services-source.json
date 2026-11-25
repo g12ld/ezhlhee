@@ -1,0 +1,432 @@
+{
+  "schema_version": 1,
+  "researched_on": "2026-11-25",
+  "store_origin": "https://ezhalhe.com",
+  "coverage": {
+    "status": "partial_not_catalog_complete",
+    "sitemap_verified": false,
+    "category_pagination_verified": false,
+    "verified_product_pages": 4,
+    "explanation_ar": "تعذر تحميل sitemap وrobots وفهرس المنتجات كاملًا. الصفحة الرئيسية والتصنيف يعملان عبر JavaScript ولا تكشف أداة الويب روابط المنتجات. لا يمثل هذا الملف جردًا نهائيًا لكل الخدمات.",
+    "limitations": [
+      "صور غلاف المنتجات لم تظهر في الاستخراج النصي؛ جميع cover_image_url غير المتحققة تظل null.",
+      "روابط الباقات الثلاث الموجودة محليًا لم تُفتح بأداة الويب، وأسعارها وتفاصيلها المحلية ليست تحققًا عامًا حديثًا.",
+      "مقالات المتجر المكتوبة في مايو 2026 أدلة اكتشاف فقط، وليست مرجع السعر الحالي أو إثبات بقاء الخدمة معروضة.",
+      "بيانات المنتج المنشورة ليست إثباتًا مستقلًا لصحة المزاعم النظامية أو المالية أو ضمانات النتائج."
+    ],
+    "attempted_inventory_urls": [
+      {
+        "url": "https://ezhalhe.com/",
+        "result": "JavaScript shell; incomplete catalog"
+      },
+      {
+        "url": "https://ezhalhe.com/robots.txt",
+        "result": "not accessible through research tool"
+      },
+      {
+        "url": "https://ezhalhe.com/sitemap.xml",
+        "result": "not accessible through research tool"
+      },
+      {
+        "url": "https://ezhalhe.com/blog",
+        "result": "not accessible through research tool"
+      }
+    ]
+  },
+  "categories": [
+    {
+      "name": "باقات تصميم المتاجر",
+      "url": "https://ezhalhe.com/باقات-تصميم-المتاجر/c111989299",
+      "source_ref": "turn230433593view3",
+      "status": "title_verified_products_not_exposed",
+      "product_count": null
+    }
+  ],
+  "design_packages_local_pending_public_verification": [
+    {
+      "local_id": "plus",
+      "product_id": "560117077",
+      "local_name": "باقة بلس",
+      "public_name": null,
+      "category": "باقات تصميم المتاجر",
+      "url": "https://ezhalhe.com/تصميم-المتجر-احترفي-سلة-وزد-باقة-بلس/p560117077",
+      "public_price": null,
+      "cover_image_url": null,
+      "verification_status": "public_product_not_accessible",
+      "local_source": "js/advisor-data.js",
+      "local_price_snapshot": 1099,
+      "local_currency": "SAR",
+      "local_details_snapshot": [
+        "إنشاء المتجر وضبط إعداداته",
+        "ثلاثة أقسام رئيسية وثلاثة بنرات",
+        "تجهيز عشر منتجات مع أوصافها",
+        "إعداد وسائل الدفع والشحن والصفحات القانونية"
+      ],
+      "note": "تفاصيل محلية سابقة فقط؛ لا تُقدّم كمطابقة متحققة لمحتوى المتجر العام."
+    },
+    {
+      "local_id": "professional",
+      "product_id": "2132256496",
+      "local_name": "الباقة الاحترافية",
+      "public_name": null,
+      "category": "باقات تصميم المتاجر",
+      "url": "https://ezhalhe.com/الباقة-الاحترافية-—-تطوير-وتصميم-متجر-إلكتروني/p2132256496",
+      "public_price": null,
+      "cover_image_url": null,
+      "verification_status": "public_product_not_accessible",
+      "local_source": "js/advisor-data.js",
+      "local_price_snapshot": 1490,
+      "local_currency": "SAR",
+      "local_details_snapshot": [
+        "تجهيز المتجر مع شعار وأربعة بنرات وخمسة أقسام",
+        "عشرون منتجًا مع وصف",
+        "إعداد الدفع والشحن وتهيئة SEO أساسية",
+        "ربط Google Analytics وSearch Console وواتساب",
+        "الصفحات القانونية"
+      ],
+      "note": "تفاصيل محلية سابقة فقط؛ لا تُقدّم كمطابقة متحققة لمحتوى المتجر العام."
+    },
+    {
+      "local_id": "gold",
+      "product_id": "1934611542",
+      "local_name": "الباقة الذهبية برو",
+      "public_name": null,
+      "category": "باقات تصميم المتاجر",
+      "url": "https://ezhalhe.com/تطوير-والتصميم-متجر-الالكتروني-الباقة-الذهبية-باقة-برو/p1934611542",
+      "public_price": null,
+      "cover_image_url": null,
+      "verification_status": "public_product_not_accessible",
+      "local_source": "js/advisor-data.js",
+      "local_price_snapshot": 1980,
+      "local_currency": "SAR",
+      "local_details_snapshot": [
+        "دومين .com لمدة عام بحسب البيانات المحلية",
+        "شعار وهوية وستة بنرات وتخصيص CSS",
+        "خمسة وثلاثون منتجًا مع SEO",
+        "الدفع والشحن وتابي وتمارا",
+        "ربط البكسلات وGoogle Analytics وSearch Console",
+        "متابعة شهر بعد التسليم بحسب البيانات المحلية"
+      ],
+      "note": "تفاصيل محلية سابقة فقط؛ لا تُقدّم كمطابقة متحققة لمحتوى المتجر العام."
+    }
+  ],
+  "verified_product_pages": [
+    {
+      "product_id": "1404796305",
+      "name": "استخراج وتقديم على وثيقة العمل الحر",
+      "url": "https://ezhalhe.com/p1404796305-استخراج-وتقديم-على-وثيقة-العمل-الحر",
+      "discovered_url": "https://ezhalhe.com/[اسم-المنتج]/p1404796305",
+      "source_ref": "turn824210221view0",
+      "captured_on": "2026-11-25",
+      "verification_status": "product_page_text_verified",
+      "category": null,
+      "category_from_older_store_blog": "خدمات أزهلها",
+      "public_price": {
+        "displayed_amount": 119,
+        "compare_at_displayed_amount": 149,
+        "currency": "SAR",
+        "currency_note": "العملة بحسب سياق المتجر السعودي؛ الرمز لم يظهر في الاستخراج النصي"
+      },
+      "cover_image_url": null,
+      "cover_status": "not_exposed_by_text_reader",
+      "description_summary_ar": "خدمة تقديم على وثيقة العمل الحر. تعرض الصفحة أهلية مرتبطة بالجنسية والعمر، ومزايا متعلقة بممارسة العمل وفتح حساب مرتبط بالوثيقة، وتذكر صلاحية سنة واسترداد الأتعاب عند عدم الموافقة.",
+      "details_paraphrased": [
+        "الفئات المذكورة واسعة وتشمل الطلبة والباحثين عن عمل والموظفين والمتقاعدين، والرجال والنساء.",
+        "تذكر الصفحة اشتراط الجنسية السعودية وعمر 18 سنة هجرية أو أكثر.",
+        "تورد إمكان التسجيل الاختياري بالتأمينات والتعاقد واستخدام وسائل الدفع الرقمية وفتح حساب بنكي مرتبط بالوثيقة.",
+        "تذكر الصفحة أن الوثيقة سارية سنة من الإصدار.",
+        "تورد استرداد المبلغ إذا لم تُعتمد الوثيقة."
+      ],
+      "terms_requiring_official_check": [
+        "شرط العمر وصلاحيته النظامية الحالية",
+        "الفئات والأهلية ومتطلبات الوثيقة",
+        "المزايا النظامية والتأمينية والبنكية"
+      ],
+      "description_capture": "Paraphrased factual extraction; refer to source for original wording.",
+      "missing_fields": [
+        "cover_image_url",
+        "current_category_url",
+        "delivery_time",
+        "explicit_tax_status"
+      ]
+    },
+    {
+      "product_id": "980169495",
+      "name": "تحديث بيانات المالك وتوثيق متجرك في منصة سلة",
+      "url": "https://ezhalhe.com/p980169495-توثيق-متجر-سلة-بهويتك",
+      "source_ref": "turn824210221view3",
+      "captured_on": "2026-11-25",
+      "verification_status": "product_page_text_verified",
+      "category": null,
+      "category_from_older_store_blog": "خدمات أزهلها",
+      "public_price": {
+        "displayed_amount": 79,
+        "compare_at_displayed_amount": 99,
+        "currency": "SAR",
+        "currency_note": "العملة بحسب سياق المتجر السعودي؛ الرمز لم يظهر في الاستخراج النصي"
+      },
+      "cover_image_url": null,
+      "cover_status": "not_exposed_by_text_reader",
+      "description_summary_ar": "خدمة لمراجعة بيانات صاحب متجر سلة وتحديثها وتجهيز مستندات التوثيق ومتابعتها.",
+      "details_paraphrased": [
+        "تعديل بيانات المالك الرسمية وربطها بهوية المالك الجديد أو سجله.",
+        "تحديث البريد ورقم الجوال والعنوان وإرفاق المستندات التي تطلبها سلة.",
+        "متابعة طلب التوثيق مع الدعم ومراجعة الرفض السابق والتأكد من عمل الميزات بعد الإجراء.",
+        "الحالات المذكورة: نقل الملكية أو تغيير الاسم أو السجل، تجديد الوثائق، الرفض السابق أو ظهور تنبيه تحديث.",
+        "المستندات التي تسردها الصفحة: إثبات هوية، وثيقة عمل حر أو سجل ساري، عنوان وطني ووسائل تواصل."
+      ],
+      "terms_requiring_official_check": [
+        "أي ضمان بعدم إيقاف المتجر",
+        "الادعاء بأن التوثيق يزيد حد المبيعات",
+        "الادعاءات المتعلقة بأهلية باقات سلة ومتطلبات بوابات الدفع"
+      ],
+      "description_capture": "Paraphrased factual extraction; refer to source for original wording.",
+      "missing_fields": [
+        "cover_image_url",
+        "current_category_url",
+        "delivery_time",
+        "explicit_tax_status"
+      ]
+    },
+    {
+      "product_id": "166288191",
+      "name": "تركيب وتفعيل بكسل (Pixel) لمتجرك",
+      "url": "https://ezhalhe.com/p166288191-تركيب-وتفعيل-بكسل-(pixel)-لمتجرك",
+      "short_url": "https://ezhalhe.com/jZxAoBX",
+      "source_ref": "turn162837054view2",
+      "captured_on": "2026-11-25",
+      "verification_status": "product_page_text_verified",
+      "category": null,
+      "category_from_older_store_blog": "خدمات أزهلها",
+      "public_price": {
+        "displayed_amount": 249,
+        "compare_at_displayed_amount": null,
+        "currency": "SAR",
+        "currency_note": "العملة بحسب سياق المتجر السعودي؛ الرمز لم يظهر في الاستخراج النصي"
+      },
+      "cover_image_url": null,
+      "cover_status": "not_exposed_by_text_reader",
+      "description_summary_ar": "عنوان المنتج عام، لكن الوصف التفصيلي يخص إعداد Snap Pixel لمتاجر سلة؛ لا يُفترض أنه يشمل جميع منصات البكسل.",
+      "details_paraphrased": [
+        "إعداد حساب إعلانات سناب عند الحاجة وإنشاء بكسل أو وصل البكسل الحالي بسلة.",
+        "إعداد أحداث الزيارة وعرض المنتج والإضافة للسلة وإتمام الطلب.",
+        "تذكر الصفحة إعداد Snap CAPI وفحص التتبع بأداة Snap Pixel Helper.",
+        "إعداد جمهور لإعادة الاستهداف وشرح قراءة بيانات البكسل.",
+        "تستثني الخدمة إنتاج الإعلانات وإدارة الحملات وميزانية منصة الإعلانات.",
+        "تشير إلى خيار يجمع سناب وتيك توك، دون أن يظهر سعر ذلك الخيار أو رابطه."
+      ],
+      "terms_requiring_official_check": [
+        "تأكيد شمول CAPI وفق حساب العميل وإمكانات سلة",
+        "أي وعد بتقليل CPA أو ضمان دقة شاملة",
+        "إحصاءات مستخدمي سناب الواردة بالوصف لم تُستخدم كحقائق مستقلة"
+      ],
+      "description_capture": "Paraphrased factual extraction; refer to source for original wording.",
+      "missing_fields": [
+        "cover_image_url",
+        "current_category_url",
+        "delivery_time",
+        "explicit_tax_status",
+        "bundle_option_price"
+      ]
+    },
+    {
+      "product_id": "1701323826",
+      "name": "إدارة متجرك وحسابات التواصل الاجتماعي — شهرياً",
+      "url": "https://ezhalhe.com/p1701323826-مدونة-محسنة-بالـseo-داخل-متجرك-في-سلة",
+      "source_ref": "turn824210221view2",
+      "captured_on": "2026-11-25",
+      "verification_status": "product_page_text_verified_options_incomplete",
+      "category": null,
+      "public_price": {
+        "displayed_base_amount": 0,
+        "verified_final_amount": null,
+        "currency": "SAR",
+        "price_type": "requires_option_selection",
+        "warning_ar": "الصفر ليس سعر خدمة مجانية؛ الصفحة تتضمن خيارات مدفوعة لم تُكشف كاملة في القراءة المباشرة."
+      },
+      "cached_search_option": {
+        "name": "إدارة متجر شهرًا مع حساب تيك توك أو إنستغرام",
+        "amount": 3000,
+        "verification_status": "search_index_only_not_live_option_confirmed",
+        "source_ref": "turn367069525search2"
+      },
+      "cover_image_url": null,
+      "cover_status": "not_exposed_by_text_reader",
+      "description_summary_ar": "إدارة شهرية للمتجر والمحتوى الاجتماعي. يتغير نطاق الطلب بتحديد الخيارات؛ لا يمكن تثبيت سعر نهائي من الرقم الأساسي المعروض.",
+      "details_paraphrased": [
+        "متابعة الطلبات والمخزون وتعديل المنتجات ونصوصها وصورها والعروض.",
+        "خدمة استفسارات العملاء بالمتجر وواتساب والتعليقات والرسائل الاجتماعية.",
+        "تشمل القائمة محتوى منشورات وقصص ومقاطع لحسابات إنستغرام وتيك توك وسناب وتويتر.",
+        "تقارير شهرية عن أداء المتجر والقنوات الاجتماعية.",
+        "تصف الصفحة فريق إدارة ومحتوى وتصميم وردود، وتحدد دوامًا من التاسعة صباحًا حتى السابعة مساءً."
+      ],
+      "terms_requiring_official_check": [
+        "النطاق الفعلي لكل خيار والمنصات المشمولة",
+        "عدد المنشورات والقصص والمقاطع",
+        "أيام العمل والمنطقة الزمنية",
+        "الوعود بزيادة المبيعات أو نمو المتابعين ليست ضمانات موثقة"
+      ],
+      "description_capture": "Paraphrased factual extraction; refer to source for original wording.",
+      "missing_fields": [
+        "cover_image_url",
+        "current_category_url",
+        "all_option_names_and_prices",
+        "explicit_tax_status",
+        "service_level_per_option"
+      ]
+    }
+  ],
+  "discovered_candidates_not_ready_for_service_page": [
+    {
+      "name": "تطوير متجرك برمجة css",
+      "short_url": "https://ezhalhe.com/xADdWYG",
+      "source_article": "https://ezhalhe.com/blog/تطوير-متجرك-برمجه-css-xADdWYG/a-1031530795",
+      "source_ref": "turn467030857search1",
+      "category_in_older_article": [
+        "خدمات تطوير متجرك",
+        "تصميم برمجي",
+        "خدمات اساسية"
+      ],
+      "historical_article_price": 599,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_returned_410; blog_only_details_are_generic"
+    },
+    {
+      "name": "ربط متجرك مع مخازن واضافة منتجات",
+      "short_url": "https://ezhalhe.com/rAYexOd",
+      "source_article": "https://ezhalhe.com/blog/ربط-متجرك-مع-مخازن-واضافة-منتجات-كيف-يخدم-نمو-متجرك-الإلكتروني؟/a-1496127285",
+      "source_ref": "turn899627362search0",
+      "category_in_older_article": [
+        "خدمات تطوير متجرك",
+        "اضافة تطبيقات بمتجرك",
+        "خدمات اساسية"
+      ],
+      "historical_article_price": 149,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_returned_410; blog_only_details_are_generic"
+    },
+    {
+      "name": "تحسين متجرك في محركات بحث قوقل السيو seo",
+      "short_url": "https://ezhalhe.com/NAYrQdg",
+      "source_article": "https://ezhalhe.com/blog/تحسين-متجرك-في-محركات-بحث-قوقل-السيو-seo-كيف-يخدم-نمو-متجرك-الإلكتروني؟/a-433247217",
+      "source_ref": "turn899627362search2",
+      "category_in_older_article": [
+        "خدمات أزهلها"
+      ],
+      "historical_article_price": 359,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_not_accessible; blog_only_details_are_generic"
+    },
+    {
+      "name": "تسجيل متجرك في إمكان للدفع الآجل (تقسيط الراجحي)",
+      "short_url": "https://ezhalhe.com/dbdXvzw",
+      "source_article": "https://ezhalhe.com/blog/تسجيل-متجرك-في-امكان-للدفع-الاجل-تقسيط-الراجحي-dbdXvzw/a-217161215",
+      "source_ref": "turn899627362search6",
+      "category_in_older_article": [
+        "خدمات المدفوعات"
+      ],
+      "historical_article_price": 149,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_returned_410; current_availability_not_verified"
+    },
+    {
+      "name": "ربط متجرك بعلي إكسبريس للدروبشيبينغ (AliExpress Dropshipping)",
+      "short_url": "https://ezhalhe.com/rABXVxO",
+      "source_article": "https://ezhalhe.com/blog/ربط-متجرك-بعلي-اكسبريس-للدروبشيبينغ-AliExpress-Dropshipping-rABXVxO/a-2055273210",
+      "source_ref": "turn899627362search10",
+      "category_in_older_article": null,
+      "historical_article_price": 149,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_not_accessible; article_discovery_only; current_product_not_verified"
+    },
+    {
+      "name": "اشتراك الباقة",
+      "short_url": "https://ezhalhe.com/YzQGZKE",
+      "source_article": "https://ezhalhe.com/blog/اشتراك-الباقه-YzQGZKE/a-252308457",
+      "source_ref": "turn899627362search9",
+      "category_in_older_article": [
+        "خدمات التجارة الإلكترونية"
+      ],
+      "historical_article_price": 299,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_not_accessible; article_discovery_only; ambiguous_scope_do_not_guess"
+    },
+    {
+      "name": "باركود",
+      "short_url": "https://ezhalhe.com/PDvnxzW",
+      "source_article": "https://ezhalhe.com/blog/باركود-PDvnxzW/a-1665641967",
+      "source_ref": "turn880125607search8",
+      "category_in_older_article": [
+        "خدمات التجارة الإلكترونية"
+      ],
+      "historical_article_price": 129,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_not_accessible; ambiguous_scope_do_not_guess"
+    },
+    {
+      "name": "اسرار الاشتراكات والمنتجات الرقمية",
+      "short_url": "https://ezhalhe.com/EZypYPA",
+      "source_article": "https://ezhalhe.com/blog/اسرار-الاشتراكات-والمنتجات-الرقمية-دليل-عملي-للتعلم-والتطبيق/a-924570322",
+      "source_ref": "turn899627362search5",
+      "category_in_older_article": [
+        "منتجات رقمية"
+      ],
+      "historical_article_price": 99,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_not_accessible; article_discovery_only; product_not_service"
+    },
+    {
+      "name": "كيفية انشاء متجر الكتروني من الصفر",
+      "short_url": "https://ezhalhe.com/ydevArR",
+      "source_article": "https://ezhalhe.com/blog/كيفية-انشاء-متجر-الكتروني-من-الصفر-كيف-يخدم-نمو-متجرك-الإلكتروني؟/a-404835886",
+      "source_ref": "turn899627362search7",
+      "category_in_older_article": [
+        "منتجات رقمية"
+      ],
+      "historical_article_price": 35,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "short_product_url_returned_410; article_discovery_only; product_not_service"
+    },
+    {
+      "name": "دورات البحث عن منتج رابح",
+      "short_url": null,
+      "source_article": "https://ezhalhe.com/blog/دورات-البحث-عن-منتج-رابح-دليل-عملي-للتعلم-والتطبيق/a-1779330351",
+      "source_ref": "turn899627362search11",
+      "category_in_older_article": null,
+      "historical_article_price": 25,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "article_discovery_only; product_link_not_exposed"
+    },
+    {
+      "name": "كتاب الترويج على تيك توك",
+      "product_id": "2101813824",
+      "discovered_product_url": "https://ezhalhe.com/[اسم-المنتج]/p2101813824",
+      "source_ref": "turn367069525search1",
+      "open_ref": "turn824210221view1",
+      "category_in_older_article": [
+        "منتجات رقمية"
+      ],
+      "historical_search_sale_price": 12,
+      "historical_search_compare_at": 49,
+      "current_verified_price": null,
+      "cover_image_url": null,
+      "status": "previous_product_url_redirected_to_home; do_not_publish_as_current"
+    }
+  ],
+  "handoff_notes_ar": [
+    "يلزم الحصول على كتالوج ظاهر بالمتصفح أو تصدير منتجات مصرح به لإتمام الجرد والتحقق من صور الأغلفة وخيارات الأسعار.",
+    "الأسماء والحقائق أعلاه من صفحات المتجر نفسها؛ الملخصات معاد صياغتها وليست نصوصًا أصلية كاملة.",
+    "لا تنقل مزاعم قانونية أو بنكية أو وعود نتائج باعتبارها حقائق مستقلة من دون مراجعة مصادرها الرسمية.",
+    "يختلف رقم التواصل العام الذي ظهر في بعض فهارس المتجر عن الرقم في الموقع التعريفي؛ لم أعدّل رقم أي واجهة."
+  ]
+}

@@ -11,10 +11,15 @@ ROOT = Path(__file__).resolve().parents[1]
 ROADMAP = ROOT / "reports" / "roadmap-implementation"
 RELEASE = ROADMAP / "09-staging-release"
 SITE_ARTIFACT_EXTENSIONS = (".html", ".css", ".js", ".xml", ".txt", ".json", ".svg", ".webmanifest")
+IGNORED_INVENTORY_PREFIXES = ("scratch/", ".claude/")
 
 
 def read_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def sitemap_url_count() -> int:
+    return (ROOT / "sitemap.xml").read_text(encoding="utf-8").count("<loc>")
 
 
 def lighthouse_summary(path: Path, profile: str, quality_path: Path | None = None) -> dict[str, object]:
@@ -65,7 +70,10 @@ def git_inventory() -> list[dict[str, str]]:
         else:
             path = diff_entries[index].decode("utf-8", errors="replace")
         index += 1
-        statuses[path.replace("\\", "/")] = status
+        normalized = path.replace("\\", "/")
+        if any(normalized.startswith(prefix) for prefix in IGNORED_INVENTORY_PREFIXES):
+            continue
+        statuses[normalized] = status
 
     entries = [entry for entry in result.stdout.split(b"\0") if entry]
     index = 0
@@ -77,6 +85,9 @@ def git_inventory() -> list[dict[str, str]]:
             index += 1
             path = entries[index].decode("utf-8", errors="replace")
         normalized = path.replace("\\", "/")
+        if any(normalized.startswith(prefix) for prefix in IGNORED_INVENTORY_PREFIXES):
+            index += 1
+            continue
         statuses[normalized] = f"{statuses[normalized]}+WT:{status.strip()}" if normalized in statuses else f"WT:{status.strip()}"
         index += 1
 
@@ -137,6 +148,12 @@ def validation_status(path: Path) -> tuple[str, str]:
             f"{summary.get('file_level_checks', 0)} file-level checks + "
             f"{summary.get('homepage_cro_checks', 0)} homepage CRO checks; "
             f"failed_files={summary.get('failed_files', 0)}"
+        )
+    elif isinstance(summary, dict) and "pages_checked" in summary:
+        detail = (
+            f"{summary.get('pages_checked', 0)} page/viewport checks; "
+            f"failed_pages={summary.get('failed_pages', 0)}; "
+            f"failed_interactions={summary.get('failed_interactions', 0)}"
         )
     elif "file_level_checks" in payload and "homepage_cro_checks" in payload:
         detail = (
@@ -201,6 +218,7 @@ def main() -> None:
         ("Content and internal links", ROADMAP / "05-content-architecture" / "validation.json"),
         ("Performance", ROADMAP / "06-performance" / "validation.json"),
         ("UI, accessibility, and CRO", ROADMAP / "07-ui-accessibility-cro" / "validation.json"),
+        ("Browser viewport QA", ROADMAP / "08-viewport-qa" / "viewport-browser-validation.json"),
         ("Authority and E-E-A-T", ROADMAP / "08-authority-eeat" / "validation.json"),
         ("Protected staging runtime", RELEASE / "staging-validation.json"),
     ]
@@ -210,6 +228,7 @@ def main() -> None:
         suite_results.append({"name": name, "status": status, "detail": detail, "report": path.relative_to(ROOT).as_posix()})
 
     staging = read_json(RELEASE / "staging-validation.json")
+    current_sitemap_count = sitemap_url_count()
     readiness = {
         "status": "READY_FOR_OWNER_RELEASE_GATES",
         "generated": str(date.today()),
@@ -219,7 +238,7 @@ def main() -> None:
         "validation_suites": suite_results,
         "lighthouse": lighthouse,
         "release_scope": {
-            "indexable_pages": 119,
+            "indexable_pages": current_sitemap_count,
             "articles": 101,
             "path_redirects": 204,
             "host_redirects": 1,
@@ -227,9 +246,9 @@ def main() -> None:
             "legacy_public_urls_preserved": 1,
         },
         "owner_gates": [
-            "Revoke the exposed Telegram bot token in BotFather and create a replacement.",
-            "Configure TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID for Vercel Preview and Production without placing values in the repository.",
-            "Approve the final production promotion after a credentialed preview contact-form test passes.",
+            "Confirm the WhatsApp Business account for +966 50 322 8029 is active and can receive new chats.",
+            "Test the preview contact form and verify it opens WhatsApp with the customer's request prefilled.",
+            "Approve the final production promotion after the WhatsApp contact-flow test passes.",
         ],
         "post_release_gates": [
             "Immediate crawl, redirect, canonical, robots, sitemap, header, link, and structured-data verification.",
@@ -260,11 +279,12 @@ def main() -> None:
             "",
             "## Runtime staging result",
             "",
-            "- 119/119 sitemap pages returned HTTP 200.",
+            f"- {staging['summary'].get('sitemap_pages_checked', current_sitemap_count)}/{staging['summary'].get('sitemap_pages_checked', current_sitemap_count)} sitemap pages returned HTTP 200.",
             "- 204/204 path redirects are permanent and have zero static chains; 12 runtime samples matched.",
             "- The apex host has one atomic redirect to `www`.",
             "- Required security headers, robots.txt, sitemap.xml, WebP delivery, and a real 404 passed.",
-            "- The contact API returns 405 for GET, 422 for invalid input, and 503 fail-closed while release credentials are absent.",
+            "- The homepage contact form opens a prefilled WhatsApp message to +966 50 322 8029.",
+            "- The legacy contact API returns 405 for GET, 422 for invalid input, and 503 fail-closed while credentials are absent.",
             "",
             "## Owner release gates",
             "",
@@ -283,28 +303,28 @@ def main() -> None:
 
 ## Preconditions
 
-1. The exposed Telegram token is revoked in BotFather and a replacement is created.
-2. `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` are configured in Vercel Preview and Production. Values must never be written to a file, report, command log, or client-side response.
-3. A new protected preview is built after the environment variables are configured.
-4. The full staging validator passes, including one valid contact submission that receives a successful Telegram API response.
+1. The WhatsApp Business account for +966 50 322 8029 is active and can receive new chats.
+2. A new protected preview is built from the final source.
+3. The full staging validator passes, including the homepage WhatsApp handoff check.
+4. A manual preview contact-form test opens WhatsApp with the customer's request prefilled.
 5. The owner explicitly approves production deployment.
 
 ## Atomic release
 
-Promote the exact validated Vercel deployment to production so HTML, redirects, canonicals, robots.txt, sitemap.xml, headers, assets, and the server endpoint switch together. Do not upload or replace files individually. The production alias change is the release boundary.
+Promote the exact validated Vercel deployment to production so HTML, redirects, canonicals, robots.txt, sitemap.xml, headers, assets, and contact links switch together. Do not upload or replace files individually. The production alias change is the release boundary.
 
 ## Immediate validation (start within five minutes)
 
-1. Crawl all 119 canonical sitemap URLs and require HTTP 200.
+1. Crawl all {current_sitemap_count} canonical sitemap URLs and require HTTP 200.
 2. Validate all 204 redirect rules plus the apex-to-`www` host redirect; require one hop and HTTP 301/308.
-3. Verify representative old backlink URLs, internal links, canonical tags, robots.txt, sitemap.xml, headers, real 404 behavior, and contact submission.
+3. Verify representative old backlink URLs, internal links, canonical tags, robots.txt, sitemap.xml, headers, real 404 behavior, and the WhatsApp contact flow.
 4. Validate JSON-LD syntax and eligible critical pages with Google Rich Results Test.
 5. Inspect the homepage, Salla, Zid, SEO, article index, contact page, and representative article in Search Console.
 6. Submit the canonical sitemap only after these checks pass.
 
 ## Rollback trigger
 
-Rollback immediately for a critical 404/5xx/soft-404, redirect loop or chain, robots/indexing block, wrong canonical, missing sitemap, security-header failure, broken navigation, invalid critical schema, or failed lead endpoint.
+Rollback immediately for a critical 404/5xx/soft-404, redirect loop or chain, robots/indexing block, wrong canonical, missing sitemap, security-header failure, broken navigation, invalid critical schema, or failed WhatsApp lead flow.
 
 ## Rollback method
 
@@ -312,7 +332,7 @@ Reassign the production alias to the previously known-good Vercel deployment. Re
 
 ## Validated candidate
 
-Protected preview: `{staging['deployment']}`. It must be rebuilt after credentials are configured; the resulting deployment becomes the promotion candidate only after validation passes again.
+Protected preview: `{staging['deployment']}`. It must be rebuilt from the final source; the resulting deployment becomes the promotion candidate only after validation passes again.
 """
     (RELEASE / "deployment-rollback-runbook.md").write_text(runbook, encoding="utf-8")
 

@@ -152,7 +152,7 @@ def organization() -> dict:
         "areaServed": {"@type": "Country", "name": "المملكة العربية السعودية"},
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+966501940155",
+            "telephone": "+966503228029",
             "contactType": "sales",
             "areaServed": "SA",
             "availableLanguage": "Arabic",
@@ -411,7 +411,7 @@ def social_block(title: str, description: str, url: str, article: bool) -> str:
         '<link rel="icon" href="/favicon.svg" type="image/svg+xml">',
         '<link rel="icon" href="/images/logo.webp" type="image/webp" sizes="1000x1000">',
         '<link rel="manifest" href="/site.webmanifest">',
-        '<meta name="theme-color" content="#0D2224">',
+        '<meta name="theme-color" content="#0B3D4C">',
         '<meta name="msapplication-config" content="/browserconfig.xml">',
     ] + [
         f'<meta {attribute}="{name}" content="{html.escape(value, quote=True)}">'

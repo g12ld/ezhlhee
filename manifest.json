@@ -9,7 +9,7 @@
   "scope": "/",
   "display": "standalone",
   "background_color": "#FFFFFF",
-  "theme_color": "#0D2224",
+  "theme_color": "#0B3D4C",
   "icons": [
     {
       "src": "/images/logo.webp",

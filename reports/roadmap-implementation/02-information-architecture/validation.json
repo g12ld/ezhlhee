@@ -46,17 +46,17 @@
     {
       "check": "canonical-coverage",
       "passed": true,
-      "evidence": "valid=119, errors=0"
+      "evidence": "valid=123, errors=0"
     },
     {
       "check": "sitemap-valid-canonical-urls",
       "passed": true,
-      "evidence": "urls=119, unique=119, missing=0, redirected=0"
+      "evidence": "urls=123, unique=123, missing=0, redirected=0"
     },
     {
       "check": "sitemap-lastmod-complete",
       "passed": true,
-      "evidence": "lastmods=119"
+      "evidence": "lastmods=123"
     },
     {
       "check": "blog-legacy-links-repaired",

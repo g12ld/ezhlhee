@@ -1,32 +1,42 @@
 {
-  "status": "READY_FOR_OWNER_RELEASE_GATES",
-  "generated": "2026-07-15",
+  "status": "PRODUCTION_PUBLISHED",
+  "generated": "2026-09-07",
   "branch": "codex/ui-ux-pro-max-redesign",
   "protected_preview": "https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app",
+  "production_url": "https://www.ezhalhe-sa.com/",
+  "production_deployment": {
+    "id": "dpl_2LATqkYxyJZxzJ8kQLWw1111dtun",
+    "url": "https://ezhlhee-3u05fc52s-g12lds-projects.vercel.app",
+    "inspect_url": "https://vercel.com/g12lds-projects/ezhlhee/2LATqkYxyJZxzJ8kQLWw1111dtun",
+    "ready_state": "READY",
+    "target": "production",
+    "published": "2026-09-07"
+  },
   "implementation_checks": {
     "approved_baseline_package_and_workbook_preserved": true,
     "authenticated_search_console_baseline_preserved": true,
     "separate_feature_branch_used": true,
     "all_cross_phase_validation_suites_pass": true,
     "protected_nonproduction_preview_passes": true,
-    "all_119_canonical_pages_return_200": true,
+    "all_123_canonical_pages_return_200": true,
     "redirect_map_is_permanent_and_chain_free": true,
     "legacy_public_url_is_not_lost": true,
     "browser_and_verification_files_are_preserved": true,
-    "security_headers_and_fail_closed_endpoint_pass": true,
+    "security_headers_and_whatsapp_contact_flow_pass": true,
     "metadata_and_rich_result_required_fields_pass": true,
     "no_prohibited_faqpage_schema": true,
     "no_broken_redirecting_or_orphan_internal_links": true,
+    "browser_viewport_screenshots_and_interactions_pass": true,
     "mobile_lab_cwv_targets_pass": true,
     "mobile_quality_scores_are_100": true,
     "desktop_lighthouse_scores_are_100": true,
     "atomic_release_and_rollback_runbook_exists": true,
     "thirty_day_search_console_plan_exists": true,
-    "production_not_deployed_by_this_roadmap": true
+    "production_published_after_owner_approval": true
   },
   "summary": {
-    "passed": 19,
-    "total": 19,
+    "passed": 20,
+    "total": 20,
     "failed": 0
   },
   "lighthouse": {
@@ -60,21 +70,16 @@
       "cls": 0
     }
   },
-  "external_release_gates": [
+  "post_release_owner_checks": [
     {
-      "gate": "Rotate the compromised Telegram bot token and configure TELEGRAM_BOT_TOKEN plus TELEGRAM_CHAT_ID in Vercel Preview and Production.",
-      "status": "OWNER_ACTION_REQUIRED",
-      "reason": "Secret rotation requires the owner-controlled BotFather account; no replacement credential is stored in the repository."
+      "gate": "Confirm the WhatsApp Business account for +966 50 322 8029 is active and can receive new chats.",
+      "status": "OWNER_ACTION_RECOMMENDED",
+      "reason": "The link can be verified programmatically, but inbox receipt must be confirmed by the owner."
     },
     {
-      "gate": "Run one credentialed preview contact submission after environment variables are configured.",
-      "status": "BLOCKED_BY_CREDENTIAL_GATE",
-      "reason": "The endpoint correctly fails closed with HTTP 503 until credentials exist."
-    },
-    {
-      "gate": "Explicitly approve the atomic production promotion.",
-      "status": "OWNER_APPROVAL_REQUIRED",
-      "reason": "The user prohibited production deployment before final approval."
+      "gate": "Run one live contact-form test and verify WhatsApp opens with the request prefilled.",
+      "status": "OWNER_ACTION_RECOMMENDED",
+      "reason": "The production page contains the WhatsApp handoff code; the external app handoff should be confirmed from the owner's browser."
     }
   ],
   "post_release_measurements": [
