@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate secret removal, server-side contact handling, and headers."""
+"""Validate secret removal, WhatsApp contact handling, and headers."""
 
 from __future__ import annotations
 
@@ -48,9 +48,12 @@ def main() -> None:
 
     index = (ROOT / "index.html").read_text(encoding="utf-8")
     check(
-        "contact-form-server-endpoint",
-        "fetch('/api/contact'" in index and "api.telegram.org" not in index,
-        "Homepage submits only to the same-origin server endpoint",
+        "contact-form-whatsapp-handoff",
+        "WHATSAPP_CONTACT_NUMBER='966503228029'" in index
+        and "https://wa.me/${WHATSAPP_CONTACT_NUMBER}" in index
+        and "fetch('/api/contact'" not in index
+        and "api.telegram.org" not in index,
+        "Homepage form opens a prefilled WhatsApp message",
     )
     check(
         "contact-form-accessibility",
@@ -136,9 +139,7 @@ def main() -> None:
         "passed": passed,
         "failed": len(results) - passed,
         "external_release_requirements": [
-            "Revoke the compromised bot token in BotFather",
-            "Create a replacement token",
-            "Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in Vercel staging and production",
+            "Confirm the WhatsApp Business account for +966 50 322 8029 is active",
         ],
         "results": results,
     }
@@ -162,10 +163,8 @@ def main() -> None:
             "",
             "## External release requirements",
             "",
-            "- Revoke the compromised bot token in BotFather.",
-            "- Create a replacement token.",
-            "- Configure `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` in Vercel staging and production.",
-            "- Run the authenticated staging form test before release approval.",
+            "- Confirm the WhatsApp Business account for +966 50 322 8029 is active.",
+            "- Run a staging form click test before release approval.",
         ]
     )
     (REPORT_DIR / "validation.md").write_text("\n".join(lines) + "\n", encoding="utf-8")

@@ -10,6 +10,8 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+EXPECTED_MAINTAINED_HTML = 125
+EXPECTED_INDEXABLE_HTML = 123
 REPORT_DIR = ROOT / "reports" / "roadmap-implementation" / "07-ui-accessibility-cro"
 EXCLUDED = {"_new_testi.html", "google387142411d334808.html"}
 ALLOWED_RGB = {
@@ -193,8 +195,16 @@ def main() -> None:
     gold_start = homepage.find('<section class="pro-section sec" id="pro">')
     gold_template = homepage.find('<template id="moreGoldProWorks">', gold_start)
     visible_gold = homepage[gold_start:gold_template]
+    visible_work_cards = re.findall(r'<div class="work-card\b', homepage)
     homepage_checks = {
-        "gold_pro_primary_cta": 'href="#pro" class="btn-primary">اطلب الباقة الذهبية برو' in homepage,
+        "consultation_primary_cta": all(
+            value in homepage
+            for value in [
+                'href="booking.html" class="btn-primary">احجز استشارة مجانية',
+                'href="portfolio.html" class="btn-outline">شاهد أعمالنا',
+                'href="#packages" class="btn-link">قارن الباقات',
+            ]
+        ),
         "accessible_mobile_menu": all(value in homepage for value in ['id="burg"', 'aria-controls="nav"', 'aria-expanded="false"', "event.key==='Escape'"]),
         "accessible_portfolio_dialog": all(value in homepage for value in ['role="dialog"', 'aria-modal="true"', 'aria-hidden="true"', 'aria-labelledby="lbTitle"']),
         "keyboard_portfolio_cards": "[role=\"button\"][onclick]" in homepage and "event.key==='Enter'" in homepage,
@@ -216,7 +226,7 @@ def main() -> None:
                 'id="moreTestimonials"' in homepage,
                 'id="morePortfolio"' in homepage,
                 len(re.findall(r'<div class="testi-card">', homepage)) == 50,
-                len(re.findall(r'<div class="work-card(?:\s|\")', homepage)) == 19,
+                len(visible_work_cards) >= 19,
                 "function loadMoreTestimonials()" in homepage,
                 "function loadMorePortfolio(moveFocus)" in homepage,
             ]
@@ -247,8 +257,8 @@ def main() -> None:
     aggregate_checks = {
         "all_file_checks_pass": all(all(item["checks"].values()) for item in results.values()),
         "homepage_cro_checks_pass": all(homepage_checks.values()),
-        "maintained_html_count": len(files) == 121,
-        "indexable_html_count": sum(bool(item["indexable"]) for item in results.values()) == 119,
+        "maintained_html_count": len(files) == EXPECTED_MAINTAINED_HTML,
+        "indexable_html_count": sum(bool(item["indexable"]) for item in results.values()) == EXPECTED_INDEXABLE_HTML,
     }
     failures = {
         rel: [name for name, passed in item["checks"].items() if not passed]

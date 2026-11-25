@@ -1,0 +1,337 @@
+{
+  "status": "PASS",
+  "tested_at": "2026-09-07T09:10:40.468Z",
+  "origin": "http://127.0.0.1:4173",
+  "browser": "chrome",
+  "summary": {
+    "pages_checked": 11,
+    "failed_pages": 0,
+    "failed_interactions": 0
+  },
+  "results": [
+    {
+      "scenario": "home",
+      "url": "http://127.0.0.1:4173/index.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/home-375.png",
+      "screenshot_bytes": 49868,
+      "checks": {
+        "title": "تصميم متجر سلة وزد | إنشاء متجر إلكتروني احترافي — إزهلها",
+        "path": "/index.html",
+        "viewport_width": 375,
+        "scroll_width": 375,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 4,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "home",
+      "url": "http://127.0.0.1:4173/index.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/home-768.png",
+      "screenshot_bytes": 76531,
+      "checks": {
+        "title": "تصميم متجر سلة وزد | إنشاء متجر إلكتروني احترافي — إزهلها",
+        "path": "/index.html",
+        "viewport_width": 768,
+        "scroll_width": 768,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 4,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "home",
+      "url": "http://127.0.0.1:4173/index.html",
+      "viewport": {
+        "width": 1024,
+        "height": 900
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/home-1024.png",
+      "screenshot_bytes": 199687,
+      "checks": {
+        "title": "تصميم متجر سلة وزد | إنشاء متجر إلكتروني احترافي — إزهلها",
+        "path": "/index.html",
+        "viewport_width": 1024,
+        "scroll_width": 1024,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 4,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "home",
+      "url": "http://127.0.0.1:4173/index.html",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/home-1440.png",
+      "screenshot_bytes": 245670,
+      "checks": {
+        "title": "تصميم متجر سلة وزد | إنشاء متجر إلكتروني احترافي — إزهلها",
+        "path": "/index.html",
+        "viewport_width": 1440,
+        "scroll_width": 1440,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 4,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "portfolio",
+      "url": "http://127.0.0.1:4173/portfolio.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/portfolio-375.png",
+      "screenshot_bytes": 47138,
+      "checks": {
+        "title": "أعمالنا | نماذج متاجر سلة وزد من إزهلها",
+        "path": "/portfolio.html",
+        "viewport_width": 375,
+        "scroll_width": 375,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": true,
+        "visible_cards": 6,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "portfolio",
+      "url": "http://127.0.0.1:4173/portfolio.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/portfolio-768.png",
+      "screenshot_bytes": 77695,
+      "checks": {
+        "title": "أعمالنا | نماذج متاجر سلة وزد من إزهلها",
+        "path": "/portfolio.html",
+        "viewport_width": 768,
+        "scroll_width": 768,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": true,
+        "visible_cards": 6,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "booking",
+      "url": "http://127.0.0.1:4173/booking.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/booking-375.png",
+      "screenshot_bytes": 43543,
+      "checks": {
+        "title": "احجز استشارة تصميم متجر مجانية | إزهلها",
+        "path": "/booking.html",
+        "viewport_width": 375,
+        "scroll_width": 375,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 0,
+        "booking_form_present": true,
+        "booking_slot_input_present": true
+      },
+      "pass": true
+    },
+    {
+      "scenario": "booking",
+      "url": "http://127.0.0.1:4173/booking.html",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/booking-768.png",
+      "screenshot_bytes": 61214,
+      "checks": {
+        "title": "احجز استشارة تصميم متجر مجانية | إزهلها",
+        "path": "/booking.html",
+        "viewport_width": 768,
+        "scroll_width": 768,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 0,
+        "booking_form_present": true,
+        "booking_slot_input_present": true
+      },
+      "pass": true
+    },
+    {
+      "scenario": "articles",
+      "url": "http://127.0.0.1:4173/articles.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/articles-375.png",
+      "screenshot_bytes": 43903,
+      "checks": {
+        "title": "مركز معرفة التجارة الإلكترونية | أدلة سلة وزد — إزهلها",
+        "path": "/articles.html",
+        "viewport_width": 375,
+        "scroll_width": 375,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 0,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "salla",
+      "url": "http://127.0.0.1:4173/salla-store-design.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/salla-375.png",
+      "screenshot_bytes": 39354,
+      "checks": {
+        "title": "تصميم متجر سلة احترافي 2026 | إنشاء متجر إلكتروني سلة — إزهلها",
+        "path": "/salla-store-design.html",
+        "viewport_width": 375,
+        "scroll_width": 375,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 0,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    },
+    {
+      "scenario": "zid",
+      "url": "http://127.0.0.1:4173/zid-store-design.html",
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "reports/roadmap-implementation/08-viewport-qa/zid-375.png",
+      "screenshot_bytes": 38908,
+      "checks": {
+        "title": "تصميم متجر زد احترافي 2026 | إنشاء متجر إلكتروني زد — إزهلها",
+        "path": "/zid-store-design.html",
+        "viewport_width": 375,
+        "scroll_width": 375,
+        "horizontal_overflow_px": 0,
+        "main_landmarks": 1,
+        "h1_count": 1,
+        "skip_link": true,
+        "primary_action_visible": true,
+        "mobile_menu_button_present": true,
+        "mobile_menu_controls_nav": true,
+        "active_filter_visible": false,
+        "visible_cards": 0,
+        "booking_form_present": false,
+        "booking_slot_input_present": false
+      },
+      "pass": true
+    }
+  ],
+  "interactions": {
+    "mobile_menu_opens_and_syncs_aria_expanded": true,
+    "escape_closes_mobile_menu": true,
+    "enter_opens_portfolio_dialog": true,
+    "escape_closes_portfolio_dialog": true
+  },
+  "failures": {
+    "pages": [],
+    "interactions": []
+  },
+  "launch_errors": [
+    {
+      "browser": "playwright-chromium",
+      "error": "browserType.launch: Executable doesn't exist at C:\\Users\\mrlei\\AppData\\Local\\ms-playwright\\chromium_headless_shell-1234\\chrome-headless-shell-win64\\chrome-headless-shell.exe"
+    }
+  ]
+}

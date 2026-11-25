@@ -4,3 +4,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+reports/roadmap-implementation/08-viewport-qa/*/
+/scratch/
+/outputs/
+node_modules/

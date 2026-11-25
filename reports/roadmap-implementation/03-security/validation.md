@@ -6,7 +6,7 @@ Result: 10/10 static checks passed.
 |---|---|---|
 | no-token-patterns | PASS | files=0 |
 | no-client-telegram-calls | PASS | files=0 |
-| contact-form-server-endpoint | PASS | Homepage submits only to the same-origin server endpoint |
+| contact-form-whatsapp-handoff | PASS | Homepage form opens a prefilled WhatsApp message |
 | contact-form-accessibility | PASS | Labels and live status are present |
 | endpoint-env-only-secrets | PASS | Endpoint reads both credentials from environment variables |
 | endpoint-defenses | PASS | Origin, rate, honeypot, timing, response, and timeout defenses are present |
@@ -17,7 +17,5 @@ Result: 10/10 static checks passed.
 
 ## External release requirements
 
-- Revoke the compromised bot token in BotFather.
-- Create a replacement token.
-- Configure `TELEGRAM_BOT_TOKEN` and `TELEGRAM_CHAT_ID` in Vercel staging and production.
-- Run the authenticated staging form test before release approval.
+- Confirm the WhatsApp Business account for +966 50 322 8029 is active.
+- Run a staging form click test before release approval.

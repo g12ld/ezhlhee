@@ -1,9 +1,18 @@
 {
-  "status": "READY_FOR_OWNER_RELEASE_GATES",
-  "generated": "2026-07-15",
+  "status": "PRODUCTION_PUBLISHED",
+  "generated": "2026-09-07",
   "branch": "codex/ui-ux-pro-max-redesign",
-  "production_modified": false,
+  "production_modified": true,
   "protected_preview": "https://ezhlhee-50bcrj1ix-g12lds-projects.vercel.app",
+  "production_url": "https://www.ezhalhe-sa.com/",
+  "production_deployment": {
+    "id": "dpl_2LATqkYxyJZxzJ8kQLWw1111dtun",
+    "url": "https://ezhlhee-3u05fc52s-g12lds-projects.vercel.app",
+    "inspect_url": "https://vercel.com/g12lds-projects/ezhlhee/2LATqkYxyJZxzJ8kQLWw1111dtun",
+    "ready_state": "READY",
+    "target": "production",
+    "published": "2026-09-07"
+  },
   "validation_suites": [
     {
       "name": "Information architecture",
@@ -40,6 +49,12 @@
       "status": "PASS",
       "detail": "19 file-level checks + 13 homepage CRO checks; failed_files=0",
       "report": "reports/roadmap-implementation/07-ui-accessibility-cro/validation.json"
+    },
+    {
+      "name": "Browser viewport QA",
+      "status": "PASS",
+      "detail": "11 page/viewport checks; failed_pages=0; failed_interactions=0",
+      "report": "reports/roadmap-implementation/08-viewport-qa/viewport-browser-validation.json"
     },
     {
       "name": "Authority and E-E-A-T",
@@ -89,17 +104,25 @@
     }
   ],
   "release_scope": {
-    "indexable_pages": 119,
+    "indexable_pages": 123,
     "articles": 101,
     "path_redirects": 204,
     "host_redirects": 1,
-    "changed_or_new_files": 248,
+    "changed_or_new_files": 190,
     "legacy_public_urls_preserved": 1
   },
-  "owner_gates": [
-    "Revoke the exposed Telegram bot token in BotFather and create a replacement.",
-    "Configure TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID for Vercel Preview and Production without placing values in the repository.",
-    "Approve the final production promotion after a credentialed preview contact-form test passes."
+  "production_smoke_checks": [
+    "Production www homepage returned HTTP 200 with required security headers.",
+    "Apex host redirected to www with HTTP 301.",
+    "Canonical /index.html redirected to the homepage with HTTP 308.",
+    "robots.txt, sitemap.xml, portfolio.html, and booking.html returned HTTP 200.",
+    "A non-existent URL returned HTTP 404.",
+    "The live homepage contains the prefilled WhatsApp handoff for +966 50 322 8029.",
+    "The legacy contact API rejected GET with HTTP 405."
+  ],
+  "post_release_owner_checks": [
+    "Confirm the WhatsApp Business account for +966 50 322 8029 is active and can receive new chats.",
+    "Run one live contact-form test from a real browser and confirm WhatsApp opens with the customer's request prefilled."
   ],
   "post_release_gates": [
     "Immediate crawl, redirect, canonical, robots, sitemap, header, link, and structured-data verification.",

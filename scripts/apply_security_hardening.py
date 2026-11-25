@@ -15,44 +15,38 @@ CONTACT_HANDLER_RE = re.compile(
 )
 
 CONTACT_HANDLER = """/* ── CONTACT FORM ── */
+const WHATSAPP_CONTACT_NUMBER='966503228029';
 const contactForm=document.getElementById('cf');
 contactForm.dataset.startedAt=Date.now().toString();
-contactForm.addEventListener('submit',async function(e){
+contactForm.addEventListener('submit',function(e){
   e.preventDefault();
-  const submitButton=this.querySelector('button[type="submit"]');
   const status=document.getElementById('contact-status');
-  const payload={
-    name:this.elements.name.value,
-    email:this.elements.email.value,
-    message:this.elements.message.value,
-    website:this.elements.website.value,
-    startedAt:Number(this.dataset.startedAt)
-  };
-  submitButton.disabled=true;
-  submitButton.setAttribute('aria-disabled','true');
-  this.setAttribute('aria-busy','true');
-  status.textContent='جارٍ إرسال رسالتك…';
-  try{
-    const response=await fetch('/api/contact',{
-      method:'POST',
-      credentials:'same-origin',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(payload)
-    });
-    const result=await response.json().catch(()=>({}));
-    if(!response.ok||result.ok!==true) throw new Error('contact_submission_failed');
-    status.textContent='تم إرسال رسالتك بنجاح.';
-    showToast('✅ تم إرسال رسالتك بنجاح!');
-    this.reset();
-    this.dataset.startedAt=Date.now().toString();
-  }catch{
-    status.textContent='تعذر الإرسال الآن. تواصل معنا عبر واتساب أو حاول مرة أخرى.';
-    showToast('❌ تعذر الإرسال الآن، حاول مرة أخرى');
-  }finally{
-    submitButton.disabled=false;
-    submitButton.removeAttribute('aria-disabled');
-    this.removeAttribute('aria-busy');
+
+  if(this.elements.website.value.trim()) return;
+  if(!this.checkValidity()){
+    this.reportValidity();
+    status.textContent='فضلاً أكمل بيانات النموذج قبل الإرسال.';
+    return;
   }
+
+  const name=this.elements.name.value.trim();
+  const email=this.elements.email.value.trim();
+  const message=this.elements.message.value.trim();
+  const whatsappMessage=[
+    'طلب جديد من نموذج إزهلها',
+    `الاسم: ${name}`,
+    `البريد الإلكتروني: ${email}`,
+    `تفاصيل الطلب: ${message}`
+  ].join('\\n');
+  const whatsappUrl=`https://wa.me/${WHATSAPP_CONTACT_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+  status.textContent='سيتم فتح واتساب لإرسال الطلب.';
+  showToast('سيتم فتح واتساب لإرسال الطلب');
+  const opened=window.open(whatsappUrl,'_blank','noopener,noreferrer');
+  if(!opened){
+    window.location.href=whatsappUrl;
+  }
+  this.reset();
+  this.dataset.startedAt=Date.now().toString();
 });
 """
 
@@ -122,7 +116,7 @@ def secure_index() -> None:
     if STYLE_ANCHOR in content and ".form-hp{" not in content:
         content = content.replace(STYLE_ANCHOR, ACCESSIBLE_STYLES, 1)
     content, handler_count = CONTACT_HANDLER_RE.subn(CONTACT_HANDLER, content, count=1)
-    if handler_count != 1 and "fetch('/api/contact'" not in content:
+    if handler_count != 1 and "WHATSAPP_CONTACT_NUMBER" not in content:
         raise RuntimeError("Contact handler did not match the expected source")
     content = content.replace(
         '<div class="toast" id="toast"></div>',

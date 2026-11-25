@@ -9,7 +9,7 @@ Result: 13/13 checks passed.
 | internal-links-host-relative | PASS | absolute_same_domain=0 |
 | internal-fragments-resolve | PASS | invalid_fragments=0 |
 | no-indexable-orphans | PASS | orphans=0 |
-| crawl-reachable-from-home | PASS | reached=119, total=119, unreachable=0 |
+| crawl-reachable-from-home | PASS | reached=123, total=123, unreachable=0 |
 | article-author-and-date | PASS | articles=101, missing=0 |
 | article-contextual-links | PASS | articles=101, missing=0, wrong_link_count=0 |
 | topic-hub-navigation | PASS | hub_links=5 |

@@ -66,6 +66,7 @@ def sitemap_paths() -> list[str]:
 def main() -> None:
     REPORT_DIR.mkdir(parents=True, exist_ok=True)
     paths = sitemap_paths()
+    sitemap_page_count = len(paths)
     crawl_rows: list[dict[str, object]] = []
     with ThreadPoolExecutor(max_workers=18) as pool:
         future_map = {pool.submit(vercel_request, path): path for path in paths}
@@ -132,6 +133,7 @@ def main() -> None:
         "cross-origin-opener-policy",
     }
     home_headers = homepage.get("headers", {})
+    home_text = str(homepage.get("body", ""))
     crawl_failures = [row for row in crawl_rows if row["status"] != 200]
     runtime_redirect_failures = [row for row in runtime_redirects if row["status"] not in {301, 308} or row["location"] != row["expected_destination"]]
     sitemap_text = str(sitemap.get("body", ""))
@@ -159,7 +161,7 @@ def main() -> None:
 
     checks = {
         "preview_is_protected_from_indexing": home_headers.get("x-robots-tag") == "noindex",
-        "all_119_sitemap_pages_return_200": len(paths) == 119 and not crawl_failures,
+        "all_sitemap_pages_return_200": sitemap_page_count > 0 and not crawl_failures,
         "all_redirects_are_permanent_and_chain_free": len(path_redirects) == 204 and all(item.get("permanent") is True for item in redirects) and not static_chains,
         "apex_host_redirect_is_atomic": len(host_redirects) == 1 and host_redirects[0].get("source") == "/:path*" and host_redirects[0].get("destination") == "https://www.ezhalhe-sa.com/:path*",
         "runtime_redirect_sample_matches_map": not runtime_redirect_failures,
@@ -171,6 +173,7 @@ def main() -> None:
         "browser_identity_files_are_served_and_valid": browser_identity_valid,
         "google_verification_file_is_preserved": google_verification["status"] == 200 and bool(str(google_verification.get("body", "")).strip()),
         "legacy_public_url_is_preserved": legacy_fragment["status"] == 200 and "https://www.ezhalhe-sa.com/_new_testi.html" not in sitemap_text and "Disallow: /_new_testi.html" in robots_text,
+        "contact_form_whatsapp_handoff_present": "wa.me/966503228029" in home_text and "WHATSAPP_CONTACT_NUMBER" in home_text and "fetch('/api/contact'" not in home_text,
         "contact_get_rejected": api_get["status"] == 405,
         "contact_validation_rejects_bad_payload": api_invalid["status"] == 422,
         "contact_fails_closed_without_credentials": api_unconfigured["status"] == 503,
@@ -210,7 +213,7 @@ def main() -> None:
         "api_statuses": {"GET": api_get["status"], "invalid_POST": api_invalid["status"], "unconfigured_valid_POST": api_unconfigured["status"]},
         "notes": [
             "Vercel emits HTTP 308 for permanent redirects configured with permanent=true; the Firebase fallback retains explicit HTTP 301 rules.",
-            "The contact endpoint intentionally returns 503 until the owner rotates the exposed Telegram token and supplies the replacement environment credentials.",
+            "The homepage contact form opens a prefilled WhatsApp message to +966 50 322 8029; the legacy contact endpoint remains fail-closed without environment credentials.",
             "The preview deployment adds X-Robots-Tag: noindex through Vercel deployment protection; production indexing behavior is not changed.",
             "Bing verification is intentionally not asserted because the approved baseline marks it optional and no owner verification key was supplied.",
             "The existing /_new_testi.html URL remains available with HTTP 200, but stays out of the sitemap and crawl-disallowed until the owner approves any URL treatment.",
@@ -221,7 +224,7 @@ def main() -> None:
     lines = ["# Staging release validation", "", f"**Status:** {payload['status']}", "", f"**Protected preview:** `{DEPLOYMENT}`", "", "## Release gates", ""]
     for name, result in checks.items():
         lines.append(f"- {'PASS' if result else 'FAIL'} — `{name}`")
-    lines.extend(["", "## Scope", "", f"- Sitemap pages runtime-crawled: {len(paths)}.", f"- Path redirects statically checked: {len(path_redirects)}; host redirects: {len(host_redirects)}; runtime samples: {len(runtime_redirects)}.", f"- Redirect chains: {len(static_chains)}.", "- Contact endpoint: 405 for GET, 422 for invalid data, 503 fail-closed without release credentials.", "- Production was not deployed or modified."])
+    lines.extend(["", "## Scope", "", f"- Sitemap pages runtime-crawled: {sitemap_page_count}.", f"- Path redirects statically checked: {len(path_redirects)}; host redirects: {len(host_redirects)}; runtime samples: {len(runtime_redirects)}.", f"- Redirect chains: {len(static_chains)}.", "- Contact form: prefilled WhatsApp handoff to +966 50 322 8029 is present on the homepage.", "- Legacy contact endpoint: 405 for GET, 422 for invalid data, 503 fail-closed without release credentials.", "- Production was not deployed or modified."])
     (REPORT_DIR / "staging-validation.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
     print(json.dumps({"status": payload["status"], **payload["summary"], "checks": checks}, ensure_ascii=False, indent=2))

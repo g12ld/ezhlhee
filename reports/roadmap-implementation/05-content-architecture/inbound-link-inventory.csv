@@ -1,4 +1,5 @@
 ﻿file,inbound_pages,crawl_reachable
+about.html,1,True
 articles.html,112,True
 articles/أخطاء-شائعة-في-تصميم-المتاجر-الإلكترونية-وكيفية-تجنبها.html,4,True
 articles/أدوات-وتقنيات-تسهل-عليك-إدارة-متجرك-الإلكتروني-اليومية.html,2,True
@@ -102,12 +103,15 @@ articles/نصائح-لتسريع-عملية-الموافقة-على-فتح-حس�
 articles/وثيقة-العمل-الحر-دليل-لتحديد-النشاط-المناسب-لمتجرك.html,3,True
 articles/وثيقة-العمل-الحر-والالتزامات-الضريبية-ما-يجب-أن-تعرفه.html,3,True
 blog.html,7,True
+booking.html,6,True
 brand-building.html,2,True
 competitor-analysis.html,1,True
-digital-ads.html,28,True
+digital-ads.html,27,True
 discount-salla-plus.html,9,True
 discount-salla-pro.html,5,True
-index.html,119,True
+index.html,123,True
+portfolio.html,1,True
+privacy.html,1,True
 product-marketing.html,3,True
 salla-store-design-dammam.html,5,True
 salla-store-design-jeddah.html,5,True
@@ -115,6 +119,6 @@ salla-store-design-makkah.html,5,True
 salla-store-design-riyadh.html,5,True
 salla-store-design.html,24,True
 search-engine-optimization.html,10,True
-secure-payments.html,27,True
+secure-payments.html,26,True
 store-verification.html,49,True
-zid-store-design.html,9,True
+zid-store-design.html,10,True

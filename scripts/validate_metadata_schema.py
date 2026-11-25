@@ -12,6 +12,8 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://www.ezhalhe-sa.com"
+EXPECTED_INDEXABLE_PAGES = 123
+EXPECTED_BREADCRUMB_PAGES = EXPECTED_INDEXABLE_PAGES - 1
 REPORT_DIR = ROOT / "reports" / "roadmap-implementation" / "04-metadata-structured-data"
 EXCLUDED = {"404.html", "_new_testi.html", "data-analysis.html", "google387142411d334808.html"}
 SERVICE_PAGES = {
@@ -94,7 +96,7 @@ def main() -> None:
         relative = path.relative_to(ROOT).as_posix()
         if relative not in EXCLUDED:
             pages.append((relative, path))
-    check("indexable-page-count", len(pages) == 119, f"pages={len(pages)}")
+    check("indexable-page-count", len(pages) == EXPECTED_INDEXABLE_PAGES, f"pages={len(pages)}")
 
     required_social = {
         "og:locale", "og:type", "og:site_name", "og:title", "og:description", "og:url",
@@ -133,7 +135,7 @@ def main() -> None:
         if (
             set(icon_hrefs) != {"/favicon.svg", "/images/logo.webp"}
             or manifest_hrefs != ["/site.webmanifest"]
-            or tags(content, "name", "theme-color") != ["#0D2224"]
+            or tags(content, "name", "theme-color") != ["#0B3D4C"]
             or tags(content, "name", "msapplication-config") != ["/browserconfig.xml"]
         ):
             browser_identity_errors.append(relative)
@@ -255,7 +257,7 @@ def main() -> None:
     description_duplicates = [value for value, count in Counter(descriptions).items() if count > 1]
     check(
         "metadata-complete-and-bounded",
-        not metadata_errors and len(titles) == 119,
+        not metadata_errors and len(titles) == EXPECTED_INDEXABLE_PAGES,
         f"valid={len(titles)}, errors={len(set(metadata_errors))}",
     )
     check(
@@ -281,7 +283,7 @@ def main() -> None:
         f"articles={article_count}, expected={expected_article_count}",
     )
     check("service-schema-coverage", service_count == len(SERVICE_PAGES), f"services={service_count}")
-    check("breadcrumb-schema-coverage", breadcrumb_count == 118, f"pages={breadcrumb_count}")
+    check("breadcrumb-schema-coverage", breadcrumb_count == EXPECTED_BREADCRUMB_PAGES, f"pages={breadcrumb_count}")
     check(
         "required-schema-types",
         {"Organization", "WebSite", "WebPage", "CollectionPage", "Service", "Product", "Article", "BreadcrumbList", "Offer"} <= all_types,
@@ -301,7 +303,7 @@ def main() -> None:
     check(
         "browser-identity-metadata-coverage",
         not browser_identity_errors,
-        f"valid={119 - len(set(browser_identity_errors))}, errors={len(set(browser_identity_errors))}",
+        f"valid={EXPECTED_INDEXABLE_PAGES - len(set(browser_identity_errors))}, errors={len(set(browser_identity_errors))}",
     )
     identity_files_ok = False
     try:
@@ -314,11 +316,11 @@ def main() -> None:
             webmanifest == manifest_alias
             and webmanifest.get("lang") == "ar-SA"
             and webmanifest.get("dir") == "rtl"
-            and webmanifest.get("theme_color") == "#0D2224"
+            and webmanifest.get("theme_color") == "#0B3D4C"
             and webmanifest.get("background_color") == "#FFFFFF"
             and icon.get("src") == "/images/logo.webp"
             and (ROOT / "images" / "logo.webp").is_file()
-            and browserconfig.findtext("./msapplication/tile/TileColor") == "#0D2224"
+            and browserconfig.findtext("./msapplication/tile/TileColor") == "#0B3D4C"
             and favicon.tag.endswith("svg")
         )
     except (OSError, ValueError, ET.ParseError, json.JSONDecodeError):

@@ -13,6 +13,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://www.ezhalhe-sa.com"
+EXPECTED_CANONICAL_URLS = 123
 REPORT_DIR = ROOT / "reports" / "roadmap-implementation" / "02-information-architecture"
 CANONICAL_RE = re.compile(
     r'<link\b(?=[^>]*\brel=["\']canonical["\'])[^>]*\bhref=["\']([^"\']+)',
@@ -145,7 +146,7 @@ def main() -> None:
             canonical_count += 1
     check(
         "canonical-coverage",
-        not canonical_errors and canonical_count == 119,
+        not canonical_errors and canonical_count == EXPECTED_CANONICAL_URLS,
         f"valid={canonical_count}, errors={len(canonical_errors)}",
     )
 
@@ -158,8 +159,8 @@ def main() -> None:
     ]
     check(
         "sitemap-valid-canonical-urls",
-        len(sitemap_urls) == 119
-        and len(set(sitemap_urls)) == 119
+        len(sitemap_urls) == EXPECTED_CANONICAL_URLS
+        and len(set(sitemap_urls)) == EXPECTED_CANONICAL_URLS
         and all(url.startswith(f"{ORIGIN}/") for url in sitemap_urls)
         and not sitemap_missing
         and not sitemap_redirected,

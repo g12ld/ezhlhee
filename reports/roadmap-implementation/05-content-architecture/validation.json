@@ -31,7 +31,7 @@
     {
       "check": "crawl-reachable-from-home",
       "passed": true,
-      "evidence": "reached=119, total=119, unreachable=0"
+      "evidence": "reached=123, total=123, unreachable=0"
     },
     {
       "check": "article-author-and-date",

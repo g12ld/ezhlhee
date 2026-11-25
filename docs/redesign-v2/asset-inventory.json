@@ -1,0 +1,362 @@
+{
+  "recorded": "2026-11-25",
+  "note": "Inventory after migration. Original image files were not written by the redesign. This is not a historical checksum comparison.",
+  "originals": [
+    {
+      "path": "images/alyasaminoil_tawsaa_.webp",
+      "bytes": 148316,
+      "sha256": "7bbbd77b181042f9b9eded004216ad9f4d98539e8c3e13b28216c7cc1912b3e2"
+    },
+    {
+      "path": "images/asl_noura_plus.webp",
+      "bytes": 111874,
+      "sha256": "7f666e9360e6fcc7aac88221c59cb4e576c2451e1d1de70318127bcf0e6ddf5f"
+    },
+    {
+      "path": "images/black bear salla pro.webp",
+      "bytes": 169296,
+      "sha256": "6db9510697e2625772a839489e2b809f9492cdf7d2a4663c22459f6e6274a7f9"
+    },
+    {
+      "path": "images/cloud-xsa.webp",
+      "bytes": 263638,
+      "sha256": "e80ac687f2ded95f14ac6cb20570b28981f6c76b042aceebe4245ee71072bfb6"
+    },
+    {
+      "path": "images/coffepro.webp",
+      "bytes": 114296,
+      "sha256": "7fd6119b239468bc27a5163d12c4a4c49b0e251ba9c564e0585590d394b5e0ab"
+    },
+    {
+      "path": "images/darlisa_pro.webp",
+      "bytes": 323470,
+      "sha256": "7f667e2abbd8683639aab1e1d09d10f7ef260302847ce458b29df2dfcf91ab05"
+    },
+    {
+      "path": "images/dressefaya_pro.webp",
+      "bytes": 205050,
+      "sha256": "302e7da1ce0801f4a0be4964ab13b31370ffd59755dd6be054e4783396e38f9b"
+    },
+    {
+      "path": "images/duk-altayeb-salla-gold-pro.webp",
+      "bytes": 199998,
+      "sha256": "51bd45844d5acd385d8d22ecc4a31b0fd1e59777c4e2ec10e24621ddb84d551e"
+    },
+    {
+      "path": "images/fstinplus.webp",
+      "bytes": 86254,
+      "sha256": "140baf2d7ebd9c9f0d5ba127ca480c74ad8354305abd4f8fb0e03d39daf720a3"
+    },
+    {
+      "path": "images/juicyvapesa.webp",
+      "bytes": 477128,
+      "sha256": "692a0adf20ecbe7a8bc93351633f9ab02100093eeb628b245e40e45ab82cdb41"
+    },
+    {
+      "path": "images/lana-badawood-salla-gold-pro.webp",
+      "bytes": 275582,
+      "sha256": "cd6ecd57a72a5813da3880b7dbf6538e30410793369b4ccbe7a56c8f1a698a93"
+    },
+    {
+      "path": "images/lara-alsaad-boutique-salla-gold-pro.webp",
+      "bytes": 252108,
+      "sha256": "512627caf04b683c9e301b34c973a7e611c3416303efe513f9de4723849b58f8"
+    },
+    {
+      "path": "images/leder.webp",
+      "bytes": 292452,
+      "sha256": "5aead63a0ed0f38a75016deac59e70df1a36427014285eddf317c70c5e06445e"
+    },
+    {
+      "path": "images/logo.webp",
+      "bytes": 42562,
+      "sha256": "2531dbf7d5e7ffc50557c278feee32b3ceeeb581fe321fbc6a9fd731e7fa5bf5"
+    },
+    {
+      "path": "images/matgeranaia_2bni.webp",
+      "bytes": 203664,
+      "sha256": "7df9fffcb7883c3a492164382644bb88dfbeed63abe9fe6f0b00b4b29a8fa84a"
+    },
+    {
+      "path": "images/matger_abaia4.webp",
+      "bytes": 81976,
+      "sha256": "7efdbcd8c096c0afc4d7a5d21556e0911398c7e6bc6fe1567763977ce066096f"
+    },
+    {
+      "path": "images/mtger_abk1.webp",
+      "bytes": 135876,
+      "sha256": "ec037584c95cf2e1ef922406ce1aac3a1e6980c2943adc78dc1acabf2d914774"
+    },
+    {
+      "path": "images/mtger_anaia3.webp",
+      "bytes": 84284,
+      "sha256": "738d639fc2f134955b0cc582c36d5359b278438f7dd77410372184ab1fd2c9f6"
+    },
+    {
+      "path": "images/og-cover.webp",
+      "bytes": 27084,
+      "sha256": "9fcc71af26fd90964cf4487a3845b14978bcb170603e14db95b0c8c168c81eaa"
+    },
+    {
+      "path": "images/qabonah.webp",
+      "bytes": 335682,
+      "sha256": "869b6561c48d961403843db7e59bc1279b4177bc5a15ec4a887b296724c8e5f5"
+    },
+    {
+      "path": "images/responsive/alyasaminoil_tawsaa_-360.webp",
+      "bytes": 80696,
+      "sha256": "c78901d73bd3fae3dd2bd961b14bf85ef08a77906470de143ca4cc19561d52b4"
+    },
+    {
+      "path": "images/responsive/asl_noura_plus-360.webp",
+      "bytes": 63848,
+      "sha256": "b0e89d3ce056772ef396299400518d83c795ed80357131e7eabbac2c69f06636"
+    },
+    {
+      "path": "images/responsive/black bear salla pro-360.webp",
+      "bytes": 91182,
+      "sha256": "0006b64fc60fe1d96e9e1ea912c1e47d0295b2ad06163e711a474117dba1faf3"
+    },
+    {
+      "path": "images/responsive/cloud-xsa-360.webp",
+      "bytes": 144560,
+      "sha256": "9b3ac81ef903b891f544cfc9771a032077f16b03b0a0abf858fdd6249d058a6a"
+    },
+    {
+      "path": "images/responsive/coffepro-360.webp",
+      "bytes": 64548,
+      "sha256": "0fb0c8458a539ea8dada2c38665656c6902345a015256952c1298a2e2563f520"
+    },
+    {
+      "path": "images/responsive/darlisa_pro-360.webp",
+      "bytes": 182900,
+      "sha256": "3eb701d31874b39bfe3abfdcad9636f33b7177c1c93c1c30fd1ee9e8b2fae1dc"
+    },
+    {
+      "path": "images/responsive/dressefaya_pro-360.webp",
+      "bytes": 112340,
+      "sha256": "72b0f99eaee2312dbfa43b947b0083925be79b0281764adc5f73bfed800ebaeb"
+    },
+    {
+      "path": "images/responsive/duk-altayeb-salla-gold-pro-360.webp",
+      "bytes": 129454,
+      "sha256": "c7318a1a359cfd5405da631c190bb0042d502f9030ef13f3d08f64ebf4a712fe"
+    },
+    {
+      "path": "images/responsive/fstinplus-360.webp",
+      "bytes": 47734,
+      "sha256": "6ea390a3b42b6e9c493f8891ab941d35c7501ea4e53862d9eca69305051d987b"
+    },
+    {
+      "path": "images/responsive/juicyvapesa-360.webp",
+      "bytes": 191422,
+      "sha256": "a3facdc74ab3e1acaa3bd551bf8e4ff28c175fc51d607ee3e1c5dc4aa1fb98ea"
+    },
+    {
+      "path": "images/responsive/lana-badawood-salla-gold-pro-360.webp",
+      "bytes": 187150,
+      "sha256": "20b73099fbd0679d3b7dd2d6d016d8ed54b90e2f5a3956472f3dd5336f71d140"
+    },
+    {
+      "path": "images/responsive/lara-alsaad-boutique-salla-gold-pro-360.webp",
+      "bytes": 179220,
+      "sha256": "0287acc833c36163853daedc0b80c987aa6bc231173c3d41c33c4e09046fcafd"
+    },
+    {
+      "path": "images/responsive/leder-360.webp",
+      "bytes": 63938,
+      "sha256": "54d06e45f1720a1c487c29fc64cdc60f3969c69d5e190e31064990906782dd69"
+    },
+    {
+      "path": "images/responsive/logo-128.webp",
+      "bytes": 5646,
+      "sha256": "b83a9b9af30b5bc8164a81ff576fdce5ec885f2cf2cc36fb8269fd1ab7845ff3"
+    },
+    {
+      "path": "images/responsive/logo-256.webp",
+      "bytes": 12584,
+      "sha256": "ae6749a22b695373c8732bc6ca136c456c339ef0fc2641fbc6081f23e6393428"
+    },
+    {
+      "path": "images/responsive/matgeranaia_2bni-360.webp",
+      "bytes": 66774,
+      "sha256": "536d02565cb5bcaa50b112700ba376e32f726ca4b29a37e96441e537d6b0ea27"
+    },
+    {
+      "path": "images/responsive/matgeranaia_2bni-720.webp",
+      "bytes": 149384,
+      "sha256": "9f51e76db97ab8b29e61eec02a10ec855c6efb563b9cc7631341a5fb72b4c69d"
+    },
+    {
+      "path": "images/responsive/matger_abaia4-360.webp",
+      "bytes": 25682,
+      "sha256": "ee7ae6821a8a98f8b9c0269a68c22a006f4d996d8be1ccdc187fafe1fd4f1bda"
+    },
+    {
+      "path": "images/responsive/matger_abaia4-720.webp",
+      "bytes": 60050,
+      "sha256": "15148bf67134ffccb9900eff012a482c93d128645aecf50227a790151714c534"
+    },
+    {
+      "path": "images/responsive/mtger_abk1-360.webp",
+      "bytes": 70730,
+      "sha256": "3cdbfed643679933f3500606572536b84c3abfdc78efd92684d8877a861d7e8d"
+    },
+    {
+      "path": "images/responsive/mtger_anaia3-360.webp",
+      "bytes": 44216,
+      "sha256": "1d3dcea22cb7e69aea5ef48b7174777322202ef9187312511d2678635d0dbc3f"
+    },
+    {
+      "path": "images/responsive/og-cover-360.webp",
+      "bytes": 4710,
+      "sha256": "a372aa58371e77cd4433f97af6872ed683c90d4df4b7d92d8722c0092c2dcf3f"
+    },
+    {
+      "path": "images/responsive/og-cover-720.webp",
+      "bytes": 10622,
+      "sha256": "ec2c3c826ad68e8345738fb82ed4827098defc1cdbd3aa47d84e339153b00195"
+    },
+    {
+      "path": "images/responsive/rivna-360.webp",
+      "bytes": 198000,
+      "sha256": "31d59e4dbfc254e29849356572409a3d19b84008a15b8e9306782e45c8570e40"
+    },
+    {
+      "path": "images/responsive/salla-128.webp",
+      "bytes": 4634,
+      "sha256": "e870a95bedf6a68c61fa88e9c8ff79724a84136801bf976f9ee7a99e939f8846"
+    },
+    {
+      "path": "images/responsive/salla-256.webp",
+      "bytes": 9830,
+      "sha256": "0b39c8f78e4ad3cad35f9f8163f1714c1118bec95ad5c4b85daba822a9e3643f"
+    },
+    {
+      "path": "images/responsive/sanbosaalbalad_pro-360.webp",
+      "bytes": 90632,
+      "sha256": "7e4ffea7eed348fd16bc1ab304fc7aa10e34b0559844d55f6f638dec7c89ad99"
+    },
+    {
+      "path": "images/responsive/sarok_salla-360.webp",
+      "bytes": 146160,
+      "sha256": "3bef7308b82cf2068e50c67af872ffb756d009bb41e21b1017dc0ffb620abc8d"
+    },
+    {
+      "path": "images/responsive/shopify-128.webp",
+      "bytes": 3830,
+      "sha256": "2bb540e20f06754e5f3f26cd62a061b8fe78eb3be2b2ad094957b4e4b4dba31b"
+    },
+    {
+      "path": "images/responsive/shopify-256.webp",
+      "bytes": 8174,
+      "sha256": "78e69a99c42588d403a0721271bd99ddcf192963cec90374a77061b65ed0b04a"
+    },
+    {
+      "path": "images/responsive/swartyp_zid-360.webp",
+      "bytes": 157156,
+      "sha256": "53d5bb68c0bc91bbfcf892d7916c0515223e578f41585ebd9ff019f12af4f495"
+    },
+    {
+      "path": "images/responsive/whatsapp-128.webp",
+      "bytes": 4006,
+      "sha256": "35a412ebdf3c3b64647239c83151706e594d6ffbb57b8b9b57e75a00ed527c8c"
+    },
+    {
+      "path": "images/responsive/whatsapp-256.webp",
+      "bytes": 8006,
+      "sha256": "49b8e1ba0a00369867cc99a038bfe42ee795a026d0a455b707f7a7ccf33bac8e"
+    },
+    {
+      "path": "images/responsive/wordpress-128.webp",
+      "bytes": 5410,
+      "sha256": "06ff6243d63cf3891cb4ee6e7cbe69cfe2d1883fd5d5d90927e3f0310bdd3e5c"
+    },
+    {
+      "path": "images/responsive/wordpress-256.webp",
+      "bytes": 11280,
+      "sha256": "419a5e424177722b7fb6387837d2c8ff076f1be0d0ff5e191d9b452035aaa54e"
+    },
+    {
+      "path": "images/responsive/zid-128.webp",
+      "bytes": 3524,
+      "sha256": "9d2e2d05d749388220f1a4481e1316dbdcd90622d015b0a309de8ec3d5999721"
+    },
+    {
+      "path": "images/responsive/zid-256.webp",
+      "bytes": 7138,
+      "sha256": "93131d92618df7305884e28a2d2cfaa1af83a7ccb6fd57af4d6363beaf005d35"
+    },
+    {
+      "path": "images/rivna.webp",
+      "bytes": 369800,
+      "sha256": "8466a4ad4cbb5124e6a5804b59c9930ac4bd472311d170f2c0e6b11eabf69b2c"
+    },
+    {
+      "path": "images/salla.webp",
+      "bytes": 34626,
+      "sha256": "c30e78e606102902eb9080835f0e083dfb8b9e505e985d744e22a89aa586e173"
+    },
+    {
+      "path": "images/sanbosaalbalad_pro.webp",
+      "bytes": 162584,
+      "sha256": "f07f90632aab2893ccb981d2d0e11335f59d47651d979f90208e89f0d052c917"
+    },
+    {
+      "path": "images/sarok_salla.webp",
+      "bytes": 274962,
+      "sha256": "0b3429ee1d102d935206c8eb04177bc0762bf7d7ecff242343b7d4e9af96c011"
+    },
+    {
+      "path": "images/shopify.webp",
+      "bytes": 26338,
+      "sha256": "7f95cba2825dad9615e9ce53f9d582fb3dee0c1fe7141ca426599ad338cba833"
+    },
+    {
+      "path": "images/swartyp_zid.webp",
+      "bytes": 301886,
+      "sha256": "22acb6324ee5cca7110ed2e4485de8df65084dbbb02d57c6fa65e3493374a3c3"
+    },
+    {
+      "path": "images/whatsapp.webp",
+      "bytes": 32890,
+      "sha256": "72e4fed620bb7ade20983c3339de89062d1cf31244cc28ae3651fdd1fce70199"
+    },
+    {
+      "path": "images/wordpress.webp",
+      "bytes": 40188,
+      "sha256": "faec88457fcf268683899bb0ac8cb7dd0fa823ec5f02b652e59857cef0272714"
+    },
+    {
+      "path": "images/zid.webp",
+      "bytes": 28354,
+      "sha256": "146f468ec0db3e87904e2d4395cb880b19b7cf91eb469bb901d8f53422738d88"
+    }
+  ],
+  "new_derivatives": [
+    {
+      "path": "images/v2/duk-preview-360.webp",
+      "bytes": 5964
+    },
+    {
+      "path": "images/v2/duk-preview.webp",
+      "bytes": 9024
+    },
+    {
+      "path": "images/v2/lana-preview-360.webp",
+      "bytes": 25334
+    },
+    {
+      "path": "images/v2/lana-preview.webp",
+      "bytes": 41738
+    },
+    {
+      "path": "images/v2/lara-preview-360.webp",
+      "bytes": 16346
+    },
+    {
+      "path": "images/v2/lara-preview.webp",
+      "bytes": 26872
+    }
+  ]
+}
