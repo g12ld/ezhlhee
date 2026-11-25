@@ -6,12 +6,12 @@
     {
       "check": "indexable-page-count",
       "passed": true,
-      "evidence": "pages=123"
+      "evidence": "pages=149"
     },
     {
       "check": "metadata-complete-and-bounded",
       "passed": true,
-      "evidence": "valid=123, errors=0"
+      "evidence": "valid=149, errors=0"
     },
     {
       "check": "metadata-unique",
@@ -41,12 +41,12 @@
     {
       "check": "service-schema-coverage",
       "passed": true,
-      "evidence": "services=13"
+      "evidence": "services=38"
     },
     {
       "check": "breadcrumb-schema-coverage",
       "passed": true,
-      "evidence": "pages=122"
+      "evidence": "pages=148"
     },
     {
       "check": "required-schema-types",
@@ -66,7 +66,7 @@
     {
       "check": "browser-identity-metadata-coverage",
       "passed": true,
-      "evidence": "valid=123, errors=0"
+      "evidence": "valid=149, errors=0"
     },
     {
       "check": "browser-identity-files-valid",
