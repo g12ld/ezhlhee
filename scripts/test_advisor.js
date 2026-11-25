@@ -116,7 +116,7 @@ test("chat actions show recommendations and review WhatsApp without calling the 
   await elements.get("chatSend").click();
   assert.equal(details.open,true);
   assert.match(elements.get("chatWhatsApp").href,/^https:\/\/wa.me\//);
-  assert.match(elements.get("chatOrderPreview").textContent,/الاحترافية/);
+  assert.match(elements.get("chatOrderPreview").textContent,/نمو الفضية/);
   assert.equal(elements.get("chatWhatsApp").hidden,true);
   assert.equal(providerCalls,0);
 });

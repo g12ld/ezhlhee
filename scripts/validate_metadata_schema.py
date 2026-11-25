@@ -12,7 +12,7 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://www.ezhalhe-sa.com"
-EXPECTED_INDEXABLE_PAGES = 123
+EXPECTED_INDEXABLE_PAGES = len(ET.parse(ROOT / 'sitemap.xml').getroot())
 EXPECTED_BREADCRUMB_PAGES = EXPECTED_INDEXABLE_PAGES - 1
 REPORT_DIR = ROOT / "reports" / "roadmap-implementation" / "04-metadata-structured-data"
 EXCLUDED = {"404.html", "_new_testi.html", "data-analysis.html", "google387142411d334808.html"}
@@ -23,6 +23,10 @@ SERVICE_PAGES = {
     "salla-store-design-riyadh.html", "search-engine-optimization.html",
     "secure-payments.html", "store-verification.html", "zid-store-design.html",
 }
+SERVICE_CATALOG = json.loads((ROOT / 'data/services.json').read_text(encoding='utf8'))
+SERVICE_PAGES.update(item['path'].lstrip('/') for item in SERVICE_CATALOG['services'])
+EXPECTED_SOCIAL_IMAGES = {item['path'].lstrip('/'): ORIGIN + item['image'] for item in SERVICE_CATALOG['services']}
+EXPECTED_SOCIAL_IMAGES['services.html'] = ORIGIN + SERVICE_CATALOG['services'][0]['image']
 
 
 def tags(content: str, attribute: str, name: str) -> list[str]:
@@ -153,8 +157,8 @@ def main() -> None:
                 break
         if (
             tags(content, "property", "og:url") != [expected_url]
-            or tags(content, "property", "og:image") != [f"{ORIGIN}/images/og-cover.webp"]
-            or tags(content, "name", "twitter:image") != [f"{ORIGIN}/images/og-cover.webp"]
+            or tags(content, "property", "og:image") != [EXPECTED_SOCIAL_IMAGES.get(relative, f"{ORIGIN}/images/og-cover.webp")]
+            or tags(content, "name", "twitter:image") != [EXPECTED_SOCIAL_IMAGES.get(relative, f"{ORIGIN}/images/og-cover.webp")]
             or tags(content, "name", "twitter:card") != ["summary_large_image"]
         ):
             metadata_errors.append(relative)

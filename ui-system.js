@@ -119,7 +119,7 @@
     const currentPath = window.location.pathname;
     const links = [
       ["الرئيسية", "/"],
-      ["الخدمات", "/#services"],
+      ["الخدمات", "/services.html"],
       ["أعمالنا", PORTFOLIO_URL],
       ["الباقات", "/#packages"],
       ["المعرفة", ARTICLES_URL]

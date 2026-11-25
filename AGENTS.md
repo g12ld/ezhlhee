@@ -456,6 +456,8 @@ Images:
 
 # Continuous Improvement
 
+- HTML generators must be safe to run repeatedly. Target stable section IDs instead of exact class strings, preserve later enhancements, and verify the second run does not corrupt or duplicate sections.
+
 - When Python or Node code contains regexes, HTML quotes, or multiline edits, save it as a `.py` or `.js` script and execute the file. Do not embed complex quoting in PowerShell command arguments; this has caused repeated syntax errors.
 
 إذا تكرر نفس الخطأ مرتين، أضفه مباشرة إلى هذا الملف كقاعدة دائمة حتى لا يتكرر مستقبلاً.
