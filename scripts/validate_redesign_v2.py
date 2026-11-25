@@ -43,7 +43,7 @@ def main():
     images=[a for t,a in page.tags if t=='img']
     check('descriptive-alt-and-dimensions',all(a.get('alt') and a.get('width') and a.get('height') for a in images),f'{len(images)} images')
     check('chat-share-consent','chatShareConsent' in page.ids and 'ez-contact-consent' in page.ids,'separate review and approval for chat/contact handoff')
-    check('homepage-is-static-html',all(x in html for x in ['تصميم متاجر سلة وزد','1,099','1,490','1,980','ez-projects','ez-service-list']),'headline, work, services and package prices are in source HTML')
+    check('homepage-is-static-html',all(x in html for x in ['تصميم متاجر سلة وزد','1,099','599','1,980','ez-projects','svc-home-section']),'headline, work, services and package prices are in source HTML')
     original=ROOT/'scratch/redesign-v2-backup/index.html'
     check('homepage-backup-retained',original.is_file(),str(original.relative_to(ROOT)))
     canonical=re.search(r'<link rel="canonical" href="([^"]+)"',html)

@@ -10,6 +10,8 @@ function getPkg(id){
 function recommend(state){
   const result = recommendBase(state);
   if(result && result.type === "package"){
+    // Current packages: only gold explicitly includes logo creation.
+    if(state.hasLogo===false && result.packageId!=="gold")return buildPackageResult("gold",state);
     const minimum = state.productsCount === "10-20" ? 20 : ["20-35","more"].includes(state.productsCount) ? 35 : 0;
     if(result.package.limits.products < minimum){
       return buildPackageResult(minimum > 20 ? "gold" : "professional", state);
@@ -230,58 +232,11 @@ function buildReasons(state, pkgId){
 }
 
 function buildCompare(state, pkgId){
-  if(pkgId==="gold"){
-    return "الاحترافية مناسبة إذا عندك جزء كبير من التجهيزات جاهز (شعار، منتجات، دفع وشحن). لكن بناءً على إجاباتك أنت تحتاج تأسيس وتصميم وإعدادات ومنتجات ومتابعة، لذلك الذهبية توفر عليك تنفيذ هذه الأشياء بنفسك وتختصر الطريق إلى متجر جاهز.";
-  }
-  if(pkgId==="professional"){
-    return "لو اخترت بلس بتوفر حوالي 391 ريال، لكن ستحتاج تتولى بنفسك: الشعار، SEO، Analytics، وعدد منتجات أقل. ولو اخترت الذهبية بتدفع حوالي 490 ريال إضافي مقابل: دومين مجاني، CSS متحرك، SEO متقدم، بكسلات، تابي وتمارا، وتوثيق منصة الأعمال.";
-  }
-  if(pkgId==="plus"){
-    return "الاحترافية تزيد 391 ريال لكنها تضيف: شعار، SEO أساسي، Analytics، Search Console، أيقونة واتساب، و10 منتجات إضافية. الذهبية تضيف فوق ذلك هوية كاملة، دومين، CSS متحرك وتحليلات متقدمة.";
-  }
-  return "";
+  const alternatives=Object.values(PACKAGES).filter(p=>p.id!==pkgId).map(p=>p.fullName+' — '+p.priceFormatted+' ريال ('+p.limits.products+' منتجًا، '+p.limits.banners+' بنرات)');
+  return 'للمقارنة: '+alternatives.join('؛ ')+'. راجع التفاصيل والاستثناءات في صفحة كل باقة قبل اعتماد الاختيار.';
 }
 
-function getWhatWeDo(pkgId){
-  const map={
-    gold:[
-      "تجهيز المتجر من الصفر",
-      "تصميم الشعار والهوية حسب الباقة",
-      "6 بنرات احترافية",
-      "برمجة CSS متحركة",
-      "رفع 35 منتج مع SEO",
-      "إعداد الدفع (مدى، أبل باي، فيزا)",
-      "إعداد الشحن (سمسا والأنسب)",
-      "توثيق منصة الأعمال",
-      "ربط Google Analytics و Search Console",
-      "تفعيل سناب وتيك توك بكسل + تابي وتمارا",
-      "SEO متقدم",
-      "اختبار المتجر وتسليمه جاهز"
-    ],
-    professional:[
-      "إنشاء المتجر وضبط الإعدادات",
-      "تصميم شعار احترافي",
-      "4 بنرات احترافية",
-      "5 أقسام رئيسية",
-      "رفع 20 منتج بوصف كامل",
-      "تفعيل مدى وأبل باي والشحن",
-      "تحسين SEO أساسي",
-      "ربط Google Analytics و Search Console",
-      "تفعيل أيقونة WhatsApp"
-    ],
-    plus:[
-      "إنشاء المتجر وضبط الإعدادات",
-      "ترتيب العناصر بالثيم",
-      "3 أقسام رئيسية",
-      "3 بنرات احترافية",
-      "تفعيل مدى وأبل باي وتحويل بنكي",
-      "إعداد الشحن",
-      "رفع 10 منتجات مع وصف",
-      "الصفحات القانونية"
-    ]
-  };
-  return map[pkgId]||[];
-}
+function getWhatWeDo(pkgId){return getPkg(pkgId)?.features||[];}
 function getWhatWeNeed(state, pkgId){
   const needs=[];
   if(!state.businessType) needs.push("اسم النشاط أو الفكرة");
