@@ -1,0 +1,181 @@
+{
+  "hosting": "Same-origin static assets deployed with the website; GitHub blob URLs are for review only.",
+  "projects": [
+    {
+      "id": "qabonah",
+      "name": "متجر انسه صابونه",
+      "order": 1,
+      "original": "https://www.ezhalhe-sa.com/images/qabonah.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/qabonah-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/qabonah.webp"
+    },
+    {
+      "id": "lana",
+      "name": "متجر لانا",
+      "order": 2,
+      "original": "https://www.ezhalhe-sa.com/images/lana-badawood-salla-gold-pro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/lana-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/lana-badawood-salla-gold-pro.webp"
+    },
+    {
+      "id": "lara",
+      "name": "لارا السعد بوتيك",
+      "order": 3,
+      "original": "https://www.ezhalhe-sa.com/images/lara-alsaad-boutique-salla-gold-pro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/lara-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/lara-alsaad-boutique-salla-gold-pro.webp"
+    },
+    {
+      "id": "duk",
+      "name": "دوك الطيب",
+      "order": 4,
+      "original": "https://www.ezhalhe-sa.com/images/duk-altayeb-salla-gold-pro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/duk-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/duk-altayeb-salla-gold-pro.webp"
+    },
+    {
+      "id": "cloud-xsa",
+      "name": "متجر كلاود اكس",
+      "order": 5,
+      "original": "https://www.ezhalhe-sa.com/images/cloud-xsa.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/cloud-xsa-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/cloud-xsa.webp"
+    },
+    {
+      "id": "juicyvapesa",
+      "name": "متجر فيب وتدخين",
+      "order": 6,
+      "original": "https://www.ezhalhe-sa.com/images/juicyvapesa.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/juicyvapesa-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/juicyvapesa.webp"
+    },
+    {
+      "id": "mtger-abk1",
+      "name": "متجر عبايات",
+      "order": 7,
+      "original": "https://www.ezhalhe-sa.com/images/mtger_abk1.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/mtger-abk1-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/mtger_abk1.webp"
+    },
+    {
+      "id": "darlisa-pro",
+      "name": "متجر دار",
+      "order": 8,
+      "original": "https://www.ezhalhe-sa.com/images/darlisa_pro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/darlisa-pro-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/darlisa_pro.webp"
+    },
+    {
+      "id": "leder",
+      "name": "متجر ليدر",
+      "order": 9,
+      "original": "https://www.ezhalhe-sa.com/images/leder.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/leder-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/leder.webp"
+    },
+    {
+      "id": "black-bear-salla-pro",
+      "name": "بلاك بير",
+      "order": 10,
+      "original": "https://www.ezhalhe-sa.com/images/black%20bear%20salla%20pro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/black-bear-salla-pro-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/black%20bear%20salla%20pro.webp"
+    },
+    {
+      "id": "sanbosaalbalad-pro",
+      "name": "سمبوسة البلد",
+      "order": 11,
+      "original": "https://www.ezhalhe-sa.com/images/sanbosaalbalad_pro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/sanbosaalbalad-pro-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/sanbosaalbalad_pro.webp"
+    },
+    {
+      "id": "alyasaminoil-tawsaa",
+      "name": "متجر الياسمين",
+      "order": 12,
+      "original": "https://www.ezhalhe-sa.com/images/alyasaminoil_tawsaa_.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/alyasaminoil-tawsaa-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/alyasaminoil_tawsaa_.webp"
+    },
+    {
+      "id": "mtger-anaia3",
+      "name": "منتجات العناية",
+      "order": 13,
+      "original": "https://www.ezhalhe-sa.com/images/mtger_anaia3.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/mtger-anaia3-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/mtger_anaia3.webp"
+    },
+    {
+      "id": "siwar",
+      "name": "Siwar Altyeb",
+      "order": 14,
+      "original": "https://www.ezhalhe-sa.com/images/swartyp_zid.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/siwar-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/swartyp_zid.webp"
+    },
+    {
+      "id": "sarok-salla",
+      "name": "Shirwak Altayib",
+      "order": 15,
+      "original": "https://www.ezhalhe-sa.com/images/sarok_salla.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/sarok-salla-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/sarok_salla.webp"
+    },
+    {
+      "id": "coffepro",
+      "name": "Roast Master",
+      "order": 16,
+      "original": "https://www.ezhalhe-sa.com/images/coffepro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/coffepro-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/coffepro.webp"
+    },
+    {
+      "id": "rivna",
+      "name": "Rivna",
+      "order": 17,
+      "original": "https://www.ezhalhe-sa.com/images/rivna.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/rivna-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/rivna.webp"
+    },
+    {
+      "id": "asl-noura",
+      "name": "متجر عسل نورة",
+      "order": 18,
+      "original": "https://www.ezhalhe-sa.com/images/asl_noura_plus.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/asl-noura-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/asl_noura_plus.webp"
+    },
+    {
+      "id": "matger-abaia4",
+      "name": "عبايات وجلابيات",
+      "order": 19,
+      "original": "https://www.ezhalhe-sa.com/images/matger_abaia4.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/matger-abaia4-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/matger_abaia4.webp"
+    },
+    {
+      "id": "fstinplus",
+      "name": "متجر فساتين عنق",
+      "order": 20,
+      "original": "https://www.ezhalhe-sa.com/images/fstinplus.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/fstinplus-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/fstinplus.webp"
+    },
+    {
+      "id": "dressefaya-pro",
+      "name": "Dresse Faya",
+      "order": 21,
+      "original": "https://www.ezhalhe-sa.com/images/dressefaya_pro.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/dressefaya-pro-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/dressefaya_pro.webp"
+    },
+    {
+      "id": "matgeranaia-2bni",
+      "name": "منتجات عناية",
+      "order": 22,
+      "original": "https://www.ezhalhe-sa.com/images/matgeranaia_2bni.webp",
+      "thumbnail": "https://www.ezhalhe-sa.com/images/portfolio/matgeranaia-2bni-520.webp",
+      "github": "https://github.com/g12ld/ezhlhee/blob/codex/ui-ux-pro-max-redesign/images/matgeranaia_2bni.webp"
+    }
+  ]
+}
